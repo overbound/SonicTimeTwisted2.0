@@ -21,6 +21,7 @@ for (var i=0; i<4; i+=1)
     title_scale[i, 0] = 12;
 }
 
-///d3d_end();
-d3d_end();
+// D3D end
+gpu_set_ztestenable(false);
+gpu_set_zwriteenable(false);
 

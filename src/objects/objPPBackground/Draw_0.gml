@@ -21,7 +21,7 @@ if (clean) draw_clear_alpha(c_black, 0);
 d3d_transform_set_rotation_z(angle_warp);
 d3d_transform_add_translation(128, 128, 0);
 draw_surface_ext(copy_surface, shift, shift, scale, scale, 0, c_white, 1);
-d3d_transform_set_identity();
+matrix_set( matrix_world, matrix_build_identity());
 draw_sprite_ext(WhirlSpr, 0, 128, 128, 1, 1, whirl_angle, c_white, 1);
 
 surface_reset_target();

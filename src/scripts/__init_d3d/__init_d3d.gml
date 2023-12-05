@@ -1,7 +1,6 @@
 function __init_d3d() {
 	gml_pragma( "global", "__init_d3d();");
 	// setup the depth variable to a sensible default
-	global.__d3d=false;
 	global.__d3dDepth=0;
 	global.__d3dCamera=camera_create();
 	global.__d3dPrimKind = -1;

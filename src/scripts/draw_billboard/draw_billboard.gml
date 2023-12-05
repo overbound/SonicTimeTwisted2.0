@@ -7,7 +7,7 @@ function draw_billboard(argument0, argument1) {
 	d3d_transform_add_rotation_z(objSSCamera.dir1);
 	d3d_transform_add_translation(x, y, z);
 	d3d_draw_wall(argument0, 0, argument1, -argument0, 0, -argument1, sprite_get_texture(sprite_index, image_index), 1, 1);
-	d3d_transform_set_identity();
+	matrix_set( matrix_world, matrix_build_identity());
 
 
 

@@ -1,6 +1,8 @@
 /// @description  Clean up
 audio_stop_all();
-d3d_end();
+// D3D end
+gpu_set_ztestenable(false);
+gpu_set_zwriteenable(false);
 
 if (objProgram.device_info & DEVICE_OS_PLAYSTATION) {
     if (ds_exists(storage_buffers, ds_type_map)) {

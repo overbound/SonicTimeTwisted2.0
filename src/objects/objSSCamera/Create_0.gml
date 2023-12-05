@@ -7,9 +7,13 @@ if objProgram.in_past {
 z = 0;
 //progGrid = progressMapf[2];
 threeDee = true;
-d3d_start();
-d3d_set_culling(1)
-d3d_set_hidden(1)
+
+// D3D start
+gpu_set_ztestenable(true);
+gpu_set_zwriteenable(true);
+
+gpu_set_cullmode(cull_counterclockwise)
+gpu_set_ztestenable(1)
 gpu_set_alphatestenable(true);
 gpu_set_alphatestref(10);
 /*

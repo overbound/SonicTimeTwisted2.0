@@ -1,8 +1,12 @@
 event_inherited();
 z = 0;
 threeDee = true;
-d3d_start();
-d3d_set_culling(false)
+
+// D3D start
+gpu_set_ztestenable(true);
+gpu_set_zwriteenable(true);
+
+gpu_set_cullmode(cull_noculling)
 distance = 192;
 fov = 60;
 zf = 60;

@@ -24,8 +24,9 @@ var rm = FF1_f;
 if (objProgram.in_past) rm = FF1_p;
 get_titlecard_array(rm, id);
 
-///d3d_end();
-d3d_end();
+// D3D end
+gpu_set_ztestenable(false);
+gpu_set_zwriteenable(false);
 
 /// init_titlecard();
 init_titlecard(true);

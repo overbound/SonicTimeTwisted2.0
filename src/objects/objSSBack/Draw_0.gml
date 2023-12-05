@@ -6,7 +6,7 @@ draw_set_color(c_white);
 if not surface_exists(surface) surface = surface_create(512,256);
 surface_set_target(surface);
 // draw background
-draw_clear_alpha(__background_get_colour( ), 0);
+draw_clear_alpha(c_black, 0);
 with objParallax event_perform(ev_draw, 0);
 //with objSSZBGParallax event_perform(ev_draw, 0);
 
