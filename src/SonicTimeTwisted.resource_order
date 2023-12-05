@@ -2095,7 +2095,6 @@
     {"name":"__view_set_internal","order":2,"path":"scripts/__view_set_internal/__view_set_internal.yy",},
     {"name":"__init_view","order":3,"path":"scripts/__init_view/__init_view.yy",},
     {"name":"__init_global","order":8,"path":"scripts/__init_global/__init_global.yy",},
-    {"name":"__global_object_depths","order":9,"path":"scripts/__global_object_depths/__global_object_depths.yy",},
     {"name":"NebulaShader","order":1,"path":"shaders/NebulaShader/NebulaShader.yy",},
     {"name":"TimeTravelShader","order":2,"path":"shaders/TimeTravelShader/TimeTravelShader.yy",},
     {"name":"WaveShader","order":3,"path":"shaders/WaveShader/WaveShader.yy",},

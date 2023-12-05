@@ -2731,7 +2731,6 @@
     {"id":{"name":"__view_set_internal","path":"scripts/__view_set_internal/__view_set_internal.yy",},},
     {"id":{"name":"__init_view","path":"scripts/__init_view/__init_view.yy",},},
     {"id":{"name":"__init_global","path":"scripts/__init_global/__init_global.yy",},},
-    {"id":{"name":"__global_object_depths","path":"scripts/__global_object_depths/__global_object_depths.yy",},},
     {"id":{"name":"DeflateShader","path":"shaders/DeflateShader/DeflateShader.yy",},},
     {"id":{"name":"NebulaShader","path":"shaders/NebulaShader/NebulaShader.yy",},},
     {"id":{"name":"TimeTravelShader","path":"shaders/TimeTravelShader/TimeTravelShader.yy",},},
