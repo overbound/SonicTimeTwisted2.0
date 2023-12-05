@@ -1,0 +1,42 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "objOrbinautOrb",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [],
+  "parent": {
+    "name": "Orbinaut",
+    "path": "folders/Objects/Enemies/Orbinaut.yy",
+  },
+  "parentObjectId": {
+    "name": "objNonSolid",
+    "path": "objects/objNonSolid/objNonSolid.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 0,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsShapePoints": [
+    {"x":11.0,"y":11.0,},
+    {"x":12.0,"y":12.0,},
+  ],
+  "physicsStartAwake": true,
+  "properties": [],
+  "solid": false,
+  "spriteId": {
+    "name": "sprDazzlenautOrb",
+    "path": "sprites/sprDazzlenautOrb/sprDazzlenautOrb.yy",
+  },
+  "spriteMaskId": null,
+  "visible": true,
+}

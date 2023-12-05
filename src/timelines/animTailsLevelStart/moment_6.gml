@@ -1,0 +1,2 @@
+animation_new = "idle"
+

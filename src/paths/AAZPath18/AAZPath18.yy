@@ -1,0 +1,27 @@
+{
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "AAZPath18",
+  "closed": false,
+  "kind": 1,
+  "parent": {
+    "name": "Other",
+    "path": "folders/Paths/Attraction Attack/Future/Other.yy",
+  },
+  "points": [
+    {"speed":100.0,"x":3544.0,"y":968.0,},
+    {"speed":100.0,"x":3456.0,"y":984.0,},
+    {"speed":100.0,"x":3392.0,"y":1080.0,},
+    {"speed":100.0,"x":3432.0,"y":1168.0,},
+    {"speed":100.0,"x":3520.0,"y":1208.0,},
+    {"speed":100.0,"x":3600.0,"y":1168.0,},
+    {"speed":100.0,"x":3632.0,"y":1136.0,},
+    {"speed":100.0,"x":3632.0,"y":904.0,},
+    {"speed":100.0,"x":3632.0,"y":624.0,},
+    {"speed":100.0,"x":3632.0,"y":536.0,},
+    {"speed":100.0,"x":3592.0,"y":488.0,},
+    {"speed":100.0,"x":3544.0,"y":464.0,},
+    {"speed":100.0,"x":3456.0,"y":464.0,},
+  ],
+  "precision": 4,
+}

@@ -1,0 +1,10 @@
+action_inherited();
+image_speed = 0;
+moving = 0;
+waiting = 80;
+delay = 0;
+delay_offset = 16;
+z = 28;
+zdirection = 1;
+image_xscale = 1;
+image_yscale = 1;

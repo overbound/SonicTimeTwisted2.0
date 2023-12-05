@@ -1,0 +1,4 @@
+if flash {
+    visible = !visible;
+}
+

@@ -1,0 +1,1 @@
+climbable= 1;

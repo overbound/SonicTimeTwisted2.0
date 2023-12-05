@@ -1,0 +1,12 @@
+function player_reaction_platform_visible(argument0) {
+	//player_reaction_platform_visible(local_id)
+	with argument0 { 
+	    if appear == false {
+	        appear=true;
+	        alarm[1]=50;
+	    }
+	    }
+
+
+	return false;
+}

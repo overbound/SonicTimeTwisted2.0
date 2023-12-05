@@ -1,0 +1,2 @@
+init_titlecard(true);
+

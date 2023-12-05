@@ -1,0 +1,1 @@
+exitDirection=90;

@@ -1,0 +1,2 @@
+allowCollision=true;
+

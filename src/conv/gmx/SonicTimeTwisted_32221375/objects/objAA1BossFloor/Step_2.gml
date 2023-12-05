@@ -1,0 +1,3 @@
+x-=hspeed;
+y-=vspeed;
+

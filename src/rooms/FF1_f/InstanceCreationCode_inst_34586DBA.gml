@@ -1,0 +1,2 @@
+reaction_script=player_reaction_change_room_height;
+height=3704;

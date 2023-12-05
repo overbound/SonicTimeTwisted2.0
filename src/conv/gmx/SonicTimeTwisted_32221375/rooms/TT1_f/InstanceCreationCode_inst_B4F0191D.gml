@@ -1,0 +1,1 @@
+reaction_script=player_reaction_start_tt1f;

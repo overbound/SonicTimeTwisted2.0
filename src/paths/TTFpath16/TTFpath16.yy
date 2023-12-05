@@ -1,0 +1,25 @@
+{
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "TTFpath16",
+  "closed": false,
+  "kind": 1,
+  "parent": {
+    "name": "Tidal Tubes",
+    "path": "folders/Paths/Tidal Tubes.yy",
+  },
+  "points": [
+    {"speed":100.0,"x":3600.0,"y":1584.0,},
+    {"speed":100.0,"x":3712.0,"y":1584.0,},
+    {"speed":100.0,"x":3752.0,"y":1600.0,},
+    {"speed":100.0,"x":3760.0,"y":1640.0,},
+    {"speed":100.0,"x":3760.0,"y":1656.0,},
+    {"speed":100.0,"x":3760.0,"y":2760.0,},
+    {"speed":100.0,"x":3760.0,"y":2776.0,},
+    {"speed":100.0,"x":3752.0,"y":2824.0,},
+    {"speed":100.0,"x":3712.0,"y":2832.0,},
+    {"speed":100.0,"x":3688.0,"y":2832.0,},
+    {"speed":100.0,"x":3184.0,"y":2832.0,},
+  ],
+  "precision": 4,
+}

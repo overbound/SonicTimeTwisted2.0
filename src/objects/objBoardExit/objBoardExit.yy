@@ -1,0 +1,42 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "objBoardExit",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [],
+  "parent": {
+    "name": "Snowboard",
+    "path": "folders/Objects/Frigid Fortress/Objects/Snowboard.yy",
+  },
+  "parentObjectId": {
+    "name": "objNonSolid",
+    "path": "objects/objNonSolid/objNonSolid.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 0,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsShapePoints": [
+    {"x":27.0,"y":8.0,},
+    {"x":28.0,"y":28.0,},
+  ],
+  "physicsStartAwake": true,
+  "properties": [],
+  "solid": false,
+  "spriteId": {
+    "name": "sprBoard",
+    "path": "sprites/sprBoard/sprBoard.yy",
+  },
+  "spriteMaskId": null,
+  "visible": true,
+}
