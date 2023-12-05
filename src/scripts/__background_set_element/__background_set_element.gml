@@ -113,7 +113,7 @@ function __background_set_element(argument0, argument1, argument2, argument3, ar
 			}
 			else
 			{
-				__depth = (__farthestdepth - __depthinc) - (__slot * __depthinc);
+				__depth = (__farthestdepth - __depthinc) - (__i * __depthinc);
 			}
 		
 			layer_depth(__slots[__i], __depth);

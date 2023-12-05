@@ -6,9 +6,8 @@ function tr_load_fonts() {
 	tr_readd_builtin_fonts();
 
 	with (objResources) {
-	    var _newfont; // new font index.
     
-	    _newfont = tr_load_font(sprFontHud, 0);
+	    var _newfont = tr_load_font(sprFontHud, 0);
 	    if (_newfont != -1 && font_exists(fontHud)) {
 	        font_delete(fontHud);
 	        fontHud = _newfont;

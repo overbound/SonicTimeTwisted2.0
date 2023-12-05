@@ -4,7 +4,7 @@ function tr_load_files() {
 	var _sep = get_path_sep();
 
 	if (DEVICE_SUPPORTS_FILE_FIND) {
-	    var _fname = file_find_first("translations" + _sep + "*.json", false);
+	    var _fname = file_find_first("translations" + _sep + "*.json", fa_none);
     
 	    while (string_length(_fname) != 0) {
 	        tr_load_file("translations" + _sep + _fname);

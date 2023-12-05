@@ -7,17 +7,17 @@ function updateGolemObjects(argument0) {
 	  posZ += speedZ;
   
 	  speedY += _gravity;
-	  var ratio, midX, midY;
-	  midX = __view_get( e__VW.XView, 0 ) + 213;
-	  midY = __view_get( e__VW.YView, 0 );
+
+	  var _mid_x = __view_get( e__VW.XView, 0 ) + 213;
+	  var _mid_y = __view_get( e__VW.YView, 0 );
   
-	  ratio = power(2, posZ / __view_get( e__VW.WView, 0 ));
+	  var _ratio = power(2, posZ / __view_get( e__VW.WView, 0 ));
   
-	  image_xscale = ratio;
-	  image_yscale = ratio;
+	  image_xscale = _ratio;
+	  image_yscale = _ratio;
   
-	  x = floor(midX + (posX - midX) * ratio);
-	  y = floor(midY + (posY - midY) * ratio);
+	  x = floor(_mid_x + (posX - _mid_x) * _ratio);
+	  y = floor(_mid_y + (posY - _mid_y) * _ratio);
 	  if (object_index == objGolemHand)
 	  {
 	    if (!broken)
