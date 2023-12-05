@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 image_speed = 0.34;
 remove = 2;
 radius = 12;

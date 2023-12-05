@@ -1,5 +1,5 @@
 flash = false;
-action_inherited();
+event_inherited();
 image_speed = 0;
 remove = 0;
 gravity = -0.09375;

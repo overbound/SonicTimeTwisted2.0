@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 image_speed = 0;
 relative_y = 0.50;
 absolute_x = 360;

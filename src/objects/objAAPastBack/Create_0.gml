@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize background
 // defaults
 var relative_y = .98; 

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 groundz=12;
 z=300;
 chime_played = false;

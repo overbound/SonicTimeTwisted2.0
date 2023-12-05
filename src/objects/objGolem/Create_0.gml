@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Setup
   posX = 17024;
   posY = 1660;//1570;

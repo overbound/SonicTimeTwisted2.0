@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script=player_reaction_paddle_top;
 flash = false;
 remove=0;

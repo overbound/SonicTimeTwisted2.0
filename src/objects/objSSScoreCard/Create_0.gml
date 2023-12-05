@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 
 if objProgram.in_past {
     if(objProgram.special_past_current_level == 7)

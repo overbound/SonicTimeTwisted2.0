@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize
 image_blend = c_red;
 direction = 206;
@@ -16,4 +16,4 @@ sweeping_speed = 2;
 // other
 parent_id = noone;
 
-action_sound(sndMetalLaser, 1);
+audio_play_sound(sndMetalLaser, 1, 1);

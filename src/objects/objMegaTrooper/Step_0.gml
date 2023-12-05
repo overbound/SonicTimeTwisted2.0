@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// change states
 switch state {
 case 0: // rise

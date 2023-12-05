@@ -1,3 +1,3 @@
-action_inherited();
+event_inherited();
 is_right = 0;
 is_top = 0;

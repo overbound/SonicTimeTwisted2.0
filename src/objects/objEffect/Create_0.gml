@@ -1,2 +1,2 @@
-action_inherited();
+event_inherited();
 player_id = noone;

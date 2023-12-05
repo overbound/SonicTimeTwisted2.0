@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Clean up
 for (var i=0; i<3; i+=1) with orb[i] instance_destroy();
 

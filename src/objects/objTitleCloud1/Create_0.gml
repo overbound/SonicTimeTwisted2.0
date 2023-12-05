@@ -1,2 +1,2 @@
-action_inherited();
+event_inherited();
 action_set_alarm(465, 0);

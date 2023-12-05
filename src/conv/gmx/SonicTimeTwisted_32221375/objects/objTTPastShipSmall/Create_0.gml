@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize
 image_speed = .5;
 sprite_index = sprBackTTPShipSmall;

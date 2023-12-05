@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script=player_reaction_robo_rex;
 life=3;
 invulnerable=false;

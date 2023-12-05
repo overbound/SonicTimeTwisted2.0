@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Nebula Shader
 angle_change = 2;
 angle_warp = -15;

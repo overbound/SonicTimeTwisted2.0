@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Control Head 
   with jaw {
     x=other.x+xoffset;

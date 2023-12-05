@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 move=false;
 visible=true;
 remove=0;

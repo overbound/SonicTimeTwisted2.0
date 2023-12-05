@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script = player_reaction_collapsing_platform;
 ox = 2;
 oy = 5;

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 z=0;
 mode = 0;
 

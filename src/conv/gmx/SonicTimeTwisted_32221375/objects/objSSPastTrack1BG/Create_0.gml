@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 z = 0;
 threeDee = true;
 d3d_start();

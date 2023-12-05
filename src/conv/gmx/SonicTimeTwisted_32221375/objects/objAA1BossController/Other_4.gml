@@ -8,7 +8,7 @@ action_kill_object();
 exit;
 }
 }
-action_inherited();
+event_inherited();
 /// Initialize
 // states and flags
 state = 0;

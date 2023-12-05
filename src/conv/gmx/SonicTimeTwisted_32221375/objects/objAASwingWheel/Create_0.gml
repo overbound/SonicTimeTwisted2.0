@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 remove = 0;
 angle = 0;
 /// Create platforms

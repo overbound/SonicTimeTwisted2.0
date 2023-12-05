@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 state = -1;
 
 

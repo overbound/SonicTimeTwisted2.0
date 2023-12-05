@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize
 reaction_script = player_reaction_AA_target;
 remove = 0;

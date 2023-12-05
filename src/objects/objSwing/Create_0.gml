@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Swinging vine
 image_speed = 0;
 remove = 0;

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 trooperId=0;
 remove=0;
 

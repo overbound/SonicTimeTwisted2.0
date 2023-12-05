@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 remove = 1;
 /// Create trigger points
 for (var i=0; i<12; i+=1)

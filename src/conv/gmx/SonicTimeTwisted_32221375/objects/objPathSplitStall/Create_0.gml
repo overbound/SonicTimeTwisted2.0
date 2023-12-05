@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 ///setup turning collision variable
 player_id = noone;
 active = false;

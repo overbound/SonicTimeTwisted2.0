@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize
 reaction_script = player_reaction_rr_wall_run;
 width = 160;//180

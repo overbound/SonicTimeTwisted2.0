@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize
 // emitter
 //instance_create(x, y - 48, objFFSnowEmitter);

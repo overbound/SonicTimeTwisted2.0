@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script = player_reaction_AA_shock_bumper;
 /// Create shockers
 shocker[0] = instance_create(x+32, y, objAAShocker);

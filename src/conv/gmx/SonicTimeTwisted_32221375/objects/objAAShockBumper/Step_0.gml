@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Move shockers
 var i;
 // stick to platform sides

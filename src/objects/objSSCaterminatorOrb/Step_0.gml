@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 var __b__;
 __b__ = action_if_variable(instance_exists(parent_id), true, 0);
 if __b__

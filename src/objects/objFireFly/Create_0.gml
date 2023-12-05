@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 light=instance_create(x,y,objFireFlyLight);
 lightShot=instance_create(x,y,objFireFlyLightShot);
 leftRotation=0;

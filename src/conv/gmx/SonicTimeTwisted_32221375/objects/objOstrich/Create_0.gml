@@ -5,4 +5,4 @@ fire_debris =0;
 frozen=false;
 
 
-action_inherited();
+event_inherited();

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 instance_create(x,y-200,objMetallix);
 state=1000;
 remove=0;

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize
 reaction_script = -1;
 remove = 1;

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 if image_xscale = -1 {
     angle=158;
     image_speed = .5;

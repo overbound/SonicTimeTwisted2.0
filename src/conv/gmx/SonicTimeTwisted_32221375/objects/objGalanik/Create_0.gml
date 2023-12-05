@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 alarm[0] = 440;
 remove=0;
 state = 0;

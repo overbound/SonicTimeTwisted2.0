@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize
 hspeed = -4;
 image_speed = 0;

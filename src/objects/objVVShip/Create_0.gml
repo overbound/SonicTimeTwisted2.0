@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script = player_reaction_VV_ship;
 height = ystart;
 target_y = ystart;

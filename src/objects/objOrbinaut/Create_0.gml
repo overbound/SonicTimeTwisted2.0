@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize enemy
 var i;
 image_speed = 0;

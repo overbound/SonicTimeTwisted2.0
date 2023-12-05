@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 active = false;
 reaction_script = player_reaction_plane;
 rebound = false;

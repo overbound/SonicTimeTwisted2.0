@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 ds_list_add(objMetalThrowController.listMetalThrow, id);
 image_xscale=-1;
 image_speed=0;

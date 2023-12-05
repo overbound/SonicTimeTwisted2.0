@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 relative_y = 0.9;
 absolute_x = 360;
 absolute_y = 210;

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script = noone;
 gravity = .21;
 speed = 4;

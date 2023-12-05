@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Swing platforms
 // calculate angle
 angle = angle_wrap(angle+1);

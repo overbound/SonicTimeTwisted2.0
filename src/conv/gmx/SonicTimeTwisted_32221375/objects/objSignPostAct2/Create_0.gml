@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 //state control for sign
 switch objGameData.character_id[0] {
     case 1:

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 mode=4;
 remove=0;
 time=0.03125;

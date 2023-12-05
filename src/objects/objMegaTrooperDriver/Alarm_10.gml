@@ -1,6 +1,3 @@
-action_set_relative(1);
-action_create_object(objExplosionGroup, 52, -25);
-action_create_object(objExplosionGroup, -15, 8);
+instance_create(x+52, y-25, objExplosionGroup);
+instance_create(x-15, y+8, objExplosionGroup);
 play_sfx(sndBombExplosion, 1);
-
-action_set_relative(0);

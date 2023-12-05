@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Update horizon
 //with water other.horizon.absolute_y = y;
     with horizon {

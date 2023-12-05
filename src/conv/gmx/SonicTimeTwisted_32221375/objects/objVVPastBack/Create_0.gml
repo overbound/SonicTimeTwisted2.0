@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
  /// Initialize background
 var relative_y = 0.8;
 // hut

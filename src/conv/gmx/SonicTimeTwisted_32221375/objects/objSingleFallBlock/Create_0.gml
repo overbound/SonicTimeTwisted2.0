@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 gravity_direction = 270;
 gravity=.2;
 speed = 2;

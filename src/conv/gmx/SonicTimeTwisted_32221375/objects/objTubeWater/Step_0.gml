@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 ///Active if Player Close
 var xoffset;
 if instance_exists(objPlayer) {

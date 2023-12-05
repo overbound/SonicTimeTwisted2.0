@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script = player_reaction_fire;
 image_speed = 0.05;
 draw_set_color(c_white);

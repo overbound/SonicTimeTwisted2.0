@@ -1,9 +1,3 @@
-action_set_relative(1);
-action_inherited();
-action_create_object(objTitleRingOverlay, 0, 0);
-{
-action_set_relative(0);
+event_inherited();
+instance_create(x, y, objTitleRingOverlay);
 movement = 0;
-action_set_relative(1);
-}
-action_set_relative(0);

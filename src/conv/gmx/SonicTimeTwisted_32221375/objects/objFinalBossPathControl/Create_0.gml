@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 remove=0;
 xringorigin=2688;
 xorgin = 2688;

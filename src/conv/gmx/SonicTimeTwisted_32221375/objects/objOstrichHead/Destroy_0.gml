@@ -3,6 +3,6 @@ __b__ = action_if_variable(destroy, true, 0);
 if __b__
 {
 {
-action_inherited();
+event_inherited();
 }
 }

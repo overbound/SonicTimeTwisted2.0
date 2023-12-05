@@ -33,5 +33,5 @@ if hspeed<0 image_xscale = -1;
 if hspeed>0 image_xscale = 1;
 
 /* */
-action_inherited();
+event_inherited();
 /*  */

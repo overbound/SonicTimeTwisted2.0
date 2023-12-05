@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 leftRotation=0;
 rightRotation=0;
 leftSwitch=1;

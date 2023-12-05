@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script = player_reaction_fire;
 blink_speed = 2;
 min_opacity = 0.5;

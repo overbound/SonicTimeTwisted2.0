@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 remove = 0;
 reaction_script = player_reaction_harmful;
 image_speed = 0.25;

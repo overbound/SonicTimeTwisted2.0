@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize
 x = objPPBossController.x;
 image_speed = 0;

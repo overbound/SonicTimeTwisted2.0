@@ -1,1 +1,1 @@
-action_another_room(intro4);
+room_goto(intro4);

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Emitter values
 remove = 1;
 reaction_script = player_reaction_ss_magnet;

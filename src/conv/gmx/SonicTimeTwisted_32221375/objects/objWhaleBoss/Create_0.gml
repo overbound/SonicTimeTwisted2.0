@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 with (other) {
 remove=0;
 image_speed=0;

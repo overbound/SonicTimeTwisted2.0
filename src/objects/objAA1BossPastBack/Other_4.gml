@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize background
 surface = -1;
 // defaults

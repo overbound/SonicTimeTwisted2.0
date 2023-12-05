@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 x2=x;
 xOffset1Left=-6;
 xOffset1Right=6;

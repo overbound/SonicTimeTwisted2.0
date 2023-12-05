@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Scale water strips
 if not __view_get( e__VW.Visible, view_current ) exit;
 var offset, scale, i;

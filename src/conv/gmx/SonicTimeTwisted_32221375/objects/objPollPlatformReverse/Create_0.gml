@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 //harmful=true;
 remove=0;
 

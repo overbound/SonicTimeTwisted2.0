@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 state = 0;
 alarm[0]=120;
 laser_height=300;

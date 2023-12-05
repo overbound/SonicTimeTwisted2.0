@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 mode = 1;
 facing = objProgram.time_traveling;
 /// Setup Shader

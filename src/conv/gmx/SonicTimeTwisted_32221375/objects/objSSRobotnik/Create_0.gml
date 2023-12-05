@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 color=c_red;
 image_alpha=0;
 

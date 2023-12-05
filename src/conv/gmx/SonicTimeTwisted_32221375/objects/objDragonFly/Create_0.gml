@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize
 image_speed = .25;
 offscreen_enabled = true;

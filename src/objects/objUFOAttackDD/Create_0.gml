@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script=player_reaction_knock_ufo;
 remove=0;
 hit_boss = false;

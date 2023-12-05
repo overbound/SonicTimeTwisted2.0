@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize background
 relative_y = .9
 //var relative_y = (room_height-300)/(room_height-objScreen.height);//496

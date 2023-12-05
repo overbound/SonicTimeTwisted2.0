@@ -7,7 +7,7 @@ action_kill_object();
 exit;
 }
 }
-action_inherited();
+event_inherited();
 /// Set animation
 if hide {
     visible = false

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script=player_reaction_big_bomb_badnik;
 life=2;
 image_index=0;

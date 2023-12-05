@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 image_speed=0;
 through=true;
 depth_mask=4;

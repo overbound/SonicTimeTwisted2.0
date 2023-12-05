@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 depth = -128;
 image_speed = 0;
 image_blend = make_color_rgb(95, 193, 255);

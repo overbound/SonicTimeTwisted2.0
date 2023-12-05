@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 active=false;
 player_id = noone;
 allow_collision = true;

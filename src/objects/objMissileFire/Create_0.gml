@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 z=42;
 image_speed=1;
 direction=90;

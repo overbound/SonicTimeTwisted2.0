@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script=noone;
 remove=1;
 image_speed=0;

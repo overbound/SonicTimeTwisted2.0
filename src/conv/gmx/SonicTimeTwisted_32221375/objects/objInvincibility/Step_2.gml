@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Update position
 var size, i, offset;
 if !instance_exists(player_id) { instance_destroy(); }

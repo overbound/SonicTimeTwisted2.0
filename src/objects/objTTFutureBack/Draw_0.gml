@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Scale water strips
 var offset, scale, i;
 // get scale based on offset

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 hspeed = - 8;
 alarm[0] = 120;
 remove=0;

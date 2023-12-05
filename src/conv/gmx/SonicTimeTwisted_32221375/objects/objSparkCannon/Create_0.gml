@@ -1,3 +1,3 @@
-action_inherited();
+event_inherited();
 alarm[0]=60;
 

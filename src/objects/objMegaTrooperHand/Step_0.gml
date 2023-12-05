@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 script_execute(MegaTrooperHandStep,0,0,0,0,0);
 if objMegaTrooper.state >= 7 exit;
 if ydirection == 1 {

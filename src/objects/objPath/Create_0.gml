@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 visible = debug_mode;
 reaction_script = player_reaction_path;
 path = -1;

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 blast=false;
 blasty = y-128;
 blastImageIndex=0;

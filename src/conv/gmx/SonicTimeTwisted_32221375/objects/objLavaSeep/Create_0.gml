@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 image_speed = 0.05;
 draw_set_color(c_white);
 uni_time = shader_get_uniform(WaveShader,"time");

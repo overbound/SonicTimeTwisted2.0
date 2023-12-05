@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Variables
 xspeed= 0;
 legFrames=8;

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 rot = 0;
 rot2 = 0;
 

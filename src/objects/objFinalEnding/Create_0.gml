@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 remove=0;
 explodeOffset = 0;
 state = 0;

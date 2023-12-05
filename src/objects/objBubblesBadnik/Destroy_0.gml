@@ -1,3 +1,3 @@
-action_inherited();
+event_inherited();
 with bubble_id instance_destroy();
 

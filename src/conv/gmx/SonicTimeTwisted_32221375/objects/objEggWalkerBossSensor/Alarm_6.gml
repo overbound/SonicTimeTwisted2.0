@@ -1,5 +1,4 @@
-action_set_relative(1);
-action_create_object(objExplosionGroup, 10, 40);
+instance_create(x+10, y+40, objExplosionGroup);
 play_sfx(sndBombExplosion, 1);
 with objEggWalkerGun {
     instance_destroy();
@@ -16,6 +15,4 @@ with objEggWalkerLaser {
     
     }
 instance_create(x,y+10,objEggWalkerMoleDeath);
-    image_index=1;
-
-action_set_relative(0);
+image_index=1;

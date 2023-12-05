@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize
 image_xscale = -1;
 image_speed = 0;

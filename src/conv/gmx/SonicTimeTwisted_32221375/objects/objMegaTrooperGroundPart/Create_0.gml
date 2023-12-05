@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 remove=2;
 image_speed=0;
 gravity_direction=270;

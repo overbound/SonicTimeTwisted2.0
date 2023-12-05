@@ -1,1 +1,1 @@
-action_end_sound(sndMetalLaser);
+audio_stop_sound(sndMetalLaser);

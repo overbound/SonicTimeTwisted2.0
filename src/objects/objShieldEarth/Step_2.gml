@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Set offset
 switch player_id.animation
 {

@@ -1,5 +1,5 @@
 action_set_relative(1);
-action_inherited();
+event_inherited();
 var __b__;
 __b__ = action_if_variable(falling, true, 0);
 if __b__

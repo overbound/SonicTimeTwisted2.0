@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 offset = 137;
 rotation_speed = 3;
 image_xscale=1;

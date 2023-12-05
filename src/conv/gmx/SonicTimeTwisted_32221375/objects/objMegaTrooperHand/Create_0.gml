@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 remove = 0;
 ydirection = 0;
 yspeed = -2;

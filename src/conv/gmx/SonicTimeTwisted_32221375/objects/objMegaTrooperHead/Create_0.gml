@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Create jaw and eyes  
     jaw = MegaTrooperJawNew(x, y + 56);
   with jaw {

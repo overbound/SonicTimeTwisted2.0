@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script = player_reaction_FF_orb;
 force = 13.5;
 rotation_speed = 5;

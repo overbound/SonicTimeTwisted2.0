@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script = player_reaction_breakable_nobounce;
 image_speed = 0;
 if objProgram.in_past image_index = 1;

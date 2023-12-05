@@ -1,1 +1,1 @@
-action_inherited();
+event_inherited();

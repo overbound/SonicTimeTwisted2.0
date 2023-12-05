@@ -1,1 +1,1 @@
-action_bounce(0, 1);
+move_bounce_all(0);

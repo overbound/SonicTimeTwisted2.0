@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 left = instance_create(x, y, objShieldEarth_Rock);
 left.image_index = 0;
 left.shield = id;

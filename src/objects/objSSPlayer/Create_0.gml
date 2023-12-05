@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 with (other) {
 instance_create(x,y,objSSCamera);
 rings=0;

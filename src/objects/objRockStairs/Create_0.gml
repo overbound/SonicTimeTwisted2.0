@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 fall=false;
 reaction_script=noone;
 yreal=y;

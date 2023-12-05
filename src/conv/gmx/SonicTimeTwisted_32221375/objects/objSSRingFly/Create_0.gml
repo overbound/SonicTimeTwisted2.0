@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 speed = 5;
 zspeed = 4;
 timer=256;

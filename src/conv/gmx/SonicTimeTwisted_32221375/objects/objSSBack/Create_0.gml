@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 // Initialize background
 image_speed = 0;
 var relative_y;

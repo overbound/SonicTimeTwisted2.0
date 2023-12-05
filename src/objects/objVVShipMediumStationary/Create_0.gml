@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 height = ystart;
 target_y = ystart;
 moving = false;

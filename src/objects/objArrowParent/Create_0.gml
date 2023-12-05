@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 reaction_script=player_reaction_harmful;
 child=instance_create(x,y,objArrowChild);
 hspeed=3;

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Initialize background
 var relative_y = 0.825;
 basex=__view_get( e__VW.XView, view_current );

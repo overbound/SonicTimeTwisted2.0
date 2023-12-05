@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 harm = instance_create(x,y,objSpikeRollerHarmful);
 reaction_script = player_reaction_spike_roller;
 active=false;

@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 image_speed = 0.25;
 reaction_script = player_reaction_warp;
 state = 0;

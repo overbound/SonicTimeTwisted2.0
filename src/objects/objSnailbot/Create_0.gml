@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 hsp = 0;    
 Dir = -1;
 span = 80;

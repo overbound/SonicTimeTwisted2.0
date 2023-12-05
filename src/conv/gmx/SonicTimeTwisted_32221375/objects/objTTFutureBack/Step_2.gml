@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 /// Update horizon
 //with water other.horizon.absolute_y = y;
 //horizon.image_index = objScreen.image_index*0.34;

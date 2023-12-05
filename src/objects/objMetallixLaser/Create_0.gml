@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 state = 10000;
 laser_height=108;
 gun_id=0;

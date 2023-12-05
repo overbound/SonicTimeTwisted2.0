@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 // Initialize background
 // parallax_create(tiled, back, left, top, width, height, hspeed, vspeed, relative_x,
 //                  relative_y, absolute_x, absolute_y, separation_x, separation_y);

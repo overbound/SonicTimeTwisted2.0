@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 z=34;//34
 alarm[0]=100;
 spr_direction=90;

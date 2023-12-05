@@ -1,4 +1,4 @@
-action_inherited();
+event_inherited();
 image_xscale = 2;
 image_yscale = 2;
 image_speed = 0.167;
