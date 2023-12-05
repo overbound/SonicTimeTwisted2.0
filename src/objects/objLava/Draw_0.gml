@@ -20,7 +20,7 @@ shader_reset();
         draw_sprite_part(sprLavaBubbles, floor(bubbleIndex)+i/64, 0, 0, min(abs(sprite_width-i), 64), 32, x+i, y-24);
     }
       
-draw_set_blend_mode(bm_add);
+gpu_set_blendmode(bm_add);
 draw_sprite_ext(sprPPLavaTopAdd,image_index,x,y-17,image_xscale*4,1,0,c_white,0.8);
-draw_set_blend_mode(bm_normal);
+gpu_set_blendmode(bm_normal);
 

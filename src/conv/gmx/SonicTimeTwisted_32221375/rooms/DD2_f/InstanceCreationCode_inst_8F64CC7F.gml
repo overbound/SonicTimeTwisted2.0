@@ -1,1 +1,0 @@
-reaction_script=player_reaction_ddf_change_to_inside_bg;

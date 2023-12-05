@@ -1,4 +1,4 @@
 event_inherited();
 state = 0;
 
-action_set_alarm(500, 0);
+alarm_set(0, 500);

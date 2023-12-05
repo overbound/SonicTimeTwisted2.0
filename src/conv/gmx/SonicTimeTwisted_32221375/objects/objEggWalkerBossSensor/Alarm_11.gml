@@ -1,1 +1,0 @@
-instance_create(x+11, y+68, objExplosionGroup);

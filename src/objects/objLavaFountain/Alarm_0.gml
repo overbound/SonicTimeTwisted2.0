@@ -1,2 +1,2 @@
-action_set_alarm(40, 1);
+alarm_set(1, 40);
 reaction_script = player_reaction_fire;;

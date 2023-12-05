@@ -1,2 +1,0 @@
-event_user(state);
-

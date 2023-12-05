@@ -1,6 +1,4 @@
-var __b__;
-__b__ = action_if_variable(instance_exists(parent_id), false, 0);
-if __b__
+if (!instance_exists(parent_id))
 {
-action_kill_object();
+	instance_destroy();
 }

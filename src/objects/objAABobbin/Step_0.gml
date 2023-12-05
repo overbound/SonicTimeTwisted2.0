@@ -1,18 +1,15 @@
-var __b__;
-__b__ = action_if_variable(alarm[0], 0, 2);
-if __b__
+if (alarm[0] > 0)
 {
-__b__ = action_if_variable(image_speed, 0, 0);
-if __b__
-{
-image_speed = 0.5;
-}
+	if (image_speed == 0)
+	{
+		image_speed = 0.5;
+	}
 }
 /// Handle movement
 switch type
 {
-case 1: x = xstart+cos(objScreen.image_index/16)*16; break;
-case 2: y = ystart+cos(objScreen.image_index/16)*16; break;
+	case 1: x = xstart+cos(objScreen.image_index/16)*16; break;
+	case 2: y = ystart+cos(objScreen.image_index/16)*16; break;
 }
 // 3D effect
 if type>0

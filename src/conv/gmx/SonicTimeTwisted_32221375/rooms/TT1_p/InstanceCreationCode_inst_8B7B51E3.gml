@@ -1,1 +1,0 @@
-reaction_script=player_reaction_TT1_p_enter_room;

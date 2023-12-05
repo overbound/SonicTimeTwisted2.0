@@ -1,10 +1,10 @@
 event_inherited();
 image_speed = 0;
 remove = 2;
-action_set_motion(75, 4);
-var __b__;
-__b__ = action_if_variable(objProgram.in_past, true, 0);
-if __b__
+direction = 75;
+speed = 4;
+
+if (objProgram.in_past)
 {
-image_index = 1;
+	image_index = 1;
 }

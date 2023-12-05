@@ -1,3 +1,3 @@
-action_kill_object();
+instance_destroy();
 with objAAKnuckles instance_destroy();
 

@@ -1,6 +1,4 @@
-var __b__;
-__b__ = action_if_variable(frozen, false, 0);
-if __b__
+if (!frozen)
 {
 /// Enemy behavior
 // ignore if turned around

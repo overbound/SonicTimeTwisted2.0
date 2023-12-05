@@ -27,4 +27,4 @@ with parallax_create(1, backAAFClouds, 0, 160, 460, 167, -0.2, 0, 0.8, relative_
 // sky
 parallax_create(1, backVVFSky, 0, 0, 1, 320, 0, 0, 0.85, relative_y, 0, 0, 0, 0);
 
-action_set_alarm(1, 1);
+alarm_set(1, 1);

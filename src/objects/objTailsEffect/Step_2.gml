@@ -1,9 +1,7 @@
-var __b__;
-__b__ = action_if_variable(player_id.character_id, 2, 0);
-if !__b__
+if (player_id.character_id != 2)
 {
 {
-action_kill_object();
+instance_destroy();
 exit;
 }
 }

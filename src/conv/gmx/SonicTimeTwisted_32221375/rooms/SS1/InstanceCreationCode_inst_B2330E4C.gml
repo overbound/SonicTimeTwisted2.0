@@ -1,1 +1,0 @@
-reaction_script=player_reaction_ss_stop_sound;

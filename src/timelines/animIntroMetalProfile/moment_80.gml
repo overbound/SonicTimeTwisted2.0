@@ -1,1 +1,1 @@
-action_set_hspeed(1);
+hspeed = 1;

@@ -20,7 +20,7 @@ for (cy=ly; cy<=ry; cy+=sy)
 {
     for (cx=lx; cx<=rx; cx+=sx)
     {
-        if back>-1 draw_background_part_ext(back, left, top, width, height, cx, cy, image_xscale, image_yscale, image_blend, image_alpha); 
+        if back>-1 draw_sprite_part_ext(back,0, left, top, width, height, cx, cy, image_xscale, image_yscale, image_blend, image_alpha); 
         
         else{
         

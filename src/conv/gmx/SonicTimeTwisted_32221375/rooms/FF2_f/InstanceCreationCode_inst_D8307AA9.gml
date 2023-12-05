@@ -1,1 +1,0 @@
-reaction_script=player_reaction_shift_camera_right;

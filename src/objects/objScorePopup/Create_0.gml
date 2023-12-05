@@ -1,3 +1,3 @@
 event_inherited();
 image_speed = 0;
-action_set_alarm(32, 0);
+alarm_set(0, 32);

@@ -10,4 +10,4 @@ max_speed = 4;
 turning = 0;
 hsp=-4;
 
-action_set_hspeed(-4);
+hspeed = -4;

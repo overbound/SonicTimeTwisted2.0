@@ -2,4 +2,4 @@
 while place_meeting(x, y, other.id) {x -= cosine[direction]; y += sine[direction];}
 
 hspeed = -hspeed;
-action_set_alarm(120, 0);
+alarm_set(0, 120);

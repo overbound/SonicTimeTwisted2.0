@@ -1,2 +1,0 @@
-path=pthSSMetalSonicP4
-exitDirection=270;

@@ -1,1 +1,0 @@
-ramp = true;climbable=true;

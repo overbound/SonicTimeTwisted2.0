@@ -14,5 +14,5 @@ target2 = noone;
 explosion = noone;
 offset=0;
 
-action_path(pathVV1BossToNeutral, 4, 0, 1);
-action_set_alarm(120, 1);
+path_start(pathVV1BossToNeutral, 4, 0, 1);
+alarm_set(1, 120);

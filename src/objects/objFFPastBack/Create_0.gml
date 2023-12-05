@@ -36,4 +36,4 @@ parallax_create(1, backFFPTrees, 0, 32, 64, 32, 0, 0, 0.89, relative_y, 0, 407, 
 // stars
 for (var i=0; i<28; i+=1) parallax_create(1, backFFPStars, 0, (i mod 4)*16, 64, 16, 0, 0, 0.80+(i*0.005), relative_y, 0, i*16, 0, 0);
 
-action_kill_object();
+instance_destroy();

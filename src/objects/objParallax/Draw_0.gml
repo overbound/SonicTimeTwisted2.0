@@ -52,7 +52,7 @@ for (cy=ly; cy<=ry; cy+=sy)
 {
     for (cx=lx; cx<=rx; cx+=sx)
     {
-        if back>-1 draw_background_part_ext(back, left, top, width, height, floor(cx), cy, image_xscale, image_yscale, image_blend, image_alpha); else
+        if back>-1 draw_sprite_part_ext(back,0, left, top, width, height, floor(cx), cy, image_xscale, image_yscale, image_blend, image_alpha); else
         draw_sprite_ext(sprite_index, image_index, floor(cx), cy, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
     }
 }

@@ -10,8 +10,8 @@ threeDee = true;
 d3d_start();
 d3d_set_culling(1)
 d3d_set_hidden(1)
-draw_set_alpha_test(true);
-draw_set_alpha_test_ref_value(10);
+gpu_set_alphatestenable(true);
+gpu_set_alphatestref(10);
 /*
 if objProgram.in_past
     background=backSSFuture;

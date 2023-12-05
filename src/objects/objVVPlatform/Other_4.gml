@@ -1,10 +1,7 @@
 event_inherited();
-var __b__;
-__b__ = action_if_variable(mode, 0, 2);
-if __b__
+
+if (mode > 0)
 {
-{
-remove = 0;
-depth = 2;
-}
+	remove = 0;
+	depth = 2;
 }

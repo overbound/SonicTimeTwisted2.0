@@ -5,4 +5,4 @@ set_input_enabled(false);
 //play_music_intro(objMusic.musicIntroAsset,0);
 //with objLevel started = true;
 
-action_path(AAZPathPlane, 3, 0, 1);
+path_start(AAZPathPlane, 3, 0, 1);

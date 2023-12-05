@@ -63,10 +63,8 @@ if(is_touchscreen != prev_is_touchscreen)
     event_user(3);
 }
 
-/* */
-var __b__;
-__b__ = action_if(!is_touchscreen);
-if __b__
+
+if (!is_touchscreen)
 {
 {
 /// Clear message
@@ -221,8 +219,7 @@ if xSpeed == 0 {
 /* */
 }
 }
-__b__ = action_if(is_touchscreen);
-if __b__
+if (is_touchscreen)
 {
 {
 /// Update mouse positions
@@ -349,9 +346,8 @@ view_object[0] = self;
 view_hspeed[0] = 24;
 */
 
-/* */
-__b__ = action_if_variable(selectState, 1, 0);
-if __b__
+
+if (selectState == 1)
 {
 /// select act
 if(drag_registered)
@@ -459,8 +455,7 @@ if(cancelled)
 else
 {
 {
-__b__ = action_if_variable(selectState, 2, 0);
-if __b__
+if (selectState == 2)
 {
 /// select character
 if(drag_registered)
@@ -528,8 +523,7 @@ if(cancelled)
 else
 {
 {
-__b__ = action_if_variable(selectState, 5, 0);
-if __b__
+if (selectState == 5)
 {
 {
 /// Manage clicks
@@ -563,8 +557,7 @@ if(tap_registered)
 else
 {
 {
-__b__ = action_if(selectState == 0 || selectState == 4);
-if __b__
+if (selectState == 0 || selectState == 4)
 {
 {
 /// Drag camera

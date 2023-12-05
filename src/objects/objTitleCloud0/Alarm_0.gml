@@ -1,1 +1,2 @@
-action_set_gravity(90, .08);
+gravity = .08;
+gravity_direction = 90;

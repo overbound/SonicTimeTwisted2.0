@@ -1,2 +1,0 @@
-climbable=true;
-ramp = true;

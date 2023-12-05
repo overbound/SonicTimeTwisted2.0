@@ -28,8 +28,8 @@ surface_reset_target();
 xoffset+=xspeed;
 shader_set(NebulaShader);
 texture_set_stage(sampler_index_warp, texture_warp);
-draw_background(NebulaBkg, __view_get( e__VW.XView, view_current )-42, __view_get( e__VW.YView, view_current )-128);
-draw_background_tiled(NebulaBkg, __view_get( e__VW.XView, view_current )+xoffset, __view_get( e__VW.YView, view_current )-128)
+draw_sprite(NebulaBkg,0, __view_get( e__VW.XView, view_current )-42, __view_get( e__VW.YView, view_current )-128);
+draw_sprite_tiled(NebulaBkg,0, __view_get( e__VW.XView, view_current )+xoffset, __view_get( e__VW.YView, view_current )-128)
 shader_reset();
 with (objParallax) event_perform(ev_draw, 0);
 /*

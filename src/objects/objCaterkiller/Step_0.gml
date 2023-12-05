@@ -1,9 +1,6 @@
-var __b__;
-__b__ = action_if_variable(frozen, false, 0);
-if __b__
+if (!frozen)
 {
-__b__ = action_if_variable(bouncing, false, 0);
-if __b__
+if (!bouncing)
 {
 /// Enemy behavior
 var i;

@@ -1,1 +1,0 @@
-reaction_script=level_goto_tt1p;

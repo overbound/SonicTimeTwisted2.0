@@ -1,1 +1,0 @@
-exitDirection=90;

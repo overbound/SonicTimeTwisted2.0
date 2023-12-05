@@ -224,9 +224,7 @@ sprite_index=sprBackLeftLeg;
 
 }
 
-var __b__;
-__b__ = action_if_variable(image_xscale, 1, 0);
-if __b__
+if (image_xscale == 1)
 {
 {
 /// Left Gun
@@ -490,7 +488,7 @@ sprite_index=sprBackLeftLeg;
 /* */
 }
 }
-action_set_alarm(400, 1);
+alarm_set(1, 400);
 /// Start Walking
 timeline_index = timeEggWalkerStartWalk
 timeline_position = 0;

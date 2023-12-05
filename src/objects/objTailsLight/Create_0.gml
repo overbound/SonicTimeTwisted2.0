@@ -1,3 +1,4 @@
 play_sfx(sndDashOfLight,10);
 
-action_move("001000000", 7.5);
+direction = 315;
+speed = 7.5;

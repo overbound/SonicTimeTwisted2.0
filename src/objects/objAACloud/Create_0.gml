@@ -1,2 +1,3 @@
 event_inherited();
-action_set_gravity(180, .04);
+gravity = .04;
+gravity_direction = 180;

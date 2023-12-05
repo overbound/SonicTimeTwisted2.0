@@ -1,6 +1,4 @@
-var __b__;
-__b__ = action_if_variable(active, true, 0);
-if __b__
+if (active)
 {
 {
 /// Plane Motion

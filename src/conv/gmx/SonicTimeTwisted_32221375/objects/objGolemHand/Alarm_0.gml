@@ -1,2 +1,0 @@
-reaction_script2=player_reaction_golem_hand_target;
-

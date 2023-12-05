@@ -1,1 +1,1 @@
-action_set_hspeed(24);
+hspeed = 24;

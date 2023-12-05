@@ -1,12 +1,8 @@
-var __b__;
-__b__ = action_if_variable(objProgram.spawn_tag, 0, 0);
-if !__b__
+if (objProgram.spawn_tag != 0)
 {
-{
-was_removed = true;
-action_kill_object();
-exit;
-}
+	was_removed = true;
+	instance_destroy();
+	exit;
 }
 event_inherited();
 /// Initialize
@@ -51,4 +47,7 @@ with objPlayer
     camera.bottom = camera.y+(__view_get( e__VW.HView, camera.view_id )*0.5);
 }
 
-action_timeline_set(timeAA1Boss, 0, 0, 0);
+timeline_index = timeAA1Boss;
+timeline_position = 0;
+timeline_running = 1;
+timeline_loop = 0;

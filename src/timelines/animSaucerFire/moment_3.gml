@@ -1,1 +1,4 @@
-action_timeline_set(animSaucer, 0, 0, 1);
+timeline_index = animSaucer;
+timeline_position = 0;
+timeline_running = 1;
+timeline_loop = 1;

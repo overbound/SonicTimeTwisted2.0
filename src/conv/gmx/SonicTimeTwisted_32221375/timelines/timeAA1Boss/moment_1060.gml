@@ -1,2 +1,0 @@
-boss.firing = true;
-

@@ -4,9 +4,7 @@ if(!is_in_view) exit;
 // if there is no player to find, exit as well
 if(!instance_exists(objPlayer)) exit;
 
-var __b__;
-__b__ = action_if_variable(frozen, false, 0);
-if __b__
+if (!frozen)
 {
 /// Enemy behavoir
 // check if player is within range that activates most of this enemy's state machine

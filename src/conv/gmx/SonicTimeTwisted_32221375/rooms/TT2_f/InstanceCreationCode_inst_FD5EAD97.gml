@@ -1,2 +1,0 @@
-harmful = true;
-climbable=true;

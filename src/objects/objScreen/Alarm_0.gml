@@ -4,6 +4,6 @@ if (objProgram.device_info & DEVICE_TYPE_COMPUTER) {
         window_center();
     }
 }
-texture_set_interpolation(interpolation);
+gpu_set_texfilter(interpolation);
 
 

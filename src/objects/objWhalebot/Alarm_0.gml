@@ -1,2 +1,5 @@
 image_xscale = -image_xscale;
-action_timeline_set(animWhalebot, 0, 0, 1);
+timeline_index = animWhalebot;
+timeline_position = 0;
+timeline_running = 1;
+timeline_loop = 1;

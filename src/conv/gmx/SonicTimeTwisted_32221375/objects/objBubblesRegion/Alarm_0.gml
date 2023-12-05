@@ -1,2 +1,0 @@
-allow_collision = true;
-

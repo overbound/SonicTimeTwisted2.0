@@ -9,14 +9,12 @@ draw_sprite_ext(sprMoleGun, 0, hand_point_x, hand_point_y, facing, 1, radtodeg(f
 // debug only
 if debug_mode draw_circle_color(damage_point_x, damage_point_y, 7, c_red, c_fuchsia, true);
 
-var __b__;
-__b__ = action_if_variable(frozen, true, 0);
-if __b__
+if (frozen)
 {
-/// Render ice block
-// get offset from time
-var offset = (-1+(((90-alarm[1]) div 4) mod 2)*2)*(alarm[1]<45);
-// draw ice block
-draw_sprite(sprShieldIceBlock, 0, x+offset, y);
+	/// Render ice block
+	// get offset from time
+	var offset = (-1+(((90-alarm[1]) div 4) mod 2)*2)*(alarm[1]<45);
+	// draw ice block
+	draw_sprite(sprShieldIceBlock, 0, x+offset, y);
 
 }

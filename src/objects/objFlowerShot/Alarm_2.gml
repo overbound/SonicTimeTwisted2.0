@@ -1,4 +1,4 @@
-action_set_alarm(120, 0);
+alarm_set(0, 120);
 image_speed = 0;
 fire = false;
 frozen = false;

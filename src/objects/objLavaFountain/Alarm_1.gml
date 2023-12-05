@@ -7,4 +7,4 @@ with lavaId
     fall_speed = other.fall_speed;
 }
 
-action_set_alarm((length div fall_speed)+6, 2);
+alarm_set(2, (length div fall_speed)+6);

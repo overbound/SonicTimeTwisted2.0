@@ -1,1 +1,0 @@
-init_lamp_post(27);

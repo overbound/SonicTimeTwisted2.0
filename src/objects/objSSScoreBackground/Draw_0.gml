@@ -1,4 +1,4 @@
-draw_background_ext(bg, bg_x, bg_y, 2, 1, 0, c_white, 0.2);
+draw_sprite_ext(bg,0, bg_x, bg_y, 2, 1, 0, c_white, 0.2);
 if(objProgram.saveSlot > -2) // emeralds only appear in regular gameplay mode
 {
     for(var i = 0; i < level; i++)

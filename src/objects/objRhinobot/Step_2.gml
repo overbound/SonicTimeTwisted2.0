@@ -1,10 +1,6 @@
-var __b__;
-__b__ = action_if_variable(frozen, 0, 0);
-if __b__
+if (!frozen)
 {
-{
-__b__ = action_if_variable(state, 4, 1);
-if __b__
+if (state < 4)
 {
 /// Movement and collision
 // reset collision data
@@ -25,6 +21,5 @@ else
     if (i<offset_y*2) y += i; else {x -= hspeed; cliff_facing = sign(hspeed);}
 }
 
-}
 }
 }

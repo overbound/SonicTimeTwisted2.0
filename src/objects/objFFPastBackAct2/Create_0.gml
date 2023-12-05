@@ -66,5 +66,5 @@ parallax_create(1, backFFPStars, 0, 32, 256, 16, 0, 0, 0.935, relative_y, 0, 416
 parallax_create(1, backFFPStars, 0, 48, 256, 16, 0, 0, 0.94, relative_y, 0, 432, 0, 0);
 
 /* */
-action_kill_object();
+instance_destroy();
 /*  */

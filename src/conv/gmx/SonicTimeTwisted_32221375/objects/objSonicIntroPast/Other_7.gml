@@ -1,2 +1,0 @@
-loopCount +=1;
-

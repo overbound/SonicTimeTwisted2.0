@@ -82,7 +82,7 @@ surface_reset_target();
 /* */
 ///Draw the surface.
 // draw a dummy background for the effect to cover
-//draw_background_ext(zonebkg, 0, 0, 2, 2, 0, c_white, 1);
+//draw_sprite_ext(zonebkg,0, 0, 0, 2, 2, 0, c_white, 1);
 // turn on the time travel effect shader
 if (__view_get( e__VW.YView, 0 ) < room_height - __view_get( e__VW.HView, 0 ) - 64)
 {

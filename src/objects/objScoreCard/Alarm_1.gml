@@ -1,2 +1,2 @@
 state = 2;
-action_set_alarm(176, 2);
+alarm_set(2, 176);

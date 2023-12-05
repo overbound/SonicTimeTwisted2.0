@@ -1,1 +1,0 @@
-reaction_script = noone;

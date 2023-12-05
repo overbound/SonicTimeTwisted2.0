@@ -1,2 +1,0 @@
-init_titlecard(true);
-

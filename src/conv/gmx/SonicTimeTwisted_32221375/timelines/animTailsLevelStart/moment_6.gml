@@ -1,2 +1,0 @@
-animation_new = "idle"
-

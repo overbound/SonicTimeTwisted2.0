@@ -1,6 +1,7 @@
-var __b__;
-__b__ = action_if_variable(tag, objProgram.spawn_tag, 0);
-if __b__
+if (tag == objProgram.spawn_tag)
 {
-action_timeline_set(animLampPost, 0, 0, 1);
+	timeline_index = animLampPost;
+	timeline_position = 0;
+	timeline_running = 1;
+	timeline_loop = 1;
 }

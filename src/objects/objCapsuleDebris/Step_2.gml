@@ -1,7 +1,6 @@
 event_inherited();
-var __b__;
-__b__ = action_if_variable(alarm[0], 0, 3);
-if __b__
+
+if (alarm[0] <= 0)
 {
-visible = objScreen.flashing_visible;
+	visible = objScreen.flashing_visible;
 }

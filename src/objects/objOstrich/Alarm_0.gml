@@ -1,12 +1,10 @@
-var __b__;
-__b__ = action_if_variable(frozen, false, 0);
-if __b__
+if (!frozen)
 {
-/// activate start drilling
-state=1;
+	/// activate start drilling
+	state=1;
 
 }
 else
 {
-action_set_alarm(10, 0);
+	alarm_set(0, 10);
 }

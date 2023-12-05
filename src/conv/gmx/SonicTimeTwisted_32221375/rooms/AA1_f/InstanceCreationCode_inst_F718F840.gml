@@ -1,1 +1,0 @@
-angleNumber = 4;

@@ -1,6 +1,7 @@
 event_inherited();
 remove = 0;
-action_set_gravity(270, .15);
+gravity = .15;
+gravity_direction = 270;
 reaction_script = player_reaction_fire;
 image_speed = 0;
-action_set_alarm(400, 0);
+alarm_set(0, 400);

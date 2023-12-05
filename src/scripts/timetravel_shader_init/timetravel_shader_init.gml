@@ -16,10 +16,10 @@ function timetravel_shader_init(argument0, argument1) {
 	if (!tts_ok) show_message_async("Could not compile Time Travel Shader!");
 	else
 	{
-	    tt_texhandle = background_get_texture(tt_texture);
-	    grad_texhandle = background_get_texture(tt_gradient);
-	    tt_width = background_get_width(tt_texture);
-	    tt_height = background_get_height(tt_texture);
+	    tt_texhandle = sprite_get_texture(tt_texture, 0);
+	    grad_texhandle = sprite_get_texture(tt_gradient, 0);
+	    tt_width = sprite_get_width(tt_texture);
+	    tt_height = sprite_get_height(tt_texture);
     
 	    // the parameter handle to be used to send the shift amount to the shader later in the draw event
 	    param_shift = shader_get_uniform(TimeTravelShader, "shift");

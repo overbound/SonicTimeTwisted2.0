@@ -37,4 +37,4 @@ for (var j=0; j<height; j+=1)
     }
 }
 
-action_kill_object();
+instance_destroy();

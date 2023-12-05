@@ -1,9 +1,5 @@
-var __b__;
-__b__ = action_if_variable(sprite_index, sprMetalFall, 0);
-if __b__
+if (sprite_index == sprMetalFall)
 {
-{
-image_index = 2;
-image_speed = 0;
-}
+	image_index = 2;
+	image_speed = 0;
 }

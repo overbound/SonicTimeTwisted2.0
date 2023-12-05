@@ -1,6 +1,4 @@
-var __b__;
-__b__ = action_if_variable(abs(xspeed), 6, 4);
-if __b__
+if (abs(xspeed) >= 6)
 {
 animation_new = "run";
 }

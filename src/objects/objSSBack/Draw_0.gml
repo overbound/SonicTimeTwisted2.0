@@ -12,10 +12,10 @@ with objParallax event_perform(ev_draw, 0);
 
 surface_reset_target()
 shader_set(DeflateShader);
-texture_set_interpolation(true);
+gpu_set_texfilter(true);
 // draw complete surface
 draw_surface_ext(surface, __view_get( e__VW.XView, view_current )-43, __view_get( e__VW.YView, view_current ), 1, 1, 0, c_white, 1);
-texture_set_interpolation(false);
+gpu_set_texfilter(false);
 shader_reset();
 
 // covers for bottom and top of surface

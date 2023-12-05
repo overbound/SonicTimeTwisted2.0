@@ -19,4 +19,4 @@ with parallax_create(1, backAAFClouds, 0, 160, 460, 167, -0.2, 0, 0.8, relative_
 // sky
 parallax_create(1, backAAPSky, 0, 0, 16, 165, 0, 0, 0.85, relative_y, 0, absolute_y-30, 0, 0); //-104
 
-action_kill_object();
+instance_destroy();

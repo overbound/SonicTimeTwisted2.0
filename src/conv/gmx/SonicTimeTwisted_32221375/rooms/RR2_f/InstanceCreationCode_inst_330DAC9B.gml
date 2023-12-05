@@ -1,2 +1,0 @@
-climbable=1;
-

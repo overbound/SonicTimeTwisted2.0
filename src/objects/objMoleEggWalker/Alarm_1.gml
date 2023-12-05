@@ -1,5 +1,7 @@
-action_set_motion(60, 5);
-action_set_gravity(270, .08);
+direction = 60;
+speed = 5;
+gravity = .08;
+gravity_direction = 270;
 image_index=1;
 image_xscale = 1;
 draw_bubble =false;

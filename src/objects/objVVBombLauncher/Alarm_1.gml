@@ -4,4 +4,4 @@ with instance_create(x-24, y, objVVBomb) direction = 185;
 // sound
 play_sfx(sndBombLaunch, 4);
 
-action_set_alarm(115, 2);
+alarm_set(2, 115);

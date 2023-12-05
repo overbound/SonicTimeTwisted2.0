@@ -26,6 +26,6 @@ oy[7] = 16;
 active=false;
 player_id = noone;
 
-action_move_point(0, 0, 0);
+move_towards_point(0, 0, 0);
 camera_pass = false;
 

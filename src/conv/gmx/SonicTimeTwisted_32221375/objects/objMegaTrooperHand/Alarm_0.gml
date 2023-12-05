@@ -1,2 +1,0 @@
-ydirection = -1;
-

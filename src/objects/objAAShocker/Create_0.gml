@@ -1,3 +1,6 @@
 event_inherited();
 reaction_script = player_reaction_AA_shocker;
-action_timeline_set(animAAShocker, 0, 0, 1);
+timeline_index = animAAShocker;
+timeline_position = 0;
+timeline_running = 1;
+timeline_loop = 1;

@@ -64,8 +64,8 @@ if objProgram.in_past {
             break;
     }
 }
-bg_x = __view_get( e__VW.WView, view_current )/2 - background_get_width(bg);
-bg_y = (__view_get( e__VW.HView, view_current ) - background_get_height(bg))/2;
+bg_x = __view_get( e__VW.WView, view_current )/2 - sprite_get_width(bg);
+bg_y = (__view_get( e__VW.HView, view_current ) - sprite_get_height(bg))/2;
 em_x = __view_get( e__VW.WView, view_current )/2 - 17 * (level - 1);
 em_y = 96;
 oem_x = __view_get( e__VW.WView, view_current )/2 - 8 * (other_level - 1);

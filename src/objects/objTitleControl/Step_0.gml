@@ -1,6 +1,4 @@
-var __b__;
-__b__ = action_if_variable(state, 3, 1);
-if __b__
+if (state < 3)
 {
 {
 switch(state)
@@ -47,12 +45,10 @@ switch(state)
 else
 {
 {
-__b__ = action_if_variable(state, 4, 0);
-if !__b__
+if (state != 4)
 {
 {
-__b__ = action_if_variable(skipping, 0, 0);
-if __b__
+if (!skipping)
 {
 {
 /// Start Menu

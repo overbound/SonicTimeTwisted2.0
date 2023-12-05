@@ -1,2 +1,2 @@
 image_speed = 0;
-action_set_alarm(10, 0);
+alarm_set(0, 10);

@@ -1,1 +1,0 @@
-reaction_script=player_reaction_DD1_prevent_sonic_shield;

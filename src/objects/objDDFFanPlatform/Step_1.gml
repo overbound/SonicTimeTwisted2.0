@@ -1,12 +1,10 @@
-var __b__;
-__b__ = action_if_variable(mode, 0, 0);
-if __b__
+if (mode == 0)
 {
-y = floor(ystart+cos(objScreen.image_index/time)*offset);
+	y = floor(ystart+cos(objScreen.image_index/time)*offset);
 }
 else
 {
-y = floor(ystart+sin(objScreen.image_index/time)*offset);
+	y = floor(ystart+sin(objScreen.image_index/time)*offset);
 }
 ///animation direction
 

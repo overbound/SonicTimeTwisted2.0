@@ -1,10 +1,7 @@
-var __b__;
-__b__ = action_if(destroyed && frontRightLeg[1].stop == true && frontLeftLeg[1].stop == true && backLeftLeg[1].stop == true && backRightLeg[1].stop == true);
-if !__b__
+if !(destroyed && frontRightLeg[1].stop == true && frontLeftLeg[1].stop == true && backLeftLeg[1].stop == true && backRightLeg[1].stop == true)
 {
 {
-__b__ = action_if_variable(image_xscale, 1, 0);
-if __b__
+if (image_xscale == 1)
 {
 {
 /// Leg Movement Left

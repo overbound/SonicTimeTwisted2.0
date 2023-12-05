@@ -1,12 +1,11 @@
-var __b__;
-__b__ = action_if_variable(visible, 1, 0);
-if __b__
+if (visible)
 {
-{
-action_timeline_set(animExplosionBomb, 0, 0, 0);
-visible = false;
-reaction_script = -1;
-speed=0;
+	timeline_index = animExplosionBomb;
+	timeline_position = 0;
+	timeline_running = 1;
+	timeline_loop = 0;
+	visible = false;
+	reaction_script = -1;
+	speed=0;
 
-}
 }

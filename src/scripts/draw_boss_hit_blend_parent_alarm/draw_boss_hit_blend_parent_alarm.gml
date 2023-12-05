@@ -3,9 +3,9 @@ function draw_boss_hit_blend_parent_alarm() {
 	{
 	    if (objScreen.flashing_visible)
 	    {
-	        draw_set_blend_mode_ext(10, 1);
+	        gpu_set_blendmode_ext(10, 1);
 	        draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false);
-	        draw_set_blend_mode(bm_normal);
+	        gpu_set_blendmode(bm_normal);
 	    }
 	}
 

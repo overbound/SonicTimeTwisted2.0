@@ -1,8 +1,6 @@
-var __b__;
-__b__ = action_if_variable(instance_exists(parent_id), true, 0);
-if __b__
+if (instance_exists(parent_id))
 {
-/// Timer
-if timer {timer -= 1; if not timer instance_destroy();}
+	/// Timer
+	if timer {timer -= 1; if not timer instance_destroy();}
 
 }

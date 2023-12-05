@@ -8,5 +8,8 @@ reaction_script = player_reaction_enemy;
 max_speed = 4;
 turning = 0;
 
-action_timeline_set(animWhalebot, 0, 0, 1);
-action_set_hspeed(-3);
+timeline_index = animWhalebot;
+timeline_position = 0;
+timeline_running = 1;
+timeline_loop = 1;
+hspeed = -3;
