@@ -4,7 +4,6 @@
 function object_get_depth(argument0) {
 
 	switch(argument0) {
-        case objMetalSonicCharge:
         case objCloudTransition:
         case objEnterFFZ:
         case objEnterTTZF:
@@ -562,38 +561,6 @@ function object_get_depth(argument0) {
             return 17;
         case objTitleWater:
             return 20;
-        case objProgram:
-        case objSaveBg:
-        case objSSScoreBackground:
-        case objSSFutureTrack1_1:
-        case objSSFutureTrack1_2:
-        case objSSFutureTrack2_1:
-        case objSSFutureTrack2_2:
-        case objSSFutureTrack3_1:
-        case objSSFutureTrack3_2:
-        case objSSFutureTrack4_1:
-        case objSSFutureTrack4_2:
-        case objSSFutureTrack5_1:
-        case objSSFutureTrack5_2:
-        case objSSFutureTrack6_1:
-        case objSSFutureTrack6_2:
-        case objSSFutureTrack7_1:
-        case objSSFutureTrack7_2:
-        case objSSPastTrack1_1:
-        case objSSPastTrack1_2:
-        case objSSPastTrack2_1:
-        case objSSPastTrack2_2:
-        case objSSPastTrack3_1:
-        case objSSPastTrack3_2:
-        case objSSPastTrack4_1:
-        case objSSPastTrack4_2:
-        case objSSPastTrack5_1:
-        case objSSPastTrack5_2:
-        case objSSPastTrack6_1:
-        case objSSPastTrack6_2:
-        case objSSPastTrack7_1:
-        case objSSPastTrack7_2:
-            return 100;
         case objSSCamera:
             return 101;
         case objMetallixUFOBg:
@@ -635,8 +602,6 @@ function object_get_depth(argument0) {
             return 1025;
         case objSSPastTrack1BG:
             return 2000;
-        case objTrack:
-            return 4000;
 		default:
 			return 0;
 	}
