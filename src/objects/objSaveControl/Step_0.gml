@@ -403,30 +403,32 @@ if(tap_registered)
         // depending on where the click is and what can be selected,
         // start the game or change the time period
         
+		var _mouse_x_scaled = mouse_x_scaled;
+		var _mouse_y_scaled = mouse_y_scaled;
         with slots[selectCheck] {
             // the check is only done if both past and future can be displayed
             // also, tapping an already selected time period starts the game
-            var do_start = true;
-            if (mouse_y_scaled <= bbox_top + 65)
+            var _do_start = true;
+            if (_mouse_y_scaled <= bbox_top + 65)
             {
                 if(visiblePast && visibleFuture)
                 {
-                    if(mouse_x_scaled < x && other.stageLeftRight == 1)
+                    if(_mouse_x_scaled < x && other.stageLeftRight == 1)
                     {
                         other.stageLeftRight = 0;
-                        do_start = false;
+                        _do_start = false;
                     }
                     else
                     {
-                        if(mouse_x_scaled >= x && other.stageLeftRight == 0)
+                        if(_mouse_x_scaled >= x && other.stageLeftRight == 0)
                         {
                             other.stageLeftRight = 1;
-                            do_start = false;
+                            _do_start = false;
                         }
                     }
                 }
             }
-            if(do_start)
+            if(_do_start)
             {
                 event_user(0);
             }

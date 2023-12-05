@@ -1,5 +1,5 @@
 function macros() {
-#macro VERSION "v1.1.3-dev"
+#macro VERSION "v2.0.0-dev"
 #macro GAMEPAD_POV_Y 7
 #macro GAMEPAD_POV_X 6
 #macro GAMEPAD_AXIS_V 5

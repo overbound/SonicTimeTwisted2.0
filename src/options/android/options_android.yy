@@ -2,6 +2,9 @@
   "resourceType": "GMAndroidOptions",
   "resourceVersion": "1.0",
   "name": "Android",
+  "ConfigValues": {
+    "Android": {"option_android_icon_adaptive_hdpi":"icons_adaptive/hdpi.png","option_android_icon_adaptive_xhdpi":"icons_adaptive/xhdpi.png","option_android_icon_adaptive_mdpi":"icons_adaptive/mdpi.png","option_android_icon_adaptive_xxhdpi":"icons_adaptive/xxhdpi.png","option_android_icon_adaptive_ldpi":"icons_adaptive/ldpi.png","option_android_icon_adaptive_xxxhdpi":"icons_adaptive/xxxhdpi.png","option_android_icon_adaptivebg_mdpi":"icons_adaptivebg/mdpi.png","option_android_icon_adaptivebg_xhdpi":"icons_adaptivebg/xhdpi.png","option_android_icon_adaptivebg_xxxhdpi":"icons_adaptivebg/xxxhdpi.png","option_android_icon_adaptivebg_hdpi":"icons_adaptivebg/hdpi.png","option_android_icon_adaptivebg_ldpi":"icons_adaptivebg/ldpi.png","option_android_icon_adaptivebg_xxhdpi":"icons_adaptivebg/xxhdpi.png","option_android_icon_adaptive_generate":"true","option_android_screen_depth":"1","option_android_launchscreen_fill":"2","option_android_splash_screens_portrait":"splash/portrait.png","option_android_splash_screens_landscape":"splash/landscape.png","option_android_attribute_allow_backup":"true","option_android_orient_portrait_flipped":"false","option_android_orient_portrait":"false","option_android_arch_x86_64":"true","option_android_arch_armv7":"true","option_android_package_product":"SonicTimeTwisted","option_android_package_company":"overboundstudio","option_android_version":"2.0.0","option_android_display_name":"Sonic Time Twisted",},
+  },
   "option_android_application_tag_inject": "",
   "option_android_arch_arm64": true,
   "option_android_arch_armv7": false,
