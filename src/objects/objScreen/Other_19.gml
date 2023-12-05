@@ -1,4 +1,5 @@
 /// @description  PostDraw event if integer scaling ON - draw app surface now
+gpu_set_blendenable(false);
 if (interpolation == 2) {
     gpu_set_texfilter(false);
     draw_surface_ext(application_surface, intscalex, intscaley, window_scale, window_scale, 0, c_white, 1);
@@ -6,4 +7,4 @@ if (interpolation == 2) {
 } else {
     draw_surface_ext(application_surface, intscalex, intscaley, window_scale, window_scale, 0, c_white, 1);
 }   
-
+gpu_set_blendenable(true);
