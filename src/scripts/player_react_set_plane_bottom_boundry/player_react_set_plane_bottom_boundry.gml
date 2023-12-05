@@ -11,5 +11,5 @@ function player_react_set_plane_bottom_boundry(argument0) {
 	} else camera.bottom = room_height;
 
 
-
+	return false;
 }

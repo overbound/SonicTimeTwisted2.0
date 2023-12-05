@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "SS1",
-  "creationCodeFile": "RoomCreationCode.gml",
+  "creationCodeFile": "rooms/SS1/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

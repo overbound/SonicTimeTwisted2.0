@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "DD2_f",
-  "creationCodeFile": "RoomCreationCode.gml",
+  "creationCodeFile": "rooms/DD2_f/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

@@ -19,6 +19,7 @@ if objProgram.spawn_tag == 0 {
             with cloud[2] visible = true;
             with cloud[3] visible = true;
             alarm[0]=120;
+			with objWater instance_destroy();
         }
     }
 }

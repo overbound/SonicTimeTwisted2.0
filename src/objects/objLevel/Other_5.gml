@@ -17,11 +17,17 @@ if cleared
     
     if ds_exists(objProgram.life_future_list,ds_type_list) {
         ds_list_destroy(objProgram.life_future_list);
+    }
+	
+    if ds_exists(objProgram.ring_future_list,ds_type_list) {
         ds_list_destroy(objProgram.ring_future_list);
     }
         
     if ds_exists(objProgram.life_past_list,ds_type_list) {
         ds_list_destroy(objProgram.life_past_list);
+    }
+        
+    if ds_exists(objProgram.ring_past_list,ds_type_list) {
         ds_list_destroy(objProgram.ring_past_list);
     }
     

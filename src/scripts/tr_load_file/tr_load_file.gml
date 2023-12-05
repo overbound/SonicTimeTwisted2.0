@@ -50,7 +50,7 @@ function tr_load_file(argument0) {
 	         _key = ds_map_find_next(_mapdata, _key)) {
 	         // replace "\n" symbol with a gms1 newline
 	         _value = _mapdata[? _key];
-	         _mapdata[? _key] = string_replace_all(_value, chr(10), "#");;
+	         _mapdata[? _key] = string_replace_all(_value, chr(10), "#");
 	    }
 	}
 
