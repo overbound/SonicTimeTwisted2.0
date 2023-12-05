@@ -11,3 +11,7 @@ if image_xscale == -2 {
    xoffset=426;
 } else xoffset=0;
 
+draw_event_number = 0;
+if (gpu_get_texfilter()) {
+	draw_event_number = 1;
+}
