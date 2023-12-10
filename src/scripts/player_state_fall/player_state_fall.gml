@@ -43,6 +43,28 @@ function player_state_fall() {
 	        instashield = noone;
 	        // bubble shield bounce
 	        if shield {if shield.timeline_index==animShieldBubbleAction return player_is_bouncing();}
+			
+			//Drop dash launching
+			if dropdash_charge == 20 {
+				dropdash_charge = 0;
+				dropDash = false;
+				camera.alarm[0] = 16;
+		        play_sfx(sndSpinDash);
+		        //dust = instance_create(xpos, ypos, obj_drop_dash_dust);
+		        stop_sound(sndDropDash);
+		        if (sign(xspeed) == facing) || (sign(xspeed) == 0){ //if player was moving forwards
+					xspeed = (xspeed / 4) + (drpspd * facing);
+		            xspeed = clamp(xspeed, -drpmax, drpmax);
+		        }else{ //else if player was moving backwards
+		            if relative_angle == 0 xspeed = drpspd * facing;
+		            else xspeed = (xspeed / 2) + (drpspd * facing);
+		            xspeed = clamp(xspeed, -drpmax, drpmax);
+		        }
+				return player_is_rolling();
+		        //dust.image_xscale = sign(xspeed);
+			}
+			
+			dropdash_charge = 0;
 	        break;
 	    case 3: // Knuckles
 	        if glide_falling
@@ -67,7 +89,20 @@ function player_state_fall() {
 	    // super transformation
 	    if superform and player_transform_input() player_transform(false); else
 	    if objProgram.special_future_current_level>=7 and (not objLevel.cleared) and objGameData.rings[0]>=50 and (character_id == 1) and not (superform or invincibility) and player_transform_input() return player_is_transforming(); else
-	    // jump action    
+	    // jump action
+		if input_check(cACTION)
+		{
+			if character_id == 1 //Sonic
+			{
+				if dropdash_charge > 0 && !dropDash{
+					dropdash_charge = min(dropdash_charge+1, 20);
+					if dropdash_charge >= 20{
+						//Drop dash fully ready
+						return player_is_drop_dashing();
+					}
+				}
+			}
+		}
 	    if input_check_pressed(cACTION)
 	    {
 	        // curl up
@@ -101,7 +136,15 @@ function player_state_fall() {
 	            case 3: return player_is_air_dashing(); break;
 	            case 4: return player_is_ice_attacking(); break;
 	            case 5: if underwater==false return player_is_shield_flying(); break;
-	            default: return player_is_shielding(); break;
+	            default: { /*return player_is_shielding();*/
+					//Begin charging Drop Dash
+					if character_id == 1 {//Sonic
+						if !shield && spinning && jumping && dropdash_charge == 0{
+							dropdash_charge++;
+						}
+					}
+					break;
+				}
 	            }
 	            break;
     
@@ -117,6 +160,14 @@ function player_state_fall() {
 	        break;
 	        }
 	    }
+	}
+	//Drop dash cancelling
+	if (input_check_released(cACTION)){
+		if dropdash_charge > 0 {
+			dropdash_charge = 0;
+			dropDash = false;
+			jump_action = true;
+		}
 	}
 	// animate
 	if (animation=="rise") and (yspeed>=0) {animation_new = "walk"; timeline_speed = 0.125;}
