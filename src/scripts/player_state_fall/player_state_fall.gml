@@ -49,7 +49,6 @@ function player_state_fall() {
 				dropdash_charge = 0;
 				dropDash = false;
 				camera.alarm[0] = 16;
-		        //dust = instance_create(xpos, ypos, obj_drop_dash_dust);
 		        if !superform play_sfx(sndSpinDash);
 				else play_sfx(sndPeeloutRelease);
 		        stop_sound(sndDropDash);
@@ -61,8 +60,10 @@ function player_state_fall() {
 		            else xspeed = (xspeed / 2) + (drpspd * facing);
 		            xspeed = clamp(xspeed, -drpmax, drpmax);
 		        }
+				//Create drop dash particle
+				part_type_scale(objResources.dropdash_dust, facing, 1);
+				part_particles_create(objLevel.particles, x, y, objResources.dropdash_dust, 1);
 				return player_is_rolling();
-		        //dust.image_xscale = sign(xspeed);
 			}
 			
 			dropdash_charge = 0;
@@ -168,6 +169,9 @@ function player_state_fall() {
 			dropdash_charge = 0;
 			dropDash = false;
 			jump_action = true;
+			//animate
+			animation_new = "spin";
+			timeline_speed = 1/max(5-abs(xspeed), 1);
 		}
 	}
 	// animate

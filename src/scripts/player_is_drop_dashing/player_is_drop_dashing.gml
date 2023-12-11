@@ -5,6 +5,9 @@ function player_is_drop_dashing(){
 	jump_action = false;
 	dropdash_charge = 20;
 	dropDash = true;
+	//animate
+	animation_new = "drop_dash";
+	timeline_speed = 1;
 	//sound
 	play_sfx(sndDropDash);
 }
