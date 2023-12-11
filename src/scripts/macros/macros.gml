@@ -101,6 +101,7 @@ function macros() {
 #macro Browser:DEVICE_BACK_BUTTON vk_escape
 #macro Browser:DEVICE_SUPPORTS_FILE_FIND 0
 
-
+#macro GAME_WIDTH 426
+#macro GAME_HEIGHT 240
 
 }
