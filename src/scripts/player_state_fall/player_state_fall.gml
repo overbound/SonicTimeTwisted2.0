@@ -49,8 +49,9 @@ function player_state_fall() {
 				dropdash_charge = 0;
 				dropDash = false;
 				camera.alarm[0] = 16;
-		        play_sfx(sndSpinDash);
 		        //dust = instance_create(xpos, ypos, obj_drop_dash_dust);
+		        if !superform play_sfx(sndSpinDash);
+				else play_sfx(sndPeeloutRelease);
 		        stop_sound(sndDropDash);
 		        if (sign(xspeed) == facing) || (sign(xspeed) == 0){ //if player was moving forwards
 					xspeed = (xspeed / 4) + (drpspd * facing);

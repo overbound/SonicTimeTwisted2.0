@@ -6,6 +6,5 @@ function player_is_drop_dashing(){
 	dropdash_charge = 20;
 	dropDash = true;
 	//sound
-	if !superform play_sfx(sndDropDash, 0);
-	else play_sfx(sndPeeloutRelease);
+	play_sfx(sndDropDash);
 }
