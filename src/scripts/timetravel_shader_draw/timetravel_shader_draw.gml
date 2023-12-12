@@ -1,4 +1,4 @@
-function timetravel_shader_draw(argument0, argument1, argument2, argument3) {
+function timetravel_shader_draw(_width, _height, _draw_x, _draw_y) {
 	// argument0 - sprite/screen width
 	// argument1 - sprite/screen height
 	// argument2 - surface draw x
@@ -9,14 +9,14 @@ function timetravel_shader_draw(argument0, argument1, argument2, argument3) {
 	    shader_set(TimeTravelShader);
     
 	        // send: the scaling of the sparkly SCD texture so it will repeat enough times to not be stretched
-	        shader_set_uniform_f(param_scl, argument0 / tt_width, argument1 / tt_height);
+	        shader_set_uniform_f(param_scl, _width / tt_width, _height / tt_height);
 	        // send: the texture index of the sparkly SCD texture
 	        texture_set_stage(stage_mask, tt_texhandle);
 	        // send: the texture index of the the gradient used to cycle the colours
 	        texture_set_stage(stage_grad, grad_texhandle);
         
 	        shader_set_uniform_f(param_shift, shift); // send the shift amount (for colour cycling) to the shader
-	        if (surface_exists(tt_surface)) draw_surface_ext(tt_surface, argument2, argument3, image_xscale, image_yscale, 0, c_white, 1);
+	        if (surface_exists(tt_surface)) draw_surface_ext(tt_surface, _draw_x, _draw_y, image_xscale, image_yscale, 0, c_white, 1);
 	    shader_reset();
 	}
 

@@ -9,7 +9,7 @@ event_inherited();
 // states and flags
 state = 0;
 // boss object
-boss = instance_create(objScreen.width, 230, objAA1Boss);
+boss = instance_create(objScreen.width, (objScreen.height-10), objAA1Boss);
 // moving platforms
 plat[0] = instance_create(256, 192, objAA1BossFloor);
 plat[0].hspeed = -4.5;
@@ -41,10 +41,10 @@ with objPlayer
     //xspeed = 6;
     player_is_standing();
     // lock camera at the start
-    camera.left = camera.x-(__view_get( e__VW.WView, camera.view_id )*0.5);
-    camera.right = camera.x+(__view_get( e__VW.WView, camera.view_id )*0.5);
-    camera.top = camera.y-(__view_get( e__VW.HView, camera.view_id )*0.5);
-    camera.bottom = camera.y+(__view_get( e__VW.HView, camera.view_id )*0.5);
+    camera.left = camera.x-(objScreen.width / 2);
+    camera.right = camera.x+(objScreen.width / 2);
+    camera.top = camera.y-(objScreen.height / 2);
+    camera.bottom = camera.y+(objScreen.height / 2);
 }
 
 timeline_index = timeAA1Boss;
