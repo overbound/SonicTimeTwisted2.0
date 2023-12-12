@@ -65,6 +65,7 @@
 		"_levelselect_menu_SSZ": "Sunken Saucer Zone",
 		"_levelselect_menu_PPZ": "Planetary Panic Zone",
 		"_levelselect_menu_GGZ": "Galacnik Gauntlet Zone",
+		"_levelselect_menu_CUTSCENES": "Cutscene Gallery",
 		"_levelselect_menu_SST": "Special Stage",
 		"_levelselect_menu_Back": "< Back",
 		"_levelselect_menu_A1F": "Act 1 - Future",
@@ -75,6 +76,17 @@
 		"_levelselect_ppanic_Title": "Planetary Panic Zone",
 		"_levelselect_ppanic_Act_1": "Act 1",
 		"_levelselect_ppanic_Act_2": "Act 2",
+		
+		"_levelselect_menu_CUTSCENES": "Cutscene Gallery",
+		"_cutselect_CUT1F": "Intro - Future",
+		"_cutselect_CUT1P": "Intro - Past",
+		"_cutselect_menu_CUT2": "Endings",
+		
+		"_levelselect_menu_CUT2": "Endings",
+		"_cutselect_CUT2Bad": "Bad/Normal Ending",
+		"_cutselect_CUT2NoChaos": "Time Ending",
+		"_cutselect_CUT2NoTime": "Super Ending",
+		"_cutselect_CUT2True": "True Ending",
 
 		"_menu_Back": "< Back",
 		"_menu_RemapAll": "Remap all",

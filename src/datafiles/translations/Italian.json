@@ -132,6 +132,7 @@
 		"_levelselect_menu_PPZ": "Zona Panico Planetario",
 		"_levelselect_menu_GGZ": "Zona Scontro Spaziale",
 		"_levelselect_menu_SST": "Area Speciale",
+		"_levelselect_menu_CUTSCENES": "Cutscene Gallery",
 		"_levelselect_menu_Back": "< Indietro",
 		"_levelselect_menu_A1F": "Atto 1 - Futuro",
 		"_levelselect_menu_A1P": "Atto 1 - Passato",
@@ -141,6 +142,17 @@
 		"_levelselect_ppanic_Title": "Zona Panico Planetario",
 		"_levelselect_ppanic_Act_1": "Atto 1",
 		"_levelselect_ppanic_Act_2": "Atto 2",
+		
+		"_levelselect_menu_CUTSCENES": "Cutscene Gallery",
+		"_cutselect_CUT1F": "Intro - Future",
+		"_cutselect_CUT1P": "Intro - Past",
+		"_cutselect_menu_CUT2": "Endings",
+		
+		"_levelselect_menu_CUT2": "Endings",
+		"_cutselect_CUT2Bad": "Bad/Normal Ending",
+		"_cutselect_CUT2NoChaos": "Time Ending",
+		"_cutselect_CUT2NoTime": "Super Ending",
+		"_cutselect_CUT2True": "True Ending",
 
 		"_menu_Back": "< Indietro",
 		"_menu_RemapAll": "Ri-assegna Tutto",

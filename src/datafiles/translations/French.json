@@ -131,6 +131,7 @@
 		"_levelselect_menu_PPZ": "Panique Planétaire",
 		"_levelselect_menu_GGZ": "Attaque Astrale",
 		"_levelselect_menu_SST": "Niveau Spécial",
+		"_levelselect_menu_CUTSCENES": "Cutscene Gallery",
 		"_levelselect_menu_Back": "< Retour",
 		"_levelselect_menu_A1F": "Acte 1 - Futur",
 		"_levelselect_menu_A1P": "Acte 1 - Passé",
@@ -140,6 +141,17 @@
 		"_levelselect_ppanic_Title": "Panique Planétaire",
 		"_levelselect_ppanic_Act_1": "Acte 1",
 		"_levelselect_ppanic_Act_2": "Acte 2",
+		
+		"_levelselect_menu_CUTSCENES": "Cutscene Gallery",
+		"_cutselect_CUT1F": "Intro - Future",
+		"_cutselect_CUT1P": "Intro - Past",
+		"_cutselect_menu_CUT2": "Endings",
+		
+		"_levelselect_menu_CUT2": "Endings",
+		"_cutselect_CUT2Bad": "Bad/Normal Ending",
+		"_cutselect_CUT2NoChaos": "Time Ending",
+		"_cutselect_CUT2NoTime": "Super Ending",
+		"_cutselect_CUT2True": "True Ending",
 		
 		"_menu_Back": "< Retour",
 		"_menu_RemapAll": "Tout réaffecter",

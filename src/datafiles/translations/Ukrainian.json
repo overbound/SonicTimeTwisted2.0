@@ -125,6 +125,7 @@
 		"_levelselect_menu_PPZ": "Зона Космічної Катастрофи",
 		"_levelselect_menu_GGZ": "Зона Позаземного Поєдинку",
 		"_levelselect_menu_SST": "Особливі рівні",
+		"_levelselect_menu_CUTSCENES": "Cutscene Gallery",
 		"_levelselect_menu_Back": "< Назад",
 		"_levelselect_menu_A1F": "Акт 1 - Майбутнє",
 		"_levelselect_menu_A1P": "Акт 1 - Минуле",
@@ -134,6 +135,17 @@
 		"_levelselect_ppanic_Title": "Зона Космічної Катастрофи",
 		"_levelselect_ppanic_Act_1": "Акт 1",
 		"_levelselect_ppanic_Act_2": "Акт 2",
+		
+		"_levelselect_menu_CUTSCENES": "Cutscene Gallery",
+		"_cutselect_CUT1F": "Intro - Future",
+		"_cutselect_CUT1P": "Intro - Past",
+		"_cutselect_menu_CUT2": "Endings",
+		
+		"_levelselect_menu_CUT2": "Endings",
+		"_cutselect_CUT2Bad": "Bad/Normal Ending",
+		"_cutselect_CUT2NoChaos": "Time Ending",
+		"_cutselect_CUT2NoTime": "Super Ending",
+		"_cutselect_CUT2True": "True Ending",
 
 		"_splash_ASonicfangame": "Фан-гра про Соніка від",
 		"_splash_ThisGameIsFreeware": "Ця гра розповсюджується безкоштовно.",

@@ -12,7 +12,8 @@ function menu_part_levelselect_items() {
 	menu_fn_add_option(tr("_levelselect_menu_PPZ"), 7);
 	menu_fn_add_option(tr("_levelselect_menu_GGZ"), 8);
 	menu_fn_add_option(tr("_levelselect_menu_SST"), 9);
-	menu_fn_add_option(tr("_levelselect_menu_Back"), 10);
+	menu_fn_add_option(tr("_levelselect_menu_CUTSCENES"), 10);
+	menu_fn_add_option(tr("_levelselect_menu_Back"), 11);
 
 	// this means "level select"
 	menu_type = 3;
