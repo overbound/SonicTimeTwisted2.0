@@ -8,10 +8,10 @@ function updateGolemObjects(argument0) {
   
 	  speedY += _gravity;
 
-	  var _mid_x = __view_get( e__VW.XView, 0 ) + (objScreen.width / 2);
-	  var _mid_y = __view_get( e__VW.YView, 0 );
+	  var _mid_x = camera_get_view_x(view_camera[view_current]) + (objScreen.width / 2);
+	  var _mid_y = camera_get_view_y(view_camera[view_current]);
   
-	  var _ratio = power(2, posZ / __view_get( e__VW.WView, 0 ));
+	  var _ratio = power(2, posZ / objScreen.width);
   
 	  image_xscale = _ratio;
 	  image_yscale = _ratio;

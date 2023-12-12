@@ -23,7 +23,7 @@ if (timer) {
             if (rootY == 1024) {
                 state = "float down";
                 timer = 32;
-                posZ = -__view_get( e__VW.WView, 0 ) + 3;
+                posZ = -objScreen.width + 3;
                 break;
             }
             if (causeQuake and rootY < floor_level) {
