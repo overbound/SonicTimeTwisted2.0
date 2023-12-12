@@ -1,6 +1,6 @@
-function draw_lives(argument0, argument1) {
+function draw_lives(_x, _y) {
 	// character "avatar"
-	draw_sprite(sprLives, character_id[view_current], argument0, argument1);
+	draw_sprite(sprLives, character_id[view_current], _x, _y);
 
 	// lives string
 	draw_set_color(c_white);
@@ -11,13 +11,13 @@ function draw_lives(argument0, argument1) {
 
 	// draw character name.
 	var drawname = tr("_charname_" + string(character_id[view_current]));
-	draw_text_colour(argument0 + 32, argument1 + 4, string_hash_to_newline(drawname), c_yellow, c_yellow, c_white, c_white, 1);
+	draw_text_colour(_x + 32, _y + 4, string_hash_to_newline(drawname), c_yellow, c_yellow, c_white, c_white, 1);
 
 	// make lives string.
 	var drawstring = "";
 	if (objGameData.player_lives[view_current] >= 10) drawstring = string(objGameData.player_lives[view_current]);
 	else drawstring = " " + string(objGameData.player_lives[view_current]);
-	draw_text(argument0 + 32, argument1 + 4, string_hash_to_newline(chr(10) + "  x" + drawstring));
+	draw_text(_x + 32, _y + 4, string_hash_to_newline(chr(10) + "  x" + drawstring));
 	draw_set_font(objResources.fontHud);
 
 
