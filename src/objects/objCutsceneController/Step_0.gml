@@ -5,11 +5,11 @@ if alarm[0] == -1 {
 } else if alarm[0] == 0 {
     state = 1;
 } else if alarm[0] == 220 {
-   sonicLight=instance_create(-262,-108,objSonicLight);
+   sonicLight=instance_create(camera_get_view_x(view_camera[view_current]) - (((objScreen.width/2) + 49)), -108, objSonicLight);
 } else if alarm[0] == 140{
-   knucklesLight=instance_create(-262,410,objKnucklesLight);
+   knucklesLight=instance_create(camera_get_view_x(view_camera[view_current]) - (((objScreen.width/2) + 49)), 410, objKnucklesLight);
 } else if alarm[0] == 110 {
-    tailsLight=instance_create(-260,2,objTailsLight);
+    tailsLight=instance_create(camera_get_view_x(view_camera[view_current]) - (((objScreen.width/2) + 47)), 2, objTailsLight);
 }
 break;
 case 1:
