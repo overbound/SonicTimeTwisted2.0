@@ -64,12 +64,12 @@ if objProgram.in_past {
             break;
     }
 }
-bg_x = __view_get( e__VW.WView, view_current )/2 - sprite_get_width(bg);
-bg_y = (__view_get( e__VW.HView, view_current ) - sprite_get_height(bg))/2;
-em_x = __view_get( e__VW.WView, view_current )/2 - 17 * (level - 1);
-em_y = 96;
-oem_x = __view_get( e__VW.WView, view_current )/2 - 8 * (other_level - 1);
-oem_y = 116;
+bg_x = (objScreen.width/2) - sprite_get_width(bg);
+bg_y = ((objScreen.height) - sprite_get_height(bg))/2;
+em_x = (objScreen.width/2) - 17 * (level - 1);
+em_y = (objScreen.height/2) - ((objScreen.height/2) - 24);
+oem_x = objScreen.width/2 - 8 * (other_level - 1);
+oem_y = (objScreen.height/2) - ((objScreen.height/2) - 4);
 alarm[0] = 10;
 menu = instance_create(x, y, objMenu);
 // this one is useful for ports
