@@ -17,11 +17,10 @@ intscaley = 0;
 interpolation = 0;
 alarm[0] = center_delay;
 view_enabled = true;
-__view_set( e__VW.Visible, 0, true );
-__view_set( e__VW.WView, 0, width );
-__view_set( e__VW.HView, 0, height );
-__view_set( e__VW.WPort, 0, width );
-__view_set( e__VW.HPort, 0, height );
+view_set_visible(view_camera[view_current], true);
+camera_set_view_size(view_camera[view_current], width, height);
+view_set_wport(view_camera[view_current], width);
+view_set_hport(view_camera[view_current], height);
 if(objProgram.device_info & DEVICE_TYPE_SMARTPHONE)
 {
     // calculating what the definition would be if the game used the entire screen

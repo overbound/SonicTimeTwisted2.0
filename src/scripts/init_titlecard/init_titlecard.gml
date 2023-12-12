@@ -40,7 +40,7 @@ function init_titlecard(argument0) {
 	        }
 	    }
 	    // set offset
-	    title_ox[i] = 298-string_width(string_hash_to_newline(title_string[i]));
+	    title_ox[i] = (objScreen.width-22)-string_width(string_hash_to_newline(title_string[i]));
 	    // go through each character
 	    for (j=0; j<title_length[i]; j+=1) title_scale[i, j] = 12;
 	}
