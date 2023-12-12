@@ -20,7 +20,7 @@
   "exportToGame": true,
   "extensionVersion": "1.0.0",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":2097160,"filename":"SttAndroid.ext","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"SttAndroid.ext","constants":[],"copyToTargets":2097160,"filename":"SttAndroid.ext","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"sttandroid_input_get_state","argCount":1,"args":[
             2,
           ],"documentation":"","externalName":"sttandroid_input_get_state","help":"sttandroid_input_get_state(inputNumber)","hidden":false,"kind":11,"returnType":2,},
