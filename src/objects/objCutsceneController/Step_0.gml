@@ -13,7 +13,7 @@ if alarm[0] == -1 {
 }
 break;
 case 1:
-if __view_get( e__VW.XView, 0 ) < objScreen.width {
+if __view_get( e__VW.XView, 0 ) < 426 + (213 - (objScreen.width/2)) {
     __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (2) );
 } else if alarm[0] == -1 {
     alarm[0] = 20;
@@ -148,7 +148,7 @@ with objTimeTravelVortex {
 break;
 case 11:
 if alarm[0] == -1 {
-    if __view_get( e__VW.XView, 0 ) < (objScreen.width / 2) {
+    if __view_get( e__VW.XView, 0 ) < 213 + (213-(objScreen.width / 2)) {
     
         __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (4) );
         
