@@ -12,7 +12,7 @@ script_execute(hud_draw_script);
 } else {
 
     draw_set_color(c_black);
-    draw_rectangle(0,0,426,240,false);
+    draw_rectangle(0,0,objScreen.width,objScreen.height,false);
     draw_set_color(c_white);
 }
 

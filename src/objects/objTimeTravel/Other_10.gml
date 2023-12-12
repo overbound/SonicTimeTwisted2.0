@@ -1,6 +1,6 @@
 /// @description draw code
 if !surface_exists(tt_surface)
-    tt_surface = surface_create(426, 240);
+    tt_surface = surface_create(objScreen.width, objScreen.height);
 // set the drawing target to the surface
 surface_set_target(tt_surface);
 // clear the surface
@@ -11,4 +11,4 @@ draw_sprite_ext(spr, floor(image_index), 0, 120, 2, -2, 0, c_white, 1);
 // reset the drawing target to the screen
 surface_reset_target();
 
-timetravel_shader_draw(426, 240, __view_get( e__VW.XView, 0 )+xoffset, __view_get( e__VW.YView, 0 ));
+timetravel_shader_draw(objScreen.width, objScreen.height, __view_get( e__VW.XView, 0 )+xoffset, __view_get( e__VW.YView, 0 ));

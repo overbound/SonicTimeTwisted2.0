@@ -147,7 +147,7 @@ if (timer) {
                             other.state = "grounded";
                             other.wait = other.__GroundedTime;
                             play_sfx(sndGolemSlam,4);
-                            span = 426;
+                            span = objScreen.width;
                             angle = radtodeg(arccos(max(min((posX - other.posX) / span,1),-1)));
                             with(objGolemTarget) instance_destroy();
                             screen_shake();

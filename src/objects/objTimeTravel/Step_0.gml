@@ -16,11 +16,11 @@ case 0: // start level
     objLevel.timer_enabled = true;
     with objHud visible = true;
     mode = -1;
-    //xoffset=426;
+    //xoffset=objScreen.width;
     image_xscale = image_xscale*-1;
     
     if image_xscale == -2 {
-       xoffset=426;
+       xoffset=objScreen.width; //would either be 426 *or* 320 if the 4:3 mode is enabled
     } else xoffset=0;
     break;
 case -1: // wipe in

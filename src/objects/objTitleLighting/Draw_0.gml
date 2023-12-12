@@ -1,7 +1,7 @@
 /// @description  Check Surface Exists
 if (!surface_exists(tt_surface) && __view_get( e__VW.YView, 0 ) < room_height - __view_get( e__VW.HView, 0 ) - 64)
 {
-    tt_surface = surface_create(426, 240);
+    tt_surface = surface_create(objScreen.width, objScreen.height);
 }
 if (__view_get( e__VW.YView, 0 ) >= room_height - __view_get( e__VW.HView, 0 ) - 64)
 {
@@ -12,7 +12,7 @@ if (__view_get( e__VW.YView, 0 ) >= room_height - __view_get( e__VW.HView, 0 ) -
 ///Draw the lightning to the surface.
 // set the drawing target to the surface
 var temp_Detail = 30;
-var temp_Centre = 213;
+var temp_Centre = (objScreen.width / 2);
 var temp_Offset = 25;
 var temp_Sign   = 1;
 var temp_Height = 0;
@@ -24,7 +24,7 @@ var temp_Wave_3 = 0; // larger wave
 surface_set_target(tt_surface);
     draw_clear_alpha(c_black, 0);
     draw_primitive_begin(pr_trianglefan); // pr_trianglefan // pr_linestrip
-    draw_vertex_colour(213, 120, c_white, 1);
+    draw_vertex_colour((objScreen.width / 2), (objScreen.height / 2), c_white, 1);
         for (var j = 0; j < 2; j++)
         {
             for (var i = 0; i < temp_Detail; i++)

@@ -9,7 +9,7 @@ event_inherited();
 // states and flags
 state = 0;
 // boss object
-boss = instance_create(426, 230, objAA1Boss);
+boss = instance_create(objScreen.width, 230, objAA1Boss);
 // moving platforms
 plat[0] = instance_create(256, 192, objAA1BossFloor);
 plat[0].hspeed = -4.5;

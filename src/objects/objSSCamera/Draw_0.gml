@@ -1,4 +1,4 @@
-d3d_set_projection_ortho(0, 0, 426, 240, 0);
+d3d_set_projection_ortho(0, 0, objScreen.width, objScreen.height, 0);
 /*gpu_set_ztestenable(false);
 draw_rectangle_color(0, 0, 320, 120, c_black, c_black, c_navy, c_navy, false);
 gpu_set_ztestenable(true);*/

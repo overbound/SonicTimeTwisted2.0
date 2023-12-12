@@ -25,10 +25,10 @@ if(state >= 2)
             draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),false);
             draw_set_alpha(1);
             draw_set_color(c_white);
-            draw_sprite_ext(sprOverboundLogo,0,__view_get( e__VW.XView, 0 )+213,__view_get( e__VW.YView, 0 )+90,1,1,0,c_white,lA);
-            draw_text_color(__view_get( e__VW.XView, 0 )+213,__view_get( e__VW.YView, 0 )+15,string_hash_to_newline(tr("_splash_ASonicfangame")),c_white,c_white,c_teal,c_teal,lA);
-            draw_text_color(__view_get( e__VW.XView, 0 )+213,__view_get( e__VW.YView, 0 )+150,string_hash_to_newline(tr("_splash_ThisGameIsFreeware")),c_white,c_white,c_teal,c_teal,lA);
-            draw_text_color(__view_get( e__VW.XView, 0 )+213,__view_get( e__VW.YView, 0 )+170,string_hash_to_newline(tr("_splash_DoNotSell")),c_white,c_white,c_red,c_red,lA);
+            draw_sprite_ext(sprOverboundLogo,0,__view_get( e__VW.XView, 0 )+(objScreen.width / 2),__view_get( e__VW.YView, 0 )+90,1,1,0,c_white,lA);
+            draw_text_color(__view_get( e__VW.XView, 0 )+(objScreen.width / 2),__view_get( e__VW.YView, 0 )+15,string_hash_to_newline(tr("_splash_ASonicfangame")),c_white,c_white,c_teal,c_teal,lA);
+            draw_text_color(__view_get( e__VW.XView, 0 )+(objScreen.width / 2),__view_get( e__VW.YView, 0 )+150,string_hash_to_newline(tr("_splash_ThisGameIsFreeware")),c_white,c_white,c_teal,c_teal,lA);
+            draw_text_color(__view_get( e__VW.XView, 0 )+(objScreen.width / 2),__view_get( e__VW.YView, 0 )+170,string_hash_to_newline(tr("_splash_DoNotSell")),c_white,c_white,c_red,c_red,lA);
             break;
         case 3:
         case 4:
@@ -36,7 +36,7 @@ if(state >= 2)
         case 6:
         case 7:
         case 8:
-            var yshift = 120;
+            var yshift = (objScreen.height / 2);
             if(alarm[0] >= 60)
             {
                 yshift = yshift + 27 + (alarm[0] - 60) * 32;
@@ -50,11 +50,11 @@ if(state >= 2)
             {
                 yshift = yshift - 27 - (5 - alarm[0]) * 32;            
             }
-            draw_text_color(__view_get( e__VW.XView, 0 )+213,__view_get( e__VW.YView, 0 )+yshift,string_hash_to_newline(names[name - 3]),c_white,c_white,c_yellow,c_yellow,1);
+            draw_text_color(__view_get( e__VW.XView, 0 )+(objScreen.width / 2),__view_get( e__VW.YView, 0 )+yshift,string_hash_to_newline(names[name - 3]),c_white,c_white,c_yellow,c_yellow,1);
             break;
         case 12:
             if (pauseState == 3) {
-                draw_text_color(__view_get( e__VW.XView, 0 )+213, __view_get( e__VW.YView, 0 )+228, string_hash_to_newline(startText),c_white,c_white,c_yellow,c_yellow,1); 
+                draw_text_color(__view_get( e__VW.XView, 0 )+(objScreen.width / 2), __view_get( e__VW.YView, 0 )+228, string_hash_to_newline(startText),c_white,c_white,c_yellow,c_yellow,1); 
             }
             start=true;
             break;

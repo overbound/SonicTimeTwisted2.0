@@ -39,10 +39,10 @@ if opening {
     draw_set_color(c_white);
     draw_set_halign(fa_center);
     draw_set_font(objResources.fontTitleLarge);
-    draw_text(213,64,string_hash_to_newline(tr("_ss_intro_Race")));
+    draw_text((objScreen.width / 2),64,string_hash_to_newline(tr("_ss_intro_Race")));
     // title second word
     draw_set_color(blue);
-    draw_text(213,98,string_hash_to_newline(tr("_ss_intro_Metal_Sonic")));
+    draw_text((objScreen.width / 2),98,string_hash_to_newline(tr("_ss_intro_Metal_Sonic")));
     draw_set_color(c_yellow);
     draw_set_halign(fa_left);
     if (show_go_separately)

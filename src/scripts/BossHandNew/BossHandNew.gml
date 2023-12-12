@@ -22,7 +22,7 @@ function BossHandNew(argument0, argument1, argument2, argument3) {
 	  offsetY = 0;
 	  offsetZ = 0;
   
-	  span = 426;
+	  span = objScreen.width;
 	  _speed = 0;
 	  if sideOn == 0
 	      angle = 180;

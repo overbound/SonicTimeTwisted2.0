@@ -67,11 +67,11 @@ if(objProgram.device_info & DEVICE_TYPE_SMARTPHONE)
             if(display_get_orientation() == display_portrait
                 || display_get_orientation() == display_portrait_flipped)
             {
-                calculated_height = round(426 * (display_get_width()/display_get_height()));
+                calculated_height = round(width * (display_get_width()/display_get_height()));
             }
             else
             {
-                calculated_height = round(426 * (display_get_height()/display_get_width()));
+                calculated_height = round(width * (display_get_height()/display_get_width()));
             }
             if(calculated_height mod 2)
             {

@@ -1,5 +1,5 @@
 /// @description  Setup Shader
-timetravel_shader_init(426, 240);
+timetravel_shader_init(objScreen.width, objScreen.height);
 
 // I've included two types of "zipper animation" - see step event
 type = false;

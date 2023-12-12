@@ -13,7 +13,7 @@ if alarm[0] == -1 {
 }
 break;
 case 1:
-if __view_get( e__VW.XView, 0 ) < 426 {
+if __view_get( e__VW.XView, 0 ) < objScreen.width {
     __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (2) );
 } else if alarm[0] == -1 {
     alarm[0] = 20;
@@ -136,7 +136,7 @@ if alarm[0] == 0 {
 break;
 case 10:
 if alarm[0] == 0 {
-    instance_create(213,-120,objTimeTravelVortex);
+    instance_create((objScreen.width / 2),-(objScreen.height / 2),objTimeTravelVortex);
 }
 with objTimeTravelVortex {
     if image_xscale >= 1 && other.alarm[0] == -1 {
@@ -148,7 +148,7 @@ with objTimeTravelVortex {
 break;
 case 11:
 if alarm[0] == -1 {
-    if __view_get( e__VW.XView, 0 ) < 213 {
+    if __view_get( e__VW.XView, 0 ) < (objScreen.width / 2) {
     
         __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (4) );
         
@@ -156,7 +156,7 @@ if alarm[0] == -1 {
     }else {
     
         state = 12;
-        with objTimeTravelVortex { instance_create(x+140,y+120,objMetalSonicWarped); }
+        with objTimeTravelVortex { instance_create(x+((objScreen.width / 2) - ((objScreen.width / 2) - 140)),y+(objScreen.height / 2),objMetalSonicWarped); }
         
         }
 }

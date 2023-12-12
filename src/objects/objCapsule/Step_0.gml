@@ -16,10 +16,10 @@ else if active != 0
     if (camera_pass == 0)
     {
         set_input_enabled(false);
-        player_id.camera.right = min(x + 426 - 84, room_width);
+        player_id.camera.right = min(x + objScreen.width - 84, room_width);
         player_id.camera.left = max(x - 256, 0);
-        player_id.camera.top = max(y - 120, 0);
-        player_id.camera.bottom = max(y + 120, room_height);
+        player_id.camera.top = max(y - (objScreen.height / 2), 0);
+        player_id.camera.bottom = max(y + (objScreen.height / 2), room_height);
         camera_pass = 1;
         player_id.landed = false;
     }
@@ -29,7 +29,7 @@ else if active != 0
     }
     else if (camera_pass == 2)
     {
-        __view_set( e__VW.XView, 0, min(x - 84, room_width - 426) );
+        __view_set( e__VW.XView, 0, min(x - 84, room_width - objScreen.width) );
     }
     with (player_id)
     {
