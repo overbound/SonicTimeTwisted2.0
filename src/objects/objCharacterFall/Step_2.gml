@@ -17,22 +17,22 @@ if __view_get( e__VW.XView, 0 ) <= 0 {
     state = 1;
     __view_set( e__VW.XView, 0, 0 );
 }
-if  abs(__view_get( e__VW.XView, 0 ) - abs(x-__view_get( e__VW.WView, 0 )*.5)) > 16 || abs(__view_get( e__VW.YView, 0 ) - abs(y-__view_get( e__VW.HView, 0 )*.5-16)) > 16 {
-    if __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5 > x {
+if  abs(__view_get( e__VW.XView, 0 ) - abs(x-objScreen.width*.5)) > 16 || abs(__view_get( e__VW.YView, 0 ) - abs(y-objScreen.height*.5-16)) > 16 {
+    if __view_get( e__VW.XView, 0 )+objScreen.width*0.5 > x {
         __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) - (8) );
     }
-    if __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5 < x {
+    if __view_get( e__VW.XView, 0 )+objScreen.width*0.5 < x {
         __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (8) );
     }
-    if __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5 > y {
+    if __view_get( e__VW.YView, 0 )+objScreen.height*0.5 > y {
         __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) - (8) );
     }
-    if __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5 < y {
+    if __view_get( e__VW.YView, 0 )+objScreen.height*0.5 < y {
         __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) + (8) );
     }
 } else {
-    __view_set( e__VW.XView, 0, x-__view_get( e__VW.WView, 0 )*.5 );
-    __view_set( e__VW.YView, 0, y-__view_get( e__VW.HView, 0 )*.5-16 );
+    __view_set( e__VW.XView, 0, x-objScreen.width*.5 );
+    __view_set( e__VW.YView, 0, y-objScreen.height*.5-16 );
 }
     /*if view_xview > 0 {
         view_xview = x-view_wview*.5;

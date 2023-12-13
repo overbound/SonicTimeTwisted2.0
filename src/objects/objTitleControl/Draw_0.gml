@@ -6,7 +6,7 @@ if(state >= 2)
     // fade for menu
     draw_set_alpha(screenAlpha);
     draw_set_color(c_black);
-    draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),false);
+    draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+objScreen.width,__view_get( e__VW.YView, 0 )+objScreen.height,false);
         
     // setup
     draw_set_color(c_white);
@@ -22,7 +22,7 @@ if(state >= 2)
             var lA = clamp(logoAlpha, 0, 1);
             draw_set_color(c_black);
             draw_set_alpha(lA);
-            draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),false);
+            draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+objScreen.width,__view_get( e__VW.YView, 0 )+objScreen.height,false);
             draw_set_alpha(1);
             draw_set_color(c_white);
             draw_sprite_ext(sprOverboundLogo,0,__view_get( e__VW.XView, 0 )+(objScreen.width / 2),__view_get( e__VW.YView, 0 )+90,1,1,0,c_white,lA);
@@ -71,7 +71,7 @@ if(state >= 2)
         {
             draw_set_alpha((60 - skipping)/30);    
         }
-        draw_rectangle(__view_get( e__VW.XView, 0 ), __view_get( e__VW.YView, 0 ), __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 ), __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ), false);
+        draw_rectangle(__view_get( e__VW.XView, 0 ), __view_get( e__VW.YView, 0 ), __view_get( e__VW.XView, 0 ) + objScreen.width, __view_get( e__VW.YView, 0 ) + objScreen.height, false);
         draw_set_alpha(1);
     }
 }
@@ -86,7 +86,7 @@ if(state <= 2 || state == 4)
         draw_set_alpha(textAlpha);
     }
     draw_set_color(c_black);
-    draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),false);
+    draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+objScreen.width,__view_get( e__VW.YView, 0 )+objScreen.height,false);
     draw_set_color(c_white);
     draw_set_alpha(textAlpha);
     

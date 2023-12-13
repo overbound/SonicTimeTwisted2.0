@@ -8,8 +8,8 @@ if objGameData.character_id[0] == 1 {
     sprite_index=sprKnucklesFallingEnding;
 }
 image_speed = 0;
-__view_set( e__VW.XView, 0, x-__view_get( e__VW.WView, 0 )*.5 );
-__view_set( e__VW.YView, 0, y-__view_get( e__VW.HView, 0 )*.5-310 );
+__view_set( e__VW.XView, 0, x-objScreen.width*.5 );
+__view_set( e__VW.YView, 0, y-objScreen.height*.5-310 );
 
 // "bad" "noemeralds" "nostones" "good"
 music = bgmEndingBad;
