@@ -33,6 +33,9 @@ function menu_part_videooptions_actions(argument0) {
 	    case 7:
 	        objScreen.show_shield = !objScreen.show_shield;
 	        break;
+		case 8:
+			with (objScreen) event_user(10);
+	        break;
 	    case -2:
 	        // left key
 	        switch(items[cursor, 1])
@@ -72,6 +75,9 @@ function menu_part_videooptions_actions(argument0) {
 	            case 7:
 	                objScreen.show_shield = !objScreen.show_shield;
 	                break;
+				case 8:
+					with (objScreen) event_user(10);
+			        break;
 	        }
 	        break;
 	    case -3:
@@ -106,6 +112,9 @@ function menu_part_videooptions_actions(argument0) {
 	            case 7:
 	                objScreen.show_shield = !objScreen.show_shield;
 	                break;
+				case 8:
+					with (objScreen) event_user(10);
+			        break;
 	        }
 	        break;
 	}
@@ -202,11 +211,21 @@ function menu_part_videooptions_actions(argument0) {
 	    menu_fn_refresh_displayed_value(7, offLabel);
 	}
 
+	var widescreenAspectlabel = "< "+tr("_menu_gfx_Aspect_Widescreen")+ " >";
+	var retroAspectlabel = "< "+tr("_menu_gfx_Aspect_Retro")+ " >";
+	
+	if(objScreen.width == 320) {
+	    menu_fn_refresh_displayed_value(8, retroAspectlabel);
+	} else if(objScreen.width == 426) {
+	    menu_fn_refresh_displayed_value(8, widescreenAspectlabel);
+	}
+
 	menu_fn_calculate_width_add(1, false, tallyLabel1, tallyLabel2, tallyLabel3);
 	menu_fn_calculate_width_add(2, false, onLabel, offLabel);
 	menu_fn_calculate_width_add(4, false, timerLabel1, timerLabel2);
 	menu_fn_calculate_width_add(6, false, onLabel, offLabel, onlyGUIlabel);
 	menu_fn_calculate_width_add(7, false, onLabel, offLabel);
+	menu_fn_calculate_width_add(8, false, retroAspectlabel, widescreenAspectlabel);
 
 	menu_fn_calculate_width_finish();
 	// preserve the cursor value - usually false for the sake of touchscreen controls

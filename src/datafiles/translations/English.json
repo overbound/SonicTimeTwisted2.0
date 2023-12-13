@@ -131,6 +131,9 @@
 		"_menu_gfx_Timer": "Timer format",
 		"_menu_gfx_Timer_MMSSCS": "m's\"cs",
 		"_menu_gfx_Timer_MMSS": "m:s",
+		"_menu_gfx_Aspect": "Aspect Ratio",
+		"_menu_gfx_Aspect_Widescreen": "16:9",
+		"_menu_gfx_Aspect_Retro": "4:3",
 		
 		"_menu_sfx_Title": "Sound",
 		"_menu_sfx_MasterVolume": "Master volume",

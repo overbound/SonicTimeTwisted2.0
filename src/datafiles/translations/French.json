@@ -196,6 +196,9 @@
 		"_menu_gfx_Timer": "Format du temps",
 		"_menu_gfx_Timer_MMSSCS": "m's\"cs",
 		"_menu_gfx_Timer_MMSS": "m:s",
+		"_menu_gfx_Aspect": "Aspect Ratio",
+		"_menu_gfx_Aspect_Widescreen": "16:9",
+		"_menu_gfx_Aspect_Retro": "4:3",
 				
 		"_menu_sfx_Title": "Audio",
 		"_menu_sfx_MasterVolume": "Volume principal",

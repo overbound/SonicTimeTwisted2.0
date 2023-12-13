@@ -1,7 +1,7 @@
 event_inherited();
 
 //always center the room's view to avoid borking the Title Screen
-camera_set_view_pos(view_camera[view_current], (213-(objScreen.width / 2)), 0);
+if(objScreen.width < 426) camera_set_view_pos(view_camera[view_current], (213-(objScreen.width / 2)), 0); else camera_set_view_pos(view_camera[view_current], 0, 0);
 
 /// Initialize
 image_speed = 0;

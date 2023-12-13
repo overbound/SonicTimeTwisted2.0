@@ -194,6 +194,9 @@
 		"_menu_gfx_Timer": "Формат часу",
 		"_menu_gfx_Timer_MMSSCS": "м'с\"сс",
 		"_menu_gfx_Timer_MMSS": "м:с",
+		"_menu_gfx_Aspect": "Aspect Ratio",
+		"_menu_gfx_Aspect_Widescreen": "16:9",
+		"_menu_gfx_Aspect_Retro": "4:3",
 		
 		"_menu_sfx_Title": "Звук",
 		"_menu_sfx_MasterVolume": "Загальна гучність",

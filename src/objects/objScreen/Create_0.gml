@@ -1,5 +1,5 @@
 /// @description  Screen settings
-width = 320;
+width = 426;
 height = 240;
 postdraw_event = 8; // postdraw event - set to 8 to draw normally, 9 for special drawing of application_surface
 vsync = true; // enabled by default.
