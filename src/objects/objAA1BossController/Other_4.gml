@@ -41,8 +41,8 @@ with objPlayer
     //xspeed = 6;
     player_is_standing();
     // lock camera at the start
-    camera.left = camera.x-(objScreen.width / 2);
-    camera.right = camera.x+(objScreen.width / 2);
+    camera.left = camera.x-(426 / 2);
+    camera.right = camera.x+(426 / 2);
     camera.top = camera.y-(objScreen.height / 2);
     camera.bottom = camera.y+(objScreen.height / 2);
 }
