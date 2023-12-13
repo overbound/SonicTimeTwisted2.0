@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "VV2_p",
-  "creationCodeFile": "RoomCreationCode.gml",
+  "creationCodeFile": "rooms/VV2_p/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,
