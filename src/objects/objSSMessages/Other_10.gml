@@ -1,5 +1,5 @@
 /// @description  Calculating string positions
-show_go_separately = tr_get_real_prop("ss_start_go_is_longer") > 0;
+show_go_separately = ((tr_get_real_prop("ss_start_go_is_longer") > 0) || objScreen.width < 426);
 
 title_string[0] = "3";
 title_string[1] = "2";
