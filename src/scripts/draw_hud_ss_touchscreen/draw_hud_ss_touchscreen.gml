@@ -1,8 +1,8 @@
 function draw_hud_ss_touchscreen() {
 	if(objProgram.saveSlot > -2) // if we are playing this in the mini-game/level select mode, lives don't appear
 	{
-	    draw_lives(__view_get( e__VW.WView, view_current ) - 100, 16*objScreen.split_screen + 4 );
-	    draw_shield_ss(__view_get( e__VW.WView, view_current ) - 36, 28-(16*objScreen.split_screen), objProgram.temp_shield);
+	    draw_lives(objScreen.width - 100, 16*objScreen.split_screen + 4 );
+	    draw_shield_ss(objScreen.width - 36, 28-(16*objScreen.split_screen), objProgram.temp_shield);
 	}
 	// Progress bar - hide it if 3 2 1 GO is showing, because there's overlap
 
@@ -16,7 +16,7 @@ function draw_hud_ss_touchscreen() {
 	}
 	if(show_progressbar)
 	{
-	    draw_ss_progress_bar(72, 80, 128);
+	    draw_ss_progress_bar(((objScreen.width/2) - ((objScreen.width/2) - 72)), ((objScreen.width/2) - ((objScreen.width/2) - 80)), ((objScreen.width/2) - ((objScreen.width/2) - 128)));
 	}
 
 

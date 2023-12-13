@@ -34,7 +34,7 @@ if closeMenu == false {
 
 /// Opening
 if opening {
-    d3d_set_projection_ortho(0, 0, __view_get( e__VW.WPort, 0 ), __view_get( e__VW.HPort, 0 ), 0);
+    d3d_set_projection_ortho(0, 0, objScreen.width, objScreen.height, 0);
     // title first word
     draw_set_color(c_white);
     draw_set_halign(fa_center);

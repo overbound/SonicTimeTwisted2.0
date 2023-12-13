@@ -102,7 +102,7 @@ case 4:
 break;
 case 5:
     with objPlaneRestoreFinal {
-        if x > (objScreen.width / 2) {
+        if x > (213 - (213 - (objScreen.width / 2))) {
             instance_create(248,1944,objTLPRestoreEnding);
             other.alarm[0] = 500;
             
