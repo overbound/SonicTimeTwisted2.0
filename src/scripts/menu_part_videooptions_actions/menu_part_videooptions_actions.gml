@@ -211,7 +211,7 @@ function menu_part_videooptions_actions(argument0) {
 	    menu_fn_refresh_displayed_value(7, offLabel);
 	}
 
-	if(objProgram.device_info & !DEVICE_TYPE_SMARTPHONE)
+	if!(objProgram.device_info & DEVICE_TYPE_SMARTPHONE)
 	{
 		var widescreenAspectlabel = "< "+tr("_menu_gfx_Aspect_Widescreen")+ " >";
 		var retroAspectlabel = "< "+tr("_menu_gfx_Aspect_Retro")+ " >";
@@ -228,7 +228,7 @@ function menu_part_videooptions_actions(argument0) {
 	menu_fn_calculate_width_add(4, false, timerLabel1, timerLabel2);
 	menu_fn_calculate_width_add(6, false, onLabel, offLabel, onlyGUIlabel);
 	menu_fn_calculate_width_add(7, false, onLabel, offLabel);
-	if(objProgram.device_info & !DEVICE_TYPE_SMARTPHONE) menu_fn_calculate_width_add(8, false, retroAspectlabel, widescreenAspectlabel);
+	if!(objProgram.device_info & DEVICE_TYPE_SMARTPHONE) menu_fn_calculate_width_add(8, false, retroAspectlabel, widescreenAspectlabel);
 
 	menu_fn_calculate_width_finish();
 	// preserve the cursor value - usually false for the sake of touchscreen controls
