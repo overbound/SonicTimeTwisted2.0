@@ -34,7 +34,7 @@ function menu_part_videooptions_actions(argument0) {
 	        objScreen.show_shield = !objScreen.show_shield;
 	        break;
 		case 8:
-			with (objScreen) event_user(10);
+			objScreen.aspect_mode = !objScreen.aspect_mode;
 	        break;
 	    case -2:
 	        // left key
@@ -76,7 +76,7 @@ function menu_part_videooptions_actions(argument0) {
 	                objScreen.show_shield = !objScreen.show_shield;
 	                break;
 				case 8:
-					with (objScreen) event_user(10);
+					objScreen.aspect_mode = !objScreen.aspect_mode;
 			        break;
 	        }
 	        break;
@@ -113,7 +113,7 @@ function menu_part_videooptions_actions(argument0) {
 	                objScreen.show_shield = !objScreen.show_shield;
 	                break;
 				case 8:
-					with (objScreen) event_user(10);
+					objScreen.aspect_mode = !objScreen.aspect_mode;
 			        break;
 	        }
 	        break;
@@ -216,9 +216,11 @@ function menu_part_videooptions_actions(argument0) {
 		var widescreenAspectlabel = "< "+tr("_menu_gfx_Aspect_Widescreen")+ " >";
 		var retroAspectlabel = "< "+tr("_menu_gfx_Aspect_Retro")+ " >";
 	
-		if(objScreen.width == 320) {
+		if(objScreen.aspect_mode == true) {
+			with(objScreen) event_user(10);
 		    menu_fn_refresh_displayed_value(8, retroAspectlabel);
-		} else if(objScreen.width == 426) {
+		} else if(objScreen.aspect_mode == false) {
+			with(objScreen) event_user(11);
 		    menu_fn_refresh_displayed_value(8, widescreenAspectlabel);
 		}
 	}

@@ -1,6 +1,13 @@
 /// @description  Screen settings
-width = 426;
-height = 240;
+aspect_mode = false;
+if(aspect_mode)
+{
+	width = 320;
+	height = 240;
+} else {
+	width = 426;
+	height = 240;
+}
 postdraw_event = 8; // postdraw event - set to 8 to draw normally, 9 for special drawing of application_surface
 vsync = true; // enabled by default.
 window_scale = 2; // default window scale, 2x.

@@ -10,7 +10,7 @@ allowStart = false;
 state = 0;
 // other
 view_id =0;
-ox = +170;
+ox = +((objScreen.width - 43) - (objScreen.width/2));
 oy = 96;
 offset = 2;
 time = 16;

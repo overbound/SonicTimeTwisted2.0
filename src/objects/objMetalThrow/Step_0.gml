@@ -1,8 +1,8 @@
 // get camera center
 if view_id > -1
 {
-    var cx = __view_get( e__VW.XView, view_current )+(__view_get( e__VW.WView, view_current )*0.5);
-    var cy = __view_get( e__VW.YView, view_current )+(__view_get( e__VW.HView, view_current )*0.5);
+    var cx = camera_get_view_x(view_camera[view_current])+(objScreen.width * 0.5);
+    var cy = camera_get_view_y(view_camera[view_current])+(objScreen.height * 0.5);
     
 }
 var camera = instance_nearest(x, y, objCamera);

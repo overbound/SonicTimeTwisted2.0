@@ -1,7 +1,7 @@
-/// @description Switch Aspect Ratios (4:3)
+/// @description Switch Aspect Ratios (16:9)
 
 	// I hope to god this works
-	width = 320;
+	width = 426;
 	height = 240;
 
 	alarm[0] = center_delay;
