@@ -16,7 +16,7 @@ function menu_part_videooptions_items() {
 	}
 	menu_fn_add_option(tr("_menu_gfx_Timer"), 4, 1, "");
 	menu_fn_add_option(tr("_menu_gfx_Shield"), 7, 1, "");
-	menu_fn_add_option(tr("_menu_gfx_Aspect"), 8, 1, "");
+	if(objProgram.device_info & !DEVICE_TYPE_SMARTPHONE) menu_fn_add_option(tr("_menu_gfx_Aspect"), 8, 1, "");
 	menu_fn_add_option(tr("_menu_Back"), 5);
 
 	action_script = menu_part_videooptions_actions;
