@@ -14,13 +14,13 @@ draw_set_font(objResources.fontHud);
 var epilepsy_title_height = string_height(string_hash_to_newline(epilepsy_title));
 var disclaimer_title_height = string_height(string_hash_to_newline(disclaimer_title));
 
-var line_length = camera_get_view_width(view_camera[view_current]) - 8;
+var line_length = objScreen.width - 8;
 draw_set_font(objResources.fontMicro);
 var epilepsy_height = epilepsy_title_height + string_height_ext(string_hash_to_newline(epilepsy), 12, line_length) + 4;
 var disclaimer_height = disclaimer_title_height + string_height_ext(string_hash_to_newline(disclaimer), 12, line_length) + 4;
 var github_height = string_height_ext(string_hash_to_newline(github), 12, line_length);
 
-var text_skip = floor((camera_get_view_height(view_camera[view_current]) - epilepsy_height - disclaimer_height - github_height)/4);
+var text_skip = floor((objScreen.height - epilepsy_height - disclaimer_height - github_height)/4);
 
 epilepsy_title_y = text_skip;
 epilepsy_y = epilepsy_title_y + epilepsy_title_height + 4;

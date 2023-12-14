@@ -24,10 +24,10 @@ intscaley = 0;
 interpolation = 0;
 alarm[0] = center_delay;
 view_enabled = true;
-view_set_visible(view_camera[view_current], true);
+view_set_visible(view_current, true);
 camera_set_view_size(view_camera[view_current], width, height);
-view_set_wport(view_camera[view_current], width);
-view_set_hport(view_camera[view_current], height);
+view_set_wport(view_current, width);
+view_set_hport(view_current, height);
 if(objProgram.device_info & DEVICE_TYPE_SMARTPHONE)
 {
     // calculating what the definition would be if the game used the entire screen
