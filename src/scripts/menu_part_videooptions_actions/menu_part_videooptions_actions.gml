@@ -35,6 +35,7 @@ function menu_part_videooptions_actions(argument0) {
 	        break;
 		case 8:
 			objScreen.aspect_mode = !objScreen.aspect_mode;
+			menu_fn_reopen(menu_part_videooptions_items, 8);
 	        break;
 	    case -2:
 	        // left key
@@ -77,6 +78,7 @@ function menu_part_videooptions_actions(argument0) {
 	                break;
 				case 8:
 					objScreen.aspect_mode = !objScreen.aspect_mode;
+					menu_fn_reopen(menu_part_videooptions_items, 8);
 			        break;
 	        }
 	        break;
@@ -114,6 +116,7 @@ function menu_part_videooptions_actions(argument0) {
 	                break;
 				case 8:
 					objScreen.aspect_mode = !objScreen.aspect_mode;
+					menu_fn_reopen(menu_part_videooptions_items, 8);
 			        break;
 	        }
 	        break;

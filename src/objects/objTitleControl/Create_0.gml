@@ -1,7 +1,8 @@
 event_inherited();
 
 //always center the room's view to avoid borking the Title Screen
-if(objScreen.width < 426) camera_set_view_pos(view_camera[view_current], (213-(objScreen.width / 2)), 0); else camera_set_view_pos(view_camera[view_current], 0, 0);
+if(objScreen.aspect_mode) camera_set_view_pos(view_camera[view_current], (213-(objScreen.width / 2)), camera_get_view_y(view_camera[view_current]));
+else camera_set_view_pos(view_camera[view_current], 0, camera_get_view_y(view_camera[view_current]));
 
 /// Initialize
 image_speed = 0;
