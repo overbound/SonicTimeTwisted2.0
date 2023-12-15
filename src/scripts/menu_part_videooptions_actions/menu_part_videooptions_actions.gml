@@ -34,6 +34,15 @@ function menu_part_videooptions_actions(argument0) {
 	        objScreen.show_shield = !objScreen.show_shield;
 	        break;
 		case 8:
+			if(room == titlescreen)
+			{
+				objScreen.aspect_mode = !objScreen.aspect_mode;
+				menu_fn_reopen(menu_part_videooptions_items, 8);
+			} else if(room != titlescreen){
+				menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
+			}
+	        break;
+		case 9:
 			objScreen.aspect_mode = !objScreen.aspect_mode;
 			menu_fn_reopen(menu_part_videooptions_items, 8);
 	        break;
@@ -77,6 +86,15 @@ function menu_part_videooptions_actions(argument0) {
 	                objScreen.show_shield = !objScreen.show_shield;
 	                break;
 				case 8:
+					if(room == titlescreen)
+					{
+						objScreen.aspect_mode = !objScreen.aspect_mode;
+						menu_fn_reopen(menu_part_videooptions_items, 8);
+					} else if(room != titlescreen){
+						menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
+					}
+			        break;
+				case 9:
 					objScreen.aspect_mode = !objScreen.aspect_mode;
 					menu_fn_reopen(menu_part_videooptions_items, 8);
 			        break;
@@ -115,6 +133,15 @@ function menu_part_videooptions_actions(argument0) {
 	                objScreen.show_shield = !objScreen.show_shield;
 	                break;
 				case 8:
+					if(room == titlescreen)
+					{
+						objScreen.aspect_mode = !objScreen.aspect_mode;
+						menu_fn_reopen(menu_part_videooptions_items, 8);
+					} else if(room != titlescreen){
+						menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
+					}
+			        break;
+				case 9:
 					objScreen.aspect_mode = !objScreen.aspect_mode;
 					menu_fn_reopen(menu_part_videooptions_items, 8);
 			        break;

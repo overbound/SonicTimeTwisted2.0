@@ -24,7 +24,7 @@ function menu_part_input_items() {
 	       }
 	       else
 	       {
-	            if (!(objProgram.device_info & DEVICE_OS_PLAYSTATION)) {
+	            if (!(objProgram.device_info & (DEVICE_OS_PLAYSTATION || DEVICE_OS_XBOX || DEVICE_OS_SWITCH))) {
 	                menu_fn_add_option(tr("_menu_input_Keyboard"), 2);
 	            }
 	            menu_fn_add_option(tr("_menu_input_Gamepad"), 6);
