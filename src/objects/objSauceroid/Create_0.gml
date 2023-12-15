@@ -6,9 +6,9 @@ remove = 1;
 state = 0;
 // other
 view_id =-1;
-ox = 180;
+ox = (objScreen.width/2 - sign(objScreen.width/2 - 180));
 oy = -80;
-offset = 260;
+offset = (objScreen.width/2 - sign(objScreen.width/2 - 260));
 wait_timer = -1;
 shot_number = 0;
 shot[0] = -1;
