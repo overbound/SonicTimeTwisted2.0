@@ -211,7 +211,7 @@ ds_map_add(anim_sonic_super, "swing", animSuperSonicSwing);
 ds_map_add(anim_sonic_super, "wallrun", animSuperSonicWallRun);
 ds_map_add(anim_sonic_super, "float", animSuperSonicFloat);
 ds_map_add(anim_sonic_super, "stand_rotate", animeSuperSonicStandRotate);
-ds_map_add(anim_sonic_super, "drop_dash", animSonicDropDash);
+ds_map_add(anim_sonic_super, "drop_dash", animSuperSonicDropDash);
 
 /* */
 /*  */
