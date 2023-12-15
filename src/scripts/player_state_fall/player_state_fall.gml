@@ -96,6 +96,7 @@ function player_state_fall() {
 		{
 			if character_id == 1 //Sonic
 			{
+				//Charge drop dash
 				if dropdash_charge > 0 && !dropDash{
 					dropdash_charge = min(dropdash_charge+1, 20);
 					if dropdash_charge >= 20{
