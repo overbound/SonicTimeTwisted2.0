@@ -86,26 +86,42 @@ function player_state_fall() {
 	    if xspeed!=0 return player_is_running(); else return player_is_standing();
 	}
 	// jump actions
+	//Charge the drop dash when holding the button.
+	if input_check(cACTION)
+	{
+		if character_id == 1 //Sonic
+		{
+			if dropdash_charge > 0 && !dropDash && (special_move_mode == 1 || special_move_mode == 2){
+				dropdash_charge = min(dropdash_charge+1, 20);
+				if dropdash_charge >= 20{
+					//Drop dash fully ready
+					return player_is_drop_dashing();
+				}
+			}
+		}
+	}
+	//Author note, this section above needs to be changed to adapt to the new input method, which is pressing down twice
+	//Begin charging Drop Dash
+	if input_check_pressed(cACTION)
+	{
+		if character_id == 1 //Sonic
+		{
+			switch special_move_mode {
+				case 1: //Drop dash only
+				case 2: //Both, drop dash triggered by holding jump
+					if !shield && spinning && jumping && dropdash_charge == 0{
+						dropdash_charge++;
+					}
+					break;
+			}
+		}
+	}
 	if jump_action
 	{
 	    // super transformation
 	    if superform and player_transform_input() player_transform(false); else
 	    if objProgram.special_future_current_level>=7 and (not objLevel.cleared) and objGameData.rings[0]>=50 and (character_id == 1) and not (superform or invincibility) and player_transform_input() return player_is_transforming(); else
 	    // jump action
-		if input_check(cACTION)
-		{
-			if character_id == 1 //Sonic
-			{
-				//Charge drop dash
-				if dropdash_charge > 0 && !dropDash{
-					dropdash_charge = min(dropdash_charge+1, 20);
-					if dropdash_charge >= 20{
-						//Drop dash fully ready
-						return player_is_drop_dashing();
-					}
-				}
-			}
-		}
 	    if input_check_pressed(cACTION)
 	    {
 	        // curl up
@@ -139,14 +155,14 @@ function player_state_fall() {
 	            case 3: return player_is_air_dashing(); break;
 	            case 4: return player_is_ice_attacking(); break;
 	            case 5: if underwater==false return player_is_shield_flying(); break;
-	            default: { /*return player_is_shielding();*/
-					//Begin charging Drop Dash
-					if character_id == 1 {//Sonic
-						if !shield && spinning && jumping && dropdash_charge == 0{
-							dropdash_charge++;
-						}
+	            default: {
+					switch special_move_mode {
+						case 0: //Instashield only
+						case 2: //Both, drop dash triggered by holding jump
+						case 3: //Both, drop dash triggered by pressing down twice
+							return player_is_shielding();
+							break;
 					}
-					break;
 				}
 	            }
 	            break;
@@ -169,7 +185,6 @@ function player_state_fall() {
 		if dropdash_charge > 0 {
 			dropdash_charge = 0;
 			dropDash = false;
-			jump_action = true;
 			//animate
 			animation_new = "spin";
 			timeline_speed = 1/max(5-abs(xspeed), 1);
