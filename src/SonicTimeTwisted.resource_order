@@ -485,6 +485,7 @@
     {"name":"Unsorted","order":2,"path":"folders/Timelines/Specific/Unsorted.yy",},
     {"name":"Zones","order":3,"path":"folders/Timelines/Specific/Zones.yy",},
     {"name":"Submerged Saucer","order":1,"path":"folders/Timelines/Specific/Zones/Submerged Saucer.yy",},
+    {"name":"Aspect Mode Placeholders","order":3,"path":"folders/Sprites/Overlays/HUD/Aspect Mode Placeholders.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sprIntroClouds","order":1,"path":"sprites/sprIntroClouds/sprIntroClouds.yy",},
@@ -2104,6 +2105,7 @@
     {"name":"WaveShader","order":3,"path":"shaders/WaveShader/WaveShader.yy",},
     {"name":"animSignPost","order":1,"path":"timelines/animSignPost/animSignPost.yy",},
     {"name":"animTimePost","order":2,"path":"timelines/animTimePost/animTimePost.yy",},
+    {"name":"sprPause426","order":1,"path":"sprites/sprPause426/sprPause426.yy",},
     {"name":"animKnucklesBoarding","order":1,"path":"timelines/animKnucklesBoarding/animKnucklesBoarding.yy",},
     {"name":"animKnucklesBrake","order":2,"path":"timelines/animKnucklesBrake/animKnucklesBrake.yy",},
     {"name":"animKnucklesCliff","order":3,"path":"timelines/animKnucklesCliff/animKnucklesCliff.yy",},

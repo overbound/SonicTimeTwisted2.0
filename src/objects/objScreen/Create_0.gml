@@ -16,6 +16,7 @@ center_delay = 3; // apparently two frames is not enough on Linux...
 split_screen = false;
 paused = false;
 screenshot = -1; // for pausing
+pause_bg = -1;
 scanlines = false;
 flashing_reduced = 1;
 default_image_speed = 1;
