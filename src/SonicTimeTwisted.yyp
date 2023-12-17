@@ -337,6 +337,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Sprites/Fonts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Overlays","folderPath":"folders/Sprites/Overlays.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"HUD","folderPath":"folders/Sprites/Overlays/HUD.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Aspect Mode Placeholders","folderPath":"folders/Sprites/Overlays/HUD/Aspect Mode Placeholders.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shields","folderPath":"folders/Sprites/Overlays/HUD/Shields.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Sprites/Overlays/Menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Mid-scroll","folderPath":"folders/Sprites/Overlays/Menu/Mid-scroll.yy",},
@@ -681,7 +682,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Zones","folderPath":"folders/Timelines/Specific/Zones.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Attraction Attack","folderPath":"folders/Timelines/Specific/Zones/Attraction Attack.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Submerged Saucer","folderPath":"folders/Timelines/Specific/Zones/Submerged Saucer.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Aspect Mode Placeholders","folderPath":"folders/Sprites/Overlays/HUD/Aspect Mode Placeholders.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"045e_02fd_xbox_wireless_controller.csv","CopyToMask":2097160,"filePath":"datafiles/android/gamepad",},

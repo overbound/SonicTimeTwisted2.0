@@ -249,6 +249,7 @@
     {"name":"Outro","order":2,"path":"folders/Sprites/Cutscenes/Outro.yy",},
     {"name":"Fonts","order":1,"path":"folders/Sprites/Fonts.yy",},
     {"name":"Overlays","order":2,"path":"folders/Sprites/Overlays.yy",},
+    {"name":"Aspect Mode Placeholders","order":3,"path":"folders/Sprites/Overlays/HUD/Aspect Mode Placeholders.yy",},
     {"name":"Menu","order":5,"path":"folders/Sprites/Overlays/Menu.yy",},
     {"name":"Mid-scroll","order":3,"path":"folders/Sprites/Overlays/Menu/Mid-scroll.yy",},
     {"name":"Save Screen","order":1,"path":"folders/Sprites/Overlays/Save Screen.yy",},
@@ -485,7 +486,6 @@
     {"name":"Unsorted","order":2,"path":"folders/Timelines/Specific/Unsorted.yy",},
     {"name":"Zones","order":3,"path":"folders/Timelines/Specific/Zones.yy",},
     {"name":"Submerged Saucer","order":1,"path":"folders/Timelines/Specific/Zones/Submerged Saucer.yy",},
-    {"name":"Aspect Mode Placeholders","order":3,"path":"folders/Sprites/Overlays/HUD/Aspect Mode Placeholders.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sprIntroClouds","order":1,"path":"sprites/sprIntroClouds/sprIntroClouds.yy",},
