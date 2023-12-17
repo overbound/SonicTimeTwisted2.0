@@ -91,13 +91,23 @@ function player_state_fall() {
 	{
 		if character_id == 1 //Sonic
 		{
-			if dropdash_charge > 0 && !dropDash && (special_move_mode == 1 || special_move_mode == 2){
+			if dropdash_charge > 0 && !dropDash && (special_move_mode == 1) {
 				dropdash_charge = min(dropdash_charge+1, 20);
 				if dropdash_charge >= 20{
 					//Drop dash fully ready
 					return player_is_drop_dashing();
 				}
 			}
+		}
+	}
+	
+	//Charge the drop dash when you press down twice
+	if(!dropDash && special_move_mode == 2) {
+		if input_check_pressed(cDOWN) && objScreen.image_index - 30 <= last_frame_down_pressed {
+			last_frame_down_pressed = 0;
+			return player_is_drop_dashing();
+		} else if input_check_pressed(cDOWN) {
+			last_frame_down_pressed = objScreen.image_index;
 		}
 	}
 	//Author note, this section above needs to be changed to adapt to the new input method, which is pressing down twice
