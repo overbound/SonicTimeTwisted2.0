@@ -61,6 +61,8 @@ function load_options() {
             
 	        deadzone_int = ini_read_real("input","deadzone",30);
 	        deadzone = deadzone_int/100;
+			sonic_special_move = ini_read_real("input","sonic_special",0);
+			sonic_ddtrigger = ini_read_real("input","sonic_ddtrigger",0);
 	    }
     
 	    with (objMusic)
@@ -107,6 +109,8 @@ function load_options() {
 	        input_rumble_trigger_script = input_method_dummy_script;
 	        deadzone_int = 30;
 	        deadzone = deadzone_int/100;
+			sonic_special_move = 0;
+			sonic_ddtrigger = 0;
 	    }
     
 	    with (objMusic)

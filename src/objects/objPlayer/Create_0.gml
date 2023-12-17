@@ -30,13 +30,6 @@ transforming = false;
 reverse_control = false;
 boarding = false;
 
-// special move mode
-special_move_mode = 2; /* 
-0 - insta-shield only
-1 - drop dash only
-2 - both, drop dash triggered by holding jump
-3 - both, drop dash trggered by pressing down twice */
-
 // movement and collision
 terrain_list = ds_list_create();
 wall_direction = 0;
@@ -80,6 +73,7 @@ player_in_air();
 // initialize values
 player_change_character(objGameData.character_id[player_id], true);
 player_reset_physics();
+player_reload_special_moves();
 
 // system flags
 segment_enabled = true;

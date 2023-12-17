@@ -191,6 +191,7 @@
 		"_menu_sfx_MusicVolume": "Volume de la musique",
 		
 		"_menu_input_Title": "Contrôles",
+		"_menu_input_CharacterControls": "Contrôles des personnages",
 		"_menu_input_Method": "Périph. utilisé",
 		"_menu_input_Keyboard": "Clavier",
 		"_menu_input_Gamepad": "Manette",
@@ -200,6 +201,15 @@
 		"_menu_input_Method_Gamepad": "Manette",
 		"_menu_input_Method_Keyboard": "Clavier",
 		"_menu_input_Method_Auto": "Auto",
+		
+		"_menu_charactercontrols_Title": "Contrôles des personnages",
+		"_menu_charactercontrols_Sonic": "Technique de Sonic",
+		"_menu_charactercontrols_Sonic_InstaShield": "Insta-Shield",
+		"_menu_charactercontrols_Sonic_DropDash": "Drop Dash",
+		"_menu_charactercontrols_Sonic_Both": "Les deux",
+		"_menu_charactercontrols_DropDashTrigger": "Commande Drop Dash",
+		"_menu_charactercontrols_DropDashTrigger_DownTwice": "Bas deux fois",
+		"_menu_charactercontrols_DropDashTrigger_HoldJump": "Maintenir Saut",
 		
 		"_menu_keyboard_Title": "Clavier",
 		
