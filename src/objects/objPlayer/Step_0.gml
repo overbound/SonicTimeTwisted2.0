@@ -43,7 +43,7 @@ default: // normal activity
     if (player_id==0) audio_listener_position(camera.x, camera.y, 0);
 	
 	//Cancel drop dash
-	if !jumping {dropdash_charge = 0; dropDash = false;}
+	if !jumping && character_id != 1 {dropdash_charge = 0; dropDash = false;}
 }
 
 /* */
