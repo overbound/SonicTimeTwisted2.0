@@ -190,7 +190,7 @@ function player_state_fall() {
 	    }
 	}
 	//Drop dash cancelling
-	if (input_check_released(cACTION)) && character_id == 1{
+	if ((input_check_released(cACTION)) && character_id == 1 && (special_move_mode == 1 || special_move_mode == 2)) || (input_check_pressed(cUP) && special_move_mode == 3){
 		if dropdash_charge > 0 {
 			dropdash_charge = 0;
 			dropDash = false;
