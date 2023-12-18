@@ -90,9 +90,9 @@ break;
 case 6:
     with objLevel.player[0] {
         if state != player_state_standby
-            camera.bottom = __view_get( e__VW.YView, 0 ) +__view_get( e__VW.HView, 0 );
+            camera.bottom = camera_get_view_y(view_camera[0]) +objScreen.height;
         state = player_state_standby;
-        x = __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 )*0.5;
+        x = camera_get_view_x(view_camera[0]) + objScreen.width*0.5;
         y += 4;
         depth = -2001;
     }
@@ -100,8 +100,8 @@ case 6:
     with laser[0] instance_destroy();
     with laser[1] instance_destroy();
     
-    view_xoffset = x - __view_get( e__VW.XView, 0 );
-    view_yoffset = y - __view_get( e__VW.YView, 0 );
+    view_xoffset = x - camera_get_view_x(view_camera[0]);
+    view_yoffset = y - camera_get_view_y(view_camera[0]);
     y+=2;
     image_xscale +=0.035;
     image_yscale = image_xscale;
@@ -126,14 +126,14 @@ case 7:
     
     {
 }
-      x = __view_get( e__VW.XView, 0 ) + view_xoffset;
-      y = __view_get( e__VW.YView, 0 ) + view_yoffset;
+      x = camera_get_view_x(view_camera[0]) + view_xoffset;
+      y = camera_get_view_y(view_camera[0]) + view_yoffset;
       state = 8;
 break;
 case 8:
         y+=8;
         gravity = .125;
-        if bbox_top > __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) {
+        if bbox_top > camera_get_view_y(view_camera[0])+objScreen.height {
              // setup titlecard
             //if !instance_exists(objTitlecard)
             if room == MM1
