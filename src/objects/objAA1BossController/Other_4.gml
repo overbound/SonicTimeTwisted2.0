@@ -41,10 +41,10 @@ with objPlayer
     //xspeed = 6;
     player_is_standing();
     // lock camera at the start
-    camera.left = camera.x-(objScreen.width / 2);
-    camera.right = camera.x+(objScreen.width / 2);
-    camera.top = camera.y-(objScreen.height / 2);
-    camera.bottom = camera.y+(objScreen.height / 2);
+    camera.left = camera.x-(camera_get_view_width(view_camera[camera.view_id]) / 2);
+    camera.right = camera.x+(camera_get_view_width(view_camera[camera.view_id]) / 2);
+    camera.top = camera.y-(camera_get_view_height(view_camera[camera.view_id]) / 2);
+    camera.bottom = camera.y+(camera_get_view_height(view_camera[camera.view_id]) / 2);
 }
 
 timeline_index = timeAA1Boss;
