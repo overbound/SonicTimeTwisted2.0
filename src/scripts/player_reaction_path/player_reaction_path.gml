@@ -18,6 +18,7 @@ function player_reaction_path(argument0) {
 	global.check = 0;
 	// character values
 	if character_id==3 glide_falling = false;
+	else if character_id==1 {dropdash_charge = 0; dropDash = false;}
 
 	// reset timer
 	if underwater && shield_type != 1

@@ -102,7 +102,7 @@ function player_state_fall() {
 	}
 	
 	//Charge the drop dash when you press down twice
-	if(character_id == 1 && !dropDash && special_move_mode == 3) {
+	if(character_id == 1 && !dropDash && !shield && spinning && jumping && special_move_mode == 3) {
 		if input_check_pressed(cDOWN) && objScreen.image_index - 30 <= last_frame_down_pressed {
 			last_frame_down_pressed = 0;
 			return player_is_drop_dashing();
