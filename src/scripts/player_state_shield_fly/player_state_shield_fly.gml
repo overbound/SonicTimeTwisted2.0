@@ -20,6 +20,45 @@ function player_state_shield_fly() {
 	//rumble
 	rumble(rumble_short_weakest);
 
-
+	// jump actions
+	//Charge the drop dash when holding the button.
+	if input_check(cACTION)
+	{
+		if character_id == 1 //Sonic
+		{
+			if dropdash_charge > 0 && !dropDash && (special_move_mode == 1 || special_move_mode == 2) {
+				dropdash_charge = min(dropdash_charge+1, 20);
+				if dropdash_charge >= 20{
+					//Drop dash fully ready
+					return player_is_drop_dashing();
+				}
+			}
+		}
+	}
+	
+	//Charge the drop dash when you press down twice
+	if(character_id == 1 && !dropDash && /*shield&&*/  spinning /*&& jumping*/ && special_move_mode == 3) {
+		if input_check_pressed(cDOWN) && objScreen.image_index - 30 <= last_frame_down_pressed {
+			last_frame_down_pressed = 0;
+			return player_is_drop_dashing();
+		} else if input_check_pressed(cDOWN) {
+			last_frame_down_pressed = objScreen.image_index;
+		}
+	}
+	//Begin charging Drop Dash when you press jump
+	if input_check_pressed(cACTION)
+	{
+		if character_id == 1 //Sonic
+		{
+			switch special_move_mode {
+				case 1: //Drop dash only
+				case 2: //Both, drop dash triggered by holding jump
+					if /*!shield &&*/ spinning /* && jumping */ && dropdash_charge == 0{
+						dropdash_charge++;
+					}
+					break;
+			}
+		}
+	}
 
 }
