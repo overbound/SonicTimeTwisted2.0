@@ -34,13 +34,7 @@ function menu_part_videooptions_actions(argument0) {
 	        objScreen.show_shield = !objScreen.show_shield;
 	        break;
 		case 8:
-			if(room == titlescreen)
-			{
-				objScreen.aspect_mode = !objScreen.aspect_mode;
-				menu_fn_reopen(menu_part_videooptions_items, 8);
-			} else if(room != titlescreen){
-				menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
-			}
+			menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
 	        break;
 		case 9:
 			objScreen.aspect_mode = !objScreen.aspect_mode;
@@ -86,14 +80,8 @@ function menu_part_videooptions_actions(argument0) {
 	                objScreen.show_shield = !objScreen.show_shield;
 	                break;
 				case 8:
-					if(room == titlescreen)
-					{
-						objScreen.aspect_mode = !objScreen.aspect_mode;
-						menu_fn_reopen(menu_part_videooptions_items, 8);
-					} else if(room != titlescreen){
-						menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
-					}
-			        break;
+					menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
+					break;
 				case 9:
 					objScreen.aspect_mode = !objScreen.aspect_mode;
 					menu_fn_reopen(menu_part_videooptions_items, 8);
@@ -133,14 +121,8 @@ function menu_part_videooptions_actions(argument0) {
 	                objScreen.show_shield = !objScreen.show_shield;
 	                break;
 				case 8:
-					if(room == titlescreen)
-					{
-						objScreen.aspect_mode = !objScreen.aspect_mode;
-						menu_fn_reopen(menu_part_videooptions_items, 8);
-					} else if(room != titlescreen){
-						menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
-					}
-			        break;
+					menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
+					break;
 				case 9:
 					objScreen.aspect_mode = !objScreen.aspect_mode;
 					menu_fn_reopen(menu_part_videooptions_items, 8);
@@ -241,7 +223,7 @@ function menu_part_videooptions_actions(argument0) {
 	    menu_fn_refresh_displayed_value(7, offLabel);
 	}
 
-	if(!(objProgram.device_info & DEVICE_TYPE_SMARTPHONE))
+	if(objProgram.device_info & DEVICE_TYPE_COMPUTER)
 	{
 		var widescreenAspectlabel = "< "+tr("_menu_gfx_Aspect_Widescreen")+ " >";
 		var retroAspectlabel = "< "+tr("_menu_gfx_Aspect_Retro")+ " >";

@@ -1,13 +1,7 @@
 /// @description  Screen settings
 aspect_mode = false;
-if(aspect_mode)
-{
-	width = 320;
-	height = 240;
-} else {
-	width = 426;
-	height = 240;
-}
+width = (aspect_mode ? 320 : 426);
+height = 240;
 postdraw_event = 8; // postdraw event - set to 8 to draw normally, 9 for special drawing of application_surface
 vsync = true; // enabled by default.
 window_scale = 2; // default window scale, 2x.
@@ -16,7 +10,6 @@ center_delay = 3; // apparently two frames is not enough on Linux...
 split_screen = false;
 paused = false;
 screenshot = -1; // for pausing
-pause_bg = -1;
 scanlines = false;
 flashing_reduced = 1;
 default_image_speed = 1;
