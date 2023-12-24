@@ -156,7 +156,7 @@ if alarm[0] == -1 {
     }else {
     
         state = 12;
-        with objTimeTravelVortex { instance_create(x+((objScreen.width / 2) - ((objScreen.width / 2) - 140)),y+(objScreen.height / 2),objMetalSonicWarped); }
+        with objTimeTravelVortex { instance_create(x+140,y+(objScreen.height / 2),objMetalSonicWarped); }
         
         }
 }

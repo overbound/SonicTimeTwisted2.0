@@ -23,7 +23,7 @@ if (timer) {
             if (rootY == 1024) {
                 state = "float down";
                 timer = 32;
-                posZ = -objScreen.width + 3;
+                posZ = -426 + 3;
                 break;
             }
             if (causeQuake and rootY < floor_level) {
@@ -147,7 +147,7 @@ if (timer) {
                             other.state = "grounded";
                             other.wait = other.__GroundedTime;
                             play_sfx(sndGolemSlam,4);
-                            span = objScreen.width;
+                            span = 426;
                             angle = radtodeg(arccos(max(min((posX - other.posX) / span,1),-1)));
                             with(objGolemTarget) instance_destroy();
                             screen_shake();
