@@ -16,9 +16,9 @@ var disclaimer_title_height = string_height(string_hash_to_newline(disclaimer_ti
 
 var line_length = objScreen.width - 8;
 draw_set_font(objResources.fontMicro);
-var epilepsy_height = epilepsy_title_height + string_height_ext(string_hash_to_newline(epilepsy), 12, line_length) + 4;
-var disclaimer_height = disclaimer_title_height + string_height_ext(string_hash_to_newline(disclaimer), 12, line_length) + 4;
-var github_height = string_height_ext(string_hash_to_newline(github), 12, line_length);
+var epilepsy_height = epilepsy_title_height + string_height_ext(string_hash_to_newline(epilepsy), -1, line_length) + 4;
+var disclaimer_height = disclaimer_title_height + string_height_ext(string_hash_to_newline(disclaimer), -1, line_length) + 4;
+var github_height = string_height_ext(string_hash_to_newline(github), -1, line_length);
 
 var text_skip = floor((objScreen.height - epilepsy_height - disclaimer_height - github_height)/4);
 
