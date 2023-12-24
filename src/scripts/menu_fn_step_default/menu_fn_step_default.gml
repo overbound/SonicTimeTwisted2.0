@@ -190,7 +190,7 @@ function menu_fn_step_default() {
 	        }
 	        else
 	        {
-	            internal__menu_slide_offset_x = timer * -42;
+	            internal__menu_slide_offset_x = timer * ceil(objScreen.width/-10);
 	        }
 	        if(timer >= 10)
 	        {
@@ -208,7 +208,7 @@ function menu_fn_step_default() {
 	        }
 	        else
 	        {
-	            internal__menu_slide_offset_x = objScreen.width + timer * -42;
+	            internal__menu_slide_offset_x = objScreen.width + timer * ceil(objScreen.width/-10);
 	        }
 	        if(timer >= 10)
 	        {
@@ -227,7 +227,7 @@ function menu_fn_step_default() {
 	        }
 	        else
 	        {
-	            internal__menu_slide_offset_x = max(timer * 42, internal__menu_slide_offset_x);
+	            internal__menu_slide_offset_x = max(timer * ceil(objScreen.width/10), internal__menu_slide_offset_x);
 	        }
         
 	        if(timer >= 10)
@@ -246,7 +246,7 @@ function menu_fn_step_default() {
 	        }
 	        else
 	        {
-	            internal__menu_slide_offset_x = -1*objScreen.width + timer * 42;
+	            internal__menu_slide_offset_x = -1*objScreen.width + timer * ceil(objScreen.width/10);
 	        }
 	        if(timer >= 10)
 	        {
