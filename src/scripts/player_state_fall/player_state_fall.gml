@@ -49,6 +49,7 @@ function player_state_fall() {
 				dropdash_charge = 0;
 				dropDash = false;
 				camera.alarm[0] = 16;
+				camera.ground_mode = true;
 		        if !superform play_sfx(sndSpinDash);
 				else play_sfx(sndPeeloutRelease);
 		        //stop_sound(sndDropDash);
