@@ -77,7 +77,7 @@ case 5:
         }
         
                 
-                if objPPBossController.y - 240 < y {
+                if objPPBossController.y - objScreen.height < y {
                 
                     y -=2;
                     

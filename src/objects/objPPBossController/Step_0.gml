@@ -84,7 +84,7 @@ case 1:
                         screen_shake();
                     }
                     
-                if other.y - 240 < y {
+                if other.y - objScreen.height < y {
                     y -=2;
                 } else { 
                         other.state = 2;
