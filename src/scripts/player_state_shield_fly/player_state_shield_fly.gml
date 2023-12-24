@@ -56,6 +56,7 @@ function player_state_shield_fly() {
 	if(character_id == 1 && !dropDash && special_move_mode == 3) {
 		if input_check_pressed(cDOWN) && objScreen.image_index - 30 <= last_frame_down_pressed {
 			last_frame_down_pressed = 0;
+			player_is_falling();
 			return player_is_drop_dashing();
 		} else if input_check_pressed(cDOWN) {
 			last_frame_down_pressed = objScreen.image_index;
