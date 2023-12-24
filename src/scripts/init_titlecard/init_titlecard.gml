@@ -49,15 +49,15 @@ function init_titlecard(argument0) {
 
 	if(zone_first)
 	{
-	    word2y = ((objScreen.height/2) - ((objScreen.height/2) - 90));
-	    word3y = ((objScreen.height/2) + (124 - (objScreen.height/2)));
+	    word2y = (objScreen.height/2) - 30;
+	    word3y = (objScreen.height/2) + 4;
 	    word1font = objResources.fontTitleSmall;
 	    word3font = objResources.fontTitleLarge;
 	}
 	else
 	{
-	    word2y = ((objScreen.height/2) - ((objScreen.height/2) - 98));
-	    word3y = ((objScreen.height/2) + (132 - (objScreen.height/2)));
+	    word2y = (objScreen.height/2) - 22;
+	    word3y = (objScreen.height/2) + 12;
 	    word1font = objResources.fontTitleLarge;
 	    word3font = objResources.fontTitleSmall;
 	}

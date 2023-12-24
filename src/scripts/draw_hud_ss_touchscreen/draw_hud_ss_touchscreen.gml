@@ -16,7 +16,7 @@ function draw_hud_ss_touchscreen() {
 	}
 	if(show_progressbar)
 	{
-	    draw_ss_progress_bar(((objScreen.width/2) - ((objScreen.width/2) - 72)), ((objScreen.width/2) - ((objScreen.width/2) - 80)), ((objScreen.width/2) - ((objScreen.width/2) - 128)));
+	    draw_ss_progress_bar(72, 80, 128);
 	}
 
 
