@@ -23,7 +23,7 @@ function menu_fn_open_slider_window(argument0, argument1, argument2, argument3, 
 	var view_height = objScreen.gui_height;
 
 	draw_set_font(objResources.fontHudMin);
-	internal__draw_confirmation_height = string_height_ext(string_hash_to_newline(confirmation_text), 0, view_width - 4*margin)*4 + 2*margin;
+	internal__draw_confirmation_height = string_height_ext(string_hash_to_newline(confirmation_text), -1, view_width - 4*margin)*4 + 2*margin;
 	var text_width = string_width_ext(string_hash_to_newline(confirmation_text), 0, view_width - 4*margin) + 2*margin;
 	var slider_width = string_width(string_hash_to_newline(string(confirmation_no_action))) + string_width(string_hash_to_newline(string(confirmation_yes_action))) + 240 + 2*margin;
 	var button_width = 0;
