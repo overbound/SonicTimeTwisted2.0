@@ -201,7 +201,7 @@
 		"_menu_gfx_Aspect_Widescreen": "16:9",
 		"_menu_gfx_Aspect_Retro": "4:3",
 		"_menu_gfx_AspectWarning_Confirm": "Are you sure?\nChanging Aspect Ratios can\ncause some unintended side\neffects in regular gameplay.",
-		"_menu_gfx_AspectWarning_Accept": "I'm very sure.",
+		"_menu_gfx_AspectWarning_Accept": "I'm very sure",
 		
 		"_menu_sfx_Title": "Suoni",
 		"_menu_sfx_MasterVolume": "Volume Principale",
