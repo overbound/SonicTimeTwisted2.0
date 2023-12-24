@@ -18,6 +18,7 @@ function player_reset_physics() {
 	roll_friction = 0.0234375;
 	drpspd = 8; //the base speed for a drop dash
 	drpmax = 12; //the top speed for a drop dash
+	dropdash_charge_max = 14
 	// gravity values
 	jump_constant = 6.5-(character_id==3);
 	jump_release = 4;

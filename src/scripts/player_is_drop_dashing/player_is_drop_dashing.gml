@@ -3,7 +3,7 @@ function player_is_drop_dashing(){
 	//states and flags
 	spinning = true;
 	jump_action = false;
-	dropdash_charge = 20;
+	dropdash_charge = dropdash_charge_max;
 	dropDash = true;
 	//animate
 	animation_new = "drop_dash";

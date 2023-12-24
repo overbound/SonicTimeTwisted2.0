@@ -12,7 +12,7 @@ function player_state_fall() {
 	if not player_movement_air()
 	{
 	    // bubble shield bounce
-	    if shield
+	    if shield && dropdash_charge == dropdash_charge_max
 	    {
 	        // shield animation
 	        if shield.timeline_index==animShieldBubbleAction
@@ -42,16 +42,16 @@ function player_state_fall() {
 	        with instashield instance_destroy();
 	        instashield = noone;
 	        // bubble shield bounce
-	        if shield {if shield.timeline_index==animShieldBubbleAction return player_is_bouncing();}
+	        if shield {if shield.timeline_index==animShieldBubbleAction && dropdash_charge < dropdash_charge_max return player_is_bouncing();}
 			
 			//Drop dash launching
-			if dropdash_charge == 20 {
+			if dropdash_charge == dropdash_charge_max {
 				dropdash_charge = 0;
 				dropDash = false;
 				camera.alarm[0] = 16;
 		        if !superform play_sfx(sndSpinDash);
 				else play_sfx(sndPeeloutRelease);
-		        stop_sound(sndDropDash);
+		        //stop_sound(sndDropDash);
 		        if (sign(xspeed) == facing) || (sign(xspeed) == 0){ //if player was moving forwards
 					xspeed = (xspeed / 4) + (drpspd * facing);
 		            xspeed = clamp(xspeed, -drpmax, drpmax);
@@ -92,8 +92,8 @@ function player_state_fall() {
 		if character_id == 1 //Sonic
 		{
 			if dropdash_charge > 0 && !dropDash && (special_move_mode == 1 || special_move_mode == 2) {
-				dropdash_charge = min(dropdash_charge+1, 20);
-				if dropdash_charge >= 20{
+				dropdash_charge = min(dropdash_charge+1, dropdash_charge_max);
+				if dropdash_charge >= dropdash_charge_max {
 					//Drop dash fully ready
 					return player_is_drop_dashing();
 				}

@@ -10,7 +10,11 @@ function player_is_rolling() {
 	spindashing = false;
 	// counters
 	chain_multiplier = 0;
-
-
+	if shield != noone && shield.timeline_index == animShieldBubbleAction {
+		shield.timeline_index = animShieldBubble;
+		shield.timeline_position = 0;
+		shield.timeline_running = 1;
+		shield.timeline_loop = 1;
+	}
 
 }

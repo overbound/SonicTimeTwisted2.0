@@ -27,8 +27,8 @@ function player_state_shield_fly() {
 		if character_id == 1 //Sonic
 		{
 			if dropdash_charge > 0 && !dropDash && (special_move_mode == 1 || special_move_mode == 2) {
-				dropdash_charge = min(dropdash_charge+1, 20);
-				if dropdash_charge >= 20{
+				dropdash_charge = min(dropdash_charge+1, dropdashChargeMax);
+				if dropdash_charge >= dropdashChargeMax{
 					//Drop dash fully ready
 					return player_is_drop_dashing();
 				}

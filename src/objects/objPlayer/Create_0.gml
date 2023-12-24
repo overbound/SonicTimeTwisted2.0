@@ -105,6 +105,7 @@ slope_friction_down = 0.3125;
 spindash_friction = 0.96875;
 drpspd = 8; //the base speed for a drop dash
 drpmax = 12; //the top speed for a drop dash
+dropdash_charge_max = 14
 
 super_lose_rings = false;
 
