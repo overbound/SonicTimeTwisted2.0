@@ -41,6 +41,13 @@ default: // normal activity
 
     // update listener
     if (player_id==0) audio_listener_position(camera.x, camera.y, 0);
+	
+	//Cancel drop dash
+	if (/*!jumping ||*/ !spinning || state != player_state_fall || character_id != 1) && dropdash_charge > 0
+	{
+		dropdash_charge = 0;
+		dropDash = false;
+	}
 }
 
 /* */

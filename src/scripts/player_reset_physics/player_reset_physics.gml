@@ -16,6 +16,9 @@ function player_reset_physics() {
 	air_acceleration = 0.09375;
 	roll_deceleration = 0.125;
 	roll_friction = 0.0234375;
+	drpspd = 8; //the base speed for a drop dash
+	drpmax = 12; //the top speed for a drop dash
+	dropdash_charge_max = 14
 	// gravity values
 	jump_constant = 6.5-(character_id==3);
 	jump_release = 4;
@@ -51,6 +54,9 @@ function player_reset_physics() {
 	        deceleration *= 2;
 	        air_acceleration *= 4;
 	        jump_constant = 8;
+			drpspd = 12; //the base speed for a drop dash
+			drpmax = 13; //the top speed for a drop dash
+			
 	        break;
 	    case 3: // knuckles
 	        glide_acceleration *= 2;

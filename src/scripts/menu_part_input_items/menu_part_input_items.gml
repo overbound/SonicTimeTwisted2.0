@@ -2,6 +2,7 @@ function menu_part_input_items() {
 	items = false;
 
 	menu_fn_add_title(tr("_menu_input_Title"));
+	menu_fn_add_option(tr("_menu_input_CharacterControls"), 7);
 	if(objProgram.device_info & DEVICE_TYPE_COMPUTER)
 	{
 	    menu_fn_add_option(tr("_menu_input_Method"), 1, 1, "");
@@ -31,7 +32,7 @@ function menu_part_input_items() {
 	       }
 	   }
 	}
-	menu_fn_add_option(tr("_menu_Back"), 7);
+	menu_fn_add_option(tr("_menu_Back"), 8);
 
 	action_script = menu_part_input_actions;
 	draw_script = menu_fn_draw_default;

@@ -39,6 +39,11 @@ function game_unpause_events() {
 	{
 	    event_user(0);
 	}
+	// Player - update special moves
+	with(objPlayer)
+	{
+	    player_reload_special_moves();
+	}
 
 
 

@@ -6,7 +6,7 @@ function player_is_shielding() {
 	image_angle = 0;
 	// states and flags
 	spinning = true;
-	jumping = false;
+	//jumping = false;
 	jump_action = false;
 	// timers
 	if invulnerable<6 invulnerable = 6;

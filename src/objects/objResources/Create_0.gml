@@ -65,6 +65,10 @@ part_type_life(ff_snow, 240, 240);
 part_type_orientation(ff_snow, 270, 270, 0.5, 0, false);
 part_type_gravity(ff_snow, 0.1, 270);
 part_type_alpha2(ff_snow, 1, 0);
+// drop dash dust
+dropdash_dust = part_type_create();
+part_type_sprite(dropdash_dust, sprDropDashDust, true, true, false);
+part_type_life(dropdash_dust, 20, 20);
 
 // Lifetime and default values
 lifetime = 240
@@ -108,6 +112,7 @@ ds_map_add(anim_sonic, "level_start", animSonicLevelStart);
 ds_map_add(anim_sonic, "swing", animSonicSwing);
 ds_map_add(anim_sonic, "wallrun", animSonicWallRun);
 ds_map_add(anim_sonic, "float", animSonicFloat);
+ds_map_add(anim_sonic, "drop_dash", animSonicDropDash);
 // tails animation table
 anim_tails = ds_map_create();
 ds_map_add(anim_tails, "idle", animTailsIdle);
@@ -206,6 +211,7 @@ ds_map_add(anim_sonic_super, "swing", animSuperSonicSwing);
 ds_map_add(anim_sonic_super, "wallrun", animSuperSonicWallRun);
 ds_map_add(anim_sonic_super, "float", animSuperSonicFloat);
 ds_map_add(anim_sonic_super, "stand_rotate", animeSuperSonicStandRotate);
+ds_map_add(anim_sonic_super, "drop_dash", animSuperSonicDropDash);
 
 /* */
 /*  */
