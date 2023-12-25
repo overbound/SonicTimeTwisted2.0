@@ -12,7 +12,7 @@ with grass2 event_perform(ev_draw, 0);
 with grass1 event_perform(ev_draw, 0);
 surface_reset_target();
 // draw complete surface 
-draw_surface_ext(surface, __view_get( e__VW.XView, view_current )+66, __view_get( e__VW.YView, view_current )-180/*-216*/, 1, 1, 333, c_white, 1);
+draw_surface_ext(surface, camera_get_view_x(view_camera[view_current])+(objScreen.width/2 - 147), camera_get_view_y(view_camera[view_current])-(objScreen.height/2 + 60)/*-216*/, 1, 1, 333, c_white, 1);
 
 /* */
 /*  */
