@@ -9,6 +9,7 @@ function player_is_shield_flying() {
 	spinning = true;
 	jumping = false;
 	jump_action = false;
+	dropdash_charge = 0;
 	// movement and collision
 	xspeed = 0;
 	yspeed = 0;

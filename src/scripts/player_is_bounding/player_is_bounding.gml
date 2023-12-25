@@ -10,7 +10,7 @@ function player_is_bounding() {
 	jump_action = false;
 	// movement and collision
 	xspeed = 0;
-	yspeed = 8;
+	yspeed = 6.5;
 	// set air state
 	player_in_air();
 	// shield animation

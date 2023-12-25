@@ -67,8 +67,11 @@ function menu_part_input_actions(argument0) {
 	    case 6:
 	        menu_fn_goto_submenu(menu_part_gamepad_simple_items);
 	        break;
-	    case -1:
 	    case 7:
+	        menu_fn_goto_submenu(menu_part_charcontrols_items);
+	        break;
+	    case -1:
+	    case 8:
 	        save_options();
 	        menu_fn_exit_submenu(menu_part_options_items, 1);
 	        break;

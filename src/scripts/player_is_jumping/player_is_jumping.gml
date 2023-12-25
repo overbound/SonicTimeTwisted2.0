@@ -15,8 +15,8 @@ function player_is_jumping() {
 	spindashing = false;
 	// movement and collision
 	ground_speed = xspeed;
-	xspeed = (v_cosine * ground_speed) - (v_sine * jump_constant);
-	yspeed = -(v_sine * ground_speed) - (v_cosine * jump_constant);
+	xspeed = (v_cosine * ground_speed) - (v_sine * (jump_constant + gravity_force));
+	yspeed = -(v_sine * ground_speed) - (v_cosine * (jump_constant + gravity_force));
 	// set air state
 	player_in_air();
 	// sound

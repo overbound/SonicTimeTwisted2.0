@@ -209,6 +209,7 @@
 		"_menu_sfx_MusicVolume": "Громкость музыки",
 		
 		"_menu_input_Title": "Управление",
+		"_menu_input_CharacterControls": "Управление персонажами",
 		"_menu_input_Method": "Устройство",
 		"_menu_input_Keyboard": "Клавиатура",
 		"_menu_input_Gamepad": "Геймпад",
@@ -218,6 +219,15 @@
 		"_menu_input_Method_Gamepad": "Геймпад",
 		"_menu_input_Method_Keyboard": "Клавиатура",
 		"_menu_input_Method_Auto": "Авто",
+		
+		"_menu_charactercontrols_Title": "Управление персонажами",
+		"_menu_charactercontrols_Sonic": "Особое умение Соника",
+		"_menu_charactercontrols_Sonic_InstaShield": "Insta-Shield",
+		"_menu_charactercontrols_Sonic_DropDash": "Super Drop Dash",
+		"_menu_charactercontrols_Sonic_Both": "Оба",
+		"_menu_charactercontrols_DropDashTrigger": "Команда Super Drop Dash",
+		"_menu_charactercontrols_DropDashTrigger_DownTwice": "Дважды Вниз",
+		"_menu_charactercontrols_DropDashTrigger_HoldJump": "Держать Прыжок",
 		
 		"_menu_keyboard_Title": "Клавиатура",
 				

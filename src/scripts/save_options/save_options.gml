@@ -24,6 +24,8 @@ function save_options() {
 	    ini_write_real("input", "analog_deadzone_max", objProgram.inputManager.gpanalog_deadzone_max);
 	    ini_write_real("input", "analog_ss_min_angle", objProgram.inputManager.gpanalog_ss_min_angle);
 	    ini_write_real("input", "analog_ss_max_angle", objProgram.inputManager.gpanalog_ss_max_angle);
+	    ini_write_real("input", "sonic_special", objProgram.inputManager.sonic_special_move);
+	    ini_write_real("input", "sonic_ddtrigger", objProgram.inputManager.sonic_ddtrigger);
 	    ini_write_real("smartphone", "dpadmode", objProgram.inputManager.dpadmode);
 	    ini_write_real("smartphone", "vkalpha", objProgram.inputManager.vkalpha);
 	    ini_write_real("smartphone", "gyroinss", objProgram.inputManager.gyroinss);

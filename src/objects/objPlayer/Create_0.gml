@@ -49,6 +49,7 @@ camera_pan_down = 110;
 spindash_charge = 0;
 spindash_pitch = 0;
 chain_multiplier = 0;
+dropdash_charge = 0;
 
 // timers
 sliding = 0;
@@ -57,6 +58,7 @@ invulnerable = 0;
 ignore_rings = 0;
 superspeed = 0;
 superform = -1;
+last_frame_down_pressed = 0;
 
 // camera
 camera = instance_create(x, y, objCamera);
@@ -72,6 +74,7 @@ player_in_air();
 // initialize values
 player_change_character(objGameData.character_id[player_id], true);
 player_reset_physics();
+player_reload_special_moves();
 
 // system flags
 segment_enabled = true;
@@ -100,6 +103,9 @@ slope_friction_cap = 0.125;
 slope_friction_up = 0.071825;
 slope_friction_down = 0.3125;
 spindash_friction = 0.96875;
+drpspd = 8; //the base speed for a drop dash
+drpmax = 12; //the top speed for a drop dash
+dropdash_charge_max = 14
 
 super_lose_rings = false;
 
