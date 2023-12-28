@@ -3,7 +3,7 @@ switch state {
      with objLevel.player[0] {
         x+=8;
         state = player_state_object;
-        if bbox_left > __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 )+160 {
+        if bbox_left > camera_get_view_x(view_camera[0]) + objScreen.width+160 {
             other.state = 1000;
             other.alarm[0] = 3;
         }   
@@ -41,8 +41,8 @@ switch state {
     case 2:
         
         with objCharacterFall {
-            if y > __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 )*0.5 {
-                __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) + (2) );
+            if y > camera_get_view_y(view_camera[0]) + objScreen.height*0.5 {
+                __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) + (2) );
                 other.screen_y -=2;
             } else with other state = 3;
             }

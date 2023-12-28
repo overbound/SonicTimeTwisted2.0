@@ -116,7 +116,7 @@ case 9:
     }
 break;
 case 10:
-    if y < __view_get( e__VW.YView, 0 ) + (__view_get( e__VW.HView, 0 )*0.5)-32 {
+    if y < camera_get_view_y(view_camera[0]) + (objScreen.height*0.5)-32 {
         y+=2;
     }
     image_angle+=20;

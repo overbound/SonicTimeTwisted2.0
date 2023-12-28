@@ -1,3 +1,3 @@
 alarm[3] = 8;
-instance_create(__view_get( e__VW.XView, view_current )+430,__view_get( e__VW.YView, view_current )+10+random(260),objUFOBg)
+instance_create(camera_get_view_x(view_camera[view_current])+430,camera_get_view_y(view_camera[view_current])+10+random(260),objUFOBg)
 

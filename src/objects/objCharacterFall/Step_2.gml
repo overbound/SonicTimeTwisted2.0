@@ -12,23 +12,23 @@ if gravity != 0 {
     image_xscale=1;
     image_yscale=1;
 }
-if __view_get( e__VW.XView, 0 ) <= 0 {
+if camera_get_view_x(view_camera[0]) <= 0 {
     alarm[0] = 120;
     state = 1;
     __view_set( e__VW.XView, 0, 0 );
 }
-if  abs(__view_get( e__VW.XView, 0 ) - abs(x-objScreen.width*.5)) > 16 || abs(__view_get( e__VW.YView, 0 ) - abs(y-objScreen.height*.5-16)) > 16 {
-    if __view_get( e__VW.XView, 0 )+objScreen.width*0.5 > x {
-        __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) - (8) );
+if  abs(camera_get_view_x(view_camera[0]) - abs(x-objScreen.width*.5)) > 16 || abs(camera_get_view_y(view_camera[0]) - abs(y-objScreen.height*.5-16)) > 16 {
+    if camera_get_view_x(view_camera[0])+objScreen.width*0.5 > x {
+        __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) - (8) );
     }
-    if __view_get( e__VW.XView, 0 )+objScreen.width*0.5 < x {
-        __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (8) );
+    if camera_get_view_x(view_camera[0])+objScreen.width*0.5 < x {
+        __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) + (8) );
     }
-    if __view_get( e__VW.YView, 0 )+objScreen.height*0.5 > y {
-        __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) - (8) );
+    if camera_get_view_y(view_camera[0])+objScreen.height*0.5 > y {
+        __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) - (8) );
     }
-    if __view_get( e__VW.YView, 0 )+objScreen.height*0.5 < y {
-        __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) + (8) );
+    if camera_get_view_y(view_camera[0])+objScreen.height*0.5 < y {
+        __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) + (8) );
     }
 } else {
     __view_set( e__VW.XView, 0, x-objScreen.width*.5 );
@@ -51,8 +51,8 @@ case 1:
     } else  {
         viewTop = 1780;
     }
-        if __view_get( e__VW.YView, 0 ) > viewTop{
-            __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) - (2) );
+        if camera_get_view_y(view_camera[0]) > viewTop{
+            __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) - (2) );
         } else {
         
             if endType == "bad" || endType == "noemeralds" {
@@ -102,7 +102,7 @@ case 4:
 break;
 case 5:
     with objPlaneRestoreFinal {
-        if x > (213 - (213 - (objScreen.width / 2))) {
+        if x > (213 - (objScreen.aspect_mode ? 160 : 0)) {
             instance_create(248,1944,objTLPRestoreEnding);
             other.alarm[0] = 500;
             
@@ -143,8 +143,8 @@ case 7:
     }
 break;
 case 8:
-    if __view_get( e__VW.YView, 0 ) < 2760 {
-        __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) + (2) );
+    if camera_get_view_y(view_camera[0]) < 2760 {
+        __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) + (2) );
     } else {
         __view_set( e__VW.YView, 0, 2760 )
         state = 9;

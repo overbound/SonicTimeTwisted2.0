@@ -5,8 +5,8 @@ draw_set_color(c_white);
 uni_time = shader_get_uniform(WaveShader,"time");
 var_time_var = 0;
 uni_resolution = shader_get_uniform(WaveShader,"resolution");
-var_resolution_x = __view_get( e__VW.WView, 0 );
-var_resolution_y = __view_get( e__VW.HView, 0 );
+var_resolution_x = objScreen.width;
+var_resolution_y = objScreen.height;
 uni_wave_amount = shader_get_uniform(WaveShader,"wave_amount");
 var_wave_amount = 20; //higher = more waves
 uni_wave_distortion = shader_get_uniform(WaveShader,"wave_distortion");

@@ -7,9 +7,9 @@ with objLevel.player[0] {
     }
     
     if instance_exists(camera)
-    if (camera.bottom < __view_get( e__VW.YView, view_current )+240) {
+    if (camera.bottom < camera_get_view_y(view_camera[view_current])+240) {
     
-        __view_set( e__VW.YView, view_current, __view_get( e__VW.YView, view_current ) - (2) );    
+        __view_set( e__VW.YView, view_current, camera_get_view_y(view_camera[view_current]) - (2) );    
     
     }
 

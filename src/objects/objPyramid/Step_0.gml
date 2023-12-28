@@ -2,8 +2,8 @@ switch state {
     
     case 0:
     
-        if __view_get( e__VW.YView, view_current ) >= 0
-            __view_set( e__VW.YView, view_current, __view_get( e__VW.YView, view_current ) - (8) );
+        if camera_get_view_y(view_camera[view_current]) >= 0
+            __view_set( e__VW.YView, view_current, camera_get_view_y(view_camera[view_current]) - (8) );
         else {
             __view_set( e__VW.YView, view_current, 0 );
             state = -1;

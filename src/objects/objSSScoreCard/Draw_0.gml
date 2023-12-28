@@ -2,9 +2,9 @@
 if(state >= 6)
 {
     var draw_x_offset, draw_y_offset_title, draw_y_offset_score;
-    draw_x_offset = __view_get( e__VW.XView, view_current );
-    draw_y_offset_title = __view_get( e__VW.YView, view_current );
-    draw_y_offset_score = __view_get( e__VW.YView, view_current );
+    draw_x_offset = camera_get_view_x(view_camera[view_current]);
+    draw_y_offset_title = camera_get_view_y(view_camera[view_current]);
+    draw_y_offset_score = camera_get_view_y(view_camera[view_current]);
     if(!is_act_scorecard)
     {
         draw_y_offset_title -= 16;

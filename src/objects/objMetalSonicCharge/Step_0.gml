@@ -14,9 +14,9 @@ case 1:
             camera.bottom = 1712;
         }
         
-        if camera.bottom < __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ) {
+        if camera.bottom < camera_get_view_y(view_camera[0]) + objScreen.height {
         
-            __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) - (2) );
+            __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) - (2) );
         
         } else {
             other.state =2;

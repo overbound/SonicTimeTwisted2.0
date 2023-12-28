@@ -30,8 +30,8 @@ if(selectState == 0)
         if(mouse_check_button_pressed(mb_left))
         {
             cancel =  point_in_rectangle(device_mouse_x(0), device_mouse_y(0), 
-                __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 ) - 28, __view_get( e__VW.YView, 0 ) + 4,
-                __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 ) - 4, __view_get( e__VW.YView, 0 ) + 28);
+                camera_get_view_x(view_camera[0]) + objScreen.width - 28, camera_get_view_y(view_camera[0]) + 4,
+                camera_get_view_x(view_camera[0]) + objScreen.width - 4, camera_get_view_y(view_camera[0]) + 28);
         }
     }
     if(cancel)
@@ -230,21 +230,21 @@ mouse_y_scaled = get_mouse_y_with_scale();
 /// Detect & distinguish press or drag
 if(mouse_check_button_pressed(mb_left))
 {
-    mouse_prev_x = mouse_x_scaled - __view_get( e__VW.XView, 0 );
-    mouse_prev_y = mouse_y_scaled - __view_get( e__VW.YView, 0 );
+    mouse_prev_x = mouse_x_scaled - camera_get_view_x(view_camera[0]);
+    mouse_prev_y = mouse_y_scaled - camera_get_view_y(view_camera[0]);
     mouse_dx = 0;
     mouse_dy = 0;
     mouse_click_registered = false;
-    x_on_press = mouse_x_scaled + __view_get( e__VW.XView, 0 );
+    x_on_press = mouse_x_scaled + camera_get_view_x(view_camera[0]);
     y_on_press = mouse_y_scaled;
     
 }
 if(mouse_check_button(mb_left))
 {
-    mouse_dx = mouse_x_scaled - __view_get( e__VW.XView, 0 ) - mouse_prev_x;
-    mouse_dy = mouse_y_scaled - __view_get( e__VW.YView, 0 ) - mouse_prev_y;
-    mouse_prev_x = mouse_x_scaled - __view_get( e__VW.XView, 0 );
-    mouse_prev_y = mouse_y_scaled - __view_get( e__VW.YView, 0 );
+    mouse_dx = mouse_x_scaled - camera_get_view_x(view_camera[0]) - mouse_prev_x;
+    mouse_dy = mouse_y_scaled - camera_get_view_y(view_camera[0]) - mouse_prev_y;
+    mouse_prev_x = mouse_x_scaled - camera_get_view_x(view_camera[0]);
+    mouse_prev_y = mouse_y_scaled - camera_get_view_y(view_camera[0]);
 }
 tap_registered = false;
 drag_registered = false;
@@ -257,7 +257,7 @@ if(mouse_check_button_released(mb_left))
         case 5:
             // selecting a slot
             // within 2 pixels is considered a touch
-            if(abs(mouse_x_scaled + __view_get( e__VW.XView, 0 ) - x_on_press) <= 2)
+            if(abs(mouse_x_scaled + camera_get_view_x(view_camera[0]) - x_on_press) <= 2)
             {
                 tap_registered = true;
             }
@@ -290,18 +290,18 @@ if(mouse_check_button_released(mb_left))
 // with room bounds
 if(selectState == 1 || selectState == 2 || selectState == 3 || selectState == 6 || selectState == 7)
 {
-    var diff_center = (__view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 ) div 2)) - x;
+    var diff_center = (camera_get_view_x(view_camera[0]) + (objScreen.width div 2)) - x;
     if(diff_center != 0)
     {
         if(diff_center <= -16)
         {
-            __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (16) );
+            __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) + (16) );
         }
         else
         {
             if((diff_center > -16 && diff_center <= 0) || (diff_center < 16 && diff_center >= 0))
             {
-                __view_set( e__VW.XView, 0, x - (__view_get( e__VW.WView, 0 ) div 2) );
+                __view_set( e__VW.XView, 0, x - (objScreen.width div 2) );
                 if(selectState == 3)
                 {
                     selectState = 4;
@@ -319,14 +319,14 @@ if(selectState == 1 || selectState == 2 || selectState == 3 || selectState == 6 
             {
                 if(diff_center >= 16)
                 {
-                    __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) - (16) );
+                    __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) - (16) );
                 }
             }
         }
     }
     else
     {
-        __view_set( e__VW.XView, 0, x - (__view_get( e__VW.WView, 0 ) div 2) );
+        __view_set( e__VW.XView, 0, x - (objScreen.width div 2) );
         if(selectState == 3)
         {
             selectState = 4;
@@ -563,15 +563,15 @@ if (selectState == 0 || selectState == 4)
 /// Drag camera
 __view_set( e__VW.Object, 0, noone );
 __view_set( e__VW.XView, 0, max(
-    slots[0].x  - (__view_get( e__VW.WView, 0 ) div 2),
+    slots[0].x  - (objScreen.width div 2),
     min(
-        __view_get( e__VW.XView, 0 ) - mouse_dx,
+        camera_get_view_x(view_camera[0]) - mouse_dx,
         slots[8].x  - (__view_get( e__VW.WView, 8 ) div 2),
     )
 ) );
 if(selectState == 4 || selectState == 6)
 {
-    x = __view_get( e__VW.XView, 0 ) + (__view_get( e__VW.WView, 0 ) div 2);
+    x = camera_get_view_x(view_camera[0]) + (objScreen.width div 2);
 }
 
 /* */

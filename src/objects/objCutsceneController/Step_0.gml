@@ -13,8 +13,8 @@ if alarm[0] == -1 {
 }
 break;
 case 1:
-if __view_get( e__VW.XView, 0 ) < 426 + (213 - (objScreen.width/2)) {
-    __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (2) );
+if camera_get_view_x(view_camera[0]) < 426 + (213 - (objScreen.aspect_mode ? 160 : 0)) {
+    camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) + 2, camera_get_view_y(view_camera[0]));
 } else if alarm[0] == -1 {
     alarm[0] = 20;
 }
@@ -73,9 +73,9 @@ with objSonicIntroPast {
 }
 break;
 case 6: // move to memory cloud
-    if __view_get( e__VW.YView, 0 ) > 0 {
+    if camera_get_view_y(view_camera[0]) > 0 {
     
-        __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) - (2) );
+        __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) - (2) );
     
     } else if alarm[0] == -1{
         __view_set( e__VW.YView, 0, 0 );
@@ -84,7 +84,7 @@ case 6: // move to memory cloud
          
     }
     
-    if __view_get( e__VW.YView, 0 ) < 32 {
+    if camera_get_view_y(view_camera[0]) < 32 {
     
         with objSmallSonic {
     
@@ -148,9 +148,9 @@ with objTimeTravelVortex {
 break;
 case 11:
 if alarm[0] == -1 {
-    if __view_get( e__VW.XView, 0 ) < 213 + (213-(objScreen.width / 2)) {
+    if camera_get_view_x(view_camera[0]) < 213 + (objScreen.aspect_mode ? 53 : 0) {
     
-        __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (4) );
+        __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) + (4) );
         
     
     }else {

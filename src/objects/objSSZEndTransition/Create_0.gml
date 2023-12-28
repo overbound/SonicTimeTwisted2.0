@@ -5,7 +5,7 @@ explodeOffset = 0;
 state = 0;
 alarm[0]=20;
 image_alpha = 0;
-x = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5;
-y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5;
+x = camera_get_view_x(view_camera[0])+objScreen.width*0.5;
+y = camera_get_view_y(view_camera[0])+objScreen.height*0.5;
     
 

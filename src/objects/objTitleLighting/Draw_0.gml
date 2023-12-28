@@ -31,31 +31,31 @@ surface_set_target(tt_surface);
             {
                 if (!j)
                 {
-                    temp_Wave_1 = sin(degtorad(time / 8 + (i) + (__view_get( e__VW.YView, 0 ) / 80) * temp_Sign) * 16 + (__view_get( e__VW.YView, 0 ) / 40) * temp_Sign) * (10 / (max(1, __view_get( e__VW.YView, 0 ) / 240) * temp_Sign));
+                    temp_Wave_1 = sin(degtorad(time / 8 + (i) + (camera_get_view_y(view_camera[0]) / 80) * temp_Sign) * 16 + (camera_get_view_y(view_camera[0]) / 40) * temp_Sign) * (10 / (max(1, camera_get_view_y(view_camera[0]) / 240) * temp_Sign));
                 }
                 else
                 {
-                    temp_Wave_1 = cos(degtorad(time / 8 - (i) - (__view_get( e__VW.YView, 0 ) / 80) * temp_Sign) * 16 - (__view_get( e__VW.YView, 0 ) / 40) * temp_Sign) * (10 / (max(1, __view_get( e__VW.YView, 0 ) / 240) * temp_Sign));
+                    temp_Wave_1 = cos(degtorad(time / 8 - (i) - (camera_get_view_y(view_camera[0]) / 80) * temp_Sign) * 16 - (camera_get_view_y(view_camera[0]) / 40) * temp_Sign) * (10 / (max(1, camera_get_view_y(view_camera[0]) / 240) * temp_Sign));
                 }
                 // temp_Wave_1 = sin(degtorad(time / 8 + i + (view_yview / 60) * temp_Sign) * 16) * 10;
-                draw_vertex_colour(temp_Centre + ((temp_Offset / max(1, __view_get( e__VW.YView, 0 ) / 240)) * temp_Sign) + (temp_Wave_1 * temp_Sign) + (temp_Wave_2 * temp_Sign), temp_Height, c_white, 1);
+                draw_vertex_colour(temp_Centre + ((temp_Offset / max(1, camera_get_view_y(view_camera[0]) / 240)) * temp_Sign) + (temp_Wave_1 * temp_Sign) + (temp_Wave_2 * temp_Sign), temp_Height, c_white, 1);
                 temp_Height += (240 / temp_Detail) * temp_Sign;
             }
             if (!j)
             {
-                temp_Wave_1 = sin(degtorad(time / 8 + i + (__view_get( e__VW.YView, 0 ) / 80) * temp_Sign) * 16 + (__view_get( e__VW.YView, 0 ) / 40) * temp_Sign) * (10 / (max(1, __view_get( e__VW.YView, 0 ) / 240) * temp_Sign));
+                temp_Wave_1 = sin(degtorad(time / 8 + i + (camera_get_view_y(view_camera[0]) / 80) * temp_Sign) * 16 + (camera_get_view_y(view_camera[0]) / 40) * temp_Sign) * (10 / (max(1, camera_get_view_y(view_camera[0]) / 240) * temp_Sign));
             }
             else
             {
-                temp_Wave_1 = cos(degtorad(time / 8 - (i) - (__view_get( e__VW.YView, 0 ) / 80) * temp_Sign) * 16 - (__view_get( e__VW.YView, 0 ) / 40) * temp_Sign) * (10 / (max(1, __view_get( e__VW.YView, 0 ) / 240) * temp_Sign));
+                temp_Wave_1 = cos(degtorad(time / 8 - (i) - (camera_get_view_y(view_camera[0]) / 80) * temp_Sign) * 16 - (camera_get_view_y(view_camera[0]) / 40) * temp_Sign) * (10 / (max(1, camera_get_view_y(view_camera[0]) / 240) * temp_Sign));
             }
-            draw_vertex_colour(temp_Centre + ((temp_Offset / max(1, __view_get( e__VW.YView, 0 ) / 240)) * temp_Sign) + (temp_Wave_1 * temp_Sign) + (temp_Wave_2 * temp_Sign) + (temp_Wave_3 * temp_Sign), temp_Height, c_white, 1);
+            draw_vertex_colour(temp_Centre + ((temp_Offset / max(1, camera_get_view_y(view_camera[0]) / 240)) * temp_Sign) + (temp_Wave_1 * temp_Sign) + (temp_Wave_2 * temp_Sign) + (temp_Wave_3 * temp_Sign), temp_Height, c_white, 1);
             temp_Sign *= -1;
         }
         temp_Sign = 1;
         temp_Height = 0;
-        temp_Wave_1 = sin(degtorad(time / 8 + (__view_get( e__VW.YView, 0 ) / 80) * temp_Sign) * 16 + (__view_get( e__VW.YView, 0 ) / 40) * temp_Sign) * (10 / (max(1, __view_get( e__VW.YView, 0 ) / 240) * temp_Sign));
-        draw_vertex_colour(temp_Centre + ((temp_Offset / max(1, __view_get( e__VW.YView, 0 ) / 240)) * temp_Sign) + (temp_Wave_1 * temp_Sign) + (temp_Wave_2 * temp_Sign) + (temp_Wave_3 * temp_Sign), temp_Height, c_white, 1);
+        temp_Wave_1 = sin(degtorad(time / 8 + (camera_get_view_y(view_camera[0]) / 80) * temp_Sign) * 16 + (camera_get_view_y(view_camera[0]) / 40) * temp_Sign) * (10 / (max(1, camera_get_view_y(view_camera[0]) / 240) * temp_Sign));
+        draw_vertex_colour(temp_Centre + ((temp_Offset / max(1, camera_get_view_y(view_camera[0]) / 240)) * temp_Sign) + (temp_Wave_1 * temp_Sign) + (temp_Wave_2 * temp_Sign) + (temp_Wave_3 * temp_Sign), temp_Height, c_white, 1);
     draw_primitive_end();
     /*temp_Sign = 1;
     temp_Height = 0;

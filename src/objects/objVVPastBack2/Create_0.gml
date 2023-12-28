@@ -1,8 +1,8 @@
 event_inherited();
  /// Initialize background
 var relative_y = 0.8;
-basex=__view_get( e__VW.XView, view_current );
-basey=__view_get( e__VW.YView, view_current );
+basex=camera_get_view_x(view_camera[view_current]);
+basey=camera_get_view_y(view_camera[view_current]);
 shake = false;
 // hut
 parallax_create(1, backVVPHutTop, 0, 0,164, 206, 0, 0, 0.42, relative_y, 0, 0, 64, 0);

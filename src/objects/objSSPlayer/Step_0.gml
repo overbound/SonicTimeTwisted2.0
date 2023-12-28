@@ -168,8 +168,8 @@ if (b)
   move_speed *= 0.95;
 }
 
-__view_set( e__VW.XView, 0, x - __view_get( e__VW.WView, 0 ) / 2 );
-__view_set( e__VW.YView, 0, y - __view_get( e__VW.HView, 0 ) / 2 );
+__view_set( e__VW.XView, 0, x - objScreen.width / 2 );
+__view_set( e__VW.YView, 0, y - objScreen.height / 2 );
 
 image_angle = move_direction;
 __view_set( e__VW.Angle, 0, 90 - move_direction );

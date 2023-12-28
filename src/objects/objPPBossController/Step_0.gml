@@ -6,13 +6,13 @@ case 0:
         alarm[0] = 540;
     
     }
-    if objLevel.player[0].camera.bottom < __view_get( e__VW.YView, view_current ) + __view_get( e__VW.HView, view_current ) {
+    if objLevel.player[0].camera.bottom < camera_get_view_y(view_camera[view_current]) + objScreen.height {
     
-        __view_set( e__VW.YView, view_current, __view_get( e__VW.YView, view_current ) - (2) );
+        __view_set( e__VW.YView, view_current, camera_get_view_y(view_camera[view_current]) - (2) );
     
     } else {
     
-       __view_set( e__VW.YView, view_current, objLevel.player[0].camera.bottom - __view_get( e__VW.HView, view_current ) );
+       __view_set( e__VW.YView, view_current, objLevel.player[0].camera.bottom - objScreen.height );
     
     with playerId {
         

@@ -10,7 +10,7 @@ case "entering":
             image_yscale = max(image_yscale - zSpeed, zPosition);
         }
         y -= ySpeed;
-        var cameraCentre = __view_get( e__VW.YView, 0 ) + (__view_get( e__VW.HView, 0 ) * 0.5);
+        var cameraCentre = camera_get_view_y(view_camera[0]) + (objScreen.height * 0.5);
         if (y <= cameraCentre)
         {
             y = cameraCentre;
@@ -20,7 +20,7 @@ case "entering":
     break;
 
 case "waiting":
-    y = __view_get( e__VW.YView, 0 ) + (__view_get( e__VW.HView, 0 ) * 0.5);
+    y = camera_get_view_y(view_camera[0]) + (objScreen.height * 0.5);
     break;
 
 case "exiting":
@@ -32,7 +32,7 @@ case "exiting":
             image_yscale = min(image_yscale + zSpeed, 1);
         }
         y += ySpeed;
-        if (y >= __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ) + 6)
+        if (y >= camera_get_view_y(view_camera[0]) + objScreen.height + 6)
         {
             with (objGalanik)
             {

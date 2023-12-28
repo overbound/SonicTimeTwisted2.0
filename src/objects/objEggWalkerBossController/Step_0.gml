@@ -9,17 +9,17 @@ break;
 case 1:
 // 
 
-if(__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) > objLevel.player[0].camera.bottom){
-    __view_set( e__VW.YView, view_current, __view_get( e__VW.YView, view_current ) - (2) );
+if(camera_get_view_y(view_camera[0])+objScreen.height > objLevel.player[0].camera.bottom){
+    __view_set( e__VW.YView, view_current, camera_get_view_y(view_camera[view_current]) - (2) );
     }
     
-if __view_get( e__VW.XView, view_current ) < objEggWalker.x-360{   //10888
+if camera_get_view_x(view_camera[view_current]) < objEggWalker.x-360{   //10888
     
   with objLevel.player[0] {
     camera.left +=2;
     camera.right +=3;
    //objLevel.player[0].camera.x+=8;
-   __view_set( e__VW.XView, view_current, __view_get( e__VW.XView, view_current ) + (2) );
+   __view_set( e__VW.XView, view_current, camera_get_view_x(view_camera[view_current]) + (2) );
 }
     
 }
