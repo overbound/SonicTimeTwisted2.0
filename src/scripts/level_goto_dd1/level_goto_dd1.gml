@@ -19,8 +19,8 @@ function level_goto_dd1(argument0) {
 	objProgram.temp_image_index=image_index;
 	objProgram.temp_timeline_position=timeline_position;
 	objProgram.temp_y=784-y;
-	objProgram.temp_yview_offset=objLevel.player[0].y-__view_get( e__VW.YView, 0 );
-	objProgram.temp_xview_offset=objLevel.player[0].x-__view_get( e__VW.XView, 0 );
+	objProgram.temp_yview_offset=objLevel.player[0].y-camera_get_view_y(view_camera[0]);
+	objProgram.temp_xview_offset=objLevel.player[0].x-camera_get_view_x(view_camera[0]);
 	if (state == player_state_fly) {
 	    objProgram.temp_fly_value = alarm[0];
 	} else if (state == player_state_glide) {

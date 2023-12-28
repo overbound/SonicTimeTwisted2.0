@@ -1,4 +1,9 @@
 event_inherited();
+
+//always center the room's view to avoid borking the Title Screen
+if(objScreen.aspect_mode) camera_set_view_pos(view_camera[view_current], 53, camera_get_view_y(view_camera[view_current]));
+else camera_set_view_pos(view_camera[view_current], 0, camera_get_view_y(view_camera[view_current]));
+
 /// Initialize
 image_speed = 0;
 // 0 - first fade in

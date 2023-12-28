@@ -2,7 +2,7 @@ event_inherited();
 /// Scale water strips
 var offset, scale, i;
 // get scale based on offset
-offset = floor(__view_get( e__VW.YView, view_current )*relative_y)+absolute_y;
+offset = floor(camera_get_view_y(view_camera[view_current])*relative_y)+absolute_y;
 scale = 1;
 with water scale = median((y-offset)/160, -other.scale_limit, other.scale_limit);
 // apply scale

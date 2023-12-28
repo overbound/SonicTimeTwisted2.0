@@ -22,7 +22,7 @@ separation_x = 512;
 separation_y = 0;
 sprite_h = sprite_height;
 depth =20;
-yy=y+floor(__view_get( e__VW.YView, view_current )*relative_y)+absolute_y;
+yy=y+floor(camera_get_view_y(view_camera[view_current])*relative_y)+absolute_y;
 //xx=x+floor(view_xview[view_current]*relative_x)+absolute_x;
 
 //old setup code

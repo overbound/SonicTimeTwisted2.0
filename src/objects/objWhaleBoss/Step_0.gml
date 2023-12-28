@@ -69,7 +69,7 @@ case 6: // Move Left
     if x < objTTBossController.x - 500 {
     
         state = 7;
-        instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*.5+16,objWhaleBossTowardsCam);
+        instance_create(camera_get_view_x(view_camera[0])+objScreen.width*.5,camera_get_view_y(view_camera[0])+objScreen.height*.5+16,objWhaleBossTowardsCam);
     }
 break;
 case 7:

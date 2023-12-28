@@ -8,7 +8,7 @@ case 0: // Start Firing
     x2+=xspeed;
     y2+=yspeed;
     
-    if x2 < xstart -426 {
+    if x2 < xstart -objScreen.width {
     
        state = 1;
        xspeed = dcos(dir)*3;

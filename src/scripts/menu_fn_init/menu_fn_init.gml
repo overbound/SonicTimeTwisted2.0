@@ -131,7 +131,7 @@ function menu_fn_init() {
 	internal__touch_dir = 0;
 	internal__touch_dir_changed = false;
 
-	internal__calculated_width = 200;
+	internal__calculated_width = (objScreen.width - 26)/2;
 
 	// hold buttons variables
 	internal__hold_up_timer = 0;

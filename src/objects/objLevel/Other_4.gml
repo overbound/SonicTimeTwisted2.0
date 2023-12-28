@@ -47,8 +47,8 @@ if spawn_id>-1
             player[0].y = spawn_id.y+2;
         
         if objProgram.temp_spawn_tag == 0 {
-            __view_set( e__VW.XView, 0, player[0].x-213 )
-            __view_set( e__VW.YView, 0, player[0].y-120 )
+            __view_set( e__VW.XView, 0, player[0].x-(objScreen.width / 2) )
+            __view_set( e__VW.YView, 0, player[0].y-(objScreen.height / 2) )
         }
     }
     

@@ -17,6 +17,10 @@ function load_options_platform_dependant() {
 	    else
 	    {
 	        load_options();
+			with(objScreen)
+			{
+				if(aspect_mode) event_user(10) else event_user(11);
+			}
 	        event_user(1);
 	    }
 	}

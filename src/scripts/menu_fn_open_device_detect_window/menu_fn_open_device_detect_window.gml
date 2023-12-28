@@ -27,7 +27,7 @@ function menu_fn_open_device_detect_window() {
 	var view_height = objScreen.gui_height;
 
 	draw_set_font(objResources.fontHudMin);
-	internal__draw_confirmation_height = string_height_ext(string_hash_to_newline(confirmation_text), 0, view_width - 4*margin) + 2*margin;
+	internal__draw_confirmation_height = string_height_ext(string_hash_to_newline(confirmation_text), -1, view_width - 4*margin) + 2*margin;
 	var text_width = string_width_ext(string_hash_to_newline(confirmation_text), 0, view_width - 4*margin) + 2*margin;
 	var button_width = 0;
 

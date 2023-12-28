@@ -1,8 +1,8 @@
 event_inherited();
 /// Initialize background
 var relative_y = 0.825;
-basex=__view_get( e__VW.XView, view_current );
-basey=__view_get( e__VW.YView, view_current );
+basex=camera_get_view_x(view_camera[view_current]);
+basey=camera_get_view_y(view_camera[view_current]);
 shake = false;
 // bushes
 parallax_create(1, backVVFBush3, 0, 0, 160, 32, 0, 0, 0.48, relative_y, 0, 536, 0, 0);

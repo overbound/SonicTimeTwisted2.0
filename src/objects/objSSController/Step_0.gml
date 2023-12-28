@@ -1,9 +1,9 @@
 switch state{
     case 1:
     
-    if __view_get( e__VW.YView, 0 )+240 > objLevel.player[0].camera.bottom {
+    if camera_get_view_y(view_camera[0])+240 > objLevel.player[0].camera.bottom {
     
-        __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) - (1) );
+        __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) - (1) );
     
     }
     

@@ -16,8 +16,8 @@ with player_id
             camera.x = x;
             camera.y = y;
             // update camera position
-            __view_set( e__VW.XView, camera.view_id, clamp(x-__view_get( e__VW.WView, camera.view_id )*0.5, camera.left, camera.right-__view_get( e__VW.WView, camera.view_id )) );
-            __view_set( e__VW.YView, camera.view_id, clamp(y-__view_get( e__VW.HView, camera.view_id )*0.5, camera.top, camera.bottom-__view_get( e__VW.HView, camera.view_id )) );
+            __view_set( e__VW.XView, camera.view_id, clamp(x-objScreen.width*0.5, camera.left, camera.right-objScreen.width) );
+            __view_set( e__VW.YView, camera.view_id, clamp(y-objScreen.height*0.5, camera.top, camera.bottom-objScreen.height) );
             // sound
             play_sfx(sndWarpOut, 0);
         

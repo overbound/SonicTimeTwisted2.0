@@ -2,19 +2,19 @@
     case 0: // PAN SCREEN
         
         //check if we've panned all the way right
-        if __view_get( e__VW.XView, view_current )+__view_get( e__VW.WPort, view_current ) >= room_width
+        if camera_get_view_x(view_camera[view_current])+__view_get( e__VW.WPort, view_current ) >= room_width
         {
             __view_set( e__VW.XView, view_current, room_width-__view_get( e__VW.WPort, view_current ) );
             
-            if __view_get( e__VW.YView, view_current ) > 0//pan up until at the top
-                __view_set( e__VW.YView, view_current, __view_get( e__VW.YView, view_current ) - (2) );    
+            if camera_get_view_y(view_camera[view_current]) > 0//pan up until at the top
+                __view_set( e__VW.YView, view_current, camera_get_view_y(view_camera[view_current]) - (2) );    
                 else{
                     state = -1;
                     alarm[0]=80;
                     }             
             }
         else//pan right
-            __view_set( e__VW.XView, view_current, __view_get( e__VW.XView, view_current ) + (1) );
+            __view_set( e__VW.XView, view_current, camera_get_view_x(view_camera[view_current]) + (1) );
     break;    
     case 1:// The Little Planet Appears
         with(objIntroLittlePlanet) {

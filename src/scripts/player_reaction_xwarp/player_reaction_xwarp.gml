@@ -1,8 +1,8 @@
-function player_reaction_xwarp(argument0) {
+function player_reaction_xwarp(local_id) {
 	// player_reaction_xwarp(local_id)
-	x-=argument0.xwarp;
-	camera.x-=argument0.xwarp;
-	__view_set( e__VW.XView, view_current, __view_get( e__VW.XView, view_current ) - (argument0.xwarp) );
+	x-=local_id.xwarp;
+	camera.x-=local_id.xwarp;
+	camera_set_view_pos(view_camera[view_current], camera_get_view_x(view_camera[view_current]) - (local_id.xwarp), camera_get_view_y(view_camera[view_current]));
 	// hard collision found
 	return false;
 

@@ -12,7 +12,7 @@ animation_table = -1;
 animation = "";
 animation_new = objProgram.temp_animation;
 timeline_speed = 1;
-__view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (11) );
+__view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) + (11) );
     
 animation_reset = true;
 

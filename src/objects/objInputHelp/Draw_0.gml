@@ -7,16 +7,16 @@ if(duration mod 2)
     {
         d3d_set_projection_ortho(0, 0, __view_get( e__VW.WPort, 0 ), __view_get( e__VW.HPort, 0 ), 0);
         draw_text_colour(
-            __view_get( e__VW.WView, view_current ) div 2,
-            __view_get( e__VW.HView, view_current ) div 2,
+            objScreen.width div 2,
+            objScreen.height div 2,
             string_hash_to_newline(hint), c_ltgray, c_ltgray, c_white, c_white, 1
         );
     }
     else
     {
         draw_text_colour(
-            __view_get( e__VW.XView, view_current ) + (__view_get( e__VW.WView, view_current ) div 2),
-            __view_get( e__VW.YView, view_current ) +( __view_get( e__VW.HView, view_current ) div 2),
+            camera_get_view_x(view_camera[view_current]) + (objScreen.width div 2),
+            camera_get_view_y(view_camera[view_current]) +( objScreen.height div 2),
             string_hash_to_newline(hint), c_ltgray, c_ltgray, c_white, c_white, 1
         );
     }

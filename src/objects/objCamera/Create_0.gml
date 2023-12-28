@@ -14,11 +14,11 @@ panning_hspeed = 0;
 panning_vspeed = 0;
 // setup view
 view_id = instance_number(objCamera) - 1;
-__view_set( e__VW.XView, view_id, clamp(x-__view_get( e__VW.WView, view_id )*0.5, left, right-__view_get( e__VW.WView, view_id )) );
-__view_set( e__VW.YView, view_id, clamp(y-__view_get( e__VW.HView, view_id )*0.5, top, bottom-__view_get( e__VW.HView, view_id )) );
+__view_set( e__VW.XView, view_id, clamp(x-objScreen.width*0.5, left, right-objScreen.width) );
+__view_set( e__VW.YView, view_id, clamp(y-objScreen.height*0.5, top, bottom-objScreen.height) );
 screenShake=false;
-view_xorigin=__view_get( e__VW.XView, 0 );
-view_yorigin=__view_get( e__VW.YView, 0 );
+view_xorigin=camera_get_view_x(view_camera[0]);
+view_yorigin=camera_get_view_y(view_camera[0]);
 xSpeed = 0;
 shake=false;
 

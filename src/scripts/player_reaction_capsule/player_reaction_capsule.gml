@@ -42,8 +42,8 @@ function player_reaction_capsule(argument0) {
 	// wait for flowers to bloom
 	argument0.parent_id.state = 1;
 	// force camera bounds
-	camera.right = min(argument0.x+__view_get( e__VW.WView, camera.view_id )/2, room_width);
-	camera.left = camera.right-__view_get( e__VW.WView, camera.view_id );
+	camera.right = min(argument0.x+objScreen.width/2, room_width);
+	camera.left = camera.right-objScreen.width;
 	// destroy object
 	with argument0 instance_destroy();
 	// sound

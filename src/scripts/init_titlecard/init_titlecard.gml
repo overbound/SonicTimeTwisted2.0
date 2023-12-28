@@ -40,7 +40,7 @@ function init_titlecard(argument0) {
 	        }
 	    }
 	    // set offset
-	    title_ox[i] = 298-string_width(string_hash_to_newline(title_string[i]));
+	    title_ox[i] = (objScreen.width-22)-string_width(string_hash_to_newline(title_string[i]));
 	    // go through each character
 	    for (j=0; j<title_length[i]; j+=1) title_scale[i, j] = 12;
 	}
@@ -49,15 +49,15 @@ function init_titlecard(argument0) {
 
 	if(zone_first)
 	{
-	    word2y = 90;
-	    word3y = 124;
+	    word2y = (objScreen.height/2) - 30;
+	    word3y = (objScreen.height/2) + 4;
 	    word1font = objResources.fontTitleSmall;
 	    word3font = objResources.fontTitleLarge;
 	}
 	else
 	{
-	    word2y = 98;
-	    word3y = 132;
+	    word2y = (objScreen.height/2) - 22;
+	    word3y = (objScreen.height/2) + 12;
 	    word1font = objResources.fontTitleLarge;
 	    word3font = objResources.fontTitleSmall;
 	}

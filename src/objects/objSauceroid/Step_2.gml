@@ -4,8 +4,8 @@ if (!frozen)
 	// get camera center
 	if view_id > -1
 	{
-		var cx = __view_get( e__VW.XView, view_id )+(__view_get( e__VW.WView, view_id )*0.5);
-		var cy = __view_get( e__VW.YView, view_id )+(__view_get( e__VW.HView, view_id )*0.5);
+		var cx = camera_get_view_x(view_camera[view_id])+(objScreen.width*0.5);
+		var cy = camera_get_view_y(view_camera[view_id])+(objScreen.height*0.5);
 	}
 	// wait timer
 	if wait_timer>0

@@ -5,16 +5,16 @@ if alarm[0] == -1 {
 } else if alarm[0] == 0 {
     state = 1;
 } else if alarm[0] == 220 {
-   sonicLight=instance_create(-262,-108,objSonicLight);
+   sonicLight=instance_create(camera_get_view_x(view_camera[view_current]) - 262, -108, objSonicLight);
 } else if alarm[0] == 140{
-   knucklesLight=instance_create(-262,410,objKnucklesLight);
+   knucklesLight=instance_create(camera_get_view_x(view_camera[view_current]) - 262, 410, objKnucklesLight);
 } else if alarm[0] == 110 {
-    tailsLight=instance_create(-260,2,objTailsLight);
+    tailsLight=instance_create(camera_get_view_x(view_camera[view_current]) - 260, 2, objTailsLight);
 }
 break;
 case 1:
-if __view_get( e__VW.XView, 0 ) < 426 {
-    __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (2) );
+if camera_get_view_x(view_camera[0]) < 426 + (213 - (objScreen.aspect_mode ? 160 : 0)) {
+    camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) + 2, camera_get_view_y(view_camera[0]));
 } else if alarm[0] == -1 {
     alarm[0] = 20;
 }
@@ -73,9 +73,9 @@ with objSonicIntroPast {
 }
 break;
 case 6: // move to memory cloud
-    if __view_get( e__VW.YView, 0 ) > 0 {
+    if camera_get_view_y(view_camera[0]) > 0 {
     
-        __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) - (2) );
+        __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) - (2) );
     
     } else if alarm[0] == -1{
         __view_set( e__VW.YView, 0, 0 );
@@ -84,7 +84,7 @@ case 6: // move to memory cloud
          
     }
     
-    if __view_get( e__VW.YView, 0 ) < 32 {
+    if camera_get_view_y(view_camera[0]) < 32 {
     
         with objSmallSonic {
     
@@ -136,7 +136,7 @@ if alarm[0] == 0 {
 break;
 case 10:
 if alarm[0] == 0 {
-    instance_create(213,-120,objTimeTravelVortex);
+    instance_create((objScreen.width / 2),-(objScreen.height / 2),objTimeTravelVortex);
 }
 with objTimeTravelVortex {
     if image_xscale >= 1 && other.alarm[0] == -1 {
@@ -148,15 +148,15 @@ with objTimeTravelVortex {
 break;
 case 11:
 if alarm[0] == -1 {
-    if __view_get( e__VW.XView, 0 ) < 213 {
+    if camera_get_view_x(view_camera[0]) < 213 + (objScreen.aspect_mode ? 53 : 0) {
     
-        __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (4) );
+        __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) + (4) );
         
     
     }else {
     
         state = 12;
-        with objTimeTravelVortex { instance_create(x+140,y+120,objMetalSonicWarped); }
+        with objTimeTravelVortex { instance_create(x+140,y+(objScreen.height / 2),objMetalSonicWarped); }
         
         }
 }

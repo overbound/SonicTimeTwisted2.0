@@ -20,12 +20,12 @@ function player_state_super_flight() {
 	            yspeed=0;
 	        }
 	    } else {
-	        if analog_y < 0 && __view_get( e__VW.YView, 0 ) < y {
+	        if analog_y < 0 && camera_get_view_y(view_camera[0]) < y {
 	            if yspeed > -used_speed_cap_y {
 	                yspeed-=acceleration;
 	            }
 	        } else {
-	            if analog_y > 0 && __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ) > y {
+	            if analog_y > 0 && camera_get_view_y(view_camera[0]) + objScreen.height > y {
 	                if yspeed < used_speed_cap_y {
 	                    yspeed+=acceleration;
 	                }
@@ -33,12 +33,12 @@ function player_state_super_flight() {
 	        }
 	    }
 	} else {
-	    if input_check(cUP) && __view_get( e__VW.YView, 0 ) < y {
+	    if input_check(cUP) && camera_get_view_y(view_camera[0]) < y {
 	        if yspeed > -4 {
 	            yspeed-=acceleration;
 	        }
 	    } 
-	    if input_check(cDOWN) && __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ) > y {
+	    if input_check(cDOWN) && camera_get_view_y(view_camera[0]) + objScreen.height > y {
 	        if yspeed < 4 {
 	            yspeed+=acceleration;
 	        }
@@ -105,7 +105,7 @@ function player_state_super_flight() {
                 
 	            } 
         
-	            if !input_check(cLEFT) && !input_check(cRIGHT)  && __view_get( e__VW.XView, 0 ) < x {
+	            if !input_check(cLEFT) && !input_check(cRIGHT)  && camera_get_view_x(view_camera[0]) < x {
         
 	                if xspeed > -2 {
 	                   xspeed -=deceleration;
@@ -142,7 +142,7 @@ function player_state_super_flight() {
 	        }
 	    break;
 	    default:
-	        if (__view_get( e__VW.XView, 0 ) < x)
+	        if (camera_get_view_x(view_camera[0]) < x)
 	        {
 	            xspeed += 0.05;
 	            image_angle += 12;

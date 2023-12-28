@@ -3,10 +3,10 @@ y = parentId.y;
 
 if life <= 0 {
     with objLevel.player[0] {
-        camera.left = __view_get( e__VW.XView, 0 );
-        camera.top = __view_get( e__VW.YView, 0 );
-        camera.right = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 );
-        camera.bottom = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 );
+        camera.left = camera_get_view_x(view_camera[0]);
+        camera.top = camera_get_view_y(view_camera[0]);
+        camera.right = camera_get_view_x(view_camera[0])+objScreen.width;
+        camera.bottom = camera_get_view_y(view_camera[0])+objScreen.height;
     
     }
     play_sfx(sndGalanikDeathScreech,0);

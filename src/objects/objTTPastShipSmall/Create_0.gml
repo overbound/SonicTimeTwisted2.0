@@ -24,8 +24,8 @@ hspeed=-.25;
 
 sprite_h = sprite_height;
 depth =20;
-yy=y+floor(__view_get( e__VW.YView, view_current )*relative_y)+absolute_y;
-xx=x+floor(__view_get( e__VW.XView, view_current )*relative_x)+absolute_x;
+yy=y+floor(camera_get_view_y(view_camera[view_current])*relative_y)+absolute_y;
+xx=x+floor(camera_get_view_x(view_camera[view_current])*relative_x)+absolute_x;
 
 //old setup code
 //rig= parallax_create_sprite(1,sprBackTTFRig,.5,0,0,.8,relative_y,128,280,768,0); 

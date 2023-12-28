@@ -18,7 +18,7 @@ case 1: // move player camera over
         {
             left = min(left+6, 896);
             right = 1728;
-            __view_set( e__VW.XView, view_id, left );
+			camera_set_view_pos(view_camera[view_id], left, camera_get_view_y(view_camera[view_id]));
         }
         else
         {
@@ -34,7 +34,7 @@ case 1: // move player camera over
         {
             top = min(top+3, 504);
             bottom = min(bottom+3, 744);
-            __view_set( e__VW.YView, view_id, top );
+			camera_set_view_pos(view_camera[view_id], camera_get_view_x(view_camera[view_id]), top);
         }
     }
     
@@ -43,10 +43,10 @@ case 1: // move player camera over
         if !in_view(view_current,0) {
         //if state != player_state_fall
            // player_is_falling();
-            if y<=__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5 {
+            if y<=camera_get_view_y(view_camera[0])+objScreen.height*0.5 {
                 y+=16;
             }
-            if x<=__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5 {
+            if x<=camera_get_view_x(view_camera[0])+objScreen.width*0.5 {
                 x+=8;
             }
         }

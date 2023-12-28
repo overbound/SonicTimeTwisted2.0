@@ -3,8 +3,8 @@ if in_view(view_current,0) {
     
     remove = 0;
     with objLevel.player[0] {
-        if camera.bottom < __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ) {
-            __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) - (2) );
+        if camera.bottom < camera_get_view_y(view_camera[0]) + objScreen.height {
+            __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) - (2) );
         
         }
     
@@ -23,7 +23,7 @@ if (timer) {
             if (rootY == 1024) {
                 state = "float down";
                 timer = 32;
-                posZ = -__view_get( e__VW.WView, 0 ) + 3;
+                posZ = -426 + 3;
                 break;
             }
             if (causeQuake and rootY < floor_level) {

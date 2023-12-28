@@ -1,9 +1,9 @@
 if (shot)
 {
-    if (x < __view_get( e__VW.XView, 0 ) - 128) ||
-       (y < __view_get( e__VW.YView, 0 ) - 128) ||
-       (x > __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 ) + 128) ||
-       (y > __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ) + 128)
+    if (x < camera_get_view_x(view_camera[0]) - 128) ||
+       (y < camera_get_view_y(view_camera[0]) - 128) ||
+       (x > camera_get_view_x(view_camera[0]) + objScreen.width + 128) ||
+       (y > camera_get_view_y(view_camera[0]) + objScreen.height + 128)
     {
         if shield == noone instance_destroy();
         shot = false;

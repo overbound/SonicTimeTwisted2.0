@@ -602,7 +602,7 @@ function menu_fn_draw_default() {
 	                                draw_set_color(main_border_color);
 	                                draw_rectangle(internal__draw_confirmation_rect_x_center - 101, internal__draw_menu_rect_y_center - 9, internal__draw_confirmation_rect_x_center + 101, internal__draw_menu_rect_y_center + 9, false);                         
 	                                draw_set_color(c_white);
-	                                var slider_length = round(200*((confirmation_cursor - confirmation_no_action)/(confirmation_yes_action - confirmation_no_action)));
+	                                var slider_length = round(((objScreen.width - 26)/2)*((confirmation_cursor - confirmation_no_action)/(confirmation_yes_action - confirmation_no_action)));
 	                                draw_rectangle(internal__draw_confirmation_rect_x_center - 100, internal__draw_menu_rect_y_center - 8, internal__draw_confirmation_rect_x_center - 100 + slider_length, internal__draw_menu_rect_y_center + 8, false);                         
 	                            }
 	                        }

@@ -29,7 +29,7 @@ function menu_fn_open_warning_window() {
 
 	draw_set_font(objResources.fontHudMin);
 
-	internal__draw_confirmation_height = string_height_ext(string_hash_to_newline(confirmation_text), 1, view_width - 4*margin) + 2*margin + 40;
+	internal__draw_confirmation_height = string_height_ext(string_hash_to_newline(confirmation_text), -1, view_width - 4*margin) + 2*margin + 40;
 	var text_width = string_width_ext(string_hash_to_newline(confirmation_text), 1, view_width - 4*margin) + 2*margin;
 	var button_width = string_width_ext(string_hash_to_newline(confirmation_yes_label), 0, view_width - 4*margin);
 

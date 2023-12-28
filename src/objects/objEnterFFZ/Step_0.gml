@@ -29,13 +29,13 @@ case -1: // fade in
     break;
 }
 //if objScreen.image_index mod 4 {
-    part_particles_create(snowSystem, __view_get( e__VW.XView, 0 )+random(600), __view_get( e__VW.YView, 0 ), snow, 1);
-    part_particles_create(snowSystem, __view_get( e__VW.XView, 0 )+random(600), __view_get( e__VW.YView, 0 ), snow, 1);
-    part_particles_create(snowSystem, __view_get( e__VW.XView, 0 )+random(600), __view_get( e__VW.YView, 0 ), snow, 1);
-    part_particles_create(snowSystem, __view_get( e__VW.XView, 0 )+random(600), __view_get( e__VW.YView, 0 ), snow, 1);
-    part_particles_create(snowSystem, __view_get( e__VW.XView, 0 )+random(600), __view_get( e__VW.YView, 0 ), snow, 1);
-    part_particles_create(snowSystem, __view_get( e__VW.XView, 0 )+random(600), __view_get( e__VW.YView, 0 ), snow, 1);
-    part_particles_create(snowSystem, __view_get( e__VW.XView, 0 )+random(600), __view_get( e__VW.YView, 0 ), snow, 1);
-    part_particles_create(snowSystem, __view_get( e__VW.XView, 0 )+random(600), __view_get( e__VW.YView, 0 ), snow, 1);
+    part_particles_create(snowSystem, camera_get_view_x(view_camera[0])+random(600), camera_get_view_y(view_camera[0]), snow, 1);
+    part_particles_create(snowSystem, camera_get_view_x(view_camera[0])+random(600), camera_get_view_y(view_camera[0]), snow, 1);
+    part_particles_create(snowSystem, camera_get_view_x(view_camera[0])+random(600), camera_get_view_y(view_camera[0]), snow, 1);
+    part_particles_create(snowSystem, camera_get_view_x(view_camera[0])+random(600), camera_get_view_y(view_camera[0]), snow, 1);
+    part_particles_create(snowSystem, camera_get_view_x(view_camera[0])+random(600), camera_get_view_y(view_camera[0]), snow, 1);
+    part_particles_create(snowSystem, camera_get_view_x(view_camera[0])+random(600), camera_get_view_y(view_camera[0]), snow, 1);
+    part_particles_create(snowSystem, camera_get_view_x(view_camera[0])+random(600), camera_get_view_y(view_camera[0]), snow, 1);
+    part_particles_create(snowSystem, camera_get_view_x(view_camera[0])+random(600), camera_get_view_y(view_camera[0]), snow, 1);
 //}
 

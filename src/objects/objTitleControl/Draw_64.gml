@@ -8,7 +8,7 @@ if(state >= 2)
     {
         if(name < 9 && is_touchscreen)
         {
-           draw_sprite(sprTouchscreenFastForward, 0, __view_get( e__VW.WView, 0 ) - 28, 4);
+           draw_sprite(sprTouchscreenFastForward, 0, objScreen.width - 28, 4);
         }
     }
 }

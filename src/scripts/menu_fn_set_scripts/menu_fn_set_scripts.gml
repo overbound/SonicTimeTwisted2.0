@@ -5,8 +5,8 @@ function menu_fn_set_scripts(argument0, argument1) {
 
 	// recalculate coordinates of an open menu
 	internal__button_count = array_length(items);
-	var view_width = __view_get( e__VW.WView, view_current );
-	var view_height = __view_get( e__VW.HView, view_current );
+	var view_width = camera_get_view_width(view_camera[view_current]);
+	var view_height = camera_get_view_height(view_camera[view_current]);
 
 	if(objProgram.device_info & DEVICE_TYPE_SMARTPHONE)
 	{

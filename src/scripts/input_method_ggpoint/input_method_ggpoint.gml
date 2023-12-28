@@ -41,7 +41,7 @@ function input_method_ggpoint() {
 	                    input_state |= cDOWN;
 	                }
 	            }
-	            if(mx >= __view_get( e__VW.XView, view_current ) + __view_get( e__VW.WView, view_current ) - 100)
+	            if(mx >= camera_get_view_x(view_camera[view_current]) + objScreen.width - 100)
 	            {
 	                input_state |= cA;
 	            }

@@ -3,16 +3,16 @@
 if back<0 and sprite_index<0 exit;
 var sx, sy, lx, ly, rx, ry, cx, cy;
 // get draw coordinates
-var fx = x+floor(__view_get( e__VW.XView, view_current )*relative_x)+absolute_x;
-var fy = y+floor(__view_get( e__VW.YView, view_current )*relative_y)+absolute_y;
+var fx = x+floor(camera_get_view_x(view_camera[view_current])*relative_x)+absolute_x;
+var fy = y+floor(camera_get_view_y(view_camera[view_current])*relative_y)+absolute_y;
 // get separation
 if back>-1 {sx = width+separation_x; sy = height+separation_y;} else
 {sx = sprite_width+separation_x; sy = sprite_height+separation_y;}
 // get boundaries
-if (tiled&1) lx = __view_get( e__VW.XView, view_current )+((fx-__view_get( e__VW.XView, view_current )) mod sx)-sx; else lx = fx;
-if (tiled&2) ly = __view_get( e__VW.YView, view_current )+((fy-__view_get( e__VW.YView, view_current )) mod sy)-sy; else ly = fy;
-if (tiled&1) rx = __view_get( e__VW.XView, view_current )+__view_get( e__VW.WView, view_current )+sx; else rx = fx;
-if (tiled&2) ry = __view_get( e__VW.YView, view_current )+__view_get( e__VW.HView, view_current )+sy; else ry = fy;
+if (tiled&1) lx = camera_get_view_x(view_camera[view_current])+((fx-camera_get_view_x(view_camera[view_current])) mod sx)-sx; else lx = fx;
+if (tiled&2) ly = camera_get_view_y(view_camera[view_current])+((fy-camera_get_view_y(view_camera[view_current])) mod sy)-sy; else ly = fy;
+if (tiled&1) rx = camera_get_view_x(view_camera[view_current])+objScreen.width+sx; else rx = fx;
+if (tiled&2) ry = camera_get_view_y(view_camera[view_current])+objScreen.height+sy; else ry = fy;
 if(!surface_exists(s))
 {
     // if the tile width/height haven't been calculated yet (initialized at -1), calculate them
@@ -20,13 +20,13 @@ if(!surface_exists(s))
     // that are powers of 2
     if(surface_width == -1)
     {
-        var dest_surface_width = __view_get( e__VW.WView, 0 );
+        var dest_surface_width = objScreen.width;
         var tmp_surface_size = 1;
         while(tmp_surface_size < dest_surface_width)
         {
             tmp_surface_size *= 2;
         }
-        var dest_surface_height = __view_get( e__VW.HView, 0 );
+        var dest_surface_height = objScreen.height;
         surface_width = tmp_surface_size;
         tmp_surface_size = 1;
         while(tmp_surface_size < dest_surface_height)

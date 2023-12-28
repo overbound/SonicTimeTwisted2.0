@@ -33,6 +33,13 @@ function menu_part_videooptions_actions(argument0) {
 	    case 7:
 	        objScreen.show_shield = !objScreen.show_shield;
 	        break;
+		case 8:
+			menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
+	        break;
+		case 9:
+			objScreen.aspect_mode = !objScreen.aspect_mode;
+			menu_fn_reopen(menu_part_videooptions_items, 8);
+	        break;
 	    case -2:
 	        // left key
 	        switch(items[cursor, 1])
@@ -72,6 +79,13 @@ function menu_part_videooptions_actions(argument0) {
 	            case 7:
 	                objScreen.show_shield = !objScreen.show_shield;
 	                break;
+				case 8:
+					menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
+					break;
+				case 9:
+					objScreen.aspect_mode = !objScreen.aspect_mode;
+					menu_fn_reopen(menu_part_videooptions_items, 8);
+			        break;
 	        }
 	        break;
 	    case -3:
@@ -106,6 +120,13 @@ function menu_part_videooptions_actions(argument0) {
 	            case 7:
 	                objScreen.show_shield = !objScreen.show_shield;
 	                break;
+				case 8:
+					menu_fn_open_confirmation_window(tr("_menu_gfx_AspectWarning_Confirm"), 9, -4, true, tr("_menu_gfx_AspectWarning_Accept"));
+					break;
+				case 9:
+					objScreen.aspect_mode = !objScreen.aspect_mode;
+					menu_fn_reopen(menu_part_videooptions_items, 8);
+			        break;
 	        }
 	        break;
 	}
@@ -200,6 +221,21 @@ function menu_part_videooptions_actions(argument0) {
 	    menu_fn_refresh_displayed_value(7, onLabel);
 	} else {
 	    menu_fn_refresh_displayed_value(7, offLabel);
+	}
+
+	if(objProgram.device_info & DEVICE_TYPE_COMPUTER)
+	{
+		var widescreenAspectlabel = "< "+tr("_menu_gfx_Aspect_Widescreen")+ " >";
+		var retroAspectlabel = "< "+tr("_menu_gfx_Aspect_Retro")+ " >";
+	
+		if(objScreen.aspect_mode == true) {
+			with(objScreen) event_user(10);
+		    menu_fn_refresh_displayed_value(8, retroAspectlabel);
+		} else if(objScreen.aspect_mode == false) {
+			with(objScreen) event_user(11);
+		    menu_fn_refresh_displayed_value(8, widescreenAspectlabel);
+		}
+		menu_fn_calculate_width_add(8, false, retroAspectlabel, widescreenAspectlabel);
 	}
 
 	menu_fn_calculate_width_add(1, false, tallyLabel1, tallyLabel2, tallyLabel3);

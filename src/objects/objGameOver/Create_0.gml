@@ -9,6 +9,6 @@ play_sfx(bgmGameOver, 0);
 
 word1 = tr("_GAMEOVER_WORD1");
 word2 = tr("_GAMEOVER_WORD2");
-x_center = __view_get( e__VW.WView, view_current )/2 + 8 * (string_length(word1) - string_length(word2));
+x_center = objScreen.width/2 + 8 * (string_length(word1) - string_length(word2));
 
 

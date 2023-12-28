@@ -1,4 +1,4 @@
-if __view_get( e__VW.XView, view_current ) >1300 && __view_get( e__VW.Object, view_current )!=noone {
+if camera_get_view_x(view_camera[view_current]) >1300 && __view_get( e__VW.Object, view_current )!=noone {
     
     __view_set( e__VW.Object, view_current, noone );
     alarm[0]=30;

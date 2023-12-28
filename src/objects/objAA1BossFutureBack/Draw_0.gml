@@ -13,7 +13,7 @@ with building event_perform(ev_draw, 0);
 
 surface_reset_target();
 // draw complete surface 
-draw_surface_ext(surface, __view_get( e__VW.XView, view_current )+80 /*+66*/, __view_get( e__VW.YView, view_current )-216/*-184*/, 1, 1, 333, c_white, 1);
+draw_surface_ext(surface, camera_get_view_x(view_camera[view_current])+(objScreen.width/2 - 133) /*+66*/, camera_get_view_y(view_camera[view_current])-(objScreen.height/2 + 96)/*-184*/, 1, 1, 333, c_white, 1);
 
 /* */
 /*  */

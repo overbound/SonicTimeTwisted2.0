@@ -34,6 +34,9 @@ function menu_part_levelselect_actions(argument0) {
 	        menu_fn_goto_submenu(menu_part_levelselect_sstages_items);
 	        break;
 	    case 10:
+			menu_fn_goto_submenu(menu_part_levelselect_cutscene_items);
+	        break;
+		case 11:
 	    case -1:
 	        menu_fn_exit_submenu(menu_part_levelselect_char_items, objGameData.character_id[0] - 1);
 	        break;

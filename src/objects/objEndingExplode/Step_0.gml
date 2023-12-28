@@ -8,8 +8,8 @@ if image_index == 5 {
     with objCharacterFall {
         if state != 0 {
             gravity = 0.015;
-            x=__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*.5;
-            y=__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*.5;
+            x=camera_get_view_x(view_camera[0])+objScreen.width*.5;
+            y=camera_get_view_y(view_camera[0])+objScreen.height*.5;
         }
         state = 0;
     }

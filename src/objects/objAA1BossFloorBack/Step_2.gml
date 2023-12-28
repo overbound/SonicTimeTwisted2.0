@@ -1,5 +1,5 @@
-if (x <= -256)
+if (x <= -sprite_width)
 {
 	x += 1024;
-	y += 512;
+	y += (objScreen.height + 272);
 }
