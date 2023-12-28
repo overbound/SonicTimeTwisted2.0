@@ -223,16 +223,15 @@ function menu_part_videooptions_actions(argument0) {
 	    menu_fn_refresh_displayed_value(7, offLabel);
 	}
 
-	if(objProgram.device_info & DEVICE_TYPE_COMPUTER)
+	if(objProgram.device_info & DEVICE_TYPE_COMPUTER || objProgram.device_info & DEVICE_OS_ANDROID)
 	{
 		var widescreenAspectlabel = "< "+tr("_menu_gfx_Aspect_Widescreen")+ " >";
 		var retroAspectlabel = "< "+tr("_menu_gfx_Aspect_Retro")+ " >";
 	
+		with(objScreen) change_aspect_ratio(objScreen.aspect_mode);
 		if(objScreen.aspect_mode == true) {
-			with(objScreen) event_user(10);
 		    menu_fn_refresh_displayed_value(8, retroAspectlabel);
 		} else if(objScreen.aspect_mode == false) {
-			with(objScreen) event_user(11);
 		    menu_fn_refresh_displayed_value(8, widescreenAspectlabel);
 		}
 		menu_fn_calculate_width_add(8, false, retroAspectlabel, widescreenAspectlabel);

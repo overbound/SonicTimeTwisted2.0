@@ -3156,6 +3156,7 @@
     {"id":{"name":"objCapsuleGlass","path":"objects/objCapsuleGlass/objCapsuleGlass.yy",},},
     {"id":{"name":"objFlowerSpark","path":"objects/objFlowerSpark/objFlowerSpark.yy",},},
     {"id":{"name":"objCapsuleSpark","path":"objects/objCapsuleSpark/objCapsuleSpark.yy",},},
+    {"id":{"name":"change_aspect_ratio","path":"scripts/change_aspect_ratio/change_aspect_ratio.yy",},},
     {"id":{"name":"objLayerFlip","path":"objects/objLayerFlip/objLayerFlip.yy",},},
     {"id":{"name":"objLayerSet","path":"objects/objLayerSet/objLayerSet.yy",},},
     {"id":{"name":"objPath","path":"objects/objPath/objPath.yy",},},

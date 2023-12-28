@@ -2,7 +2,7 @@ function menu_part_videooptions_items() {
 	items = false;
 
 	menu_fn_add_title(tr("_menu_gfx_Title"));
-	if(menu_type == 0 && (objProgram.device_info & DEVICE_TYPE_COMPUTER))
+	if(menu_type == 0 && (objProgram.device_info & DEVICE_TYPE_COMPUTER || objProgram.device_info & DEVICE_OS_ANDROID))
 	{
 		menu_fn_add_option(tr("_menu_gfx_Aspect"), 8, 1, "");
 	}

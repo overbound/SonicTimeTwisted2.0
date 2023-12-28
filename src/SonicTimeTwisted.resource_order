@@ -2460,6 +2460,7 @@
     {"name":"objCapsuleGlass","order":2,"path":"objects/objCapsuleGlass/objCapsuleGlass.yy",},
     {"name":"objFlowerSpark","order":3,"path":"objects/objFlowerSpark/objFlowerSpark.yy",},
     {"name":"objCapsuleSpark","order":3,"path":"objects/objCapsuleSpark/objCapsuleSpark.yy",},
+    {"name":"change_aspect_ratio","order":1,"path":"scripts/change_aspect_ratio/change_aspect_ratio.yy",},
     {"name":"objLayerFlip","order":3,"path":"objects/objLayerFlip/objLayerFlip.yy",},
     {"name":"objLayerSet","order":4,"path":"objects/objLayerSet/objLayerSet.yy",},
     {"name":"objPath","order":5,"path":"objects/objPath/objPath.yy",},
