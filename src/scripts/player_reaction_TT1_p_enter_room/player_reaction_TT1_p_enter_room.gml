@@ -8,8 +8,7 @@ function player_reaction_TT1_p_enter_room(argument0) {
 	    spinning=objProgram.temp_spinning;
 	    timeline_position=objProgram.temp_timeline_position;
 	    x=objProgram.temp_x;
-	    __view_set( e__VW.YView, 0, y-objProgram.temp_yview_offset );
-	    __view_set( e__VW.XView, 0, x-objProgram.temp_xview_offset );
+	    camera_set_view_pos(view_camera[0], x-objProgram.temp_xview_offset, y-objProgram.temp_yview_offset);
 	    if (state == player_state_fly) {
 	        alarm[0] = objProgram.temp_fly_value;
 	    } else if (state == player_state_glide) {

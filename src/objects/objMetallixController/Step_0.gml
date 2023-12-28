@@ -78,7 +78,7 @@ if instance_exists(objLevel.player[0]) && state < 6 {
     
         if camera.bottom < camera_get_view_y(view_camera[0])+objScreen.height {
         
-            __view_set( e__VW.YView, 0, camera_get_view_y(view_camera[0]) - (2) );
+            camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]) - 2);
         
         }
     }

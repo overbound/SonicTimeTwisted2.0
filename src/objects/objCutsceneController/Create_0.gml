@@ -1,5 +1,4 @@
-__view_set( e__VW.YView, 0, 264 );
-__view_set( e__VW.XView, 0, 0 );
+camera_set_view_pos(view_camera[0], 0, 264);
 state=0;
 badnik[0]=instance_create(camera_get_view_x(view_camera[view_current]) + 32, 400,objBadnikCutscene);
 with badnik[0]{ scale = .5; image_xscale = .5; image_yscale = .5; multiplier=2;}
