@@ -12,7 +12,7 @@ function menu_part_touchscreenss_actions(argument0) {
 	        break;
 	    case 3:
 	    case -1:
-	        menu_fn_exit_submenu(menu_part_input_items, 5);
+	        menu_fn_exit_submenu(menu_part_touchscreen_items, 4);
 	        break;
 	    case -2:
 	        // left key
