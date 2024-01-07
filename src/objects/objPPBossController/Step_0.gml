@@ -2,10 +2,18 @@
 switch state {
 case 0:
     if alarm[0] == -1 {
-    
-        alarm[0] = 540;
-    
+        if objLevel.player[0].character_id == 3
+        {
+            // falling platforms start appearing earlier for Knuckles
+            alarm[0] = 480;
+        }
+        else
+        {
+            alarm[0] = 540;
+        }
+        alarm[1] = 540;
     }
+	
     if objLevel.player[0].camera.bottom < camera_get_view_y(view_camera[view_current]) + objScreen.height {
     
         __view_set( e__VW.YView, view_current, camera_get_view_y(view_camera[view_current]) - (2) );
@@ -63,11 +71,11 @@ case 1:
     
     with objGalanik {
     
-        if other.alarm[0] == 400 {
+        if other.alarm[1] == 400 {
             play_sfx(sndBreak,10);
         }
     
-        if other.alarm[0] == 40 {
+        if other.alarm[1] == 40 {
         
             play_sfx(sndGalanikLaugh,1);
             set_boss_music(room);
