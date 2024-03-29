@@ -1,12 +1,14 @@
 {
-  "resourceType": "GMTimeline",
-  "resourceVersion": "1.0",
-  "name": "animTailsLook",
-  "momentList": [
-    {"resourceType":"GMMoment","resourceVersion":"1.0","name":"","evnt":{"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},"moment":0,},
+  "$GMTimeline":"",
+  "%Name":"animTailsLook",
+  "momentList":[
+    {"$GMMoment":"","%Name":"","evnt":{"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},"moment":0,"name":"","resourceType":"GMMoment","resourceVersion":"2.0",},
   ],
-  "parent": {
-    "name": "Tails",
-    "path": "folders/Timelines/Player/Characters/Tails.yy",
+  "name":"animTailsLook",
+  "parent":{
+    "name":"Tails",
+    "path":"folders/Timelines/Player/Characters/Tails.yy",
   },
+  "resourceType":"GMTimeline",
+  "resourceVersion":"2.0",
 }

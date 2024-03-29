@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "android_start_software_mapping",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "android",
-    "path": "folders/Scripts/Game/Menu/menu_functions/android.yy",
+  "$GMScript":"",
+  "%Name":"android_start_software_mapping",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"android_start_software_mapping",
+  "parent":{
+    "name":"android",
+    "path":"folders/Scripts/Game/Menu/menu_functions/android.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

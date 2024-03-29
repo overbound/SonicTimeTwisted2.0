@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "level_goback",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Transitions",
-    "path": "folders/Scripts/Game/Program/Transitions.yy",
+  "$GMScript":"",
+  "%Name":"level_goback",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"level_goback",
+  "parent":{
+    "name":"Transitions",
+    "path":"folders/Scripts/Game/Program/Transitions.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

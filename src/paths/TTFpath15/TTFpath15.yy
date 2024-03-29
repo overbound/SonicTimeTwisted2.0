@@ -1,14 +1,14 @@
 {
-  "resourceType": "GMPath",
-  "resourceVersion": "1.0",
-  "name": "TTFpath15",
-  "closed": false,
-  "kind": 1,
-  "parent": {
-    "name": "Tidal Tubes",
-    "path": "folders/Paths/Tidal Tubes.yy",
+  "$GMPath":"",
+  "%Name":"TTFpath15",
+  "closed":false,
+  "kind":1,
+  "name":"TTFpath15",
+  "parent":{
+    "name":"Tidal Tubes",
+    "path":"folders/Paths/Tidal Tubes.yy",
   },
-  "points": [
+  "points":[
     {"speed":100.0,"x":4528.0,"y":2512.0,},
     {"speed":100.0,"x":1968.0,"y":2512.0,},
     {"speed":100.0,"x":1936.0,"y":2512.0,},
@@ -32,5 +32,7 @@
     {"speed":100.0,"x":80.0,"y":2736.0,},
     {"speed":100.0,"x":144.0,"y":2736.0,},
   ],
-  "precision": 4,
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
 }

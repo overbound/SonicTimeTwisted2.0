@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "BossHandNew",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Golem",
-    "path": "folders/Scripts/Scene Objects/General/Boss/Golem.yy",
+  "$GMScript":"",
+  "%Name":"BossHandNew",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossHandNew",
+  "parent":{
+    "name":"Golem",
+    "path":"folders/Scripts/Scene Objects/General/Boss/Golem.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

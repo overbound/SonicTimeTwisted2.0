@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "stt_save_files",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "PlayStation",
-    "path": "folders/Scripts/Game/Save/PlayStation.yy",
+  "$GMScript":"",
+  "%Name":"stt_save_files",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"stt_save_files",
+  "parent":{
+    "name":"PlayStation",
+    "path":"folders/Scripts/Game/Save/PlayStation.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

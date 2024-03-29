@@ -1,14 +1,14 @@
 {
-  "resourceType": "GMPath",
-  "resourceVersion": "1.0",
-  "name": "VVZF_Path0",
-  "closed": false,
-  "kind": 1,
-  "parent": {
-    "name": "Viridian Valley",
-    "path": "folders/Paths/Viridian Valley.yy",
+  "$GMPath":"",
+  "%Name":"VVZF_Path0",
+  "closed":false,
+  "kind":1,
+  "name":"VVZF_Path0",
+  "parent":{
+    "name":"Viridian Valley",
+    "path":"folders/Paths/Viridian Valley.yy",
   },
-  "points": [
+  "points":[
     {"speed":100.0,"x":4000.0,"y":1128.0,},
     {"speed":100.0,"x":4200.0,"y":1128.0,},
     {"speed":100.0,"x":4384.0,"y":1128.0,},
@@ -19,5 +19,7 @@
     {"speed":100.0,"x":5200.0,"y":1072.0,},
     {"speed":100.0,"x":5200.0,"y":1288.0,},
   ],
-  "precision": 4,
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
 }

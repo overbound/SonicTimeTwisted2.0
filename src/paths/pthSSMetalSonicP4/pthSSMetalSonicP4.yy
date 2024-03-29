@@ -1,14 +1,14 @@
 {
-  "resourceType": "GMPath",
-  "resourceVersion": "1.0",
-  "name": "pthSSMetalSonicP4",
-  "closed": false,
-  "kind": 1,
-  "parent": {
-    "name": "Past",
-    "path": "folders/Paths/Special Stages/Past.yy",
+  "$GMPath":"",
+  "%Name":"pthSSMetalSonicP4",
+  "closed":false,
+  "kind":1,
+  "name":"pthSSMetalSonicP4",
+  "parent":{
+    "name":"Past",
+    "path":"folders/Paths/Special Stages/Past.yy",
   },
-  "points": [
+  "points":[
     {"speed":100.0,"x":3744.0,"y":8064.0,},
     {"speed":100.0,"x":3696.0,"y":6304.0,},
     {"speed":100.0,"x":3440.0,"y":6032.0,},
@@ -46,5 +46,7 @@
     {"speed":100.0,"x":480.0,"y":2816.0,},
     {"speed":100.0,"x":352.0,"y":3728.0,},
   ],
-  "precision": 4,
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
 }

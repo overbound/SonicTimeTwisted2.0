@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "rumble_act1_spin_signpost",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Effects",
-    "path": "folders/Scripts/Game/Input/Rumble/Effects.yy",
+  "$GMScript":"",
+  "%Name":"rumble_act1_spin_signpost",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"rumble_act1_spin_signpost",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Game/Input/Rumble/Effects.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

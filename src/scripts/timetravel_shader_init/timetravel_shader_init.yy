@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "timetravel_shader_init",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Shaders",
-    "path": "folders/Scripts/Overlays/Shaders.yy",
+  "$GMScript":"",
+  "%Name":"timetravel_shader_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"timetravel_shader_init",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Scripts/Overlays/Shaders.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

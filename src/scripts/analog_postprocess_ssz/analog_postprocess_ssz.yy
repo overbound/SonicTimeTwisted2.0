@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "analog_postprocess_ssz",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Analog",
-    "path": "folders/Scripts/Game/Input/Analog.yy",
+  "$GMScript":"",
+  "%Name":"analog_postprocess_ssz",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"analog_postprocess_ssz",
+  "parent":{
+    "name":"Analog",
+    "path":"folders/Scripts/Game/Input/Analog.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

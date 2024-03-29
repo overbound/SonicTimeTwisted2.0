@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_shield_act",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Hud",
-    "path": "folders/Scripts/Overlays/Hud.yy",
+  "$GMScript":"",
+  "%Name":"draw_shield_act",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_shield_act",
+  "parent":{
+    "name":"Hud",
+    "path":"folders/Scripts/Overlays/Hud.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

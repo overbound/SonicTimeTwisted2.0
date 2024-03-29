@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "PlayerRingCollision",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Collisions",
-    "path": "folders/Scripts/Scene Objects/Special Stages/Collisions.yy",
+  "$GMScript":"",
+  "%Name":"PlayerRingCollision",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerRingCollision",
+  "parent":{
+    "name":"Collisions",
+    "path":"folders/Scripts/Scene Objects/Special Stages/Collisions.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

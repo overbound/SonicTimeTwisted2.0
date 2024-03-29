@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "sync_is_touchscreen",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Input",
-    "path": "folders/Scripts/Game/Input.yy",
+  "$GMScript":"",
+  "%Name":"sync_is_touchscreen",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sync_is_touchscreen",
+  "parent":{
+    "name":"Input",
+    "path":"folders/Scripts/Game/Input.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

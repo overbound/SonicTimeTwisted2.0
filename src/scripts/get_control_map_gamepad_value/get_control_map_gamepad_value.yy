@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_control_map_gamepad_value",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Saving",
-    "path": "folders/Scripts/Game/Input/Saving.yy",
+  "$GMScript":"",
+  "%Name":"get_control_map_gamepad_value",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_control_map_gamepad_value",
+  "parent":{
+    "name":"Saving",
+    "path":"folders/Scripts/Game/Input/Saving.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

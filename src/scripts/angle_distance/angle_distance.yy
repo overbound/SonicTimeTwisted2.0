@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "angle_distance",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Geometry",
-    "path": "folders/Scripts/Scene Objects/General/Geometry.yy",
+  "$GMScript":"",
+  "%Name":"angle_distance",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"angle_distance",
+  "parent":{
+    "name":"Geometry",
+    "path":"folders/Scripts/Scene Objects/General/Geometry.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

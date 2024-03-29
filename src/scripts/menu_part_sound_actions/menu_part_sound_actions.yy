@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "menu_part_sound_actions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "options",
-    "path": "folders/Scripts/Game/Menu/menu_parts/options.yy",
+  "$GMScript":"",
+  "%Name":"menu_part_sound_actions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"menu_part_sound_actions",
+  "parent":{
+    "name":"options",
+    "path":"folders/Scripts/Game/Menu/menu_parts/options.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

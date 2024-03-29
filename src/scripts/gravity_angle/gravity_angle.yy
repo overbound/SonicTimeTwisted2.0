@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "gravity_angle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Gravity",
-    "path": "folders/Scripts/Scene Objects/General/Gravity.yy",
+  "$GMScript":"",
+  "%Name":"gravity_angle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gravity_angle",
+  "parent":{
+    "name":"Gravity",
+    "path":"folders/Scripts/Scene Objects/General/Gravity.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

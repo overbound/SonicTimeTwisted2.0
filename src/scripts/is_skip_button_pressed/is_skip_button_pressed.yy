@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "is_skip_button_pressed",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Titlecard",
-    "path": "folders/Scripts/Overlays/Titlecard.yy",
+  "$GMScript":"",
+  "%Name":"is_skip_button_pressed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"is_skip_button_pressed",
+  "parent":{
+    "name":"Titlecard",
+    "path":"folders/Scripts/Overlays/Titlecard.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

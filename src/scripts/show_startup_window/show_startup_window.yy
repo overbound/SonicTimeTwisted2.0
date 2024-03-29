@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "show_startup_window",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Startup",
-    "path": "folders/Scripts/Game/Program/Startup.yy",
+  "$GMScript":"",
+  "%Name":"show_startup_window",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"show_startup_window",
+  "parent":{
+    "name":"Startup",
+    "path":"folders/Scripts/Game/Program/Startup.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

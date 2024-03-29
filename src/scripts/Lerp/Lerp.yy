@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Lerp",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Math",
-    "path": "folders/Scripts/Game/Math.yy",
+  "$GMScript":"",
+  "%Name":"Lerp",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Lerp",
+  "parent":{
+    "name":"Math",
+    "path":"folders/Scripts/Game/Math.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

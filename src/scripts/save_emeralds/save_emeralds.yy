@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "save_emeralds",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Save",
-    "path": "folders/Scripts/Game/Save.yy",
+  "$GMScript":"",
+  "%Name":"save_emeralds",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"save_emeralds",
+  "parent":{
+    "name":"Save",
+    "path":"folders/Scripts/Game/Save.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

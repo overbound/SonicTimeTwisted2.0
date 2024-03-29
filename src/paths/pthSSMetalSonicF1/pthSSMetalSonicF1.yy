@@ -1,14 +1,14 @@
 {
-  "resourceType": "GMPath",
-  "resourceVersion": "1.0",
-  "name": "pthSSMetalSonicF1",
-  "closed": false,
-  "kind": 1,
-  "parent": {
-    "name": "Future",
-    "path": "folders/Paths/Special Stages/Future.yy",
+  "$GMPath":"",
+  "%Name":"pthSSMetalSonicF1",
+  "closed":false,
+  "kind":1,
+  "name":"pthSSMetalSonicF1",
+  "parent":{
+    "name":"Future",
+    "path":"folders/Paths/Special Stages/Future.yy",
   },
-  "points": [
+  "points":[
     {"speed":100.0,"x":3728.0,"y":2336.0,},
     {"speed":100.0,"x":3840.0,"y":992.0,},
     {"speed":100.0,"x":3616.0,"y":512.0,},
@@ -33,5 +33,7 @@
     {"speed":100.0,"x":3888.0,"y":5312.0,},
     {"speed":100.0,"x":3760.0,"y":4256.0,},
   ],
-  "precision": 4,
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
 }

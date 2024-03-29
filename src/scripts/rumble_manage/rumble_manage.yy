@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "rumble_manage",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Control",
-    "path": "folders/Scripts/Game/Input/Rumble/Control.yy",
+  "$GMScript":"",
+  "%Name":"rumble_manage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"rumble_manage",
+  "parent":{
+    "name":"Control",
+    "path":"folders/Scripts/Game/Input/Rumble/Control.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

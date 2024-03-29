@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "delete_settings",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Settings",
-    "path": "folders/Scripts/Game/Settings.yy",
+  "$GMScript":"",
+  "%Name":"delete_settings",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"delete_settings",
+  "parent":{
+    "name":"Settings",
+    "path":"folders/Scripts/Game/Settings.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

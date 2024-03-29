@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "MegaTrooperJawNew",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "MegaTrooper",
-    "path": "folders/Scripts/Scene Objects/General/Boss/MegaTrooper.yy",
+  "$GMScript":"",
+  "%Name":"MegaTrooperJawNew",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MegaTrooperJawNew",
+  "parent":{
+    "name":"MegaTrooper",
+    "path":"folders/Scripts/Scene Objects/General/Boss/MegaTrooper.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_hud_ss_touchscreen",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Hud",
-    "path": "folders/Scripts/Overlays/Hud.yy",
+  "$GMScript":"",
+  "%Name":"draw_hud_ss_touchscreen",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_hud_ss_touchscreen",
+  "parent":{
+    "name":"Hud",
+    "path":"folders/Scripts/Overlays/Hud.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

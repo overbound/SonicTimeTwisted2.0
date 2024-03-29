@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "PlayerCollision",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Player",
-    "path": "folders/Scripts/Scene Objects/Special Stages/Player.yy",
+  "$GMScript":"",
+  "%Name":"PlayerCollision",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerCollision",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Scene Objects/Special Stages/Player.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

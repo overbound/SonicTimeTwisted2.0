@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SparksNew",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Golem",
-    "path": "folders/Scripts/Scene Objects/General/Boss/Golem.yy",
+  "$GMScript":"",
+  "%Name":"SparksNew",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SparksNew",
+  "parent":{
+    "name":"Golem",
+    "path":"folders/Scripts/Scene Objects/General/Boss/Golem.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

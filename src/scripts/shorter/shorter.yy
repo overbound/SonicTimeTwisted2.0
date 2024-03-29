@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "shorter",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Math",
-    "path": "folders/Scripts/Game/Math.yy",
+  "$GMScript":"",
+  "%Name":"shorter",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"shorter",
+  "parent":{
+    "name":"Math",
+    "path":"folders/Scripts/Game/Math.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

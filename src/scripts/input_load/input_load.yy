@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "input_load",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Loading",
-    "path": "folders/Scripts/Game/Input/Loading.yy",
+  "$GMScript":"",
+  "%Name":"input_load",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"input_load",
+  "parent":{
+    "name":"Loading",
+    "path":"folders/Scripts/Game/Input/Loading.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

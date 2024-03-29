@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "print_mem_usage",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Debug",
-    "path": "folders/Scripts/Game/Program/Debug.yy",
+  "$GMScript":"",
+  "%Name":"print_mem_usage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"print_mem_usage",
+  "parent":{
+    "name":"Debug",
+    "path":"folders/Scripts/Game/Program/Debug.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
