@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "init_device_info",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Startup",
-    "path": "folders/Scripts/Game/Program/Startup.yy",
+  "$GMScript":"",
+  "%Name":"init_device_info",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"init_device_info",
+  "parent":{
+    "name":"Startup",
+    "path":"folders/Scripts/Game/Program/Startup.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

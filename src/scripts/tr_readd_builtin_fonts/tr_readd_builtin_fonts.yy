@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "tr_readd_builtin_fonts",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "I18n",
-    "path": "folders/Scripts/Game/I18n.yy",
+  "$GMScript":"",
+  "%Name":"tr_readd_builtin_fonts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"tr_readd_builtin_fonts",
+  "parent":{
+    "name":"I18n",
+    "path":"folders/Scripts/Game/I18n.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

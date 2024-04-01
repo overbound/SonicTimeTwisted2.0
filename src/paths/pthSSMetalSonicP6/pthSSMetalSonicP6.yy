@@ -1,14 +1,14 @@
 {
-  "resourceType": "GMPath",
-  "resourceVersion": "1.0",
-  "name": "pthSSMetalSonicP6",
-  "closed": false,
-  "kind": 1,
-  "parent": {
-    "name": "Past",
-    "path": "folders/Paths/Special Stages/Past.yy",
+  "$GMPath":"",
+  "%Name":"pthSSMetalSonicP6",
+  "closed":false,
+  "kind":1,
+  "name":"pthSSMetalSonicP6",
+  "parent":{
+    "name":"Past",
+    "path":"folders/Paths/Special Stages/Past.yy",
   },
-  "points": [
+  "points":[
     {"speed":100.0,"x":336.0,"y":8112.0,},
     {"speed":100.0,"x":352.0,"y":7456.0,},
     {"speed":100.0,"x":496.0,"y":7008.0,},
@@ -35,5 +35,7 @@
     {"speed":100.0,"x":944.0,"y":4224.0,},
     {"speed":100.0,"x":976.0,"y":4944.0,},
   ],
-  "precision": 4,
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
 }

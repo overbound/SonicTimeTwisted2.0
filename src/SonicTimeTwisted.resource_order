@@ -1,5 +1,5 @@
 {
-  "FolderOrderSettings": [
+  "FolderOrderSettings":[
     {"name":"Extensions","order":108,"path":"folders/Extensions.yy",},
     {"name":"Fonts","order":102,"path":"folders/Fonts.yy",},
     {"name":"Notes","order":107,"path":"folders/Notes.yy",},
@@ -486,7 +486,7 @@
     {"name":"Zones","order":3,"path":"folders/Timelines/Specific/Zones.yy",},
     {"name":"Submerged Saucer","order":1,"path":"folders/Timelines/Specific/Zones/Submerged Saucer.yy",},
   ],
-  "ResourceOrderSettings": [
+  "ResourceOrderSettings":[
     {"name":"sprIntroClouds","order":1,"path":"sprites/sprIntroClouds/sprIntroClouds.yy",},
     {"name":"sprIntroIsland","order":2,"path":"sprites/sprIntroIsland/sprIntroIsland.yy",},
     {"name":"sprIntroLittlePlanet","order":3,"path":"sprites/sprIntroLittlePlanet/sprIntroLittlePlanet.yy",},

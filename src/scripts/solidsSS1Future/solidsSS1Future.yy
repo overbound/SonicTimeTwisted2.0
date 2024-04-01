@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "solidsSS1Future",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "SolidGroups",
-    "path": "folders/Scripts/Scene Objects/Special Stages/SolidGroups.yy",
+  "$GMScript":"",
+  "%Name":"solidsSS1Future",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"solidsSS1Future",
+  "parent":{
+    "name":"SolidGroups",
+    "path":"folders/Scripts/Scene Objects/Special Stages/SolidGroups.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

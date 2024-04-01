@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "reset_persistance",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Other",
-    "path": "folders/Scripts/Scene Objects/General/Other.yy",
+  "$GMScript":"",
+  "%Name":"reset_persistance",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"reset_persistance",
+  "parent":{
+    "name":"Other",
+    "path":"folders/Scripts/Scene Objects/General/Other.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

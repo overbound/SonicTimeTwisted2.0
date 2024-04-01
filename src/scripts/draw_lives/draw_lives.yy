@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_lives",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Hud",
-    "path": "folders/Scripts/Overlays/Hud.yy",
+  "$GMScript":"",
+  "%Name":"draw_lives",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_lives",
+  "parent":{
+    "name":"Hud",
+    "path":"folders/Scripts/Overlays/Hud.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

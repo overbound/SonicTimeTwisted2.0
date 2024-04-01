@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "menu_part_sstage_levelselect_sstages_items",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "special_stage",
-    "path": "folders/Scripts/Game/Menu/menu_parts/special_stage.yy",
+  "$GMScript":"",
+  "%Name":"menu_part_sstage_levelselect_sstages_items",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"menu_part_sstage_levelselect_sstages_items",
+  "parent":{
+    "name":"special_stage",
+    "path":"folders/Scripts/Game/Menu/menu_parts/special_stage.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

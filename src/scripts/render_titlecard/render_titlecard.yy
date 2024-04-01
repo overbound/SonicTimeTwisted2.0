@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "render_titlecard",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Titlecard",
-    "path": "folders/Scripts/Overlays/Titlecard.yy",
+  "$GMScript":"",
+  "%Name":"render_titlecard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"render_titlecard",
+  "parent":{
+    "name":"Titlecard",
+    "path":"folders/Scripts/Overlays/Titlecard.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

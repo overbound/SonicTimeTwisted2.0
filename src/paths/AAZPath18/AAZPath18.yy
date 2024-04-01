@@ -1,14 +1,14 @@
 {
-  "resourceType": "GMPath",
-  "resourceVersion": "1.0",
-  "name": "AAZPath18",
-  "closed": false,
-  "kind": 1,
-  "parent": {
-    "name": "Other",
-    "path": "folders/Paths/Attraction Attack/Future/Other.yy",
+  "$GMPath":"",
+  "%Name":"AAZPath18",
+  "closed":false,
+  "kind":1,
+  "name":"AAZPath18",
+  "parent":{
+    "name":"Other",
+    "path":"folders/Paths/Attraction Attack/Future/Other.yy",
   },
-  "points": [
+  "points":[
     {"speed":100.0,"x":3544.0,"y":968.0,},
     {"speed":100.0,"x":3456.0,"y":984.0,},
     {"speed":100.0,"x":3392.0,"y":1080.0,},
@@ -23,5 +23,7 @@
     {"speed":100.0,"x":3544.0,"y":464.0,},
     {"speed":100.0,"x":3456.0,"y":464.0,},
   ],
-  "precision": 4,
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
 }

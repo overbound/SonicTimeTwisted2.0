@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_collision_floor_air",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Collision",
-    "path": "folders/Scripts/Scene Objects/Player/Physics/Collision.yy",
+  "$GMScript":"",
+  "%Name":"player_collision_floor_air",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_collision_floor_air",
+  "parent":{
+    "name":"Collision",
+    "path":"folders/Scripts/Scene Objects/Player/Physics/Collision.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

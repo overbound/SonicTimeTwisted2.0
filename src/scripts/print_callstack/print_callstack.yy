@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "print_callstack",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Debug",
-    "path": "folders/Scripts/Game/Program/Debug.yy",
+  "$GMScript":"",
+  "%Name":"print_callstack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"print_callstack",
+  "parent":{
+    "name":"Debug",
+    "path":"folders/Scripts/Game/Program/Debug.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

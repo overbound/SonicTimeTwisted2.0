@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_is_earth_shielding",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Sonic",
-    "path": "folders/Scripts/Scene Objects/Player/State Change/Character Specific/Sonic.yy",
+  "$GMScript":"",
+  "%Name":"player_is_earth_shielding",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_is_earth_shielding",
+  "parent":{
+    "name":"Sonic",
+    "path":"folders/Scripts/Scene Objects/Player/State Change/Character Specific/Sonic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

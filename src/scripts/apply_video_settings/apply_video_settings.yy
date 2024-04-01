@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "apply_video_settings",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Video",
-    "path": "folders/Scripts/Game/Video.yy",
+  "$GMScript":"",
+  "%Name":"apply_video_settings",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"apply_video_settings",
+  "parent":{
+    "name":"Video",
+    "path":"folders/Scripts/Game/Video.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

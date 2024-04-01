@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_reaction_paddle_switch",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Sunken Saucer",
-    "path": "folders/Scripts/Scene Objects/Player/Reactions/Specific/Zones/Sunken Saucer.yy",
+  "$GMScript":"",
+  "%Name":"player_reaction_paddle_switch",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_reaction_paddle_switch",
+  "parent":{
+    "name":"Sunken Saucer",
+    "path":"folders/Scripts/Scene Objects/Player/Reactions/Specific/Zones/Sunken Saucer.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

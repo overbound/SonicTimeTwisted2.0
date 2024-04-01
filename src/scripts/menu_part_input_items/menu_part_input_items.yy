@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "menu_part_input_items",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "options",
-    "path": "folders/Scripts/Game/Menu/menu_parts/options.yy",
+  "$GMScript":"",
+  "%Name":"menu_part_input_items",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"menu_part_input_items",
+  "parent":{
+    "name":"options",
+    "path":"folders/Scripts/Game/Menu/menu_parts/options.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

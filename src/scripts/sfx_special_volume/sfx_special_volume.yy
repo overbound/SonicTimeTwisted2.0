@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "sfx_special_volume",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Audio",
-    "path": "folders/Scripts/Game/Audio.yy",
+  "$GMScript":"",
+  "%Name":"sfx_special_volume",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sfx_special_volume",
+  "parent":{
+    "name":"Audio",
+    "path":"folders/Scripts/Game/Audio.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

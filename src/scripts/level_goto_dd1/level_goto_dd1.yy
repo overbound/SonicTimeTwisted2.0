@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "level_goto_dd1",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Transitions",
-    "path": "folders/Scripts/Game/Program/Transitions.yy",
+  "$GMScript":"",
+  "%Name":"level_goto_dd1",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"level_goto_dd1",
+  "parent":{
+    "name":"Transitions",
+    "path":"folders/Scripts/Game/Program/Transitions.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

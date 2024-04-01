@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "string_explode",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Helper",
-    "path": "folders/Scripts/Game/Helper.yy",
+  "$GMScript":"",
+  "%Name":"string_explode",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"string_explode",
+  "parent":{
+    "name":"Helper",
+    "path":"folders/Scripts/Game/Helper.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "menu_part_gyroscope_draw",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "smartphone",
-    "path": "folders/Scripts/Game/Menu/menu_parts/options/input/smartphone.yy",
+  "$GMScript":"",
+  "%Name":"menu_part_gyroscope_draw",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"menu_part_gyroscope_draw",
+  "parent":{
+    "name":"smartphone",
+    "path":"folders/Scripts/Game/Menu/menu_parts/options/input/smartphone.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

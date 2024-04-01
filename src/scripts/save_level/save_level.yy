@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "save_level",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Save",
-    "path": "folders/Scripts/Game/Save.yy",
+  "$GMScript":"",
+  "%Name":"save_level",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"save_level",
+  "parent":{
+    "name":"Save",
+    "path":"folders/Scripts/Game/Save.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

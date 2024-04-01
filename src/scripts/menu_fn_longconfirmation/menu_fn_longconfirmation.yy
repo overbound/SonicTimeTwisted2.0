@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "menu_fn_longconfirmation",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "menu_functions",
-    "path": "folders/Scripts/Game/Menu/menu_functions.yy",
+  "$GMScript":"",
+  "%Name":"menu_fn_longconfirmation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"menu_fn_longconfirmation",
+  "parent":{
+    "name":"menu_functions",
+    "path":"folders/Scripts/Game/Menu/menu_functions.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

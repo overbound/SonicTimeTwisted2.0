@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_reaction_squibot",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Enemies",
-    "path": "folders/Scripts/Scene Objects/Player/Reactions/Specific/Enemies.yy",
+  "$GMScript":"",
+  "%Name":"player_reaction_squibot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_reaction_squibot",
+  "parent":{
+    "name":"Enemies",
+    "path":"folders/Scripts/Scene Objects/Player/Reactions/Specific/Enemies.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

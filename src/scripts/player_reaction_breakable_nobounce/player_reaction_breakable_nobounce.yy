@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_reaction_breakable_nobounce",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "General",
-    "path": "folders/Scripts/Scene Objects/Player/Reactions/General.yy",
+  "$GMScript":"",
+  "%Name":"player_reaction_breakable_nobounce",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_reaction_breakable_nobounce",
+  "parent":{
+    "name":"General",
+    "path":"folders/Scripts/Scene Objects/Player/Reactions/General.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

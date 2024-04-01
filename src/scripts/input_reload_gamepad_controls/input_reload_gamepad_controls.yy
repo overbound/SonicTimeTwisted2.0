@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "input_reload_gamepad_controls",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Devices",
-    "path": "folders/Scripts/Game/Input/Loading/Devices.yy",
+  "$GMScript":"",
+  "%Name":"input_reload_gamepad_controls",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"input_reload_gamepad_controls",
+  "parent":{
+    "name":"Devices",
+    "path":"folders/Scripts/Game/Input/Loading/Devices.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

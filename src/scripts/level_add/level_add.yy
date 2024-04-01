@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "level_add",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Order",
-    "path": "folders/Scripts/Game/Program/Order.yy",
+  "$GMScript":"",
+  "%Name":"level_add",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"level_add",
+  "parent":{
+    "name":"Order",
+    "path":"folders/Scripts/Game/Program/Order.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

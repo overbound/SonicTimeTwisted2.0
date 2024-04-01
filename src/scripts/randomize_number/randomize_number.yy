@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "randomize_number",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Hud",
-    "path": "folders/Scripts/Overlays/Hud.yy",
+  "$GMScript":"",
+  "%Name":"randomize_number",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"randomize_number",
+  "parent":{
+    "name":"Hud",
+    "path":"folders/Scripts/Overlays/Hud.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

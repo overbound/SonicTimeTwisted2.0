@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "menu_fn_quit_specialstage",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "actions_on_close",
-    "path": "folders/Scripts/Game/Menu/menu_functions/actions_on_close.yy",
+  "$GMScript":"",
+  "%Name":"menu_fn_quit_specialstage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"menu_fn_quit_specialstage",
+  "parent":{
+    "name":"actions_on_close",
+    "path":"folders/Scripts/Game/Menu/menu_functions/actions_on_close.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

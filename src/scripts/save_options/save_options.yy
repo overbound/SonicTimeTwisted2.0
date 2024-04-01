@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "save_options",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Settings",
-    "path": "folders/Scripts/Game/Settings.yy",
+  "$GMScript":"",
+  "%Name":"save_options",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"save_options",
+  "parent":{
+    "name":"Settings",
+    "path":"folders/Scripts/Game/Settings.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

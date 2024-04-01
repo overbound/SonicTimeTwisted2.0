@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "stt_file_delete",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "PlayStation",
-    "path": "folders/Scripts/Game/Save/PlayStation.yy",
+  "$GMScript":"",
+  "%Name":"stt_file_delete",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"stt_file_delete",
+  "parent":{
+    "name":"PlayStation",
+    "path":"folders/Scripts/Game/Save/PlayStation.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
