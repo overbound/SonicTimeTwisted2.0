@@ -1,8 +1,6 @@
-function create_new_save(argument0, argument1) {
+function create_new_save(character, saveSlot) {
 	//create_new_save(character, saveslot)
 	// normally, save_data_write would have been used en masse, but for peformance's sake, we don't do it in case of a saved slot
-	var character = argument0;
-	var saveSlot = argument1;
 	if(saveSlot < 0)
 	{
 	    // if no save mode : flush temporary storage

@@ -74,6 +74,11 @@ function load_options() {
 	        event_user(0);
 	    }
     
+		with(objGameData)
+		{
+			livesMode = ini_read_real("gameplay_settings", "lives_settings", LIVES_CLASSIC);
+		}
+	
 	    global.TR_lang = ini_read_string("localization", "language", "en");
 	    if (!ds_map_exists(global.TR_map, global.TR_lang)) global.TR_lang = "en";
 	    stt_ini_close();
@@ -92,6 +97,7 @@ function load_options() {
 	        vsync = true;
 	        timer_mode = 0;
 	        show_shield = 1;
+			aspect_mode = 0;
       
 	        // apply settings
 	        apply_video_settings();
@@ -122,6 +128,11 @@ function load_options() {
 	        event_user(0);
 	    }
     
+		with(objGameData)
+		{
+			livesMode = LIVES_CLASSIC;
+		}
+	
 	    tr_set_default_lang();
 	    return false;
 	}

@@ -7,7 +7,7 @@ function menu_fn_restart_specialstage() {
 	}
 	else
 	{
-	    if(objGameData.player_lives[0] > 1)
+	    if(objGameData.livesMode == LIVES_CLASSIC && objGameData.player_lives[0] > 1)
 	    {
 	        objGameData.player_lives[0] -= 1;
 	        save_lives(objGameData.player_lives[0]);

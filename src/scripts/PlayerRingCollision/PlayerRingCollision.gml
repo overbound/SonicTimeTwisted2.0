@@ -19,7 +19,8 @@ function PlayerRingCollision(argument0) {
 	    }
     
 	    if not (rings mod 100) {
-	        player_get_lives(1);
+	        if(objGameData.livesMode == LIVES_CLASSIC) player_get_lives(1);
+			//else if(objGameData.livesMode == LIVES_ORIGINS) player_get_coins(1);
 	    }
     
 

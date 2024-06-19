@@ -15,5 +15,8 @@ rings[0] = 0;
 rings[1] = 0;
 scoreLiveCounter = 1;
 
+// global game settings
+livesMode = LIVES_CLASSIC; // this should be *by default* set to "classic", only set it to "origins" for testing
+
 /* */
 /*  */

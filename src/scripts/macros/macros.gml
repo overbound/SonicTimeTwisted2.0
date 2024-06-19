@@ -17,15 +17,15 @@ function macros() {
 #macro BIG_RINGS "y6[4hjf"
 #macro LIVES "lk[]]"
 #macro CHARACTER "k2nlKft"
-#macro cUP 1
-#macro cDOWN 2
-#macro cLEFT 4
-#macro cRIGHT 8
-#macro cA 16
-#macro cB 32
-#macro cC 64
-#macro cSTART 128
-#macro cBACK 256
+#macro cUP (1 << 0)
+#macro cDOWN (1 << 1)
+#macro cLEFT (1 << 2)
+#macro cRIGHT (1 << 3)
+#macro cA (1 << 4)
+#macro cB (1 << 5)
+#macro cC (1 << 6)
+#macro cSTART (1 << 7)
+#macro cBACK (1 << 8)
 #macro cACTION cA | cB | cC
 #macro cCANCEL cB | cBACK
 #macro cCONFIRM cA | cSTART
@@ -66,20 +66,20 @@ function macros() {
 #macro RUMBLE_END_TIME 1
 #macro RUMBLE_FORCE 2
 #macro RUMBLE_APPEND_MODE 4
-#macro DEVICE_TYPE_COMPUTER 1
-#macro DEVICE_TYPE_SMARTPHONE 2
-#macro DEVICE_TYPE_CONSOLE 4
-#macro DEVICE_TYPE_UNKNOWN 8
-#macro DEVICE_OS_WINDOWS 16
-#macro DEVICE_OS_MACOS 32
-#macro DEVICE_OS_LINUX 64
-#macro DEVICE_OS_IOS 128
-#macro DEVICE_OS_ANDROID 256
-#macro DEVICE_OS_PLAYSTATION 512
-#macro DEVICE_OS_XBOX 1024
-#macro DEVICE_OS_SWITCH 2048
-#macro DEVICE_OS_BROWSER 4096
-#macro DEVICE_OS_UNKNOWN 8192
+#macro DEVICE_TYPE_COMPUTER (1 << 0)
+#macro DEVICE_TYPE_SMARTPHONE (1 << 1)
+#macro DEVICE_TYPE_CONSOLE (1 << 2)
+#macro DEVICE_TYPE_UNKNOWN (1 << 3)
+#macro DEVICE_OS_WINDOWS (1 << 4)
+#macro DEVICE_OS_MACOS (1 << 5)
+#macro DEVICE_OS_LINUX (1 << 6)
+#macro DEVICE_OS_IOS (1 << 7)
+#macro DEVICE_OS_ANDROID (1 << 8)
+#macro DEVICE_OS_PLAYSTATION (1 << 9)
+#macro DEVICE_OS_XBOX (1 << 10)
+#macro DEVICE_OS_SWITCH (1 << 11)
+#macro DEVICE_OS_BROWSER (1 << 12)
+#macro DEVICE_OS_UNKNOWN (1 << 13)
 #macro DEVICE_INFO DEVICE_TYPE_COMPUTER | DEVICE_OS_WINDOWS
 #macro DEVICE_BACK_BUTTON vk_escape
 #macro INPUT_KEYBOARD 0
@@ -88,6 +88,8 @@ function macros() {
 #macro INPUT_AUTO 3
 #macro INPUT_OS_SPECIFIC_1 4
 #macro DEVICE_SUPPORTS_FILE_FIND 1
+#macro LIVES_CLASSIC (1 << 0) // classic lives system (default)
+#macro LIVES_ORIGINS (1 << 1) // origins coin system (optional)
 #macro sine global._sine_lookup
 #macro cosine global._cosine_lookup
 #macro Android:DEVICE_INFO DEVICE_TYPE_SMARTPHONE | DEVICE_OS_ANDROID

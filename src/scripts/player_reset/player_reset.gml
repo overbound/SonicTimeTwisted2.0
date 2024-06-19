@@ -4,9 +4,12 @@ function player_reset() {
 	objGameData.rings[0] = 0;
 	// lose a life
 	if not (/*debug_mode*/ false or instance_exists(objCutscene)) {
-	    objGameData.player_lives[player_id] -= 1;
-	    save_lives(objGameData.player_lives[player_id]);
-	    stt_save_files();
+		if(objGameData.livesMode == LIVES_CLASSIC)
+		{
+		    objGameData.player_lives[player_id] -= 1;
+		    save_lives(objGameData.player_lives[player_id]);
+		    stt_save_files();
+		}
 	}
 	// handle lives based on mode
 	/*switch objProgram.game_mode
