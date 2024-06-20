@@ -17,7 +17,7 @@ case 3: // apply scores
     // time bonus
     if time_bonus
     {
-        change = min(time_bonus, max_change);
+        change = (objScreen.score_tally_mode < 2) ? min(time_bonus, max_change) : max_change;
         time_bonus -= change;
         total_bonus += change;
         player_add_score(change);
@@ -25,7 +25,7 @@ case 3: // apply scores
     // rings bonus    
     if rings_bonus
     {
-        change = min(rings_bonus, max_change);
+        change = (objScreen.score_tally_mode < 2) ? min(rings_bonus, max_change) : max_change;
         rings_bonus -= change;
         total_bonus += change;
         player_add_score(change);
@@ -33,7 +33,7 @@ case 3: // apply scores
     // perfect bonus    
     if perfect_bonus
     {
-        change = min(perfect_bonus, max_change);
+        change = (objScreen.score_tally_mode < 2) ? min(perfect_bonus, max_change) : max_change;
         perfect_bonus -= change;
         total_bonus += change;
         player_add_score(change);
