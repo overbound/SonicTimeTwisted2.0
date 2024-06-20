@@ -40,6 +40,9 @@ function menu_part_videooptions_actions(argument0) {
 			objScreen.aspect_mode = !objScreen.aspect_mode;
 			menu_fn_reopen(menu_part_videooptions_items, 8);
 	        break;
+		case 10:
+			objScreen.scanlines = !objScreen.scanlines;
+			break;
 	    case -2:
 	        // left key
 	        switch(items[cursor, 1])
@@ -86,6 +89,9 @@ function menu_part_videooptions_actions(argument0) {
 					objScreen.aspect_mode = !objScreen.aspect_mode;
 					menu_fn_reopen(menu_part_videooptions_items, 8);
 			        break;
+				case 10:
+					objScreen.scanlines = !objScreen.scanlines;
+					break;
 	        }
 	        break;
 	    case -3:
@@ -127,6 +133,9 @@ function menu_part_videooptions_actions(argument0) {
 					objScreen.aspect_mode = !objScreen.aspect_mode;
 					menu_fn_reopen(menu_part_videooptions_items, 8);
 			        break;
+				case 10:
+					objScreen.scanlines = !objScreen.scanlines;
+					break;
 	        }
 	        break;
 	}
@@ -238,11 +247,21 @@ function menu_part_videooptions_actions(argument0) {
 		menu_fn_calculate_width_add(8, false, retroAspectlabel, widescreenAspectlabel);
 	}
 
+	if(objScreen.scanlines)
+	{
+	    menu_fn_refresh_displayed_value(10, onLabel);
+	}
+	else
+	{
+	    menu_fn_refresh_displayed_value(10, offLabel);
+	}
+
 	menu_fn_calculate_width_add(1, false, tallyLabel1, tallyLabel2, tallyLabel3);
 	menu_fn_calculate_width_add(2, false, onLabel, offLabel);
 	menu_fn_calculate_width_add(4, false, timerLabel1, timerLabel2);
 	menu_fn_calculate_width_add(6, false, onLabel, offLabel, onlyGUIlabel);
 	menu_fn_calculate_width_add(7, false, onLabel, offLabel);
+	menu_fn_calculate_width_add(10, false, onLabel, offLabel);
 
 	menu_fn_calculate_width_finish();
 	// preserve the cursor value - usually false for the sake of touchscreen controls

@@ -2322,6 +2322,7 @@
     {"name":"sprSaveIconsFuture","order":7,"path":"sprites/sprSaveIconsFuture/sprSaveIconsFuture.yy",},
     {"name":"sprSaveIconsPast","order":8,"path":"sprites/sprSaveIconsPast/sprSaveIconsPast.yy",},
     {"name":"sprSaveSlot","order":9,"path":"sprites/sprSaveSlot/sprSaveSlot.yy",},
+    {"name":"sprScanlines","order":6,"path":"sprites/sprScanlines/sprScanlines.yy",},
     {"name":"sprScorePopup","order":1,"path":"sprites/sprScorePopup/sprScorePopup.yy",},
     {"name":"sprSelectStage","order":10,"path":"sprites/sprSelectStage/sprSelectStage.yy",},
     {"name":"sprSelectStageFade","order":11,"path":"sprites/sprSelectStageFade/sprSelectStageFade.yy",},

@@ -2974,6 +2974,7 @@
     {"id":{"name":"sprSaveIconsFuture","path":"sprites/sprSaveIconsFuture/sprSaveIconsFuture.yy",},},
     {"id":{"name":"sprSaveIconsPast","path":"sprites/sprSaveIconsPast/sprSaveIconsPast.yy",},},
     {"id":{"name":"sprSaveSlot","path":"sprites/sprSaveSlot/sprSaveSlot.yy",},},
+    {"id":{"name":"sprScanlines","path":"sprites/sprScanlines/sprScanlines.yy",},},
     {"id":{"name":"sprScorePopup","path":"sprites/sprScorePopup/sprScorePopup.yy",},},
     {"id":{"name":"sprScurge","path":"sprites/sprScurge/sprScurge.yy",},},
     {"id":{"name":"sprSeal","path":"sprites/sprSeal/sprSeal.yy",},},

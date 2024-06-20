@@ -5,7 +5,7 @@ if(duration mod 2)
     draw_set_font(objResources.fontHud);
     if (in3d)
     {
-        d3d_set_projection_ortho(0, 0, __view_get( e__VW.WPort, 0 ), __view_get( e__VW.HPort, 0 ), 0);
+        d3d_set_projection_ortho(0, 0, view_get_wport(0), view_get_hport(0), 0);
         draw_text_colour(
             objScreen.width div 2,
             objScreen.height div 2,

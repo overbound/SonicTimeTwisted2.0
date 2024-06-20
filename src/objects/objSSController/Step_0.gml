@@ -77,8 +77,8 @@ switch state{
             timeline_speed = 1/max(5-abs(xspeed), 1);
             image_angle = 0;
             
-            __view_set( e__VW.XView, 0, x - __view_get( e__VW.WPort, 0 )*.5 );
-            __view_set( e__VW.YView, 0, y - __view_get( e__VW.HPort, 0 )*.5 );            
+            __view_set( e__VW.XView, 0, x - view_get_wport(0)*.5 );
+            __view_set( e__VW.YView, 0, y - view_get_hport(0)*.5 );            
              
         }
         

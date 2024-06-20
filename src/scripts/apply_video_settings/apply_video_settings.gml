@@ -28,6 +28,9 @@ function apply_video_settings() {
 	            window_set_fullscreen(false);
 	            window_set_size(width * window_scale, height * window_scale);
 	        }
+			
+			//Set aspect ratios.
+			if(aspect_mode) event_user(10) else event_user(11);
         
 	        /* reset GUI and app surface */
 	        display_set_gui_size(width, height);
@@ -60,6 +63,7 @@ function apply_video_settings() {
 	            }
 	        }
 	    }
+		
 	    /* alarm for centering the window and applying blur */
 	    alarm[0] = center_delay;
 	}

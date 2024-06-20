@@ -9,7 +9,8 @@ function save_options() {
 	    ini_write_real("video_options", "vsync", objScreen.vsync);
 	    ini_write_real("video_options", "timer_mode", objScreen.timer_mode);
 	    ini_write_real("video_options", "show_shield", objScreen.show_shield);
-		ini_write_real("video_options", "aspect_ratio", objScreen.aspect_mode)
+		ini_write_real("video_options", "aspect_ratio", objScreen.aspect_mode);
+		ini_write_real("video_options", "scanlines", objScreen.scanlines);
 	    ini_write_real("video_options", "format_version", objScreen.options_format);
 	}
 	if(instance_exists(objProgram.inputManager))
