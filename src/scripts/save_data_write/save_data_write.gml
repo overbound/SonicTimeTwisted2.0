@@ -4,8 +4,7 @@ function save_data_write(section, key, value) {
 	// In this case, a map in memory stores everything
 	if(objProgram.saveSlot < 0)
 	{
-	    var key = section+"|"+key;
-	    ds_map_replace(objProgram.no_save_data, key, value);
+	    ds_map_replace(objProgram.no_save_data, section+"|"+key, value);
 	}
 	else
 	{

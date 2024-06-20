@@ -75,14 +75,12 @@ particles = part_system_create();
 
 /// set up watchers for lives and big rings
 if objProgram.in_past && !ds_exists(objProgram.ring_past_list, ds_type_list){
-    objProgram.life_past_list = ds_list_create();
+	if(objGameData.livesMode == LIVES_CLASSIC) objProgram.life_past_list = ds_list_create();
     objProgram.ring_past_list = ds_list_create();
     
-    } else if !ds_exists(objProgram.ring_future_list, ds_type_list) {
-    
-        objProgram.life_future_list = ds_list_create();
-        objProgram.ring_future_list = ds_list_create();
-     
+} else if !ds_exists(objProgram.ring_future_list, ds_type_list) {
+    if(objGameData.livesMode == LIVES_CLASSIC) objProgram.life_future_list = ds_list_create();
+    objProgram.ring_future_list = ds_list_create();  
 }
 if objProgram.in_past {
     /* big ring past */

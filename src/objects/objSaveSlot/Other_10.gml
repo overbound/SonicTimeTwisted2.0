@@ -12,7 +12,14 @@ if (other.stageLeftRight == 1 && visibleFuture == 1) or (other.stageLeftRight ==
         ds_map_clear(objProgram.no_save_data);
     }
     load_emeralds();
-    load_lives();
+    if(objGameData.livesMode == LIVES_CLASSIC)
+	{
+		load_lives();
+	}
+	else if(objGameData.livesMode == LIVES_ORIGINS)
+	{
+		load_coins();
+	}
     if iconIndex > 0 {
         level_goto_from_save(iconIndex + 1)
     }

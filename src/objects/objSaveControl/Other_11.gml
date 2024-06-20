@@ -21,7 +21,14 @@ else
     objProgram.special_past_current_level = 0;
     objGameData.character_id[0] = slots[selectCheck].characterSelect;
     load_emeralds();
-    load_lives();
+    if(objGameData.livesMode == LIVES_CLASSIC)
+	{
+		load_lives();
+	}
+	else if(objGameData.livesMode == LIVES_ORIGINS)
+	{
+		load_coins();
+	}
     level_goto_from_save(0);
 }
 

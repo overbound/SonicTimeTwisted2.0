@@ -44,7 +44,7 @@ function menu_part_options_actions(argument0) {
 	         menu_fn_goto_submenu(menu_part_sound_items);
 	         break;
 	    case 12:
-	        // use this ID for a future option
+	         menu_fn_goto_submenu(menu_part_gameplay_items);
 	         break;
 	    case -1:
 	    case 4:

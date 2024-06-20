@@ -16,6 +16,7 @@ function macros() {
 #macro LEVELS "9z1kj"
 #macro BIG_RINGS "y6[4hjf"
 #macro LIVES "lk[]]"
+#macro COINS "Y29pbnM="
 #macro CHARACTER "k2nlKft"
 #macro cUP (1 << 0)
 #macro cDOWN (1 << 1)

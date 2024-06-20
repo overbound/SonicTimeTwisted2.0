@@ -10,6 +10,11 @@ function player_reset() {
 		    save_lives(objGameData.player_lives[player_id]);
 		    stt_save_files();
 		}
+		else if(objGameData.livesMode == LIVES_ORIGINS)
+		{
+			save_coins(objGameData.player_coins[player_id]);
+		    stt_save_files();
+		}
 	}
 	// handle lives based on mode
 	/*switch objProgram.game_mode
@@ -21,14 +26,21 @@ function player_reset() {
 	        // stop everything
 	        objLevel.timer_enabled = false;
 	        objLevel.cleared = false;
-	        // did we lose all our lives?
-	        if objGameData.player_lives[player_id] {
-	            objLevel.reseting = 60;
+			if(objGameData.livesMode == LIVES_CLASSIC)
+			{
+		        // did we lose all our lives?
+		        if objGameData.player_lives[player_id] {
+		            objLevel.reseting = 60;
             
-	        }
-	        else {
-	            instance_create(0, 0, objGameOver);
-	        }
+		        }
+		        else {
+		            instance_create(0, 0, objGameOver);
+		        }
+			}
+			else if(objGameData.livesMode == LIVES_ORIGINS)
+			{
+				objLevel.reseting = 60;
+			}
 	    }
 	    //with objMonitorBroken { instance_change(objMonitor,false); }
 	    // remove the player

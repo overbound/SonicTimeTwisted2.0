@@ -13,10 +13,12 @@ player_score[0] = 0;
 player_score[1] = 0;
 rings[0] = 0;
 rings[1] = 0;
+player_coins[0] = 0;
+player_coins[1] = 0;
 scoreLiveCounter = 1;
 
 // global game settings
-livesMode = LIVES_CLASSIC; // this should be *by default* set to "classic", only set it to "origins" for testing
+livesMode = LIVES_CLASSIC; // this should be *by default* set to "LIVES_CLASSIC", only set it to "LIVES_ORIGINS" for testing
 
 /* */
 /*  */

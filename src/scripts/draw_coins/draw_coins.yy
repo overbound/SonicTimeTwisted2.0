@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"draw_coins",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_coins",
+  "parent":{
+    "name":"Hud",
+    "path":"folders/Scripts/Overlays/Hud.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

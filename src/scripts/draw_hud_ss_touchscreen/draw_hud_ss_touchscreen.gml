@@ -1,7 +1,14 @@
 function draw_hud_ss_touchscreen() {
 	if(objProgram.saveSlot > -2) // if we are playing this in the mini-game/level select mode, lives don't appear
 	{
-	    draw_lives(objScreen.width - 100, 16*objScreen.split_screen + 4 );
+	    if(objGameData.livesMode == LIVES_CLASSIC)
+		{
+			draw_lives(objScreen.width - 100, 16*objScreen.split_screen + 4 );
+		}
+		else if(objGameData.livesMode == LIVES_ORIGINS)
+		{
+			draw_coins(objScreen.width - 100, 16*objScreen.split_screen + 4 );
+		}
 	    draw_shield_ss(objScreen.width - 36, 28-(16*objScreen.split_screen), objProgram.temp_shield);
 	}
 	// Progress bar - hide it if 3 2 1 GO is showing, because there's overlap
