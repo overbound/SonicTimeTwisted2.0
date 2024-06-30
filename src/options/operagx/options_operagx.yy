@@ -1,6 +1,13 @@
 {
   "$GMOperaGXOptions":"",
   "%Name":"operagx",
+  "ConfigValues":{
+    "Browser":{
+      "option_operagx_game_name":"Sonic Time Twisted: GX Games Edition",
+      "option_operagx_interpolate_pixels":"false",
+      "option_operagx_mod_game_name":"SonicTimeTwisted",
+    },
+  },
   "name":"operagx",
   "option_operagx_display_cursor":true,
   "option_operagx_editUrl":"",
