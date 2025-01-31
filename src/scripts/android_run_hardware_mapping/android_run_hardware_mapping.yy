@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"android_run_hardware_mapping",
   "isCompatibility":false,
   "isDnD":false,

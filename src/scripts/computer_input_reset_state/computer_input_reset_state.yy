@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"computer_input_reset_state",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlayerBadnikCollision",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"rumble_perform_windows_gamepad",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_bubbles_badnik",
   "isCompatibility":false,
   "isDnD":false,

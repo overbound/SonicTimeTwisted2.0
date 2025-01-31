@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_galanik_nose",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"move_view_to_center",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_fire_fly_light",
   "isCompatibility":false,
   "isDnD":false,

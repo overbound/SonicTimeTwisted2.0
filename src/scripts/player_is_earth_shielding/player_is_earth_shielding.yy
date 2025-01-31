@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_is_earth_shielding",
   "isCompatibility":false,
   "isDnD":false,

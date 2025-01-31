@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_restart_specialstage",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"sync_is_touchscreen",
   "isCompatibility":false,
   "isDnD":false,

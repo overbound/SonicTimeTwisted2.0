@@ -1,5 +1,5 @@
 {
-  "$GMTileSet":"",
+  "$GMTileSet":"v1",
   "%Name":"backTitleIsland_tileset",
   "autoTileSets":[],
   "macroPageTiles":{
@@ -25,10 +25,6 @@
   "textureGroupId":{
     "name":"Menus",
     "path":"texturegroups/Menus",
-  },
-  "tileAnimation":{
-    "FrameData":[0,1,2,3,4,5,6,7,8,],
-    "SerialiseFrameCount":1,
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_reload_keyboard_controls",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_AA_trampoline",
   "isCompatibility":false,
   "isDnD":false,

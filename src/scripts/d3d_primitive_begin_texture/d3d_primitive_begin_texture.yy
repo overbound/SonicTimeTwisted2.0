@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"d3d_primitive_begin_texture",
   "isCompatibility":true,
   "isDnD":false,

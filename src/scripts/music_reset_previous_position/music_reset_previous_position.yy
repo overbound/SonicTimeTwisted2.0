@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"music_reset_previous_position",
   "isCompatibility":false,
   "isDnD":false,

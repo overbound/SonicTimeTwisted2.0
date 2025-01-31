@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"render_titlecard",
   "isCompatibility":false,
   "isDnD":false,

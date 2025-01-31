@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_cleanup",
   "isCompatibility":false,
   "isDnD":false,

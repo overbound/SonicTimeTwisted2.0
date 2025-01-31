@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_load_android_gamepad_one_control",
   "isCompatibility":false,
   "isDnD":false,

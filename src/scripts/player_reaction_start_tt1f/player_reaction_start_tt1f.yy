@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_start_tt1f",
   "isCompatibility":false,
   "isDnD":false,

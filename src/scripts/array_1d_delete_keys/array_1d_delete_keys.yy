@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"array_1d_delete_keys",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_ffz_orb_reduced_flashing",
   "isCompatibility":false,
   "isDnD":false,

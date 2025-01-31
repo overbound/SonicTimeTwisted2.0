@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_FF_lift",
   "isCompatibility":false,
   "isDnD":false,

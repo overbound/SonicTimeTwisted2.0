@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_step_begin",
   "isCompatibility":false,
   "isDnD":false,

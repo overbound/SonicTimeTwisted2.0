@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_get_touchscreen_dpad_sprite",
   "isCompatibility":false,
   "isDnD":false,

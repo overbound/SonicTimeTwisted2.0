@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"print_callstack",
   "isCompatibility":false,
   "isDnD":false,

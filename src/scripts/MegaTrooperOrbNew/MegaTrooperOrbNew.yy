@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"MegaTrooperOrbNew",
   "isCompatibility":false,
   "isDnD":false,

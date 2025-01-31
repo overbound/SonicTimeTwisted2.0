@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_get_gp_label",
   "isCompatibility":false,
   "isDnD":false,

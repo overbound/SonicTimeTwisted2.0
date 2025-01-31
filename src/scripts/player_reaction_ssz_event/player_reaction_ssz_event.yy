@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_ssz_event",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_water_run_off",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_method_touchscreen_draw",
   "isCompatibility":false,
   "isDnD":false,

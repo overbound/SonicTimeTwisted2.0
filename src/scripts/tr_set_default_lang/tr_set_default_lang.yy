@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tr_set_default_lang",
   "isCompatibility":false,
   "isDnD":false,

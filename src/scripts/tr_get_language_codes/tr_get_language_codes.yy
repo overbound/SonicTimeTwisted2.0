@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tr_get_language_codes",
   "isCompatibility":false,
   "isDnD":false,

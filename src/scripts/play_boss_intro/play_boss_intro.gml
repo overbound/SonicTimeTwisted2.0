@@ -1,9 +1,7 @@
 /// @description play_boss_intro(song, position)
 /// @param song
 /// @param  position
-function play_boss_intro(argument0, argument1) {
-	var song = argument0;
-	var position = argument1;
+function play_boss_intro(song, position) {
 	stop_all_music(false);
 	with (objMusic) {
 	    bossIntroAsset = song;

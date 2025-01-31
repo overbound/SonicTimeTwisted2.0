@@ -23,11 +23,12 @@ play_boss_intro(objMusic.bossIntroAsset, 0);
 // replace background
 with objAAFutureBack instance_destroy();
 with objParallax instance_destroy();
-if objProgram.in_past
-    background=instance_create(0, 0, objAA1BossPastBack);
-    else background=instance_create(0, 0, objAA1BossFutureBack);
+background = instance_create_depth(0, 0, 1025, objProgram.in_past ? objAA1BossPastBack : objAA1BossFutureBack);
     
-for (var i=0; i<4; i+=1) instance_create(i*256, 192+(i*128), objAA1BossFloorBack);
+for (var i=0; i<4; i+=1)
+{
+	instance_create_depth(i*256, 192+(i*128), 1024, objAA1BossFloorBack);
+}
 with objLevel started = true;
 with objProgram cutscene = true;
 

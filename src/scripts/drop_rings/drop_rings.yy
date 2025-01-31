@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"drop_rings",
   "isCompatibility":false,
   "isDnD":false,

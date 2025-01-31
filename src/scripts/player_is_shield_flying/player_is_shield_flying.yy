@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_is_shield_flying",
   "isCompatibility":false,
   "isDnD":false,

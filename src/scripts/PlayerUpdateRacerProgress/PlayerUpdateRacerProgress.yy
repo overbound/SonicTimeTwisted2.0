@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlayerUpdateRacerProgress",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"analog_postprocess_act",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_titlecard_array",
   "isCompatibility":false,
   "isDnD":false,

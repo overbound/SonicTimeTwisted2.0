@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SonicSpecialAnimation",
   "isCompatibility":false,
   "isDnD":false,

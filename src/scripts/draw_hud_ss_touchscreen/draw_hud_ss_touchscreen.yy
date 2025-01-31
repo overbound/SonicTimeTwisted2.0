@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_hud_ss_touchscreen",
   "isCompatibility":false,
   "isDnD":false,

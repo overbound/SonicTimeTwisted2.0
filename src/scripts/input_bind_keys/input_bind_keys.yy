@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_bind_keys",
   "isCompatibility":false,
   "isDnD":false,

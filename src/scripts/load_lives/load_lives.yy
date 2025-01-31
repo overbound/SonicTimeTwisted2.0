@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"load_lives",
   "isCompatibility":false,
   "isDnD":false,

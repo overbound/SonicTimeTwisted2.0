@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_bind_buttons_or_axes",
   "isCompatibility":false,
   "isDnD":false,

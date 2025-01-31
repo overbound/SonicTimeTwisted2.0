@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_FF_orb",
   "isCompatibility":false,
   "isDnD":false,

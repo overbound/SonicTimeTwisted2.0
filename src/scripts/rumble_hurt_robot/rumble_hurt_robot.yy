@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"rumble_hurt_robot",
   "isCompatibility":false,
   "isDnD":false,

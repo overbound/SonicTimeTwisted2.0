@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_exit_submenu",
   "isCompatibility":false,
   "isDnD":false,

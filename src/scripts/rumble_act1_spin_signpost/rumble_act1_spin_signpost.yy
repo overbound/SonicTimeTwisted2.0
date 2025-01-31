@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"rumble_act1_spin_signpost",
   "isCompatibility":false,
   "isDnD":false,

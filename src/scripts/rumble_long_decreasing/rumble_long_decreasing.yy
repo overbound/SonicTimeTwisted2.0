@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"rumble_long_decreasing",
   "isCompatibility":false,
   "isDnD":false,

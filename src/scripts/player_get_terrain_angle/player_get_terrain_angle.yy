@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_get_terrain_angle",
   "isCompatibility":false,
   "isDnD":false,

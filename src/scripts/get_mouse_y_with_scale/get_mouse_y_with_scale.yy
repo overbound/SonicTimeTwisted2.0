@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_mouse_y_with_scale",
   "isCompatibility":false,
   "isDnD":false,

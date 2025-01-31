@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reset_physics",
   "isCompatibility":false,
   "isDnD":false,

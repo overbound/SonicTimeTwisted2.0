@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_FF_ice_slip",
   "isCompatibility":false,
   "isDnD":false,

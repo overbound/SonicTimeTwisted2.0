@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_set_scripts_from_next",
   "isCompatibility":false,
   "isDnD":false,

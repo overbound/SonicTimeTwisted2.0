@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_part_gamepad_ext_step_nodevice",
   "isCompatibility":false,
   "isDnD":false,

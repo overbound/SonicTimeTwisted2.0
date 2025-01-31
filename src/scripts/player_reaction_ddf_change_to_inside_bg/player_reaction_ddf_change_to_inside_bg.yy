@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_ddf_change_to_inside_bg",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_giant_ring",
   "isCompatibility":false,
   "isDnD":false,

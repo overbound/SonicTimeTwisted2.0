@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_add_score",
   "isCompatibility":false,
   "isDnD":false,

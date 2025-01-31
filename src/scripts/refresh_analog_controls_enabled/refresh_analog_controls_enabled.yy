@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"refresh_analog_controls_enabled",
   "isCompatibility":false,
   "isDnD":false,

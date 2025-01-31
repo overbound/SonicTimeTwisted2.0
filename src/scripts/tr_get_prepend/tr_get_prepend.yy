@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tr_get_prepend",
   "isCompatibility":false,
   "isDnD":false,

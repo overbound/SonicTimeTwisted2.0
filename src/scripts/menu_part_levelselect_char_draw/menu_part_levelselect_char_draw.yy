@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_part_levelselect_char_draw",
   "isCompatibility":false,
   "isDnD":false,

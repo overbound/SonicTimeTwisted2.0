@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"angle_distance",
   "isCompatibility":false,
   "isDnD":false,

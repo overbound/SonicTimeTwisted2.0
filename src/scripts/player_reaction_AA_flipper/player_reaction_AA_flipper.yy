@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_AA_flipper",
   "isCompatibility":false,
   "isDnD":false,

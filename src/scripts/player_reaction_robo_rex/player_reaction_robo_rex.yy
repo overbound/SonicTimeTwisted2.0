@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_robo_rex",
   "isCompatibility":false,
   "isDnD":false,

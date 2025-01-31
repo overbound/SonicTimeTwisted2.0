@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_canon",
   "isCompatibility":false,
   "isDnD":false,

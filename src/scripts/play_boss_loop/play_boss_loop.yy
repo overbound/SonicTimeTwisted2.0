@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"play_boss_loop",
   "isCompatibility":false,
   "isDnD":false,

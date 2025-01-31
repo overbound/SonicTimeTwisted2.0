@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"print_mem_usage",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"android_start_software_mapping",
   "isCompatibility":false,
   "isDnD":false,

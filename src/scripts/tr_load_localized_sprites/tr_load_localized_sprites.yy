@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tr_load_localized_sprites",
   "isCompatibility":false,
   "isDnD":false,

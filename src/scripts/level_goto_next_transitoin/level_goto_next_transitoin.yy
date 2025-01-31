@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"level_goto_next_transitoin",
   "isCompatibility":false,
   "isDnD":false,

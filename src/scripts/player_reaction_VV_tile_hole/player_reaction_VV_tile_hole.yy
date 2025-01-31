@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_VV_tile_hole",
   "isCompatibility":false,
   "isDnD":false,

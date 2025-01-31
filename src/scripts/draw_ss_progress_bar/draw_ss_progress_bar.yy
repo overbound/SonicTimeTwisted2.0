@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_ss_progress_bar",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_part_videooptions_items",
   "isCompatibility":false,
   "isDnD":false,

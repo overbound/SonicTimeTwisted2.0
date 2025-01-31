@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_method_haptics_ssgyro",
   "isCompatibility":false,
   "isDnD":false,
