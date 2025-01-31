@@ -1,6 +1,6 @@
 /// @description play_boss_intro(song, position)
 /// @param song
-/// @param  position
+/// @param position
 function play_boss_intro(song, position) {
 	stop_all_music(false);
 	with (objMusic) {

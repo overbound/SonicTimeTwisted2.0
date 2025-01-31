@@ -1,9 +1,7 @@
 /// @description play_jingle(song, resume)
 /// @param song
 /// @param  resume
-function play_jingle(argument0, argument1) {
-	var song = argument0;
-	var resume = argument1;
+function play_jingle(song, resume) {
 	with (objMusic) {
 	    stop_sound(musicJingle);
 	    musicJingle = -1;

@@ -1,11 +1,9 @@
 /// @description play_previous(statePrevious,position)
 /// @param statePrevious
 /// @param position
-function play_previous(argument0) {
-	var sp = argument0;
-	var position = music_get_previous_position(sp);
+function play_previous(_statePrevious, position = music_get_previous_position(_statePrevious)) {
 	with (objMusic) {
-	    switch (sp) {
+	    switch (_statePrevious) {
 	        case MUSIC_STATE.SILENCE: // silence
 	            // Do nothing.
 	            break;

@@ -1,7 +1,6 @@
 /// @description set_boss_music(roomIndex)
 /// @param roomIndex
-function set_boss_music(argument0) {
-	var roomIndex = argument0;
+function set_boss_music(roomIndex) {
 	with (objMusic) {
 	    switch (roomIndex) {
 	        // Regular boss theme.
