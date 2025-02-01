@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"bgmFFFutureLoop",
+  "%Name":"bgmFFFuture",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":512,
   "compression":3,
   "conversionMode":0,
-  "duration":0.0,
-  "name":"bgmFFFutureLoop",
+  "duration":96.0,
+  "name":"bgmFFFuture",
   "parent":{
     "name":"Frigid Fortress",
     "path":"folders/Sounds/BGM/Frigid Fortress.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"bgmFFFutureLoop",
+  "soundFile":"bgmFFFuture",
   "type":1,
   "volume":1.0,
 }

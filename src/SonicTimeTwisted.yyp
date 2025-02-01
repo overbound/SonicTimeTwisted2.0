@@ -2217,7 +2217,7 @@
     {"id":{"name":"bgmDrowning","path":"sounds/bgmDrowning/bgmDrowning.yy",},},
     {"id":{"name":"bgmEndingBad","path":"sounds/bgmEndingBad/bgmEndingBad.yy",},},
     {"id":{"name":"bgmEndingGood","path":"sounds/bgmEndingGood/bgmEndingGood.yy",},},
-    {"id":{"name":"bgmFFFutureLoop","path":"sounds/bgmFFFutureLoop/bgmFFFutureLoop.yy",},},
+    {"id":{"name":"bgmFFFuture","path":"sounds/bgmFFFuture/bgmFFFuture.yy",},},
     {"id":{"name":"bgmFFPastIntro","path":"sounds/bgmFFPastIntro/bgmFFPastIntro.yy",},},
     {"id":{"name":"bgmFFPastLoop","path":"sounds/bgmFFPastLoop/bgmFFPastLoop.yy",},},
     {"id":{"name":"bgmGalanik1Intro","path":"sounds/bgmGalanik1Intro/bgmGalanik1Intro.yy",},},

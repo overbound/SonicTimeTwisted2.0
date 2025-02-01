@@ -34,7 +34,7 @@ function set_zone_music(roomIndex) {
 	        // FF
 	        case FF1_f: // Future
 	        case FF2_f: {
-	            musicAsset = bgmFFFutureLoop;
+	            musicAsset = bgmFFFuture;
 	            return true;
 	        }
         
