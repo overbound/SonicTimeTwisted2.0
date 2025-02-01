@@ -18,20 +18,22 @@ function set_zone_music(roomIndex) {
 	            return true;
 	        }
         
-	        // RR
+	        // Raging Ruins
 	        case RR1_f: // Future
 	        case RR2_f: {
-	            musicAsset = bgmRRFutureLoop;
+	            musicAsset = bgmRRFuture;
+				musicLoopStart = 9.603;
 	            return true;
 	        }
         
 	        case RR1_p: // Past
 	        case RR2_p: {
-	            musicAsset = bgmRRPastLoop;
+	            musicAsset = bgmRRPast;
+				musicLoopStart = 2.805;
 	            return true;
 	        }
         
-	        // FF
+	        // Frigid Fortress
 	        case FF1_f: // Future
 	        case FF2_f: {
 	            musicAsset = bgmFFFuture;
@@ -40,81 +42,94 @@ function set_zone_music(roomIndex) {
         
 	        case FF1_p: // Past
 	        case FF2_p: {
-	            musicAsset = bgmFFPastLoop;
+	            musicAsset = bgmFFPast;
+				musicLoopStart = 7.200;
 	            return true;
 	        }
         
-	        // VV
+	        // Viridian Valley
 	        case VV1_f: // Future
 	        case VV2_f: {
-	            musicAsset = bgmVVFutureLoop;
+	            musicAsset = bgmVVFuture;
+				musicLoopStart = 3.000;
 	            return true;
 	        }
         
 	        case VV1_p: // Past
 	        case VV2_p: {
-	            musicAsset = bgmVVPastLoop;
+	            musicAsset = bgmVVPast;
+				musicLoopStart = 15.000;
 	            return true;
 	        }
         
-	        // DD
+	        // Drifting Dynamo
 	        case DD1_f: // Future
 	        case DD2_f: {
-	            musicAsset = bgmDDFutureLoop;
+	            musicAsset = bgmDDFuture;
+				musicLoopStart = 4.672;
 	            return true;
 	        }
         
 	        case DD1_p: // Past
 	        case DD2_p: {
-	            musicAsset = bgmDDPastLoop;
+	            musicAsset = bgmDDPast;
+				musicLoopStart = 33.105;
 	            return true;
 	        }
         
-	        // TT
+	        // Tidal Tubes
 	        case TT1_f: // Future
 	        case TT2_f: {
-	            musicAsset = bgmTTFutureLoop;
+	            musicAsset = bgmTTFuture;
+				musicLoopStart = 4.653;
 	            return true;
 	        }
         
 	        case TT1_p: // Past
 	        case TT2_p: {
-	            musicAsset = bgmTTPastLoop;
+	            musicAsset = bgmTTPast;
+				musicLoopStart = 34.900;
 	            return true;
 	        }
         
 	        // Sunken Saucer
 	        case SS1: {
 	            if (objProgram.spawn_tag == 25) {
-	                musicAsset = bgmSS2Loop;
+	                musicAsset = bgmSS2;
+					musicLoopStart = 10.430;
 	            }
 	            else {
-	                musicAsset = bgmSS1Loop;
+	                musicAsset = bgmSS1;
+					musicLoopStart = 13.851;
 	            }
 	            return true;
 	        }
         
 	        // Planetary Panic
 	        case PP1: {
-	            musicAsset = bgmPP1Loop;
+	            musicAsset = bgmPP1;
+				musicLoopStart = 15.996;
 	            return true;
 	        }
         
 	        case PP2: {
-	            musicAsset = bgmPP2Loop;
+	            musicAsset = bgmPP2;
+				musicLoopStart = 21.000;
 	            return true;
 	        }
         
-	        // MM
+	        // Galanik Panic (Galanik 1 is used as a boss track)
 	        case MM1: {
-	            musicAsset = bgmGalanik2Loop;
+	            musicAsset = bgmGalanik2;
+				musicLoopStart = 24.000;
 	            return true;
 	        }
         
-	        // Special Stage Result?
+	        // Save Select / Special Stage Results
 	        case ss_results_screen:
 	        case saveSelect: {
-	            musicAsset = bgmSaveScreenLoop;
+	            musicAsset = bgmSaveScreen;
+				musicLoopStart = 7.031;
 	            return true;
 	        }
         
@@ -126,7 +141,8 @@ function set_zone_music(roomIndex) {
 	        case SSF5:
 	        case SSF6:
 	        case SSF7: {
-	            musicAsset = bgmSpecialFutureLoop;
+	            musicAsset = bgmSpecialFuture;
+				musicLoopStart = 12.753;
 	            return true;
 	        }
         
@@ -137,7 +153,8 @@ function set_zone_music(roomIndex) {
 	        case SSP5:
 	        case SSP6:
 	        case SSP7: {
-	            musicAsset = bgmSpecialPastLoop;
+	            musicAsset = bgmSpecialPast;
+				musicLoopStart = 14.554;
 	            return true;
 	        }
         

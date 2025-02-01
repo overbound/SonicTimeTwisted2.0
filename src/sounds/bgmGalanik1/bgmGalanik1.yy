@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"bgmClear",
+  "%Name":"bgmGalanik1",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":512,
   "compression":3,
   "conversionMode":0,
-  "duration":11.21805,
-  "name":"bgmClear",
+  "duration":96.0,
+  "name":"bgmGalanik1",
   "parent":{
-    "name":"Jingles",
-    "path":"folders/Sounds/BGM/Jingles.yy",
+    "name":"Galacnik",
+    "path":"folders/Sounds/BGM/Galacnik.yy",
   },
   "preload":true,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"bgmClear",
+  "soundFile":"bgmGalanik1.ogg",
   "type":1,
   "volume":1.0,
 }

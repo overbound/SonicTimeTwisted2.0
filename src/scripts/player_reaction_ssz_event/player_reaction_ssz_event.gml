@@ -6,8 +6,9 @@ function player_reaction_ssz_event(argument0) {
 	objLevel.player[0].camera.bottom= argument0.bbox_bottom;
 	with objSSController state = 1;
 	objSSMetalCut.alarm[0]=228;
-	play_music(bgmSS2Loop,0);
-	objMusicNew.musicAsset = bgmSS2Loop; //TODO: Add Starting Loop Point Value here
+	play_music(bgmSS2,0);
+	objMusicNew.musicAsset = bgmSS2;
+	objMusicNew.musicLoopStart = 10.430;
 	with argument0 instance_destroy();
 
 	return false;

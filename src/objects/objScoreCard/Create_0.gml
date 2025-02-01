@@ -68,7 +68,7 @@ score_offset4 = score_offset1 + 96;
 // music
 stop_all_music(false, true);
 audio_stop_all();
-play_jingle(bgmClear, false);
+play_jingle(bgmClear, 0);
 // start event
 alarm[0] = 60;
 // set this to true so that the drawing is relative to the view
