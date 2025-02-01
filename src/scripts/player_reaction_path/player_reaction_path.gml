@@ -28,7 +28,7 @@ function player_reaction_path(argument0) {
 	// reset music
 	if audio_is_playing(bgmDrowning) {
 	    stop_all_music(true);
-	    play_previous(objMusic.priorityMusicState);
+	    play_previous(objMusicNew.priorityMusicState);
 	}
 	// rumble
 	rumble(rumble_short_mid);

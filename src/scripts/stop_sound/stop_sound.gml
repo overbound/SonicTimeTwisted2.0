@@ -1,7 +1,6 @@
 /// @description stop_sound(sndIndex)
 /// @param sndIndex
-function stop_sound(argument0) {
-	var sndIndex = argument0;
+function stop_sound(sndIndex) {
 
 	if (sndIndex < 0) {
 	    if (debug_mode) {

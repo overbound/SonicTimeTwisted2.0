@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"bgmAAPastIntro",
+  "%Name":"bgmAAPast",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":512,
   "compression":3,
   "conversionMode":0,
-  "duration":0.0,
-  "name":"bgmAAPastIntro",
+  "duration":101.98673,
+  "name":"bgmAAPast",
   "parent":{
     "name":"Attraction Attack",
     "path":"folders/Sounds/BGM/Attraction Attack.yy",
   },
-  "preload":true,
+  "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"bgmAAPastIntro",
+  "soundFile":"bgmAAPast.ogg",
   "type":1,
   "volume":1.0,
 }

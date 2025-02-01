@@ -2,26 +2,26 @@
 /// @param song
 /// @param  resume
 function play_jingle(song, resume) {
-	with (objMusic) {
+	with (objMusicNew) {
 	    stop_sound(musicJingle);
 	    musicJingle = -1;
 	    musicJingleAsset = song;
     
 	    // cancel any queued state when not supposed to resume.
 	    if (!resume) {
-	        queuedState = MUSIC_STATE.SILENCE;
+	        queuedState = states_music.STATE_SILENCE;
 	    }
     
-	    if (state == MUSIC_STATE.EFFECT) {
-	        if (resume && statePrevious != MUSIC_STATE.EFFECT && statePrevious != MUSIC_STATE.JINGLE) {
+	    if (state == states_music.STATE_EFFECT) {
+	        if (resume && statePrevious != states_music.STATE_EFFECT && statePrevious != states_music.STATE_JINGLE) {
 	            queuedState = statePrevious;
 	        }
         
 	        musicJingle = audio_play_sound(musicJingleAsset, 20, false);
 	        audio_sound_gain(musicJingle, 0, 0);
-	        statePrevious = MUSIC_STATE.JINGLE;
+	        statePrevious = states_music.STATE_JINGLE;
 	        music_reset_previous_position();
-	    } else if (state == MUSIC_STATE.JINGLE) {
+	    } else if (state == states_music.STATE_JINGLE) {
 	        musicJingle = audio_play_sound(musicJingleAsset, 20, false);
 	        audio_sound_gain(musicJingle, bgmGain / 100, 200);
 	        currentMusic = musicJingle;
@@ -29,7 +29,7 @@ function play_jingle(song, resume) {
 	        stop_all_music(resume);
 	        musicJingle = audio_play_sound(musicJingleAsset, 20, false);
 	        audio_sound_gain(musicJingle, bgmGain / 100, 200);
-	        state = MUSIC_STATE.JINGLE;
+	        state = states_music.STATE_JINGLE;
 	        currentMusic = musicJingle;
 	    }
 	}

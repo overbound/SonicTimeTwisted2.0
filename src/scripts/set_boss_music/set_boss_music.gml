@@ -1,7 +1,7 @@
 /// @description set_boss_music(roomIndex)
 /// @param roomIndex
 function set_boss_music(roomIndex) {
-	with (objMusic) {
+	with (objMusicNew) {
 	    switch (roomIndex) {
 	        // Regular boss theme.
 	        case TT2_f:
@@ -12,8 +12,7 @@ function set_boss_music(roomIndex) {
 	        case VV2_p:
 	        case RR2_f:
 	        case RR2_p: {
-	            bossLoopAsset = bgmBossLoop;
-	            bossIntroAsset = bgmBossIntro;
+	            bossAsset = bgmBossLoop;
 	            return true;
 	        }
         
@@ -22,15 +21,13 @@ function set_boss_music(roomIndex) {
 	        case DD2_p:
 	        case VV1_f:
 	        case VV1_p: {
-	            bossLoopAsset = bgmMetalSonicLoop;
-	            bossIntroAsset = bgmMetalSonicIntro;
+	            bossAsset = bgmMetalSonicLoop;
 	            return true;
 	        }
         
 	        // Galanik Panic theme. (Galanik 2 theme is the level music, so it's not here)
 	        case PP2: {
-	            bossLoopAsset = bgmGalanik1Loop;
-	            bossIntroAsset = bgmGalanik1Intro;
+	            bossAsset = bgmGalanik1Loop;
 	            return true;
 	        }
         
@@ -38,13 +35,11 @@ function set_boss_music(roomIndex) {
 	        case AA2_f:
 	        case AA2_p: {
 	            if (other.object_index == objEggWalkerBossController) {
-	                bossLoopAsset = bgmBossLoop;
-	                bossIntroAsset = bgmBossIntro;
+	                bossAsset = bgmBossLoop;
 	                show_debug_message("walker boss mus.");
 	            }
 	            else {
-	                bossLoopAsset = bgmMetalSonicLoop;
-	                bossIntroAsset = bgmMetalSonicIntro;
+	                bossAsset = bgmMetalSonicLoop;
 	                show_debug_message("metal sonic mus.");
 	            }
 	            return true;

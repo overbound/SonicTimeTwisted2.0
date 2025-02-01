@@ -2,13 +2,13 @@ function menu_part_sound_actions(argument0) {
 	switch(argument0)
 	{
 	    case 0:
-	        menu_fn_open_slider_window(0, tr("_menu_sfx_MasterVolume"), objMusic.masterGain, 0, 100, tr("_menu_format_percent"));
+	        menu_fn_open_slider_window(0, tr("_menu_sfx_MasterVolume"), objMusicNew.masterGain, 0, 100, tr("_menu_format_percent"));
 	        break;
 	    case 1:
-	        menu_fn_open_slider_window(1, tr("_menu_sfx_SFXVolume"), objMusic.sfxGain, 0, 100, tr("_menu_format_percent"));
+	        menu_fn_open_slider_window(1, tr("_menu_sfx_SFXVolume"), objMusicNew.sfxGain, 0, 100, tr("_menu_format_percent"));
 	        break;
 	    case 2:
-	        menu_fn_open_slider_window(2, tr("_menu_sfx_MusicVolume"), objMusic.bgmGain, 0, 100, tr("_menu_format_percent"));
+	        menu_fn_open_slider_window(2, tr("_menu_sfx_MusicVolume"), objMusicNew.bgmGain, 0, 100, tr("_menu_format_percent"));
 	        break;
 	    case 3:
 	    case -1:
@@ -25,9 +25,9 @@ function menu_part_sound_actions(argument0) {
 	}
 
 	// refresh displayed values
-	menu_fn_refresh_displayed_value(0, string(objMusic.masterGain) + "%");
-	menu_fn_refresh_displayed_value(1, string(objMusic.sfxGain) + "%");
-	menu_fn_refresh_displayed_value(2, string(objMusic.bgmGain) + "%");
+	menu_fn_refresh_displayed_value(0, string(objMusicNew.masterGain) + "%");
+	menu_fn_refresh_displayed_value(1, string(objMusicNew.sfxGain) + "%");
+	menu_fn_refresh_displayed_value(2, string(objMusicNew.bgmGain) + "%");
 
 	// calculating the optimal menu width
 	// We know all labels go up to "100%" : 4 characters

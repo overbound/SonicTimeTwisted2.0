@@ -67,7 +67,7 @@ function load_options() {
 			sonic_ddtrigger = ini_read_real("input","sonic_ddtrigger",0);
 	    }
     
-	    with (objMusic)
+	    with (objMusicNew)
 	    {
 	        sfxGain = ini_read_real("sound_settings", "sfx_volume", 100);
 	        bgmGain = ini_read_real("sound_settings", "bgm_volume", 100);
@@ -117,7 +117,7 @@ function load_options() {
 			sonic_ddtrigger = 0;
 	    }
     
-	    with (objMusic)
+	    with (objMusicNew)
 	    {
 	        sfxGain = 100;
 	        bgmGain = 100;

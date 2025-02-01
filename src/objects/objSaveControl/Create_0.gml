@@ -4,7 +4,7 @@ event_inherited();
 /// Initialize objects for the screen and read saved data
 // Play Save Screen music
 set_zone_music(room);
-play_music_intro(objMusic.musicIntroAsset, 0);
+play_music(objMusicNew.musicAsset, 0);
 // Create Objects and Variables
 slots[0]=instance_create(64,120,objNoSaveSlot);
 slots[1]=instance_create(192,120,objSaveSlot);

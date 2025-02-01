@@ -35,7 +35,7 @@ if (alarm[1] == 0)
     instance_activate_object(objSSLevel);
     instance_activate_object(objGameData);
     instance_activate_object(objResources);
-    instance_activate_object(objMusic);
+    instance_activate_object(objMusicNew);
     instance_activate_object(objSSMessages);
     instance_activate_object(objSSHud);
     instance_activate_object(objScreen);

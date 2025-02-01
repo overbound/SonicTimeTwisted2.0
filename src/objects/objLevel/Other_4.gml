@@ -330,7 +330,7 @@ set_zone_music(room);
         objLevel.timer_enabled = false;
             //started = true;
     } else {
-        play_music_intro(objMusic.musicIntroAsset,0);
+        play_music(objMusicNew.musicAsset,0);
     }
 // create hud
 instance_create(0, 0, objHud);

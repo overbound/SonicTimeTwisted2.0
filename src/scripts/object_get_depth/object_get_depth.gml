@@ -269,7 +269,6 @@ function object_get_depth(argument0) {
         case objGameData:
         case objInput:
         case objInputMethodDependant:
-        case objMusic:
         case objResources:
         case objCapsuleDebris:
         case objBoost:

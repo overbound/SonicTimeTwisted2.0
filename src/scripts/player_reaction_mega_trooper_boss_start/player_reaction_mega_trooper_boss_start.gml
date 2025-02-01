@@ -5,7 +5,7 @@ function player_reaction_mega_trooper_boss_start(argument0) {
 	camera.right = objMegaTrooperController.x+512;
 	camera.bottom = 3508;
 	set_boss_music(room);
-	play_boss_intro(objMusic.bossIntroAsset, 0);
+	play_boss(objMusicNew.bossAsset, 0);
 	with (argument0) instance_destroy();
 	return false;
 }

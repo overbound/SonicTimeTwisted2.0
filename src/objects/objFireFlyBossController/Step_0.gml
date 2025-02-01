@@ -13,7 +13,7 @@ case 1:
     instance_activate_object(objFireFly);
     with objFireFly state=1;
     set_boss_music(room);
-    play_boss_intro(objMusic.bossIntroAsset, 0);
+    play_boss(objMusicNew.bossAsset, 0);
     state=2;
 break;
 }

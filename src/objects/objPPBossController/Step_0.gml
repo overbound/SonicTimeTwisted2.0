@@ -79,7 +79,7 @@ case 1:
         
             play_sfx(sndGalanikLaugh,1);
             set_boss_music(room);
-            play_boss_intro(objMusic.bossIntroAsset, 0);
+            play_boss(objMusicNew.bossAsset, 0);
         }
         
         if alarm[0] == 0 {

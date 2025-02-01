@@ -37,6 +37,12 @@
 	effectLoopStart = 0;
 	effectLoopEnd = 0;
 	
+	//Previous Positions Vars
+	previousPositionMain = 0;
+	previousPositionBoss = 0;
+	previousPositionJingle = 0;
+	previousPositionEffect = 0;
+	
 	//Fallback States Vars (Default is "STATE_MUSIC" or "STATE_BOSS")
 	queuedState = statePrevious;
 	priorityMusicState = states_music.STATE_MUSIC;

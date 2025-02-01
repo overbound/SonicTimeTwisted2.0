@@ -30,7 +30,7 @@ function player_reaction_DD1_start(argument0) {
 	}
 	// only trigger on landing
 	if not (landed) return false;
-	play_music_intro(objMusic.musicIntroAsset, 0);
+	play_music(objMusicNew.musicAsset, 0);
 	// animate
 	image_angle = 0;
 	animation_new = "idle";

@@ -2,12 +2,12 @@
 /// @param [state]
 function music_get_previous_position() {
 
-	with (objMusic) {
+	with (objMusicNew) {
 	    var _arg_state = statePrevious;
 	    if (argument_count > 0) _arg_state = argument[0];
     
 	    switch (_arg_state) {
-	        case MUSIC_STATE.SILENCE: {
+	        case states_music.STATE_SILENCE: {
 	            if (debug_mode) {
 	                show_debug_message("music_get_previous_position CANNOT GET POS OF SILENCE STATE.");
 	                print_callstack();
@@ -15,32 +15,24 @@ function music_get_previous_position() {
 	            return 0;
 	        }
         
-	        case MUSIC_STATE.MUSIC_INTRO: {
-	            return previousPositionIntro;
+	        case states_music.STATE_MUSIC: {
+	            return previousPositionMain;
 	        }
         
-	        case MUSIC_STATE.MUSIC_LOOP: {
-	            return previousPositionLoop;
+	        case states_music.STATE_BOSS: {
+	            return previousPositionBoss;
 	        }
         
-	        case MUSIC_STATE.BOSS_INTRO: {
-	            return previousPositionBossIntro;
-	        }
-        
-	        case MUSIC_STATE.BOSS_LOOP: {
-	            return previousPositionBossLoop;
-	        }
-        
-	        case MUSIC_STATE.JINGLE: {
+	        case states_music.STATE_JINGLE: {
 	            return previousPositionJingle;
 	        }
         
-	        case MUSIC_STATE.EFFECT: {
+	        case states_music.STATE_EFFECT: {
 	            return previousPositionEffect;
 	        }
         
 	        default: {
-	            show_error("MUSIC_STATE enum argument out of range.", true);
+	            show_error("states_music enum argument out of range.", true);
 	            return 0;
 	        }
 	    }

@@ -4,6 +4,6 @@ with objMetallixController {
     alarm[1] = 620;
 }
 set_boss_music(room);
-play_boss_intro(objMusic.bossIntroAsset, 0);
+play_boss(objMusicNew.bossAsset, 0);
 alarm[10] = 180;
 

@@ -2,16 +2,8 @@
 /// @param song
 /// @param  position
 function play_music_intro(song, position) {
-	stop_all_music(false);
-	with (objMusic) {
-	    musicIntroAsset = song;
-	    musicIntro = audio_play_sound(musicIntroAsset, 20, false);
-	    audio_sound_gain(musicIntro, bgmGain / 100, 0);
-	    audio_sound_set_track_position(musicIntro, position);
-	    state = MUSIC_STATE.MUSIC_INTRO;
-	    priorityMusicState = state;
-	    currentMusic = musicIntro;
-	}
+	show_debug_message("play_music_intro is deprecated, redirecting calls to play_music instead (song = {0}, position = {1})", song, position);
+	play_music(song, position);
 
 
 

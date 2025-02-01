@@ -12,7 +12,7 @@ if reseting
         if instance_exists(objCutscene) transition_to(objFade, room, 24); 
         else {
             transition_to(objTitlecardDisolve, room, 0);
-            //play_music_intro(objMusic.musicIntroAsset,0);
+            //play_music(objMusicNew.musicAsset,0);
         }
     }
 }

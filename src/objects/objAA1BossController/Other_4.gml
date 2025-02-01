@@ -19,7 +19,7 @@ plat[1].hspeed = -4.5;
 plat[1].image_xscale = -1;
 // boss theme
 set_boss_music(room);
-play_boss_intro(objMusic.bossIntroAsset, 0);
+play_boss(objMusicNew.bossAsset, 0);
 // replace background
 with objAAFutureBack instance_destroy();
 with objParallax instance_destroy();

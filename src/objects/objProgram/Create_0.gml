@@ -80,7 +80,8 @@ for (var i = 360; i > -1; i--)
 }
 // start critical processes
 instance_create(0, 0, objGameData);
-instance_create(0, 0, objMusic);
+//instance_create(0, 0, objMusic); //TODO: Replace with new Music Object once everything is hooked up correctly
+instance_create_depth(0, 0, 1, objMusicNew);
 tr_init();
 instance_create(0, 0, objResources);
 // start critical processes

@@ -6,19 +6,19 @@ function menu_part_sound_step() {
 	    switch(confirmation_index)
 	    {
 	        case 0:
-	            objMusic.masterGain = menu_fn_sync_slider(objMusic.masterGain);
+	            objMusicNew.masterGain = menu_fn_sync_slider(objMusicNew.masterGain);
 	            break;
             
 	        case 1:
-	            objMusic.sfxGain = menu_fn_sync_slider(objMusic.sfxGain);
+	            objMusicNew.sfxGain = menu_fn_sync_slider(objMusicNew.sfxGain);
 	            break;
             
 	        case 2:
-	            objMusic.bgmGain = menu_fn_sync_slider(objMusic.bgmGain);
+	            objMusicNew.bgmGain = menu_fn_sync_slider(objMusicNew.bgmGain);
 	            break;
 	    }
     
-	    with (objMusic) event_user(0);
+	    with (objMusicNew) event_user(0);
 	}
 
 
