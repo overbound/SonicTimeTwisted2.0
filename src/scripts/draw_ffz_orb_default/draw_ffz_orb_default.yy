@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_ffz_orb_default",
   "isCompatibility":false,
   "isDnD":false,

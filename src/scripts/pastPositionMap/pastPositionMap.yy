@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"pastPositionMap",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,6 +1,18 @@
 {
   "$GMHtml5Options":"",
   "%Name":"HTML5",
+  "ConfigValues":{
+    "Browser":{
+      "option_html5_loadingbar":"use_default",
+      "option_html5_index":"use_default",
+      "option_html5_outputname":"stt_game.html",
+      "option_html5_foldername":"stt_html5",
+      "option_html5_browser_title":"Sonic Time Twisted",
+      "option_html5_centregame":"true",
+      "option_html5_interpolate_pixels":"false",
+      "option_html5_allow_fullscreen":"false",
+    },
+  },
   "name":"HTML5",
   "option_html5_allow_fullscreen":true,
   "option_html5_browser_title":"Created with GameMaker",

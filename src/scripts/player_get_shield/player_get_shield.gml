@@ -14,7 +14,7 @@ function player_get_shield(argument0) {
 	    underwater_count = -1;
 	    // reset music
 	    if audio_is_playing(bgmDrowning) {
-	        play_previous(objMusic.priorityMusicState);
+	        play_previous(objMusicNew.priorityMusicState);
 	    }
 	    break;
 	case 2:

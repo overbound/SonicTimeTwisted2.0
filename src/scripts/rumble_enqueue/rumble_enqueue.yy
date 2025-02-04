@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"rumble_enqueue",
   "isCompatibility":false,
   "isDnD":false,

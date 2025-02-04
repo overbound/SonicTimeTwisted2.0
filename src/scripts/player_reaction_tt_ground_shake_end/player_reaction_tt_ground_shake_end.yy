@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_tt_ground_shake_end",
   "isCompatibility":false,
   "isDnD":false,

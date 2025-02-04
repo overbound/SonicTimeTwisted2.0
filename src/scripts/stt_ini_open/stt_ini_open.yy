@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"stt_ini_open",
   "isCompatibility":false,
   "isDnD":false,

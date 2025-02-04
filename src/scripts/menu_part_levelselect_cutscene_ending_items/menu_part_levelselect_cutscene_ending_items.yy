@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_part_levelselect_cutscene_ending_items",
   "isCompatibility":false,
   "isDnD":false,

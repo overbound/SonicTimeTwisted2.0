@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_method_android_btusb_rumble",
   "isCompatibility":false,
   "isDnD":false,

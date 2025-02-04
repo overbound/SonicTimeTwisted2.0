@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_bumper",
   "isCompatibility":false,
   "isDnD":false,

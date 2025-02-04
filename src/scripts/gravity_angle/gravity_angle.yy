@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"gravity_angle",
   "isCompatibility":false,
   "isDnD":false,

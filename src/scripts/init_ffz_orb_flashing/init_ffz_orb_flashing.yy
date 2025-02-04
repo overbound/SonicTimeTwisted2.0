@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"init_ffz_orb_flashing",
   "isCompatibility":false,
   "isDnD":false,

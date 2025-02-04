@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"level_time_travel",
   "isCompatibility":false,
   "isDnD":false,

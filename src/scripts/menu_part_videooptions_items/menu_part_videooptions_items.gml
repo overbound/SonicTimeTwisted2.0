@@ -12,6 +12,7 @@ function menu_part_videooptions_items() {
 	    menu_fn_add_option(tr("_menu_gfx_ScreenSize"), 0, 1, "");
 	}
 	menu_fn_add_option(tr("_menu_gfx_Blur"), 6, 1, "");
+	menu_fn_add_option(tr("_menu_gfx_Scanlines"), 10, 1, "");
 	menu_fn_add_option(tr("_menu_gfx_Tally"), 1, 1, "");
 	menu_fn_add_option(tr("_menu_gfx_Fr"), 2, 1, "");
 	if (objProgram.device_info & DEVICE_TYPE_COMPUTER)

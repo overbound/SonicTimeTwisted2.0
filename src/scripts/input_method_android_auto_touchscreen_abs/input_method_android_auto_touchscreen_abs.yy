@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_method_android_auto_touchscreen_abs",
   "isCompatibility":false,
   "isDnD":false,

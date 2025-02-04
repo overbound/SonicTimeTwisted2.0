@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"bgmPP1",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":512,
+  "compression":3,
+  "conversionMode":0,
+  "duration":108.79583,
+  "name":"bgmPP1",
+  "parent":{
+    "name":"Planetary Panic",
+    "path":"folders/Sounds/BGM/Planetary Panic.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"bgmPP1.ogg",
+  "type":1,
+  "volume":1.0,
+}

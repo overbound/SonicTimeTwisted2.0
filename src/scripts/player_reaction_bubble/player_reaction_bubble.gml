@@ -29,7 +29,7 @@ function player_reaction_bubble(argument0) {
 	play_sfx(sndGetAir, 1);
 	// reset music
 	if audio_is_playing(bgmDrowning) {
-	    play_previous(objMusic.priorityMusicState);
+	    play_previous(objMusicNew.priorityMusicState);
 	}
 	// rumble
 	rumble(rumble_short_weak);

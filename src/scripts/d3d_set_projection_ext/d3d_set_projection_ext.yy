@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"d3d_set_projection_ext",
   "isCompatibility":true,
   "isDnD":false,

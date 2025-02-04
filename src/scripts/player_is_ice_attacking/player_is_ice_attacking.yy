@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_is_ice_attacking",
   "isCompatibility":false,
   "isDnD":false,

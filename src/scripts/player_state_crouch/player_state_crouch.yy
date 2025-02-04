@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_state_crouch",
   "isCompatibility":false,
   "isDnD":false,

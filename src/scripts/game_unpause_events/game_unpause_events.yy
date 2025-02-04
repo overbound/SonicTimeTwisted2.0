@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"game_unpause_events",
   "isCompatibility":false,
   "isDnD":false,

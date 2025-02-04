@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"apply_video_settings",
   "isCompatibility":false,
   "isDnD":false,

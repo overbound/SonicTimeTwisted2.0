@@ -1,8 +1,7 @@
 /// @description set_boss_music(roomIndex)
 /// @param roomIndex
-function set_boss_music(argument0) {
-	var roomIndex = argument0;
-	with (objMusic) {
+function set_boss_music(roomIndex) {
+	with (objMusicNew) {
 	    switch (roomIndex) {
 	        // Regular boss theme.
 	        case TT2_f:
@@ -13,8 +12,8 @@ function set_boss_music(argument0) {
 	        case VV2_p:
 	        case RR2_f:
 	        case RR2_p: {
-	            bossLoopAsset = bgmBossLoop;
-	            bossIntroAsset = bgmBossIntro;
+	            bossAsset = bgmBoss;
+				bossLoopStart = 1.506;
 	            return true;
 	        }
         
@@ -23,15 +22,16 @@ function set_boss_music(argument0) {
 	        case DD2_p:
 	        case VV1_f:
 	        case VV1_p: {
-	            bossLoopAsset = bgmMetalSonicLoop;
-	            bossIntroAsset = bgmMetalSonicIntro;
+	            bossAsset = bgmMetalSonic;
+				bossLoopStart = 9.290;
 	            return true;
 	        }
         
-	        // Galanik Panic theme. (Galanik 2 theme is the level music, so it's not here)
+	        // Galanik 1 (Planetary Panic). 
+			// (Galanik 2 is used as level music, so it's not here)
 	        case PP2: {
-	            bossLoopAsset = bgmGalanik1Loop;
-	            bossIntroAsset = bgmGalanik1Intro;
+	            bossAsset = bgmGalanik1;
+				bossLoopStart = 12.000;
 	            return true;
 	        }
         
@@ -39,13 +39,13 @@ function set_boss_music(argument0) {
 	        case AA2_f:
 	        case AA2_p: {
 	            if (other.object_index == objEggWalkerBossController) {
-	                bossLoopAsset = bgmBossLoop;
-	                bossIntroAsset = bgmBossIntro;
+	                bossAsset = bgmBoss;
+					bossLoopStart = 1.506;
 	                show_debug_message("walker boss mus.");
 	            }
 	            else {
-	                bossLoopAsset = bgmMetalSonicLoop;
-	                bossIntroAsset = bgmMetalSonicIntro;
+	                bossAsset = bgmMetalSonic;
+					bossLoopStart = 9.290;
 	                show_debug_message("metal sonic mus.");
 	            }
 	            return true;

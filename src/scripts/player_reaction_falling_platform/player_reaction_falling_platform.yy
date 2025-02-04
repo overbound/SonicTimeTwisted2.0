@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_falling_platform",
   "isCompatibility":false,
   "isDnD":false,

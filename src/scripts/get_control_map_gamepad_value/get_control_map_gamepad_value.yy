@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_control_map_gamepad_value",
   "isCompatibility":false,
   "isDnD":false,

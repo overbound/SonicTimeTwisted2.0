@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"is_skip_button_pressed",
   "isCompatibility":false,
   "isDnD":false,

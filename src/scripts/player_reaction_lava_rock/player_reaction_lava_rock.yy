@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_lava_rock",
   "isCompatibility":false,
   "isDnD":false,

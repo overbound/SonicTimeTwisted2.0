@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_ss_stop_sound",
   "isCompatibility":false,
   "isDnD":false,

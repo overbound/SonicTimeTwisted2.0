@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"bgmVVPast",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":512,
+  "compression":3,
+  "conversionMode":0,
+  "duration":88.5,
+  "name":"bgmVVPast",
+  "parent":{
+    "name":"Viridian Valley",
+    "path":"folders/Sounds/BGM/Viridian Valley.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"bgmVVPast.ogg",
+  "type":1,
+  "volume":1.0,
+}

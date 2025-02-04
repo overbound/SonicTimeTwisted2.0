@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_sync_slider",
   "isCompatibility":false,
   "isDnD":false,

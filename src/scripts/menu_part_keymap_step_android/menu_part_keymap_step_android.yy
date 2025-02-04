@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_part_keymap_step_android",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_slope_factor",
   "isCompatibility":false,
   "isDnD":false,

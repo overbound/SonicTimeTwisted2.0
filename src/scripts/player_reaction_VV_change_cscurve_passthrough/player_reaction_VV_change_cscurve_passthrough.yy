@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_VV_change_cscurve_passthrough",
   "isCompatibility":false,
   "isDnD":false,

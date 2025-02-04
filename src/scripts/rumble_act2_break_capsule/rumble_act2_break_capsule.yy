@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"rumble_act2_break_capsule",
   "isCompatibility":false,
   "isDnD":false,

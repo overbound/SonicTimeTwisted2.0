@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"analog_postprocess_dummy",
   "isCompatibility":false,
   "isDnD":false,

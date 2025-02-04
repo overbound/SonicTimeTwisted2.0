@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_reset_keyboard_bindings",
   "isCompatibility":false,
   "isDnD":false,

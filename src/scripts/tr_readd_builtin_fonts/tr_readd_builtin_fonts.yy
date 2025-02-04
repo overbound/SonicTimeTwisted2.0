@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tr_readd_builtin_fonts",
   "isCompatibility":false,
   "isDnD":false,

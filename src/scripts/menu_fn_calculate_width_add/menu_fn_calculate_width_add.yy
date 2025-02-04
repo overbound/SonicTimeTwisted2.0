@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_calculate_width_add",
   "isCompatibility":false,
   "isDnD":false,

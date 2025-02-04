@@ -9,7 +9,8 @@ function save_options() {
 	    ini_write_real("video_options", "vsync", objScreen.vsync);
 	    ini_write_real("video_options", "timer_mode", objScreen.timer_mode);
 	    ini_write_real("video_options", "show_shield", objScreen.show_shield);
-		ini_write_real("video_options", "aspect_ratio", objScreen.aspect_mode)
+		ini_write_real("video_options", "aspect_ratio", objScreen.aspect_mode);
+		ini_write_real("video_options", "scanlines", objScreen.scanlines);
 	    ini_write_real("video_options", "format_version", objScreen.options_format);
 	}
 	if(instance_exists(objProgram.inputManager))
@@ -59,11 +60,11 @@ function save_options() {
 	    ini_write_real("smartphone", "touchanalog_ss_min_angle", objProgram.inputManager.touchanalog_ss_min_angle);
 	    ini_write_real("smartphone", "touchanalog_ss_max_angle", objProgram.inputManager.touchanalog_ss_max_angle);
 	}
-	if (instance_exists(objMusic))
+	if (instance_exists(objMusicNew))
 	{
-	    ini_write_real("sound_settings", "sfx_volume", objMusic.sfxGain);
-	    ini_write_real("sound_settings", "bgm_volume", objMusic.bgmGain);
-	    ini_write_real("sound_settings", "master_volume", objMusic.masterGain);
+	    ini_write_real("sound_settings", "sfx_volume", objMusicNew.sfxGain);
+	    ini_write_real("sound_settings", "bgm_volume", objMusicNew.bgmGain);
+	    ini_write_real("sound_settings", "master_volume", objMusicNew.masterGain);
 	}
 	ini_write_string("localization", "language", global.TR_lang);
 	stt_ini_close();

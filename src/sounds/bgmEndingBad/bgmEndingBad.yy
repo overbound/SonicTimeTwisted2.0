@@ -9,7 +9,7 @@
   "bitRate":512,
   "compression":3,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":113.67728,
   "name":"bgmEndingBad",
   "parent":{
     "name":"Ending",

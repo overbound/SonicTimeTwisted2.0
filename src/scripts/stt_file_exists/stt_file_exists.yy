@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"stt_file_exists",
   "isCompatibility":false,
   "isDnD":false,

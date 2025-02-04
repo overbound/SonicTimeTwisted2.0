@@ -47,7 +47,7 @@ function player_reaction_capsule(argument0) {
 	// destroy object
 	with argument0 instance_destroy();
 	// sound
-	//play_jingle(bgmClear,false);
+	//play_jingle(bgmClear,0);
 	play_sfx(sndBreakGlass, 2);
 	// rumble
 	rumble(rumble_act2_break_capsule);

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_clear_gamepad_backup_mapping",
   "isCompatibility":false,
   "isDnD":false,

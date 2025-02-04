@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tr_stream_loc_sound",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"rumble_perform_android_smartphone",
   "isCompatibility":false,
   "isDnD":false,

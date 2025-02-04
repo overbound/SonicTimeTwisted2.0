@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_react_set_plane_bottom_boundry",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_collision_ceiling",
   "isCompatibility":false,
   "isDnD":false,

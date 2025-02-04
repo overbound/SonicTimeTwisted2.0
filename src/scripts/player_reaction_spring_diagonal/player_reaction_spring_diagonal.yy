@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_spring_diagonal",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_egg_walker_boss_start",
   "isCompatibility":false,
   "isDnD":false,

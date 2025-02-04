@@ -1,6 +1,6 @@
 /// @description  Draw Hud
 //if objScreen.paused exit;
-d3d_set_projection_ortho(0, 0, __view_get( e__VW.WPort, 0 ), __view_get( e__VW.HPort, 0 ), 0);
+d3d_set_projection_ortho(0, 0, view_get_wport(0), view_get_hport(0), 0);
 // score / time / rings string
 draw_set_font(objResources.fontHud);
 if !objProgram.paused {

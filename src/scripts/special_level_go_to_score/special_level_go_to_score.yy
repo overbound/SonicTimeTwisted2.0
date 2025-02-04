@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"special_level_go_to_score",
   "isCompatibility":false,
   "isDnD":false,

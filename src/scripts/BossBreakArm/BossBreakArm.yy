@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BossBreakArm",
   "isCompatibility":false,
   "isDnD":false,

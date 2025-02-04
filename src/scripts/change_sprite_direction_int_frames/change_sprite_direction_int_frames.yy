@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"change_sprite_direction_int_frames",
   "isCompatibility":false,
   "isDnD":false,

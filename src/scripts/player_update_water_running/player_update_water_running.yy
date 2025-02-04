@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_update_water_running",
   "isCompatibility":false,
   "isDnD":false,

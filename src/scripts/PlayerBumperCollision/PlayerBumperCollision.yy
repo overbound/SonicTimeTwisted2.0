@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlayerBumperCollision",
   "isCompatibility":false,
   "isDnD":false,

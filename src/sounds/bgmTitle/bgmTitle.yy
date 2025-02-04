@@ -9,7 +9,7 @@
   "bitRate":512,
   "compression":3,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":22.357256,
   "name":"bgmTitle",
   "parent":{
     "name":"General",

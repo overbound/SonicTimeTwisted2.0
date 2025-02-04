@@ -9,7 +9,7 @@
   "bitRate":512,
   "compression":3,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":11.21805,
   "name":"bgmClear",
   "parent":{
     "name":"Jingles",

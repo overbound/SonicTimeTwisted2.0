@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__view_set_internal",
   "isCompatibility":true,
   "isDnD":false,

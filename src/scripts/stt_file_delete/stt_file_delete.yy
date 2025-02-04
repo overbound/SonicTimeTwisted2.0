@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"stt_file_delete",
   "isCompatibility":false,
   "isDnD":false,

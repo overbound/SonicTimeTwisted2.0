@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_reset_depth",
   "isCompatibility":false,
   "isDnD":false,

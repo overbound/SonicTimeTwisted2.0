@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"bgmTTFuture",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":512,
+  "compression":3,
+  "conversionMode":0,
+  "duration":137.81458,
+  "name":"bgmTTFuture",
+  "parent":{
+    "name":"Tidal Tubes",
+    "path":"folders/Sounds/BGM/Tidal Tubes.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"bgmTTFuture.ogg",
+  "type":1,
+  "volume":1.0,
+}

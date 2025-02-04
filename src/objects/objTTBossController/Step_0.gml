@@ -9,7 +9,7 @@ case 0:
     
         state = 1;
         set_boss_music(room);
-        play_boss_intro(objMusic.bossIntroAsset, 0);
+        play_boss(objMusicNew.bossAsset, 0);
         instance_create(x+500,y+340,objWhaleBoss);
     }
 break;

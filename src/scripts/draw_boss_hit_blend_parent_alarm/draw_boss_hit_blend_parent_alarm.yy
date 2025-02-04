@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_boss_hit_blend_parent_alarm",
   "isCompatibility":false,
   "isDnD":false,

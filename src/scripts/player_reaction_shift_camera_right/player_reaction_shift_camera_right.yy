@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_shift_camera_right",
   "isCompatibility":false,
   "isDnD":false,

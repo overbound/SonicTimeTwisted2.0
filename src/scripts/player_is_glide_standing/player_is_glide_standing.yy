@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_is_glide_standing",
   "isCompatibility":false,
   "isDnD":false,

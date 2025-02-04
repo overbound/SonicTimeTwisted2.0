@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"d3d_transform_set_rotation_x",
   "isCompatibility":true,
   "isDnD":false,

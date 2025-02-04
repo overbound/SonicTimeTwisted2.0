@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"solidsSS1Future",
   "isCompatibility":false,
   "isDnD":false,

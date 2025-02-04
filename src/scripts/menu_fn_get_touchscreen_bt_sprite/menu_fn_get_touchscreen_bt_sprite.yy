@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_get_touchscreen_bt_sprite",
   "isCompatibility":false,
   "isDnD":false,

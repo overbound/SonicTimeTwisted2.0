@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"sfx_special_volume",
   "isCompatibility":false,
   "isDnD":false,

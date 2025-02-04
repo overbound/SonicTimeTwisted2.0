@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_change_room_demensions",
   "isCompatibility":false,
   "isDnD":false,

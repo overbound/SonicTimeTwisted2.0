@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_part_touchscreen_vibrations_step",
   "isCompatibility":false,
   "isDnD":false,

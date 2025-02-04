@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"bgmSpecialPast",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":512,
+  "compression":3,
+  "conversionMode":0,
+  "duration":76.48966,
+  "name":"bgmSpecialPast",
+  "parent":{
+    "name":"Special Stage",
+    "path":"folders/Sounds/BGM/Special Stage.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"bgmSpecialPast.ogg",
+  "type":1,
+  "volume":1.0,
+}

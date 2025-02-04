@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_method_smartphone_common",
   "isCompatibility":false,
   "isDnD":false,

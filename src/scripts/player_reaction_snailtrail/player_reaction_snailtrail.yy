@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_snailtrail",
   "isCompatibility":false,
   "isDnD":false,

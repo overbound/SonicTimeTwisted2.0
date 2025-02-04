@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reload_special_moves",
   "isCompatibility":false,
   "isDnD":false,

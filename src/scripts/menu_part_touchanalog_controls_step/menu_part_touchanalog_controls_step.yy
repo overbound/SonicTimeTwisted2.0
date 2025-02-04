@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_part_touchanalog_controls_step",
   "isCompatibility":false,
   "isDnD":false,
