@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"bgmGalanik2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":512,
+  "compression":3,
+  "conversionMode":0,
+  "duration":105.0,
+  "name":"bgmGalanik2",
+  "parent":{
+    "name":"Galacnik",
+    "path":"folders/Sounds/BGM/Galacnik.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"bgmGalanik2.ogg",
+  "type":1,
+  "volume":1.0,
+}

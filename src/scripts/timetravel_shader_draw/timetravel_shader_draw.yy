@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"timetravel_shader_draw",
   "isCompatibility":false,
   "isDnD":false,

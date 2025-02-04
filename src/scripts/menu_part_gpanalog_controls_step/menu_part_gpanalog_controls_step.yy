@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_part_gpanalog_controls_step",
   "isCompatibility":false,
   "isDnD":false,

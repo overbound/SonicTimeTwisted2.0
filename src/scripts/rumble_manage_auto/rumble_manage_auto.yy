@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"rumble_manage_auto",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_lillypad",
   "isCompatibility":false,
   "isDnD":false,

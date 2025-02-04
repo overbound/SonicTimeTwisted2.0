@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_ss_magnet",
   "isCompatibility":false,
   "isDnD":false,

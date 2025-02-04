@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlayerRingCollision",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_get_kb_label",
   "isCompatibility":false,
   "isDnD":false,

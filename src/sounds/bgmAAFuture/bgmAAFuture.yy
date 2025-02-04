@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"bgmAAFuture",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":512,
+  "compression":3,
+  "conversionMode":0,
+  "duration":86.16608,
+  "name":"bgmAAFuture",
+  "parent":{
+    "name":"Attraction Attack",
+    "path":"folders/Sounds/BGM/Attraction Attack.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"bgmAAFuture.ogg",
+  "type":1,
+  "volume":1.0,
+}

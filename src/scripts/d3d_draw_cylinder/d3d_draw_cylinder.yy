@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"d3d_draw_cylinder",
   "isCompatibility":true,
   "isDnD":false,

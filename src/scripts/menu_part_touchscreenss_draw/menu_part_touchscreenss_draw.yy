@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_part_touchscreenss_draw",
   "isCompatibility":false,
   "isDnD":false,

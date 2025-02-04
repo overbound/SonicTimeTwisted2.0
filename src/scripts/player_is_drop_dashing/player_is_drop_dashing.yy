@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_is_drop_dashing",
   "isCompatibility":false,
   "isDnD":false,

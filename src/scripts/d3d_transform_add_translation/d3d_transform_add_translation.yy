@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"d3d_transform_add_translation",
   "isCompatibility":true,
   "isDnD":false,

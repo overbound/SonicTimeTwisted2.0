@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_path_sep",
   "isCompatibility":false,
   "isDnD":false,

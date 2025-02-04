@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_method_ssgyro_abs",
   "isCompatibility":false,
   "isDnD":false,

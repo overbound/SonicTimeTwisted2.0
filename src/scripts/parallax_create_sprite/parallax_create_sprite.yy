@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"parallax_create_sprite",
   "isCompatibility":false,
   "isDnD":false,

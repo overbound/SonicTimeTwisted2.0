@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_unharmful_enable_controls",
   "isCompatibility":false,
   "isDnD":false,

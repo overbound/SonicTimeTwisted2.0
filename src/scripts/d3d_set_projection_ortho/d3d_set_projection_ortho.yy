@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"d3d_set_projection_ortho",
   "isCompatibility":true,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_touchscreen_default",
   "isCompatibility":false,
   "isDnD":false,

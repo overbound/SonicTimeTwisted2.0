@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_levelselect_goto_cutscene",
   "isCompatibility":false,
   "isDnD":false,

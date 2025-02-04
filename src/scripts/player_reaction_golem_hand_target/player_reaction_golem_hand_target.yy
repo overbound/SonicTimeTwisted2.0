@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_golem_hand_target",
   "isCompatibility":false,
   "isDnD":false,

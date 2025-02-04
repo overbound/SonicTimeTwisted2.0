@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"android_get_keyboard_mapped_label",
   "isCompatibility":false,
   "isDnD":false,

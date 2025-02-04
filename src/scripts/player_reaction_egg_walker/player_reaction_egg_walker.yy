@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_egg_walker",
   "isCompatibility":false,
   "isDnD":false,

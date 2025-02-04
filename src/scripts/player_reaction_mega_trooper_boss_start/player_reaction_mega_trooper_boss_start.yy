@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_mega_trooper_boss_start",
   "isCompatibility":false,
   "isDnD":false,

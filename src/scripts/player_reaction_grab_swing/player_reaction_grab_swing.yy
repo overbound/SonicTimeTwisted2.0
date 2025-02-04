@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_grab_swing",
   "isCompatibility":false,
   "isDnD":false,

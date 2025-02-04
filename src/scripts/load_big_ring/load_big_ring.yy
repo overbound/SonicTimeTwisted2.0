@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"load_big_ring",
   "isCompatibility":false,
   "isDnD":false,

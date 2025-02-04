@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_path_split",
   "isCompatibility":false,
   "isDnD":false,

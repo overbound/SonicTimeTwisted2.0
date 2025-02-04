@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_collision_floor",
   "isCompatibility":false,
   "isDnD":false,

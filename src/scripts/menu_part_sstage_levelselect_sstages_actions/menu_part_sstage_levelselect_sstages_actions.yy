@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_part_sstage_levelselect_sstages_actions",
   "isCompatibility":false,
   "isDnD":false,

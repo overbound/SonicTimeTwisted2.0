@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_paddle_top",
   "isCompatibility":false,
   "isDnD":false,

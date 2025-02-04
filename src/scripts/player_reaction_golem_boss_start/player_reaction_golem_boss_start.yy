@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_golem_boss_start",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"init_lamp_post",
   "isCompatibility":false,
   "isDnD":false,

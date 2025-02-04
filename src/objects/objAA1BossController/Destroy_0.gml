@@ -4,11 +4,8 @@ if (!was_removed)
 	// replace background
 	with background instance_destroy();
 	with objParallax instance_destroy();
-	if objProgram.in_past
-		instance_create(0, 0, objAAPastBack);
-	else instance_create(0, 0, objAAFutureBack);
-	stop_sound(bgmMetalSonicIntro);
-	stop_sound(bgmMetalSonicLoop);
+	instance_create_depth(0, 0, 1, objProgram.in_past ? objAAPastBack : objAAFutureBack);
+	stop_sound(bgmMetalSonic);
 	remove=0;
 
 }

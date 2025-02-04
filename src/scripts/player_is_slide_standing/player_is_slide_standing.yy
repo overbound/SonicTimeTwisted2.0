@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_is_slide_standing",
   "isCompatibility":false,
   "isDnD":false,

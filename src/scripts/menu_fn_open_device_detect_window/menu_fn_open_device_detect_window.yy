@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_open_device_detect_window",
   "isCompatibility":false,
   "isDnD":false,

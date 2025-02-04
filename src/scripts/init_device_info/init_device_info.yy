@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"init_device_info",
   "isCompatibility":false,
   "isDnD":false,

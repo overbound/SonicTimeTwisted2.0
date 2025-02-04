@@ -1,5 +1,6 @@
 /// @description Detect alt-enter or enter-alt presses.
 
+#region macOS-specific changes.
 // macOS special begin, this does nothing on any target that's not macOS!
 if (objProgram.device_info & DEVICE_OS_MACOS) {
     var _iswindowfs = window_get_fullscreen();
@@ -30,6 +31,7 @@ if (objProgram.device_info & DEVICE_OS_MACOS) {
     exit;
 }
 // macOS special end
+#endregion
 
 // Since we can never trust GameMaker, let's handle Alt-Enter manually.
 // oh and Alt-Enter can be pressed in various ways, Alt-Enter, Enter-Alt, weird!

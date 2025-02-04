@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_android_gamepad_change_detect",
   "isCompatibility":false,
   "isDnD":false,

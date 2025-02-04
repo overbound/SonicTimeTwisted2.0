@@ -7,7 +7,7 @@ function special_level_go_to_score() {
 	        objProgram.ss_perfect_bonus = 50000;
 	    else
 	        objProgram.ss_perfect_bonus = -1;
-	    objProgram.ss_rings_bonus = objSSPlayer.rings*10;
+	    objProgram.ss_rings_bonus = objSSPlayer.rings*100; // check objScoreCard to know this change
     
 	    var time_bonus; 
 	    var total_time = objSSLevel.timer div 60;

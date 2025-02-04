@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_method_haptics_ggpoint",
   "isCompatibility":false,
   "isDnD":false,

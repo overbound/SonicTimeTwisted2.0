@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_gyroscope_value",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"menu_fn_is_button_mappable",
   "isCompatibility":false,
   "isDnD":false,

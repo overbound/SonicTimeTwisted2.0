@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_catakiller",
   "isCompatibility":false,
   "isDnD":false,

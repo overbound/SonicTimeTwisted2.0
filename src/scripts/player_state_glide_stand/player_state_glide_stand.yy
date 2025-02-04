@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_state_glide_stand",
   "isCompatibility":false,
   "isDnD":false,

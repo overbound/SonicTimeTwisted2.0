@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tr_reload_all",
   "isCompatibility":false,
   "isDnD":false,

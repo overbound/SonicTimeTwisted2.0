@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tr_get_lang_creditsname",
   "isCompatibility":false,
   "isDnD":false,

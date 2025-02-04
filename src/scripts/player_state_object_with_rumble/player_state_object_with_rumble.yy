@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_state_object_with_rumble",
   "isCompatibility":false,
   "isDnD":false,

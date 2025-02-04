@@ -12,9 +12,9 @@ if title_word < 4
         // Start Race
         play_sfx(sndDingEnd, 1);
         if (!global.special_level_music_played) {
-            with (objMusic) {
-                if (!audio_is_playing(musicIntro) && !audio_is_playing(musicLoop)) {
-                    play_music_intro(musicIntroAsset, 0);
+            with (objMusicNew) {
+                if (!audio_is_playing(musicMain)) {
+                    play_music(musicAsset, 0);
                     global.special_level_music_played = true;
                 }
             }

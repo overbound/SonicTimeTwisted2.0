@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"play_boss",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"play_boss",
+  "parent":{
+    "name":"Audio",
+    "path":"folders/Scripts/Game/Audio.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

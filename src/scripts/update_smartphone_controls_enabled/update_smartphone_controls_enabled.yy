@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"update_smartphone_controls_enabled",
   "isCompatibility":false,
   "isDnD":false,

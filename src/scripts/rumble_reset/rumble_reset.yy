@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"rumble_reset",
   "isCompatibility":false,
   "isDnD":false,

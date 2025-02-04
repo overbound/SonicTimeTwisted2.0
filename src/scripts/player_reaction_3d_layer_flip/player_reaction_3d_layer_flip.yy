@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_3d_layer_flip",
   "isCompatibility":false,
   "isDnD":false,

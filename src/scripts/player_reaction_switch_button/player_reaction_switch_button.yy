@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_switch_button",
   "isCompatibility":false,
   "isDnD":false,

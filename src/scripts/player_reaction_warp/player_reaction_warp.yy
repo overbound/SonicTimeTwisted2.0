@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_warp",
   "isCompatibility":false,
   "isDnD":false,

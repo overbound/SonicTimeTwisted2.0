@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"save_options_platform_dependant",
   "isCompatibility":false,
   "isDnD":false,

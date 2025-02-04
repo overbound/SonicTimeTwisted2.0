@@ -1,137 +1,135 @@
 /// @description set_zone_music(roomIndex)
 /// @param roomIndex
-function set_zone_music(argument0) {
-	var roomIndex = argument0;
-	with (objMusic) {
+function set_zone_music(roomIndex) {
+	with (objMusicNew) {
 	    switch (roomIndex) {
 	        // Attraction Attack
 	        case AA1_f: // Future
 	        case AA2_f: {
-	            musicLoopAsset = bgmAAFutureLoop;
-	            musicIntroAsset = bgmAAFutureIntro;
+	            musicAsset = bgmAAFuture;
+				musicLoopStart = 20.166;
 	            return true;
 	        }
         
 	        case AA1_p: // Past
 	        case AA2_p: {
-	            musicLoopAsset = bgmAAPastLoop;
-	            musicIntroAsset = bgmAAPastIntro;
+	            musicAsset = bgmAAPast;
+				musicLoopStart = 19.996;
 	            return true;
 	        }
         
-	        // RR
+	        // Raging Ruins
 	        case RR1_f: // Future
 	        case RR2_f: {
-	            musicLoopAsset = bgmRRFutureLoop;
-	            musicIntroAsset = bgmRRFutureIntro;
+	            musicAsset = bgmRRFuture;
+				musicLoopStart = 9.603;
 	            return true;
 	        }
         
 	        case RR1_p: // Past
 	        case RR2_p: {
-	            musicLoopAsset = bgmRRPastLoop;
-	            musicIntroAsset = bgmRRPastIntro;
+	            musicAsset = bgmRRPast;
+				musicLoopStart = 2.805;
 	            return true;
 	        }
         
-	        // FF
+	        // Frigid Fortress
 	        case FF1_f: // Future
 	        case FF2_f: {
-	            musicLoopAsset = bgmFFFutureLoop;
-	            musicIntroAsset = musicLoopAsset; // ????
+	            musicAsset = bgmFFFuture;
 	            return true;
 	        }
         
 	        case FF1_p: // Past
 	        case FF2_p: {
-	            musicLoopAsset = bgmFFPastLoop;
-	            musicIntroAsset = bgmFFPastIntro;
+	            musicAsset = bgmFFPast;
+				musicLoopStart = 7.200;
 	            return true;
 	        }
         
-	        // VV
+	        // Viridian Valley
 	        case VV1_f: // Future
 	        case VV2_f: {
-	            musicLoopAsset = bgmVVFutureLoop;
-	            musicIntroAsset = bgmVVFutureIntro;
+	            musicAsset = bgmVVFuture;
+				musicLoopStart = 3.000;
 	            return true;
 	        }
         
 	        case VV1_p: // Past
 	        case VV2_p: {
-	            musicLoopAsset = bgmVVPastLoop;
-	            musicIntroAsset = bgmVVPastIntro;
+	            musicAsset = bgmVVPast;
+				musicLoopStart = 15.000;
 	            return true;
 	        }
         
-	        // DD
+	        // Drifting Dynamo
 	        case DD1_f: // Future
 	        case DD2_f: {
-	            musicLoopAsset = bgmDDFutureLoop;
-	            musicIntroAsset = bgmDDFutureIntro;
+	            musicAsset = bgmDDFuture;
+				musicLoopStart = 4.672;
 	            return true;
 	        }
         
 	        case DD1_p: // Past
 	        case DD2_p: {
-	            musicLoopAsset = bgmDDPastLoop;
-	            musicIntroAsset = bgmDDPastIntro;
+	            musicAsset = bgmDDPast;
+				musicLoopStart = 33.105;
 	            return true;
 	        }
         
-	        // TT
+	        // Tidal Tubes
 	        case TT1_f: // Future
 	        case TT2_f: {
-	            musicLoopAsset = bgmTTFutureLoop;
-	            musicIntroAsset = bgmTTFutureIntro;
+	            musicAsset = bgmTTFuture;
+				musicLoopStart = 4.653;
 	            return true;
 	        }
         
 	        case TT1_p: // Past
 	        case TT2_p: {
-	            musicLoopAsset = bgmTTPastLoop;
-	            musicIntroAsset = bgmTTPastIntro;
+	            musicAsset = bgmTTPast;
+				musicLoopStart = 34.900;
 	            return true;
 	        }
         
 	        // Sunken Saucer
 	        case SS1: {
 	            if (objProgram.spawn_tag == 25) {
-	                musicLoopAsset = bgmSS2Loop;
-	                musicIntroAsset = bgmSS2Intro;
+	                musicAsset = bgmSS2;
+					musicLoopStart = 10.430;
 	            }
 	            else {
-	                musicLoopAsset = bgmSS1Loop;
-	                musicIntroAsset = bgmSS1Intro;
+	                musicAsset = bgmSS1;
+					musicLoopStart = 13.851;
 	            }
 	            return true;
 	        }
         
 	        // Planetary Panic
 	        case PP1: {
-	            musicLoopAsset = bgmPP1Loop;
-	            musicIntroAsset = bgmPP1Intro;
+	            musicAsset = bgmPP1;
+				musicLoopStart = 15.996;
 	            return true;
 	        }
         
 	        case PP2: {
-	            musicLoopAsset = bgmPP2Loop;
-	            musicIntroAsset = bgmPP2Intro;
+	            musicAsset = bgmPP2;
+				musicLoopStart = 21.000;
 	            return true;
 	        }
         
-	        // MM
+	        // Galanik Panic (Galanik 1 is used as a boss track)
 	        case MM1: {
-	            musicLoopAsset = bgmGalanik2Loop;
-	            musicIntroAsset = bgmGalanik2Intro;
+	            musicAsset = bgmGalanik2;
+				musicLoopStart = 24.000;
 	            return true;
 	        }
         
-	        // Special Stage Result?
+	        // Save Select / Special Stage Results
 	        case ss_results_screen:
 	        case saveSelect: {
-	            musicLoopAsset = bgmSaveScreenLoop;
-	            musicIntroAsset = bgmSaveScreenIntro;
+	            musicAsset = bgmSaveScreen;
+				musicLoopStart = 7.031;
 	            return true;
 	        }
         
@@ -143,8 +141,8 @@ function set_zone_music(argument0) {
 	        case SSF5:
 	        case SSF6:
 	        case SSF7: {
-	            musicLoopAsset = bgmSpecialFutureLoop;
-	            musicIntroAsset = bgmSpecialFutureIntro;
+	            musicAsset = bgmSpecialFuture;
+				musicLoopStart = 12.753;
 	            return true;
 	        }
         
@@ -155,8 +153,8 @@ function set_zone_music(argument0) {
 	        case SSP5:
 	        case SSP6:
 	        case SSP7: {
-	            musicLoopAsset = bgmSpecialPastLoop;
-	            musicIntroAsset = bgmSpecialPastIntro;
+	            musicAsset = bgmSpecialPast;
+				musicLoopStart = 14.554;
 	            return true;
 	        }
         

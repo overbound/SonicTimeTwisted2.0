@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_rr_wall_run",
   "isCompatibility":false,
   "isDnD":false,

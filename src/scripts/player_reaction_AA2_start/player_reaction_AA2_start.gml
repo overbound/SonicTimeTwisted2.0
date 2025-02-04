@@ -47,7 +47,7 @@ function player_reaction_AA2_start(argument0) {
 	    event_perform(ev_other, ev_room_start);
 	    mode = 1;
 	}
-	play_music_intro(objMusic.musicIntroAsset, 0);
+	play_music(objMusicNew.musicAsset, 0);
 	// remove trigger
 	with argument0 instance_destroy();
 	// hard collision found

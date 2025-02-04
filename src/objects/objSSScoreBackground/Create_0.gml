@@ -81,6 +81,6 @@ ss_instructions2 = "";
 if(objProgram.saveSlot == -2)
 {
     set_zone_music(room);
-    play_music_intro(objMusic.musicIntroAsset, 0);
+    play_music(objMusicNew.musicAsset, 0);
 }
 

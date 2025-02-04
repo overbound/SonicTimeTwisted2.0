@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"analog_apply_deadzone",
   "isCompatibility":false,
   "isDnD":false,

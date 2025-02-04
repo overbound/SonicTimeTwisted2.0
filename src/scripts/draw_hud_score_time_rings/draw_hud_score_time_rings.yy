@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_hud_score_time_rings",
   "isCompatibility":false,
   "isDnD":false,

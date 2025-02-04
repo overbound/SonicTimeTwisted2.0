@@ -26,6 +26,7 @@ if(instance_exists(objLevel))
 {
     // time bonus
     var total_time = objLevel.timer div 60;
+	if total_time >= 540 time_bonus = 100000; else // this would make it consistent between this game and S3K/Mania
     if total_time > 480 time_bonus = 50000; else
     if total_time > 465 time_bonus = 10000; else
     if total_time > 450 time_bonus = 5000; else
@@ -34,7 +35,7 @@ if(instance_exists(objLevel))
     if total_time > 330 time_bonus = 2000; else
     if total_time > 270 time_bonus = 1000; else
     if total_time > 210 time_bonus = 500; else
-    if total_time == 1 time_bonus = 100000; else
+    //if total_time == 1 time_bonus = 100000; else // No idea why?
     time_bonus = 0;
     
     // perfect bonus
@@ -48,7 +49,8 @@ if(instance_exists(objLevel))
 line1 = string_replace(tr("_scorecard_line1"), "%c", name_tag);
 line2 = string_replace(tr("_scorecard_line2"), "%a", string(act));
 // ring bonus
-rings_bonus = objGameData.rings[0]*10;
+rings_bonus = objGameData.rings[0]*100; // this was originally the player's ring total times 10...
+										// so it has been changed to be more accurate to the classic games.
 // screen positions
 draw_set_font(objResources.fontTitleSmallest);
 title_ox1 = (objScreen.width * 0.5) - (string_width(string_hash_to_newline(line1)) * 0.5);
@@ -66,7 +68,7 @@ score_offset4 = score_offset1 + 96;
 // music
 stop_all_music(false, true);
 audio_stop_all();
-play_jingle(bgmClear, false);
+play_jingle(bgmClear, 0);
 // start event
 alarm[0] = 60;
 // set this to true so that the drawing is relative to the view

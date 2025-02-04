@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_is_spindashing",
   "isCompatibility":false,
   "isDnD":false,

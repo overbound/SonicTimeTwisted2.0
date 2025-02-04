@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"load_emeralds",
   "isCompatibility":false,
   "isDnD":false,

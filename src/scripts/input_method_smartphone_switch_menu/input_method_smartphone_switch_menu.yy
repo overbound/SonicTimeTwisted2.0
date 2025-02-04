@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_method_smartphone_switch_menu",
   "isCompatibility":false,
   "isDnD":false,

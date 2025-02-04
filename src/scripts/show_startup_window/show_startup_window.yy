@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"show_startup_window",
   "isCompatibility":false,
   "isDnD":false,

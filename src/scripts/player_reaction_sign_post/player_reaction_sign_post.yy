@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_sign_post",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"MegaTrooperHeadNew",
   "isCompatibility":false,
   "isDnD":false,

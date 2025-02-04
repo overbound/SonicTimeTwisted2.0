@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_breakable",
   "isCompatibility":false,
   "isDnD":false,

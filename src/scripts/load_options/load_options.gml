@@ -16,7 +16,8 @@ function load_options() {
 	        vsync = ini_read_real("video_options", "vsync", true);
 	        timer_mode = ini_read_real("video_options", "timer_mode", 0);
 	        show_shield = ini_read_real("video_options", "show_shield", 1);
-	        aspect_mode = ini_read_real("video_options", "aspect_ratio", 0);
+	        aspect_mode = ini_read_real("video_options", "aspect_ratio", false);
+	        scanlines = ini_read_real("video_options", "scanlines", false);
 	        var this_fmt = ini_read_real("video_options", "format_version", options_format_none);
 	        if (this_fmt == options_format_none) {
 	            /* need to convert videomode */
@@ -66,7 +67,7 @@ function load_options() {
 			sonic_ddtrigger = ini_read_real("input","sonic_ddtrigger",0);
 	    }
     
-	    with (objMusic)
+	    with (objMusicNew)
 	    {
 	        sfxGain = ini_read_real("sound_settings", "sfx_volume", 100);
 	        bgmGain = ini_read_real("sound_settings", "bgm_volume", 100);
@@ -97,7 +98,8 @@ function load_options() {
 	        vsync = true;
 	        timer_mode = 0;
 	        show_shield = 1;
-			aspect_mode = 0;
+	        aspect_mode = false;
+	        scanlines = false;
       
 	        // apply settings
 	        apply_video_settings();
@@ -120,7 +122,7 @@ function load_options() {
 			sonic_ddtrigger = 0;
 	    }
     
-	    with (objMusic)
+	    with (objMusicNew)
 	    {
 	        sfxGain = 100;
 	        bgmGain = 100;

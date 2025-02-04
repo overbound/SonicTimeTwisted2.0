@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_final_boss_laser",
   "isCompatibility":false,
   "isDnD":false,

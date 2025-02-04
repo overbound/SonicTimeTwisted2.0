@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"save_control_map_keyboard",
   "isCompatibility":false,
   "isDnD":false,

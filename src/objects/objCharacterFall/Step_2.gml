@@ -76,10 +76,8 @@ case 3:
     instance_create(x,y,objTextEnding);
     if alarm[0] == -1 {
         if endType == "bad" || endType == "nostones" {
-            with objTextEnding state = 1;
-            with objMusic {
-                audio_sound_gain(currentMusic,0,500);
-            }
+            objTextEnding.state = 1;
+            audio_sound_gain(objMusicNew.currentMusic,0,500);
         }
         state = 4;
         alarm[0]=120;
@@ -115,30 +113,26 @@ break;
 case 6:
     if alarm[0] == -1 {
         if endType == "noemeralds" {
-            with objTextEnding state = 1;
+            objTextEnding.state = 1;
             state = 12;
             alarm[0] = 500;
             
-            with objMusic {
-                audio_sound_gain(currentMusic,0,500);
-            }
+            audio_sound_gain(objMusicNew.currentMusic,0,500);
             
         } else {
-            with objTextEnding state = 2;
+            objTextEnding.state = 2;
             alarm[0] = 800;
             state = 7;
         }
-    with objPlaneRestoreFinal { hsp = .5; }
+    objPlaneRestoreFinal.hsp = .5;
     }
 break;
 case 7:
     if alarm[0] == -1 {
         state = 8;
-        with objMusic {
-            audio_sound_gain(currentMusic,0,500);
-        }
-        with objTextEnding instance_destroy();
-        with objAmyEnding visible = true;
+        audio_sound_gain(objMusicNew.currentMusic,0,500);
+        instance_destroy(objTextEnding);
+        objAmyEnding.visible = true;
         instance_create(208,2880,objMetalElectric);
     }
 break;
@@ -259,9 +253,9 @@ break;
 
 /* */
 /// Stop all Music if ended
-with (objMusic) {
-    var o1 = (0.1 * (objMusic.bgmGain / 100));
-    if (audio_sound_get_gain(currentMusic) <= o1) {
+with (objMusicNew) {
+    var o1 = (0.1 * (objMusicNew.bgmGain / 100));
+    if (audio_sound_get_gain(objMusicNew.currentMusic) <= o1) {
         stop_all_music(false);
     }
 }

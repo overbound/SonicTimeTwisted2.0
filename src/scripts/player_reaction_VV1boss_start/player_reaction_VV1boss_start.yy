@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_reaction_VV1boss_start",
   "isCompatibility":false,
   "isDnD":false,

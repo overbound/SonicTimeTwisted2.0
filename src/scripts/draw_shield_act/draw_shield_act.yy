@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_shield_act",
   "isCompatibility":false,
   "isDnD":false,
