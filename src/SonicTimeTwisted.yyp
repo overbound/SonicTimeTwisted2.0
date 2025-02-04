@@ -1637,7 +1637,7 @@
     {"id":{"name":"level_goback","path":"scripts/level_goback/level_goback.yy",},},
     {"id":{"name":"level_goto_dd1","path":"scripts/level_goto_dd1/level_goto_dd1.yy",},},
     {"id":{"name":"level_goto_from_save","path":"scripts/level_goto_from_save/level_goto_from_save.yy",},},
-    {"id":{"name":"level_goto_next_transitoin","path":"scripts/level_goto_next_transitoin/level_goto_next_transitoin.yy",},},
+    {"id":{"name":"level_goto_next_transition","path":"scripts/level_goto_next_transition/level_goto_next_transition.yy",},},
     {"id":{"name":"level_goto_next","path":"scripts/level_goto_next/level_goto_next.yy",},},
     {"id":{"name":"level_goto_rr1","path":"scripts/level_goto_rr1/level_goto_rr1.yy",},},
     {"id":{"name":"level_goto_tt1p","path":"scripts/level_goto_tt1p/level_goto_tt1p.yy",},},

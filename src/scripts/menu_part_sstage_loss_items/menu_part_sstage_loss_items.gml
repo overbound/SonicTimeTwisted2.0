@@ -11,7 +11,7 @@ function menu_part_sstage_loss_items() {
 	    {
 	        menu_fn_add_option(tr("_specialstage_menu_Try_Again_life"), 0);
 	    }
-		else if(objGameData.livesMode == LIVES_ORIGINS && objGameData.player_coins[0] > 1)
+		else if(objGameData.livesMode == LIVES_ORIGINS && objGameData.player_coins[0] > 0)
 		{
 			menu_fn_add_option(tr("_specialstage_menu_Try_Again_coin"), 0);
 		}

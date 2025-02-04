@@ -15,7 +15,7 @@ function menu_fn_restart_specialstage() {
 	        room_restart();
 	        with objSSLevel loopMusic = true;
 	    }
-		else if(objGameData.livesMode == LIVES_ORIGINS && objGameData.player_coins[0] > 1)
+		else if(objGameData.livesMode == LIVES_ORIGINS && objGameData.player_coins[0] > 0)
 		{
 			objGameData.player_coins[0] -= 1;
 	        save_coins(objGameData.player_coins[0]);

@@ -63,10 +63,10 @@ function macros() {
 #macro aPP1 "&*(kjda"
 #macro aPP2 "A:Lfda"
 #macro aMM1 "^&*(jkl"
-#macro RUMBLE_START_TIME 0
-#macro RUMBLE_END_TIME 1
-#macro RUMBLE_FORCE 2
-#macro RUMBLE_APPEND_MODE 4
+#macro RUMBLE_START_TIME (1 << 0)
+#macro RUMBLE_END_TIME (1 << 1)
+#macro RUMBLE_FORCE (1 << 2)
+#macro RUMBLE_APPEND_MODE (1 << 3)
 #macro DEVICE_TYPE_COMPUTER (1 << 0)
 #macro DEVICE_TYPE_SMARTPHONE (1 << 1)
 #macro DEVICE_TYPE_CONSOLE (1 << 2)
@@ -88,6 +88,7 @@ function macros() {
 #macro INPUT_GAMEPAD 2
 #macro INPUT_AUTO 3
 #macro INPUT_OS_SPECIFIC_1 4
+#macro INPUT_OS_SPECIFIC_2 5
 #macro DEVICE_SUPPORTS_FILE_FIND 1
 #macro LIVES_CLASSIC (1 << 0) // classic lives system (default)
 #macro LIVES_ORIGINS (1 << 1) // origins coin system (optional)

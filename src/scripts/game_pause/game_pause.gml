@@ -1,9 +1,18 @@
 /// @description  game_pause(pause?)
 /// @param pause?
-function game_pause(argument0) {
-	with objScreen { image_speed = not argument0; paused = argument0; }
-	with objLevel part_system_automatic_update(particles, not argument0);
-	if not argument0
+function game_pause(has_paused) {
+	with(objScreen) 
+	{
+		image_speed = !has_paused; 
+		paused = has_paused; 
+	}
+	
+	with(objLevel)
+	{
+		part_system_automatic_update(particles, !has_paused);
+	}
+	
+	if(has_paused == false)
 	{
 	    instance_activate_object(objSceneObject);
 	    audio_resume_all();
@@ -19,8 +28,11 @@ function game_pause(argument0) {
 	    instance_deactivate_object(objSceneObject);
 	    audio_pause_all();
 	}
-	if (argument0) {
-	    with (objInput) {
+	
+	if(has_paused) 
+	{
+	    with (objInput) 
+		{
 	        analog_enabled = false;
 	    }
 	}

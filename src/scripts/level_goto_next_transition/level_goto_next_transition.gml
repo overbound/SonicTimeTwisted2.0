@@ -1,4 +1,4 @@
-function level_goto_next_transitoin(argument0) {
+function level_goto_next_transition(argument0) {
 	// level_goto_next(transition)
 	var level;
 	// advance order

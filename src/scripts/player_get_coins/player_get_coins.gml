@@ -1,4 +1,4 @@
-function player_get_coins(argument0) {
+function player_get_coins(coins) {
 	// player_get_coins(coins)
 	 //   stop_level_music();
 	 //if instance_exists(objLevel) {
@@ -7,7 +7,7 @@ function player_get_coins(argument0) {
 	 //   else play_effect(sndLife, true);
 	 //}
 	 //else play_effect(sndLife, true);
-	repeat argument0
+	repeat(coins)
 	{
 	    if (objGameData.player_coins[0]>=999) return 0;
 	    objGameData.player_coins[0] += 1;
