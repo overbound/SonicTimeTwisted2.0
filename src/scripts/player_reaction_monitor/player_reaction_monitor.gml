@@ -25,18 +25,30 @@ function player_reaction_monitor(argument0, argument1) {
 	    // create icon
 	    with instance_create(argument0.x, argument0.y+argument0.image_yscale*2, objIcon)
 	    {
-	        if argument0.icon>10 image_index = 10+other.character_id; else
-	        image_index = argument0.icon;
+			if(argument0.icon > 10)
+			{
+				var _character_icon = 10 + other.character_id;
+				var _coins_icon = 14;
+				image_index = LIVES_MODE_IS_CLASSIC ? _character_icon : _coins_icon;
+			}
+			else
+			{
+				image_index = argument0.icon;
+			}
 	        player_id = other.id;
 	    }
     
-	    if objProgram.in_past /*&& argument0.icon > 10*/{
-	    ds_list_add(objProgram.life_past_list,argument0)
-	    } else {
-    
-	        ds_list_add(objProgram.life_future_list,argument0)
-    
-	    }
+	    if(LIVES_MODE_IS_CLASSIC)
+		{
+			if(objProgram.in_past /*&& argument0.icon > 10*/)
+			{
+				ds_list_add(objProgram.life_past_list,argument0);
+		    }
+			else 
+			{
+		        ds_list_add(objProgram.life_future_list,argument0);
+		    }
+		}
 	    // break item
 	    with argument0 instance_destroy();
 	    // bounce if top collision

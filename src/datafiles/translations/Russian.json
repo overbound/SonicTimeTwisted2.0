@@ -117,6 +117,7 @@
 		"_specialstage_menu_Try_Again": "Попробовать заново",
 		"_specialstage_menu_Quit": "Выйти",
 		"_specialstage_menu_Try_Again_life": "Попробовать заново (-1 жизнь)",
+		"_specialstage_menu_Try_Again_coin": "Попробовать заново (-1 coin)",
 		"_specialstage_menu_Return_to_act": "Вернуться в акт",
 
 		"_chselect_Title": "Выбор персонажа",
@@ -177,6 +178,7 @@
 		"_menu_options_Sound": "Звук",
 		"_menu_options_Input": "Управление",
 		"_menu_options_Localization": "Локализация",
+		"_menu_options_Gameplay": "Gameplay Settings",
 		"_menu_options_WaD": "Предупреждения и дисклеймеры",
 		"_menu_options_Reset": "Сброс настроек",
 		"_menu_options_Reset_Confirm": "Восстановить настройки по умолчанию?\nСохранённые игры не будут удалены.",
@@ -313,6 +315,12 @@
 		"_menu_i18n_Reload": "Перезагрузить все переводы",
 		"_menu_i18n_Export": "Экспортировать встроенные шрифты",
 
+		"_menu_gameplay_Title": "Gameplay Settings",
+		"_menu_gameplay_Lives": "Lives System",
+		"_menu_gameplay_Lives_Classic": "Classic",
+		"_menu_gameplay_Lives_Origins": "Origins",
+
+
 		"_startText_PC": "Нажмите Старт",
 		"_startText_MO": "Коснитесь чтобы начать",
 
@@ -324,6 +332,7 @@
 		"_charname_0": "СОНИК",
 		"_charname_1": "ТЕЙЛЗ",
 		"_charname_2": "НАКЛЗ",
+		"_charname_COINS": "COINS",
 		"_charname_2_wide": "НАКЛЗ",
 		"_charname_0_lc": "Соника",
 		"_charname_1_lc": "Тейлза",

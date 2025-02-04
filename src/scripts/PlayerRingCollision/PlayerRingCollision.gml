@@ -18,8 +18,15 @@ function PlayerRingCollision(argument0) {
     
 	    }
     
-	    if not (rings mod 100) {
-	        player_get_lives(1);
+	    if(rings mod 100 == 0){
+	        if(LIVES_MODE_IS_CLASSIC) 
+			{
+				player_get_lives(1);
+			}
+			else if(LIVES_MODE_IS_ORIGINS)
+			{
+				player_get_coins(1);
+			}
 	    }
     
 

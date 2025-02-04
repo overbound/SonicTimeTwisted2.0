@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"menu_part_gameplay_items",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"menu_part_gameplay_items",
+  "parent":{
+    "name":"options",
+    "path":"folders/Scripts/Game/Menu/menu_parts/options.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

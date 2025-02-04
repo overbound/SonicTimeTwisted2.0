@@ -2,10 +2,10 @@
 function end_level_normal() {
 	switch room {
 	case AA1_f:
-	    level_goto_next_transitoin(objLevelToSS);
+	    level_goto_next_transition(objLevelToSS);
 	break;
 	case AA1_p:
-	    level_goto_next_transitoin(objLevelToSS);
+	    level_goto_next_transition(objLevelToSS);
 	break;
 	case AA2_f:
 	    end_AA2();
