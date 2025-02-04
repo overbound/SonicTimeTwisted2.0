@@ -1,11 +1,11 @@
 function draw_hud_ss_touchscreen() {
 	if(objProgram.saveSlot > -2) // if we are playing this in the mini-game/level select mode, lives don't appear
 	{
-	    if(objGameData.livesMode == LIVES_CLASSIC)
+	    if(LIVES_MODE_IS_CLASSIC)
 		{
 			draw_lives(objScreen.width - 100, 16*objScreen.split_screen + 4 );
 		}
-		else if(objGameData.livesMode == LIVES_ORIGINS)
+		else if(LIVES_MODE_IS_ORIGINS)
 		{
 			draw_coins(objScreen.width - 100, 16*objScreen.split_screen + 4 );
 		}

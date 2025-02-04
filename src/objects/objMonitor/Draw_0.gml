@@ -4,12 +4,16 @@ draw_sprite_ext(sprite_index, objScreen.image_index div 4, x, y, image_xscale, i
 // icon
 if (objScreen.frame_counter != 0)
 {
-    // draw player face if applicable in classic lives mode
-    if objGameData.livesMode == LIVES_CLASSIC && icon>10
-		draw_sprite(sprIcon, 10+objGameData.character_id[view_current], x, y-image_yscale*2); 
-	else if objGameData.livesMode == LIVES_ORIGINS && icon>10 // otherwise show coins in origins live mode
-		draw_sprite(sprIcon, 14, x, y-image_yscale*2);
+    // draw live icons based on lives mode (Character Icons for Classic, and Coin icon for Origins)
+    if(icon > 10)
+	{
+		var _character_icon = 10 + objGameData.character_id[view_current];
+		var _coins_icon = 14;
+		draw_sprite(sprIcon, LIVES_MODE_IS_CLASSIC ? _character_icon : _coins_icon, x, y-image_yscale*2); 
+	}
 	else
+	{
 		draw_sprite(sprIcon, icon, x, y-image_yscale*2);
+	}
 }
 

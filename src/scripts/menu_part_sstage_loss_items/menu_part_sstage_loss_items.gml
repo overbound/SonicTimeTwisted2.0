@@ -7,11 +7,11 @@ function menu_part_sstage_loss_items() {
 	}
 	else
 	{
-	    if(objGameData.livesMode == LIVES_CLASSIC && objGameData.player_lives[0] > 1)
+	    if(LIVES_MODE_IS_CLASSIC && objGameData.player_lives[0] > 1)
 	    {
 	        menu_fn_add_option(tr("_specialstage_menu_Try_Again_life"), 0);
 	    }
-		else if(objGameData.livesMode == LIVES_ORIGINS && objGameData.player_coins[0] > 0)
+		else if(LIVES_MODE_IS_ORIGINS && objGameData.player_coins[0] > 0)
 		{
 			menu_fn_add_option(tr("_specialstage_menu_Try_Again_coin"), 0);
 		}

@@ -92,6 +92,8 @@ function macros() {
 #macro DEVICE_SUPPORTS_FILE_FIND 1
 #macro LIVES_CLASSIC (1 << 0) // classic lives system (default)
 #macro LIVES_ORIGINS (1 << 1) // origins coin system (optional)
+#macro LIVES_MODE_IS_CLASSIC (objGameData.livesMode == LIVES_CLASSIC)
+#macro LIVES_MODE_IS_ORIGINS (objGameData.livesMode == LIVES_ORIGINS)
 #macro sine global._sine_lookup
 #macro cosine global._cosine_lookup
 #macro Android:DEVICE_INFO DEVICE_TYPE_SMARTPHONE | DEVICE_OS_ANDROID

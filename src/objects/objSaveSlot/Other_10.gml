@@ -12,11 +12,11 @@ if (other.stageLeftRight == 1 && visibleFuture == 1) or (other.stageLeftRight ==
         ds_map_clear(objProgram.no_save_data);
     }
     load_emeralds();
-    if(objGameData.livesMode == LIVES_CLASSIC)
+    if(LIVES_MODE_IS_CLASSIC)
 	{
 		load_lives();
 	}
-	else if(objGameData.livesMode == LIVES_ORIGINS)
+	else if(LIVES_MODE_IS_ORIGINS)
 	{
 		load_coins();
 	}

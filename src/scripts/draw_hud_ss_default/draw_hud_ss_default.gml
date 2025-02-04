@@ -2,11 +2,11 @@ function draw_hud_ss_default() {
 	var pbOffsetX = 128;
 	if(objProgram.saveSlot > -2) // if we are playing this in the mini-game/level select mode, lives don't appear
 	{
-	    if(objGameData.livesMode == LIVES_CLASSIC)
+	    if(LIVES_MODE_IS_CLASSIC)
 		{
 			draw_lives(16, objScreen.height-24);
 		}
-		else if(objGameData.livesMode == LIVES_ORIGINS)
+		else if(LIVES_MODE_IS_ORIGINS)
 		{
 			draw_coins(16, objScreen.height-24);
 		}

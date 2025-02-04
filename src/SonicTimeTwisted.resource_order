@@ -1777,6 +1777,7 @@
     {"name":"sndChantFuture","order":7,"path":"sounds/sndChantFuture/sndChantFuture.yy",},
     {"name":"sndChantPast","order":8,"path":"sounds/sndChantPast/sndChantPast.yy",},
     {"name":"sndChing","order":2,"path":"sounds/sndChing/sndChing.yy",},
+    {"name":"sndCoin","order":6,"path":"sounds/sndCoin/sndCoin.yy",},
     {"name":"sndCollapse","order":9,"path":"sounds/sndCollapse/sndCollapse.yy",},
     {"name":"sndConfirm","order":3,"path":"sounds/sndConfirm/sndConfirm.yy",},
     {"name":"sndDashOfLight","order":1,"path":"sounds/sndDashOfLight/sndDashOfLight.yy",},

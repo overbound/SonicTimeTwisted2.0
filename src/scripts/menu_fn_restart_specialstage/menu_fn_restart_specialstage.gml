@@ -7,7 +7,7 @@ function menu_fn_restart_specialstage() {
 	}
 	else
 	{
-	    if(objGameData.livesMode == LIVES_CLASSIC && objGameData.player_lives[0] > 1)
+	    if(LIVES_MODE_IS_CLASSIC && objGameData.player_lives[0] > 1)
 	    {
 	        objGameData.player_lives[0] -= 1;
 	        save_lives(objGameData.player_lives[0]);
@@ -15,7 +15,7 @@ function menu_fn_restart_specialstage() {
 	        room_restart();
 	        with objSSLevel loopMusic = true;
 	    }
-		else if(objGameData.livesMode == LIVES_ORIGINS && objGameData.player_coins[0] > 0)
+		else if(LIVES_MODE_IS_ORIGINS && objGameData.player_coins[0] > 0)
 		{
 			objGameData.player_coins[0] -= 1;
 	        save_coins(objGameData.player_coins[0]);

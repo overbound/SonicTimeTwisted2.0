@@ -20,8 +20,14 @@ with player_id
         case 10: if not superform player_get_invincibility(); break;
         default: 
 		{
-			if(objGameData.livesMode == LIVES_CLASSIC) player_get_lives(1); 
-			else if(objGameData.livesMode == LIVES_ORIGINS) player_get_coins(1); 
+			if(LIVES_MODE_IS_CLASSIC) 
+			{
+				player_get_lives(1); 
+			}
+			else if(LIVES_MODE_IS_ORIGINS)
+			{
+				player_get_coins(1); 
+			}
 		}
 		break;
     }

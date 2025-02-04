@@ -2266,6 +2266,7 @@
     {"id":{"name":"sndChantFuture","path":"sounds/sndChantFuture/sndChantFuture.yy",},},
     {"id":{"name":"sndChantPast","path":"sounds/sndChantPast/sndChantPast.yy",},},
     {"id":{"name":"sndChing","path":"sounds/sndChing/sndChing.yy",},},
+    {"id":{"name":"sndCoin","path":"sounds/sndCoin/sndCoin.yy",},},
     {"id":{"name":"sndCollapse","path":"sounds/sndCollapse/sndCollapse.yy",},},
     {"id":{"name":"sndConfirm","path":"sounds/sndConfirm/sndConfirm.yy",},},
     {"id":{"name":"sndDashOfLight","path":"sounds/sndDashOfLight/sndDashOfLight.yy",},},

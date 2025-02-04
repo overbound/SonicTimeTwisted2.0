@@ -1,12 +1,15 @@
 function player_get_coins(coins) {
 	// player_get_coins(coins)
 	 //   stop_level_music();
-	 //if instance_exists(objLevel) {
-	 //   if objLevel.cleared
-	 //       play_effect(sndLife, false);
-	 //   else play_effect(sndLife, true);
-	 //}
-	 //else play_effect(sndLife, true);
+	if(instance_exists(objLevel))
+	{
+		play_effect(sndCoin, !objLevel.cleared);
+	}
+	else
+	{
+		play_effect(sndCoin, true);
+	}
+	
 	repeat(coins)
 	{
 	    if (objGameData.player_coins[0]>=999) return 0;
