@@ -6,7 +6,7 @@
   "name":"pthSSMetalSonicP6",
   "parent":{
     "name":"Past",
-    "path":"folders/Paths/Special Stages/Past.yy",
+    "path":"folders/Paths/Special Stages/Metal Sonic/Past.yy",
   },
   "points":[
     {"speed":100.0,"x":336.0,"y":8112.0,},

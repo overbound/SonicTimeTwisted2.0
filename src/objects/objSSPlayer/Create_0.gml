@@ -30,9 +30,11 @@ landing_tracker = instance_create(x, y, objSSPlayerLandingTracker);
 // set an alarm to make sure region activations aren't on every single step
 alarm[1] = 1;
 max_move_speed = 8;
+true_max_move_speed = 12;
 direction_multiplier = -1.5;
 cannot_accelerate = true;
 decel = 0.1;
 analog_current_yaxis = 0;
+speed_boost_touched = false;
 
 }

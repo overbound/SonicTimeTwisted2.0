@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"backDDFSand",
   "bboxMode":0,
   "bbox_bottom":63,
@@ -9,10 +9,10 @@
   "collisionKind":1,
   "collisionTolerance":0,
   "ConfigValues":{
-    "MacOS":{
+    "Linux":{
       "textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",
     },
-    "Linux":{
+    "MacOS":{
       "textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",
     },
   },
@@ -20,7 +20,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ef0b4753-45f6-4733-a85e-7d7c09cc951e","name":"ef0b4753-45f6-4733-a85e-7d7c09cc951e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ef0b4753-45f6-4733-a85e-7d7c09cc951e","name":"ef0b4753-45f6-4733-a85e-7d7c09cc951e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -40,7 +40,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"",
     "autoRecord":true,
     "backdropHeight":1080,
@@ -76,9 +76,7 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ef0b4753-45f6-4733-a85e-7d7c09cc951e","path":"sprites/backDDFSand/backDDFSand.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8cf89b7f-d90a-421e-8d18-4844020e0975","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ef0b4753-45f6-4733-a85e-7d7c09cc951e","path":"sprites/backDDFSand/backDDFSand.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8cf89b7f-d90a-421e-8d18-4844020e0975","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

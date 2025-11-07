@@ -18,7 +18,7 @@
   "exportToGame":true,
   "extensionVersion":"1.0.0",
   "files":[
-    {"$GMExtensionFile":"","%Name":"SttAndroid.ext","constants":[],"copyToTargets":2097160,"filename":"SttAndroid.ext","final":"","functions":[
+    {"$GMExtensionFile":"v1","%Name":"SttAndroid.ext","constants":[],"copyToTargets":2097160,"filename":"SttAndroid.ext","final":"","functions":[
         {"$GMExtensionFunction":"","%Name":"sttandroid_input_get_state","argCount":1,"args":[2,],"documentation":"","externalName":"sttandroid_input_get_state","help":"sttandroid_input_get_state(inputNumber)","hidden":false,"kind":11,"name":"sttandroid_input_get_state","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
         {"$GMExtensionFunction":"","%Name":"sttandroid_gamepad_hwmap_reset","argCount":1,"args":[2,],"documentation":"","externalName":"sttandroid_gamepad_hwmap_reset","help":"sttandroid_gamepad_hwmap_reset(inputNumber)","hidden":false,"kind":11,"name":"sttandroid_gamepad_hwmap_reset","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
         {"$GMExtensionFunction":"","%Name":"sttandroid_gamepad_hwmap_start","argCount":1,"args":[2,],"documentation":"","externalName":"sttandroid_gamepad_hwmap_start","help":"sttandroid_gamepad_hwmap_start(inputNumber)","hidden":false,"kind":11,"name":"sttandroid_gamepad_hwmap_start","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
@@ -68,7 +68,7 @@
         {"$GMExtensionFunction":"","%Name":"sttandroid_gamepad_get_analog_x_axis","argCount":1,"args":[2,],"documentation":"","externalName":"sttandroid_gamepad_get_analog_x_axis","help":"sttandroid_gamepad_get_analog_x_axis(inputNumber)","hidden":false,"kind":11,"name":"sttandroid_gamepad_get_analog_x_axis","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
         {"$GMExtensionFunction":"","%Name":"sttandroid_gamepad_get_analog_y_axis","argCount":1,"args":[2,],"documentation":"","externalName":"sttandroid_gamepad_get_analog_y_axis","help":"sttandroid_gamepad_get_analog_y_axis(inputNumber)","hidden":false,"kind":11,"name":"sttandroid_gamepad_get_analog_y_axis","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
         {"$GMExtensionFunction":"","%Name":"sttandroid_device_has_gyroscope","argCount":-1,"args":[],"documentation":"","externalName":"sttandroid_device_has_gyroscope","help":"sttandroid_device_has_gyroscope()","hidden":false,"kind":11,"name":"sttandroid_device_has_gyroscope","resourceType":"GMExtensionFunction","resourceVersion":"2.0","returnType":2,},
-      ],"init":"","kind":4,"name":"SttAndroid.ext","order":[],"origname":"extensions\\SttAndroid.ext","ProxyFiles":[],"resourceType":"GMExtensionFile","resourceVersion":"2.0","uncompress":false,"usesRunnerInterface":false,},
+      ],"init":"","kind":4,"name":"SttAndroid.ext","origname":"extensions\\SttAndroid.ext","ProxyFiles":[],"resourceType":"GMExtensionFile","resourceVersion":"2.0","uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject":"",
   "hasConvertedCodeInjection":true,

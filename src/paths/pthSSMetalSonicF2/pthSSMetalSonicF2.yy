@@ -6,7 +6,7 @@
   "name":"pthSSMetalSonicF2",
   "parent":{
     "name":"Future",
-    "path":"folders/Paths/Special Stages/Future.yy",
+    "path":"folders/Paths/Special Stages/Metal Sonic/Future.yy",
   },
   "points":[
     {"speed":100.0,"x":704.0,"y":8144.0,},

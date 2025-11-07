@@ -95,8 +95,10 @@ if (objProgram.inputManager.analog_applied) {
 }
 
 ///Movement
-
-var xmove, ymove, f;
+if(path_index = -1)
+{
+    //path is not active
+	var xmove, ymove, f;
 
 if (bump_radius < max_radius)
 {
@@ -126,11 +128,17 @@ if (bounce_timer)
 }
 else
 {
-  move_speed += yaxis * -0.1;
-  move_speed = max(move_speed, -2);
-  if move_speed > max_move_speed {
+	if move_speed <= max_move_speed{
+	 move_speed += yaxis * -0.1;
+	move_speed = max(move_speed, -2);
+	}
+  if move_speed > max_move_speed && speed_boost_touched == false{
     move_speed -= .25;
   }
+  else if move_speed > true_max_move_speed{
+	  move_speed -= .25
+  }
+	  
   
   xmove = cos(degtorad(move_direction)) * move_speed;
   ymove = -sin(degtorad(move_direction)) * move_speed;
@@ -183,6 +191,10 @@ depth1= depth;
 
 }
 }
+	
+}
+
+
 /// track position
 PlayerUpdateRacerProgress();
 
