@@ -6,6 +6,7 @@ image_speed = 0;
 player_id = 0;
 character_id = -1;
 tails_effect  = noone;
+steps = 4;
 
 // animation
 animation_table = -1;

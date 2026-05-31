@@ -214,7 +214,6 @@
     {"$GMFolder":"","%Name":"PlayStation","folderPath":"folders/Scripts/Game/Save/PlayStation.yy","name":"PlayStation","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Settings","folderPath":"folders/Scripts/Game/Settings.yy","name":"Settings","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Video","folderPath":"folders/Scripts/Game/Video.yy","name":"Video","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Utility","folderPath":"folders/Scripts/Utility.yy","name":"Utility","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Overlays","folderPath":"folders/Scripts/Overlays.yy","name":"Overlays","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Hud","folderPath":"folders/Scripts/Overlays/Hud.yy","name":"Hud","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Parallax","folderPath":"folders/Scripts/Overlays/Parallax.yy","name":"Parallax","resourceType":"GMFolder","resourceVersion":"2.0",},

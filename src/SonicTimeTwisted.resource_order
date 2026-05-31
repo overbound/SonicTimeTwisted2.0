@@ -153,7 +153,6 @@
     {"name":"PlayStation","order":11,"path":"folders/Scripts/Game/Save/PlayStation.yy",},
     {"name":"Settings","order":7,"path":"folders/Scripts/Game/Settings.yy",},
     {"name":"Video","order":8,"path":"folders/Scripts/Game/Video.yy",},
-    {"name":"Utility","order":5,"path":"folders/Scripts/Utility.yy",},
     {"name":"Overlays","order":2,"path":"folders/Scripts/Overlays.yy",},
     {"name":"Parallax","order":1,"path":"folders/Scripts/Overlays/Parallax.yy",},
     {"name":"Shaders","order":2,"path":"folders/Scripts/Overlays/Shaders.yy",},
