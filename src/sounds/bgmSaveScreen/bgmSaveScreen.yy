@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"bgmSaveScreen",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":512,
+  "channelFormat":1,
   "compression":3,
+  "compressionQuality":10,
   "conversionMode":0,
   "duration":34.45993,
+  "exportDir":"",
   "name":"bgmSaveScreen",
   "parent":{
     "name":"Save Screen",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"bgmSaveScreen.ogg",
-  "type":1,
   "volume":1.0,
 }

@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndGalacnikAttackLoop",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":1,
   "compression":0,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":0.0,
+  "exportDir":"",
   "name":"sndGalacnikAttackLoop",
   "parent":{
     "name":"Bosses",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndGalacnikAttackLoop",
-  "type":1,
   "volume":1.0,
 }

@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"bgmSS2",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":512,
+  "channelFormat":1,
   "compression":3,
+  "compressionQuality":10,
   "conversionMode":0,
   "duration":73.045784,
+  "exportDir":"",
   "name":"bgmSS2",
   "parent":{
     "name":"Sunken Saucer",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"bgmSS2.ogg",
-  "type":1,
   "volume":1.0,
 }

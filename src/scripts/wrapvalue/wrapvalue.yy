@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"wrapvalue",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wrapvalue",
+  "parent":{
+    "name":"Helper",
+    "path":"folders/Scripts/Game/Helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
