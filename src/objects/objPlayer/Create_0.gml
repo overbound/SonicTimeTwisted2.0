@@ -6,7 +6,6 @@ image_speed = 0;
 player_id = 0;
 character_id = -1;
 tails_effect  = noone;
-steps = 4;
 
 // animation
 animation_table = -1;
@@ -16,6 +15,8 @@ timeline_speed = 1;
 __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) + (11) );
     
 animation_reset = true;
+current_pal = 0
+steps = 5;
 
 // states and flags
 state = objProgram.temp_state;

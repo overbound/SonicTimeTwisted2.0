@@ -1,9 +1,7 @@
 /// @description  Draw character image
-///Draw With Palette Swap     
-buildPalSurface();
+///Draw With Palette Swap
+pal_swap_set(pal_supersonic, current_pal, false);
 
-pal_swap_set(pal_supersonic, current_pal, true);
-pal_swap_reset();
 
 if sprite_index>-1 draw_sprite_ext(sprite_index, image_index, floor(x), floor(y)+sprite_y_offset, image_xscale*facing, image_yscale, image_angle, image_blend, image_alpha);
 
@@ -28,3 +26,6 @@ if (debug_mode)
 	draw_set_alpha(1);
 
 }
+
+// Reset Palette
+pal_swap_reset();

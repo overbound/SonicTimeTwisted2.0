@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":6,
   "bbox_left":0,
-  "bbox_right":3,
+  "bbox_right":5,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"dc6ae9e7-af7b-4a67-98fa-ae88df80f2a9","name":"dc6ae9e7-af7b-4a67-98fa-ae88df80f2a9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fe59ca8d-c318-45ce-aea1-3835caba57eb","name":"fe59ca8d-c318-45ce-aea1-3835caba57eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":7,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"55ec651d-6a16-464b-93de-edaa0553729e","blendMode":0,"displayName":"default","isLocked":false,"name":"55ec651d-6a16-464b-93de-edaa0553729e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"bfca39d6-d770-4359-9246-3f9af1f9aaa9","blendMode":0,"displayName":"default","isLocked":false,"name":"bfca39d6-d770-4359-9246-3f9af1f9aaa9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"pal_supersonic",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"dc6ae9e7-af7b-4a67-98fa-ae88df80f2a9","path":"sprites/pal_supersonic/pal_supersonic.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f5e9d955-b01a-4148-9eda-57cb06e470e7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fe59ca8d-c318-45ce-aea1-3835caba57eb","path":"sprites/pal_supersonic/pal_supersonic.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2e3b99eb-e77c-4e73-9ad4-43d5a5c52c17","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":4,
+  "width":6,
 }

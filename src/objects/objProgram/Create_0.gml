@@ -1,5 +1,8 @@
 /// @description  Initialize
 
+// Initialize Retro Palette Swapper
+pal_swap_init_system(shd_pal_swapper,shd_pal_html_sprite,shd_pal_html_surface);
+
 // restore VM math precision as early as possible, if it's YYC.
 if (code_is_compiled()) {
     show_debug_message("YYC is enabled, expect weird behaviour.");

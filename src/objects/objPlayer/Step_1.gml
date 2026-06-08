@@ -35,6 +35,8 @@ if underwater and shield_type!=1 and !objProgram.cutscene
 // superform
 if superform
 {
+	// Cycle Palette
+	current_pal = wrapvalue(current_pal + .0625, 0, steps - 1);
     if objLevel.stage_timer_active
     {
         superform++;
