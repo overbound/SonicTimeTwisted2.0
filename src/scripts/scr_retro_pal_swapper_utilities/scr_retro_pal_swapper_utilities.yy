@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_retro_pal_swapper_utilities",
   "parent":{
-    "name":"Retro Palette Swap",
-    "path":"folders/Retro Palette Swap.yy",
+    "name":"Retro Palette Swapper",
+    "path":"folders/Scripts/Overlays/Shaders/Retro Palette Swapper.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

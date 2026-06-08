@@ -3,8 +3,8 @@
   "%Name":"shd_pal_swapper",
   "name":"shd_pal_swapper",
   "parent":{
-    "name":"Shaders",
-    "path":"folders/Retro Palette Swap/Shaders.yy",
+    "name":"Retro Palette Swapper",
+    "path":"folders/Shaders/Retro Palette Swapper.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",
