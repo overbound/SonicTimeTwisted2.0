@@ -692,6 +692,8 @@
     {"$GMIncludedFile":"","%Name":"gamecontrollerdb.txt","CopyToMask":202375362,"filePath":"datafiles","name":"gamecontrollerdb.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"libnikxfix.so","CopyToMask":134217856,"filePath":"datafiles","name":"libnikxfix.so","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"PaletteGenerator3.0.1.exe","CopyToMask":-1,"filePath":"datafiles","name":"PaletteGenerator3.0.1.exe","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"pal_supersonic.png","CopyToMask":-1,"filePath":"datafiles/Raw Player Palettes","name":"pal_supersonic.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"TTSuperSonicPal.pal","CopyToMask":-1,"filePath":"datafiles/Raw Player Palettes","name":"TTSuperSonicPal.pal","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Retro Palette Swapper Manual v1.0.pdf","CopyToMask":-1,"filePath":"datafiles","name":"Retro Palette Swapper Manual v1.0.pdf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"translations.txt","CopyToMask":9223372036854775807,"filePath":"datafiles","name":"translations.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"BrazilianPortuguese.json","CopyToMask":9223372036854775807,"filePath":"datafiles/translations","name":"BrazilianPortuguese.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},

@@ -16,7 +16,7 @@ __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) + (11) );
     
 animation_reset = true;
 current_pal = 0
-steps = 5;
+steps = 7;
 
 // states and flags
 state = objProgram.temp_state;
