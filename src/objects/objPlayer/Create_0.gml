@@ -61,6 +61,7 @@ ignore_rings = 0;
 superspeed = 0;
 superform = -1;
 last_frame_down_pressed = 0;
+sparktimer = 0;
 
 // camera
 camera = instance_create(x, y, objCamera);
