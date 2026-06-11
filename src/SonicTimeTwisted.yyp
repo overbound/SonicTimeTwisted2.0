@@ -1,8 +1,8 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"SonicTimeTwisted",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[
@@ -216,6 +216,7 @@
     {"$GMFolder":"","%Name":"Hud","folderPath":"folders/Scripts/Overlays/Hud.yy","name":"Hud","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Parallax","folderPath":"folders/Scripts/Overlays/Parallax.yy","name":"Parallax","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Shaders","folderPath":"folders/Scripts/Overlays/Shaders.yy","name":"Shaders","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Retro Palette Swapper","folderPath":"folders/Scripts/Overlays/Shaders/Retro Palette Swapper.yy","name":"Retro Palette Swapper","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Titlecard","folderPath":"folders/Scripts/Overlays/Titlecard.yy","name":"Titlecard","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Transitions","folderPath":"folders/Scripts/Overlays/Transitions.yy","name":"Transitions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scene Objects","folderPath":"folders/Scripts/Scene Objects.yy","name":"Scene Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -288,6 +289,7 @@
     {"$GMFolder":"","%Name":"Specific","folderPath":"folders/Scripts/Scene Objects/Specific.yy","name":"Specific","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sequences","folderPath":"folders/Sequences.yy","name":"Sequences","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Shaders","folderPath":"folders/Shaders.yy","name":"Shaders","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Retro Palette Swapper","folderPath":"folders/Shaders/Retro Palette Swapper.yy","name":"Retro Palette Swapper","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"BGM","folderPath":"folders/Sounds/BGM.yy","name":"BGM","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Attraction Attack","folderPath":"folders/Sounds/BGM/Attraction Attack.yy","name":"Attraction Attack","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -343,6 +345,8 @@
     {"$GMFolder":"","%Name":"Title Screen","folderPath":"folders/Sprites/Overlays/Title Screen.yy","name":"Title Screen","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Touchscreen","folderPath":"folders/Sprites/Overlays/Touchscreen.yy","name":"Touchscreen","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Zone Title","folderPath":"folders/Sprites/Overlays/Zone Title.yy","name":"Zone Title","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Palettes","folderPath":"folders/Sprites/Palettes.yy","name":"Palettes","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Super Forms","folderPath":"folders/Sprites/Palettes/Super Forms.yy","name":"Super Forms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particles","folderPath":"folders/Sprites/Particles.yy","name":"Particles","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scene Objects","folderPath":"folders/Sprites/Scene Objects.yy","name":"Scene Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"General","folderPath":"folders/Sprites/Scene Objects/General.yy","name":"General","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -681,11 +685,16 @@
     {"$GMFolder":"","%Name":"Attraction Attack","folderPath":"folders/Timelines/Specific/Zones/Attraction Attack.yy","name":"Attraction Attack","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Submerged Saucer","folderPath":"folders/Timelines/Specific/Zones/Submerged Saucer.yy","name":"Submerged Saucer","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"045e_02fd_xbox_wireless_controller.csv","CopyToMask":2097160,"filePath":"datafiles/android/gamepad","name":"045e_02fd_xbox_wireless_controller.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"057e_2006_057e_2007_joy_con__l__joy_con__r_.csv","CopyToMask":2097160,"filePath":"datafiles/android/gamepad","name":"057e_2006_057e_2007_joy_con__l__joy_con__r_.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"gamecontrollerdb.txt","CopyToMask":202375362,"filePath":"datafiles","name":"gamecontrollerdb.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"libnikxfix.so","CopyToMask":134217856,"filePath":"datafiles","name":"libnikxfix.so","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"PaletteGenerator3.0.1.exe","CopyToMask":-1,"filePath":"datafiles","name":"PaletteGenerator3.0.1.exe","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"pal_supersonic.png","CopyToMask":-1,"filePath":"datafiles/Raw Player Palettes","name":"pal_supersonic.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"TTSuperSonicPal.pal","CopyToMask":-1,"filePath":"datafiles/Raw Player Palettes","name":"TTSuperSonicPal.pal","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"Retro Palette Swapper Manual v1.0.pdf","CopyToMask":-1,"filePath":"datafiles","name":"Retro Palette Swapper Manual v1.0.pdf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"translations.txt","CopyToMask":9223372036854775807,"filePath":"datafiles","name":"translations.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"BrazilianPortuguese.json","CopyToMask":9223372036854775807,"filePath":"datafiles/translations","name":"BrazilianPortuguese.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"sprFontHud.png","CopyToMask":9223372036854775807,"filePath":"datafiles/translations/BrazilianPortuguese","name":"sprFontHud.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -753,7 +762,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"SonicTimeTwisted",
   "resources":[
@@ -1247,6 +1256,7 @@
     {"id":{"name":"objSSZBGParallax4","path":"objects/objSSZBGParallax4/objSSZBGParallax4.yy",},},
     {"id":{"name":"objSSZEndTransition","path":"objects/objSSZEndTransition/objSSZEndTransition.yy",},},
     {"id":{"name":"objStart","path":"objects/objStart/objStart.yy",},},
+    {"id":{"name":"objSuperSpark","path":"objects/objSuperSpark/objSuperSpark.yy",},},
     {"id":{"name":"objSwing","path":"objects/objSwing/objSwing.yy",},},
     {"id":{"name":"objSwitchButton","path":"objects/objSwitchButton/objSwitchButton.yy",},},
     {"id":{"name":"objTailsEffect","path":"objects/objTailsEffect/objTailsEffect.yy",},},
@@ -2134,6 +2144,8 @@
     {"id":{"name":"save_lives","path":"scripts/save_lives/save_lives.yy",},},
     {"id":{"name":"save_options_platform_dependant","path":"scripts/save_options_platform_dependant/save_options_platform_dependant.yy",},},
     {"id":{"name":"save_options","path":"scripts/save_options/save_options.yy",},},
+    {"id":{"name":"scr_retro_pal_swapper_utilities","path":"scripts/scr_retro_pal_swapper_utilities/scr_retro_pal_swapper_utilities.yy",},},
+    {"id":{"name":"scr_retro_pal_swapper","path":"scripts/scr_retro_pal_swapper/scr_retro_pal_swapper.yy",},},
     {"id":{"name":"screen_shake","path":"scripts/screen_shake/screen_shake.yy",},},
     {"id":{"name":"set_analog_controls_enabled","path":"scripts/set_analog_controls_enabled/set_analog_controls_enabled.yy",},},
     {"id":{"name":"set_boss_music","path":"scripts/set_boss_music/set_boss_music.yy",},},
@@ -2201,8 +2213,12 @@
     {"id":{"name":"update_smartphone_controls_enabled","path":"scripts/update_smartphone_controls_enabled/update_smartphone_controls_enabled.yy",},},
     {"id":{"name":"updateGolemObjects","path":"scripts/updateGolemObjects/updateGolemObjects.yy",},},
     {"id":{"name":"wrap","path":"scripts/wrap/wrap.yy",},},
+    {"id":{"name":"wrapvalue","path":"scripts/wrapvalue/wrapvalue.yy",},},
     {"id":{"name":"DeflateShader","path":"shaders/DeflateShader/DeflateShader.yy",},},
     {"id":{"name":"NebulaShader","path":"shaders/NebulaShader/NebulaShader.yy",},},
+    {"id":{"name":"shd_pal_html_sprite","path":"shaders/shd_pal_html_sprite/shd_pal_html_sprite.yy",},},
+    {"id":{"name":"shd_pal_html_surface","path":"shaders/shd_pal_html_surface/shd_pal_html_surface.yy",},},
+    {"id":{"name":"shd_pal_swapper","path":"shaders/shd_pal_swapper/shd_pal_swapper.yy",},},
     {"id":{"name":"TimeTravelShader","path":"shaders/TimeTravelShader/TimeTravelShader.yy",},},
     {"id":{"name":"WaveShader","path":"shaders/WaveShader/WaveShader.yy",},},
     {"id":{"name":"bgmAAFuture","path":"sounds/bgmAAFuture/bgmAAFuture.yy",},},
@@ -2525,6 +2541,7 @@
     {"id":{"name":"MegaTrooperShoulderSpr","path":"sprites/MegaTrooperShoulderSpr/MegaTrooperShoulderSpr.yy",},},
     {"id":{"name":"NebulaBkg","path":"sprites/NebulaBkg/NebulaBkg.yy",},},
     {"id":{"name":"objFallingSand","path":"sprites/objFallingSand/objFallingSand.yy",},},
+    {"id":{"name":"pal_supersonic","path":"sprites/pal_supersonic/pal_supersonic.yy",},},
     {"id":{"name":"PP1_1","path":"sprites/PP1_1/PP1_1.yy",},},
     {"id":{"name":"RR1_f1","path":"sprites/RR1_f1/RR1_f1.yy",},},
     {"id":{"name":"RR1_p1","path":"sprites/RR1_p1/RR1_p1.yy",},},
@@ -3149,6 +3166,7 @@
     {"id":{"name":"sprSuperSonicWalk","path":"sprites/sprSuperSonicWalk/sprSuperSonicWalk.yy",},},
     {"id":{"name":"sprSuperSonicWallRun","path":"sprites/sprSuperSonicWallRun/sprSuperSonicWallRun.yy",},},
     {"id":{"name":"sprSuperSonicWarp","path":"sprites/sprSuperSonicWarp/sprSuperSonicWarp.yy",},},
+    {"id":{"name":"sprSuperSpark","path":"sprites/sprSuperSpark/sprSuperSpark.yy",},},
     {"id":{"name":"sprSwitchButton","path":"sprites/sprSwitchButton/sprSwitchButton.yy",},},
     {"id":{"name":"sprTails3DTurn","path":"sprites/sprTails3DTurn/sprTails3DTurn.yy",},},
     {"id":{"name":"sprTailsAttack","path":"sprites/sprTailsAttack/sprTailsAttack.yy",},},
@@ -3597,357 +3615,357 @@
   "TextureGroups":[
     {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
         "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
           "autocrop":"true",
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"AAZ1F","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"AAZ1F","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"AAZ1P","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"AAZ1P","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"AAZ2F","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"AAZ2F","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"AAZ2P","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"AAZ2P","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"RRZF","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
         "Android":{
           "border":"0",
-          "groupParent":"null",
           "compressFormat":"qoi",
+          "groupParent":"null",
           "loadType":"default",
-        },
-        "PlayStation":{
-          "border":"0",
         },
         "Browser":{
           "border":"0",
         },
+        "PlayStation":{
+          "border":"0",
+        },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"RRZF","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"RRZP","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"RRZP","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"OpenCutsceneF","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
         "Android":{
-          "groupParent":"null",
           "compressFormat":"qoi",
+          "groupParent":"null",
           "loadType":"default",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"OpenCutsceneF","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"OpenCutsceneP","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
         "Android":{
-          "groupParent":"null",
           "compressFormat":"qoi",
+          "groupParent":"null",
           "loadType":"default",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"OpenCutsceneP","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"FFZ1F","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"FFZ1F","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"FFZ1P","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"FFZ1P","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"FFZ2F","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"FFZ2F","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"FFZ2P","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"FFZ2P","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"VVZ1F","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"VVZ1F","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"VVZ1P","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"VVZ1P","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"VVZ2F","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"VVZ2F","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"VVZ2P","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"VVZ2P","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"DDZ1F","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"DDZ1F","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"DDZ1P","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"DDZ1P","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"DDZ2F","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"DDZ2F","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"DDZ2P","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"DDZ2P","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"TTZ1F","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"TTZ1F","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"TTZ1P","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"TTZ1P","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"TTZ2F","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"TTZ2F","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"TTZ2P","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"TTZ2P","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"SSZ","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
         "Android":{
-          "groupParent":"null",
           "compressFormat":"qoi",
+          "groupParent":"null",
           "loadType":"default",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"SSZ","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"PPZ","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
-        "MacOS":{
-          "border":"2",
+        "Android":{
+          "compressFormat":"qoi",
+          "groupParent":"null",
+          "loadType":"default",
         },
         "Linux":{
           "border":"2",
         },
-        "Android":{
-          "groupParent":"null",
-          "compressFormat":"qoi",
-          "loadType":"default",
+        "MacOS":{
+          "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"PPZ","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"MMZ","autocrop":true,"border":0,"compressFormat":"bz2","ConfigValues":{
         "Android":{
           "border":"2",
-          "groupParent":"null",
           "compressFormat":"qoi",
+          "groupParent":"null",
           "loadType":"default",
         },
-        "MacOS":{
+        "Browser":{
           "border":"2",
         },
         "Linux":{
           "border":"2",
         },
-        "PlayStation":{
+        "MacOS":{
           "border":"2",
         },
-        "Browser":{
+        "PlayStation":{
           "border":"2",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"MMZ","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},
     {"$GMTextureGroup":"","%Name":"Menus","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
         "Android":{
-          "groupParent":"null",
           "compressFormat":"qoi",
+          "groupParent":"null",
           "loadType":"default",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":0,"name":"Menus","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":9223372036854775807,},

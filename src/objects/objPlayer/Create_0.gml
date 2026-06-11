@@ -15,6 +15,8 @@ timeline_speed = 1;
 __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) + (11) );
     
 animation_reset = true;
+current_pal = 0
+steps = 7;
 
 // states and flags
 state = objProgram.temp_state;
@@ -59,6 +61,7 @@ ignore_rings = 0;
 superspeed = 0;
 superform = -1;
 last_frame_down_pressed = 0;
+sparktimer = 0;
 
 // camera
 camera = instance_create(x, y, objCamera);

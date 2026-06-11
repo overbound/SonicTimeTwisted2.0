@@ -20,4 +20,3 @@ if (underwater_count mod 60)==0 && state != player_state_path && objProgram.cuts
 
 // brake dust
 if landed and (animation=="brake" or animation=="glide_slide") and not (objScreen.image_index mod 4) part_particles_create(objLevel.particles, x, y+offset_y-7, objResources.dust, 1);
-

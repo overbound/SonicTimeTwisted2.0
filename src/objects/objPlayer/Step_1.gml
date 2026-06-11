@@ -35,8 +35,17 @@ if underwater and shield_type!=1 and !objProgram.cutscene
 // superform
 if superform
 {
+	// Create super sparks
+	if (abs(xspeed + yspeed) >= 7 && sparktimer < 1)
+	{
+		instance_create(x, y, objSuperSpark)
+		sparktimer = 45
+	}
+	// Cycle Palette
+	current_pal = wrapvalue(current_pal + .0625, 0, steps - 1);
     if objLevel.stage_timer_active
     {
+		sparktimer--;
         superform++;
         // subtract a ring every second
         if (superform >= 61)
