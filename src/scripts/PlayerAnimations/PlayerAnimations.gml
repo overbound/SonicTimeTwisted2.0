@@ -113,12 +113,12 @@ function build_sonic_animations() {
 
 	// look
 	ds_map_add(_map, "look", new AnimationSet(sprSonicLook,
-		AnimFrames([0, 1], [4]),
+		AnimFrames([0, 1], [4, 1]),
 	false, anim_speed_fixed));
 
 	// crouch
 	ds_map_add(_map, "crouch", new AnimationSet(sprSonicCrouch,
-		AnimFrames([0, 1], [6]),
+		AnimFrames([0, 1], [6, 1]),
 	false, anim_speed_fixed));
 
 	// spin — irregular pattern: 1,0,2,0,3,0,4,0
@@ -200,7 +200,7 @@ function build_sonic_animations() {
 
 	// level_end
 	ds_map_add(_map, "level_end", new AnimationSet(sprSonicLevelEnd,
-		AnimFrames([0, 1], [3]),
+		AnimFrames([0, 1], [3, 1]),
 	false, anim_speed_fixed));
 
 	// boarding
@@ -301,7 +301,7 @@ function build_tails_animations() {
 
 	// rise
 	ds_map_add(_map, "rise", new AnimationSet(sprTailsRise,
-		AnimFrames([0, 1], [4]),
+		AnimFrames([0, 1], [4, 1]),
 	false, anim_speed_fixed));
 
 	// flip
@@ -366,7 +366,7 @@ function build_tails_animations() {
 
 	// level_end
 	ds_map_add(_map, "level_end", new AnimationSet(sprTailsLevelEnd,
-		AnimFrames([0, 1], [3]),
+		AnimFrames([0, 1], [3, 1]),
 	false, anim_speed_fixed));
 
 	// level_start
@@ -453,12 +453,12 @@ function build_knuckles_animations() {
 
 	// look
 	ds_map_add(_map, "look", new AnimationSet(sprKnucklesLook,
-		AnimFrames([0, 1], [6]),
+		AnimFrames([0, 1], [6, 1]),
 	false, anim_speed_fixed));
 
 	// crouch
 	ds_map_add(_map, "crouch", new AnimationSet(sprKnucklesCrouch,
-		AnimFrames([0, 1], [5]),
+		AnimFrames([0, 1], [5, 1]),
 	false, anim_speed_fixed));
 
 	// spin — irregular: 1,0,2,0,3,0,4,0
@@ -518,7 +518,7 @@ function build_knuckles_animations() {
 
 	// glide_end
 	ds_map_add(_map, "glide_end", new AnimationSet(sprKnucklesGlideFall,
-		AnimFrames([0, 1], [8]),
+		AnimFrames([0, 1], [8, 1]),
 	false, anim_speed_fixed));
 
 	// glide_slide
@@ -634,12 +634,12 @@ function build_super_sonic_animations() {
 
 	// look
 	ds_map_add(_map, "look", new AnimationSet(sprSuperSonicLook,
-		AnimFrames([0, 1], [4]),
+		AnimFrames([0, 1], [4, 1]),
 	false, anim_speed_fixed));
 
 	// crouch
 	ds_map_add(_map, "crouch", new AnimationSet(sprSuperSonicCrouch,
-		AnimFrames([0, 1], [6]),
+		AnimFrames([0, 1], [6, 1]),
 	false, anim_speed_fixed));
 
 	// spin
