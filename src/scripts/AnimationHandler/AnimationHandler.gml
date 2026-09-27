@@ -40,6 +40,14 @@ function AnimationHandler(_owner) constructor {
 		var _speed = current_anim.speed_func(owner);
 		if (_speed <= 0) return;
 
+		var _len = array_length(current_anim.frames);
+		if (_len == 0) return;
+
+		// clamp frame_index in case something went wrong
+		if (frame_index < 0 || frame_index >= _len) {
+			frame_index = 0;
+		}
+
 		frame_counter += _speed;
 
 		var _dur = current_anim.frames[frame_index].duration;
@@ -47,16 +55,16 @@ function AnimationHandler(_owner) constructor {
 			frame_counter -= _dur;
 			frame_index++;
 
-			if (frame_index >= array_length(current_anim.frames)) {
+			if (frame_index >= _len) {
 				if (current_anim.loop) {
-					frame_index = current_anim.loop_frame;
+					frame_index = clamp(current_anim.loop_frame, 0, _len - 1);
 				} else {
 					ended = true;
-					frame_index = array_length(current_anim.frames) - 1;
+					frame_index = _len - 1;
+					apply_frame();
 					if (current_anim.on_end != undefined) {
 						current_anim.on_end(owner);
 					}
-					apply_frame();
 					return;
 				}
 			}

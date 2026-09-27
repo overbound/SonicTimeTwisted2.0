@@ -14,7 +14,7 @@ function AnimationSet(_sprite, _frames, _loop, _speed_func, _loop_frame, _on_end
 	loop_frame = 0;
 	on_end = undefined;
 	step_callback = undefined;
-	if (argument_count > 4) loop_frame = _loop_frame;
-	if (argument_count > 5) on_end = _on_end;
-	if (argument_count > 6) step_callback = _step_callback;
+	if (!is_undefined(_loop_frame)) loop_frame = _loop_frame;
+	if (!is_undefined(_on_end)) on_end = _on_end;
+	if (!is_undefined(_step_callback)) step_callback = _step_callback;
 }
