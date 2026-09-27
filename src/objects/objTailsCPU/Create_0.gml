@@ -1,5 +1,32 @@
 /// @description Initialize as CPU Tails follower
-// Set follower properties before parent init
+// Call parent objPlayer Create_0 — sets up physics, collision, camera, position tables, AnimationHandler
+// BUT: parent hardcodes player_id=0, so it calls player_change_character with wrong character
+event_inherited();
+
+// === Now override everything the parent got wrong ===
+
+// Identity — force Tails
+character_id = 2;
+player_id = 1;
+
+// Character re-initialization — call player_change_character as Tails
+// First call in parent used character_id[0]; this call uses character_id=2 directly
+// The first call won't have created tails_effect (since we only spawn when NOT tails),
+// so this second call won't duplicate
+player_change_character(2, true);
+
+// Start in the air so CPU Tails falls naturally, uses real physics from frame 1
+player_in_air();
+
+// Force animation
+animation_new = "spin";  // air animation
+animation_reset = true;
+
+// No shield, no invincibility
+invulnerable = 0;
+image_alpha = 1;
+
+// === Follower variables ===
 leader = noone;
 follow_delay = 30;
 teleport_distance = 480;
@@ -10,21 +37,3 @@ local_input_release = -1;
 prev_input = 0;
 fly_mode = false;
 fly_speed = 6;
-
-// Force Tails character (player_id 1 = second player slot)
-player_id = 1;
-
-// Set character_id before parent init so player_change_character runs as Tails
-objGameData.character_id[1] = 2;
-
-// Call parent objPlayer Create_0 — sets up physics, animation, collision, etc.
-// This calls player_change_character which sets character_id, animation_table, tails_effect
-event_inherited();
-
-// Force into normal gameplay state (not inherited temp_state from real player)
-state = player_state_stand;
-animation_new = "idle";
-animation_reset = true;
-
-// No invulnerability — collision events handle damage
-invulnerable = 0;
