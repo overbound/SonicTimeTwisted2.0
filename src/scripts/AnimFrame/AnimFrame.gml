@@ -8,9 +8,9 @@ function AnimFrame(_image_index, _duration, _sprite, _callback) constructor {
 	duration = 1;
 	sprite = undefined;
 	callback = undefined;
-	if (argument_count > 1) duration = _duration;
-	if (argument_count > 2) sprite = _sprite;
-	if (argument_count > 3) callback = _callback;
+	if (!is_undefined(_duration)) duration = _duration;
+	if (!is_undefined(_sprite)) sprite = _sprite;
+	if (!is_undefined(_callback)) callback = _callback;
 }
 
 /// @description  AnimFrames(image_indices, [duration], [sprite], [callback])
