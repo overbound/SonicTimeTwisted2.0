@@ -74,6 +74,8 @@ function AnimationHandler(_owner) constructor {
 	}
 
 	/// @description  Write sprite_index and image_index to the owner
+	/// Also syncs timeline_position for backward compatibility with
+	/// external code (e.g. objTimePost) that reads it.
 	static apply_frame = function() {
 		if (current_anim == undefined) return;
 		var _frame = current_anim.frames[frame_index];
@@ -91,6 +93,9 @@ function AnimationHandler(_owner) constructor {
 			owner.sprite_index = _spr;
 		}
 		owner.image_index = _frame.image_index;
+
+		// sync timeline_position for external readers
+		owner.timeline_position = frame_index;
 
 		// run callback
 		if (_frame.callback != undefined) {
