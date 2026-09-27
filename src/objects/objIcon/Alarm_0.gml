@@ -17,7 +17,7 @@ with player_id
             play_jingle(bgmSpeedUp, true); 
             } break;
         case 4: case 5: case 6: case 7: case 8: case 9: case 10: player_get_shield(other.image_index-4); break;
-        case 10: if not superform player_get_invincibility(); break;
+        case 11: if not superform player_get_invincibility(); break;
         default: player_get_lives(1);
     }
 }
