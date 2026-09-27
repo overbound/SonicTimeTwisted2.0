@@ -67,6 +67,7 @@ if spawn_id>-1
     // Spawn CPU Tails follower (only when not playing as Tails)
     with (objTailsCPU) instance_destroy();
     if (objGameData.character_id[0] != 2) {
+        objGameData.character_id[1] = 2;
         var _cpu_tails = instance_create(player[0].x - 32, player[0].y, objTailsCPU);
         _cpu_tails.leader = player[0];
     }
