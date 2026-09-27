@@ -8,9 +8,9 @@ function AnimFrame(_image_index, _duration, _sprite, _callback) constructor {
 	duration = 1;
 	sprite = undefined;
 	callback = undefined;
-	if (!is_undefined(_duration)) duration = _duration;
-	if (!is_undefined(_sprite)) sprite = _sprite;
-	if (!is_undefined(_callback)) callback = _callback;
+	if (argument_count > 1) duration = _duration;
+	if (argument_count > 2) sprite = _sprite;
+	if (argument_count > 3) callback = _callback;
 }
 
 /// @description  AnimFrames(image_indices, [duration], [sprite], [callback])
@@ -25,20 +25,26 @@ function AnimFrame(_image_index, _duration, _sprite, _callback) constructor {
 function AnimFrames(_image_indices, _duration, _sprite, _callback) {
 	var _len = array_length(_image_indices);
 	var _frames = array_create(_len);
-	var _dur_is_array = is_array(_duration);
-	var _has_sprite = !is_undefined(_sprite);
-	var _has_callback = !is_undefined(_callback);
+	var _dur = 1;
+	var _spr = undefined;
+	var _cb = undefined;
+	if (argument_count > 1) _dur = _duration;
+	if (argument_count > 2) _spr = _sprite;
+	if (argument_count > 3) _cb = _callback;
+	var _dur_is_array = is_array(_dur);
+	var _has_sprite = !is_undefined(_spr);
+	var _has_callback = !is_undefined(_cb);
 
 	for (var i = 0; i < _len; i++) {
-		var _dur = _dur_is_array ? _duration[i] : _duration;
+		var _d = _dur_is_array ? _dur[i] : _dur;
 		if (_has_sprite && _has_callback) {
-			_frames[i] = new AnimFrame(_image_indices[i], _dur, _sprite, _callback);
+			_frames[i] = new AnimFrame(_image_indices[i], _d, _spr, _cb);
 		} else if (_has_sprite) {
-			_frames[i] = new AnimFrame(_image_indices[i], _dur, _sprite);
+			_frames[i] = new AnimFrame(_image_indices[i], _d, _spr);
 		} else if (_has_callback) {
-			_frames[i] = new AnimFrame(_image_indices[i], _dur, undefined, _callback);
+			_frames[i] = new AnimFrame(_image_indices[i], _d, undefined, _cb);
 		} else {
-			_frames[i] = new AnimFrame(_image_indices[i], _dur);
+			_frames[i] = new AnimFrame(_image_indices[i], _d);
 		}
 	}
 	return _frames;
