@@ -13,6 +13,18 @@ function AnimFrame(_image_index, _duration, _sprite, _callback) constructor {
 	if (!is_undefined(_callback)) callback = _callback;
 }
 
+/// @description  AnimSingle(image_index, [duration])
+/// Shorthand for a single-frame animation.
+/// @param image_index  Frame index within the sprite
+/// @param duration     How many steps to hold this frame (default 1)
+/// @return {Array}     Array containing one AnimFrame struct
+function AnimSingle() {
+	var _idx = argument[0];
+	var _dur = 1;
+	if (argument_count > 1) _dur = argument[1];
+	return [new AnimFrame(_idx, _dur)];
+}
+
 /// @description  AnimFrames(image_indices, [duration], [sprite], [callback])
 /// Shorthand to create multiple AnimFrame structs at once.
 /// @param image_indices  Array of image_index values, e.g. [0, 1, 2, 3]

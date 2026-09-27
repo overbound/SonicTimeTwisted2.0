@@ -17,32 +17,58 @@ function anim_speed_spin(owner) {
 	return 1 / max(5 - abs(owner.xspeed), 1);
 }
 
+// ---- Shared callbacks ----
+
+function anim_cb_sfx_brake(owner) { play_sfx(sndBrake); }
+
+function anim_cb_end_walk(owner) { owner.animation_new = "walk"; }
+function anim_cb_end_idle(owner) { owner.animation_new = "idle"; }
+function anim_cb_end_stand(owner) { owner.animation_new = "stand"; }
+
+function anim_cb_end_brake_sonic(owner) {
+	if (abs(owner.xspeed) >= 6) owner.animation_new = "run";
+	else owner.animation_new = "walk";
+}
+
+function anim_cb_end_brake_tails(owner) {
+	if (abs(owner.xspeed) >= 8) owner.animation_new = "sprint";
+	else if (abs(owner.xspeed) >= 6) owner.animation_new = "run";
+	else owner.animation_new = "walk";
+}
+
+function anim_cb_end_brake_knuckles(owner) {
+	if (abs(owner.xspeed) >= 6) owner.animation_new = "run";
+	else owner.animation_new = "walk";
+}
+
+function anim_cb_boarding(owner) {
+	switch owner.angle {
+		case 0: owner.image_index = 0; break;
+		case 26: owner.image_index = 2; break;
+		case 45: owner.image_index = 3; break;
+		case 296: owner.image_index = 4; break;
+		case 333: owner.image_index = 2; break;
+	}
+}
+
+function anim_cb_glide_step(owner) {
+	if (abs(owner.glide_angle - 90) > 67.5) owner.image_index = 0;
+	else if (abs(owner.glide_angle - 90) > 22.5) owner.image_index = 1;
+	else owner.image_index = 2;
+}
+
+function anim_speed_climb(owner) {
+	if !(input_check(cUP) || input_check(cDOWN)) return 0;
+	return 0.25;
+}
+
 // ---- Sonic ----
 
 function build_sonic_animations() {
 	var _map = ds_map_create();
 
-	var _sfx_brake = function(owner) { play_sfx(sndBrake); };
-	var _brake_end = function(owner) {
-		if (abs(owner.xspeed) >= 6) owner.animation_new = "run";
-		else owner.animation_new = "walk";
-	};
-	var _flip_end = function(owner) { owner.animation_new = "walk"; };
-	var _get_air_end = function(owner) { owner.animation_new = "walk"; };
-	var _transform_end = function(owner) { owner.animation_new = "walk"; };
-	var _peelout_end = function(owner) { owner.animation_new = "stand"; };
-	var _level_start_end = function(owner) { owner.animation_new = "idle"; };
 	var _walk_sprite = function(owner) {
 		return (abs(owner.xspeed) >= 3.5) ? sprSonicJog : sprSonicWalk;
-	};
-	var _boarding_fn = function(owner) {
-		switch owner.angle {
-			case 0: owner.image_index = 0; break;
-			case 26: owner.image_index = 2; break;
-			case 45: owner.image_index = 3; break;
-			case 296: owner.image_index = 4; break;
-			case 333: owner.image_index = 2; break;
-		}
 	};
 
 	// idle — long delay before foot tap, then loop from frame 1
@@ -82,18 +108,18 @@ function build_sonic_animations() {
 
 	// brake — sound on first frame, chains to walk/run
 	ds_map_add(_map, "brake", new AnimationSet(sprSonicBrake, [
-		new AnimFrame(0, 9, undefined, _sfx_brake), AnimFrames([1, 2], [9, 8])
-	], false, anim_speed_fixed, 0, _brake_end));
+		new AnimFrame(0, 9, undefined, anim_cb_sfx_brake), AnimFrames([1, 2], [9, 8])
+	], false, anim_speed_fixed, 0, anim_cb_end_brake_sonic));
 
 	// look
-	ds_map_add(_map, "look", new AnimationSet(sprSonicLook, [
-		new AnimFrame(0, 4), new AnimFrame(1)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "look", new AnimationSet(sprSonicLook,
+		AnimFrames([0, 1], [4]),
+	false, anim_speed_fixed));
 
 	// crouch
-	ds_map_add(_map, "crouch", new AnimationSet(sprSonicCrouch, [
-		new AnimFrame(0, 6), new AnimFrame(1)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "crouch", new AnimationSet(sprSonicCrouch,
+		AnimFrames([0, 1], [6]),
+	false, anim_speed_fixed));
 
 	// spin — irregular pattern: 1,0,2,0,3,0,4,0
 	ds_map_add(_map, "spin", new AnimationSet(sprSonicSpin,
@@ -115,27 +141,27 @@ function build_sonic_animations() {
 	// peelout_end — walk frames in reverse
 	ds_map_add(_map, "peelout_end", new AnimationSet(sprSonicWalk,
 		AnimFrames([7, 6, 5, 4, 3, 2, 1, 0], 2),
-	false, anim_speed_fixed, 0, _peelout_end));
+	false, anim_speed_fixed, 0, anim_cb_end_stand));
 
 	// rise
-	ds_map_add(_map, "rise", new AnimationSet(sprSonicRise, [
-		new AnimFrame(0)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "rise", new AnimationSet(sprSonicRise,
+		AnimSingle(0),
+	false, anim_speed_fixed));
 
 	// flip
 	ds_map_add(_map, "flip", new AnimationSet(sprSonicFlip,
 		AnimFrames([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 6),
-	false, anim_speed_fixed, 0, _flip_end));
+	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
 	// get_air
-	ds_map_add(_map, "get_air", new AnimationSet(sprSonicGetAir, [
-		new AnimFrame(0, 24)
-	], false, anim_speed_fixed, 0, _get_air_end));
+	ds_map_add(_map, "get_air", new AnimationSet(sprSonicGetAir,
+		AnimSingle(0, 24),
+	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
 	// transform — flickers between frames 3 and 4
 	ds_map_add(_map, "transform", new AnimationSet(sprSonicTransform,
 		AnimFrames([0, 1, 2, 3, 4, 3, 4, 3, 4, 3, 4], [6, 6, 3, 3, 3, 3, 3, 3, 3, 3, 3]),
-	false, anim_speed_fixed, 0, _transform_end));
+	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
 	// wrap_post
 	ds_map_add(_map, "wrap_post", new AnimationSet(sprSonicRotate,
@@ -144,27 +170,27 @@ function build_sonic_animations() {
 
 	// warp
 	ds_map_add(_map, "warp", new AnimationSet(sprSonicWarp,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// hurt
 	ds_map_add(_map, "hurt", new AnimationSet(sprSonicHurt,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// dead
 	ds_map_add(_map, "dead", new AnimationSet(sprSonicDead,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// drown
 	ds_map_add(_map, "drown", new AnimationSet(sprSonicDead,
-		AnimFrames([2]),
+		AnimSingle(2),
 	false, anim_speed_fixed));
 
 	// 3DTurn
 	ds_map_add(_map, "3DTurn", new AnimationSet(sprSonic3DTurn,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// stand_rotate
@@ -173,28 +199,28 @@ function build_sonic_animations() {
 	true, anim_speed_fixed));
 
 	// level_end
-	ds_map_add(_map, "level_end", new AnimationSet(sprSonicLevelEnd, [
-		new AnimFrame(0, 3), new AnimFrame(1)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "level_end", new AnimationSet(sprSonicLevelEnd,
+		AnimFrames([0, 1], [3]),
+	false, anim_speed_fixed));
 
 	// boarding
 	ds_map_add(_map, "boarding", new AnimationSet(sprSonicSnowboard, [
-		new AnimFrame(0, 4, undefined, _boarding_fn)
+		new AnimFrame(0, 4, undefined, anim_cb_boarding)
 	], true, anim_speed_fixed));
 
 	// level_start
-	ds_map_add(_map, "level_start", new AnimationSet(sprSonicLevelEnd, [
-		new AnimFrame(1, 6)
-	], false, anim_speed_fixed, 0, _level_start_end));
+	ds_map_add(_map, "level_start", new AnimationSet(sprSonicLevelEnd,
+		AnimSingle(1, 6),
+	false, anim_speed_fixed, 0, anim_cb_end_idle));
 
 	// swing
 	ds_map_add(_map, "swing", new AnimationSet(sprSonicSwing,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// wallrun
 	ds_map_add(_map, "wallrun", new AnimationSet(sprSonicWallRun,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// float
@@ -214,16 +240,6 @@ function build_sonic_animations() {
 
 function build_tails_animations() {
 	var _map = ds_map_create();
-
-	var _sfx_brake = function(owner) { play_sfx(sndBrake); };
-	var _brake_end = function(owner) {
-		if (abs(owner.xspeed) >= 8) owner.animation_new = "sprint";
-		else if (abs(owner.xspeed) >= 6) owner.animation_new = "run";
-		else owner.animation_new = "walk";
-	};
-	var _flip_end = function(owner) { owner.animation_new = "walk"; };
-	var _get_air_end = function(owner) { owner.animation_new = "walk"; };
-	var _level_start_end = function(owner) { owner.animation_new = "idle"; };
 
 	// idle — complex multi-phase: breathing, looking, foot tapping
 	ds_map_add(_map, "idle", new AnimationSet(sprTailsIdle, [
@@ -260,17 +276,17 @@ function build_tails_animations() {
 
 	// brake — Tails has 3-way sprint/run/walk end
 	ds_map_add(_map, "brake", new AnimationSet(sprTailsBrake, [
-		new AnimFrame(0, 8, undefined, _sfx_brake), new AnimFrame(1, 8)
-	], false, anim_speed_fixed, 0, _brake_end));
+		new AnimFrame(0, 8, undefined, anim_cb_sfx_brake), new AnimFrame(1, 8)
+	], false, anim_speed_fixed, 0, anim_cb_end_brake_tails));
 
 	// look
 	ds_map_add(_map, "look", new AnimationSet(sprTailsLook,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// crouch
 	ds_map_add(_map, "crouch", new AnimationSet(sprTailsCrouch,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// spin
@@ -284,19 +300,19 @@ function build_tails_animations() {
 	true, anim_speed_fixed));
 
 	// rise
-	ds_map_add(_map, "rise", new AnimationSet(sprTailsRise, [
-		new AnimFrame(0, 4), new AnimFrame(1)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "rise", new AnimationSet(sprTailsRise,
+		AnimFrames([0, 1], [4]),
+	false, anim_speed_fixed));
 
 	// flip
 	ds_map_add(_map, "flip", new AnimationSet(sprTailsFlip,
 		AnimFrames([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 6),
-	false, anim_speed_fixed, 0, _flip_end));
+	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
 	// get_air
-	ds_map_add(_map, "get_air", new AnimationSet(sprTailsGetAir, [
-		new AnimFrame(0, 24)
-	], false, anim_speed_fixed, 0, _get_air_end));
+	ds_map_add(_map, "get_air", new AnimationSet(sprTailsGetAir,
+		AnimSingle(0, 24),
+	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
 	// wrap_post
 	ds_map_add(_map, "wrap_post", new AnimationSet(sprTailsRotate,
@@ -305,22 +321,22 @@ function build_tails_animations() {
 
 	// warp
 	ds_map_add(_map, "warp", new AnimationSet(sprTailsWarp,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// hurt
 	ds_map_add(_map, "hurt", new AnimationSet(sprTailsHurt,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// dead
 	ds_map_add(_map, "dead", new AnimationSet(sprTailsDead,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// flight
 	ds_map_add(_map, "flight", new AnimationSet(sprTailsFlight,
-		AnimFrames([0]),
+		AnimSingle(0),
 	true, anim_speed_fixed));
 
 	// flight_end
@@ -340,7 +356,7 @@ function build_tails_animations() {
 
 	// 3DTurn
 	ds_map_add(_map, "3DTurn", new AnimationSet(sprTails3DTurn,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// stand_rotate
@@ -349,28 +365,28 @@ function build_tails_animations() {
 	true, anim_speed_fixed));
 
 	// level_end
-	ds_map_add(_map, "level_end", new AnimationSet(sprTailsLevelEnd, [
-		new AnimFrame(0, 3), new AnimFrame(1)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "level_end", new AnimationSet(sprTailsLevelEnd,
+		AnimFrames([0, 1], [3]),
+	false, anim_speed_fixed));
 
 	// level_start
 	ds_map_add(_map, "level_start", new AnimationSet(sprTailsLevelEnd,
 		AnimFrames([1, 0], 3),
-	false, anim_speed_fixed, 0, _level_start_end));
+	false, anim_speed_fixed, 0, anim_cb_end_idle));
 
 	// boarding
 	ds_map_add(_map, "boarding", new AnimationSet(sprTailsSnowboard,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// swing
 	ds_map_add(_map, "swing", new AnimationSet(sprTailsSwing,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// wallrun
 	ds_map_add(_map, "wallrun", new AnimationSet(sprTailsWallRun,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// float
@@ -386,26 +402,8 @@ function build_tails_animations() {
 function build_knuckles_animations() {
 	var _map = ds_map_create();
 
-	var _sfx_brake = function(owner) { play_sfx(sndBrake); };
-	var _brake_end = function(owner) {
-		if (abs(owner.xspeed) >= 6) owner.animation_new = "run";
-		else owner.animation_new = "walk";
-	};
-	var _flip_end = function(owner) { owner.animation_new = "walk"; };
-	var _get_air_end = function(owner) { owner.animation_new = "walk"; };
-	var _level_start_end = function(owner) { owner.animation_new = "idle"; };
-	var _glide_stand_end = function(owner) { owner.animation_new = "stand"; };
 	var _walk_sprite = function(owner) {
 		return (abs(owner.xspeed) >= 3.5) ? sprKnucklesJog : sprKnucklesWalk;
-	};
-	var _glide_step = function(owner) {
-		if (abs(owner.glide_angle - 90) > 67.5) owner.image_index = 0;
-		else if (abs(owner.glide_angle - 90) > 22.5) owner.image_index = 1;
-		else owner.image_index = 2;
-	};
-	var _climb_speed = function(owner) {
-		if !(input_check(cUP) || input_check(cDOWN)) return 0;
-		return 0.25;
 	};
 
 	// idle — complex multi-phase arm movement
@@ -450,18 +448,18 @@ function build_knuckles_animations() {
 
 	// brake
 	ds_map_add(_map, "brake", new AnimationSet(sprKnucklesBrake, [
-		new AnimFrame(0, 4, undefined, _sfx_brake), AnimFrames([1, 2, 3], [4, 4, 3])
-	], false, anim_speed_fixed, 0, _brake_end));
+		new AnimFrame(0, 4, undefined, anim_cb_sfx_brake), AnimFrames([1, 2, 3], [4, 4, 3])
+	], false, anim_speed_fixed, 0, anim_cb_end_brake_knuckles));
 
 	// look
-	ds_map_add(_map, "look", new AnimationSet(sprKnucklesLook, [
-		new AnimFrame(0, 6), new AnimFrame(1)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "look", new AnimationSet(sprKnucklesLook,
+		AnimFrames([0, 1], [6]),
+	false, anim_speed_fixed));
 
 	// crouch
-	ds_map_add(_map, "crouch", new AnimationSet(sprKnucklesCrouch, [
-		new AnimFrame(0, 5), new AnimFrame(1)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "crouch", new AnimationSet(sprKnucklesCrouch,
+		AnimFrames([0, 1], [5]),
+	false, anim_speed_fixed));
 
 	// spin — irregular: 1,0,2,0,3,0,4,0
 	ds_map_add(_map, "spin", new AnimationSet(sprKnucklesSpin,
@@ -475,18 +473,18 @@ function build_knuckles_animations() {
 
 	// rise
 	ds_map_add(_map, "rise", new AnimationSet(sprKnucklesRise,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// flip
 	ds_map_add(_map, "flip", new AnimationSet(sprKnucklesFlip,
 		AnimFrames([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 6),
-	false, anim_speed_fixed, 0, _flip_end));
+	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
 	// get_air
-	ds_map_add(_map, "get_air", new AnimationSet(sprKnucklesGetAir, [
-		new AnimFrame(0, 24)
-	], false, anim_speed_fixed, 0, _get_air_end));
+	ds_map_add(_map, "get_air", new AnimationSet(sprKnucklesGetAir,
+		AnimSingle(0, 24),
+	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
 	// wrap_post
 	ds_map_add(_map, "wrap_post", new AnimationSet(sprKnucklesRotate,
@@ -495,62 +493,62 @@ function build_knuckles_animations() {
 
 	// warp
 	ds_map_add(_map, "warp", new AnimationSet(sprKnucklesWarp,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// hurt
 	ds_map_add(_map, "hurt", new AnimationSet(sprKnucklesHurt,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// dead
 	ds_map_add(_map, "dead", new AnimationSet(sprKnucklesDead,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// drown
 	ds_map_add(_map, "drown", new AnimationSet(sprKnucklesDead,
-		AnimFrames([1]),
+		AnimSingle(1),
 	false, anim_speed_fixed));
 
 	// glide — step_callback controls frame based on angle
 	ds_map_add(_map, "glide", new AnimationSet(sprKnucklesGlide,
-		AnimFrames([0]),
-	false, anim_speed_fixed, 0, undefined, _glide_step));
+		AnimSingle(0),
+	false, anim_speed_fixed, 0, undefined, anim_cb_glide_step));
 
 	// glide_end
-	ds_map_add(_map, "glide_end", new AnimationSet(sprKnucklesGlideFall, [
-		new AnimFrame(0, 8), new AnimFrame(1)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "glide_end", new AnimationSet(sprKnucklesGlideFall,
+		AnimFrames([0, 1], [8]),
+	false, anim_speed_fixed));
 
 	// glide_slide
 	ds_map_add(_map, "glide_slide", new AnimationSet(sprKnucklesGlideSlide,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// glide_stand_1
-	ds_map_add(_map, "glide_stand_1", new AnimationSet(sprKnucklesCrouch, [
-		new AnimFrame(1, 15)
-	], false, anim_speed_fixed, 0, _glide_stand_end));
+	ds_map_add(_map, "glide_stand_1", new AnimationSet(sprKnucklesCrouch,
+		AnimSingle(1, 15),
+	false, anim_speed_fixed, 0, anim_cb_end_stand));
 
 	// glide_stand_2
-	ds_map_add(_map, "glide_stand_2", new AnimationSet(sprKnucklesGlideSlide, [
-		new AnimFrame(1, 15)
-	], false, anim_speed_fixed, 0, _glide_stand_end));
+	ds_map_add(_map, "glide_stand_2", new AnimationSet(sprKnucklesGlideSlide,
+		AnimSingle(1, 15),
+	false, anim_speed_fixed, 0, anim_cb_end_stand));
 
 	// climb — speed_func pauses when not moving
 	ds_map_add(_map, "climb", new AnimationSet(sprKnucklesClimb,
 		AnimFrames([0, 1, 2, 3, 4, 5]),
-	true, _climb_speed));
+	true, anim_speed_climb));
 
 	// climb_end
 	ds_map_add(_map, "climb_end", new AnimationSet(sprKnucklesClamber,
-		AnimFrames([0, 1, 2], [7, 6]),
+		AnimFrames([0, 1, 2], [7, 6, 6]),
 	false, anim_speed_fixed));
 
 	// 3DTurn
 	ds_map_add(_map, "3DTurn", new AnimationSet(sprKnuckles3DTurn,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// stand_rotate
@@ -566,21 +564,21 @@ function build_knuckles_animations() {
 	// level_start — reverse of level_end
 	ds_map_add(_map, "level_start", new AnimationSet(sprKnucklesLevelEnd,
 		AnimFrames([8, 7, 6, 5, 4, 3, 2, 1, 0], 2),
-	false, anim_speed_fixed, 0, _level_start_end));
+	false, anim_speed_fixed, 0, anim_cb_end_idle));
 
 	// boarding
 	ds_map_add(_map, "boarding", new AnimationSet(sprKnucklesSnowboard,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// swing
 	ds_map_add(_map, "swing", new AnimationSet(sprKnucklesSwing,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// wallrun
 	ds_map_add(_map, "wallrun", new AnimationSet(sprKnucklesWallRun,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// float
@@ -596,24 +594,8 @@ function build_knuckles_animations() {
 function build_super_sonic_animations() {
 	var _map = ds_map_create();
 
-	var _sfx_brake = function(owner) { play_sfx(sndBrake); };
-	var _brake_end = function(owner) {
-		if (abs(owner.xspeed) >= 6) owner.animation_new = "run";
-		else owner.animation_new = "walk";
-	};
-	var _peelout_end = function(owner) { owner.animation_new = "stand"; };
-	var _get_air_end = function(owner) { owner.animation_new = "walk"; };
 	var _walk_sprite = function(owner) {
 		return (abs(owner.xspeed) >= 3.5) ? sprSuperSonicJog : sprSuperSonicWalk;
-	};
-	var _boarding_fn = function(owner) {
-		switch owner.angle {
-			case 0: owner.image_index = 0; break;
-			case 26: owner.image_index = 2; break;
-			case 45: owner.image_index = 3; break;
-			case 296: owner.image_index = 4; break;
-			case 333: owner.image_index = 2; break;
-		}
 	};
 
 	// idle
@@ -647,18 +629,18 @@ function build_super_sonic_animations() {
 
 	// brake
 	ds_map_add(_map, "brake", new AnimationSet(sprSuperSonicBrake, [
-		new AnimFrame(0, 9, undefined, _sfx_brake), AnimFrames([1, 2], [9, 8])
-	], false, anim_speed_fixed, 0, _brake_end));
+		new AnimFrame(0, 9, undefined, anim_cb_sfx_brake), AnimFrames([1, 2], [9, 8])
+	], false, anim_speed_fixed, 0, anim_cb_end_brake_sonic));
 
 	// look
-	ds_map_add(_map, "look", new AnimationSet(sprSuperSonicLook, [
-		new AnimFrame(0, 4), new AnimFrame(1)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "look", new AnimationSet(sprSuperSonicLook,
+		AnimFrames([0, 1], [4]),
+	false, anim_speed_fixed));
 
 	// crouch
-	ds_map_add(_map, "crouch", new AnimationSet(sprSuperSonicCrouch, [
-		new AnimFrame(0, 6), new AnimFrame(1)
-	], false, anim_speed_fixed));
+	ds_map_add(_map, "crouch", new AnimationSet(sprSuperSonicCrouch,
+		AnimFrames([0, 1], [6]),
+	false, anim_speed_fixed));
 
 	// spin
 	ds_map_add(_map, "spin", new AnimationSet(sprSuperSonicSpin,
@@ -680,22 +662,22 @@ function build_super_sonic_animations() {
 	// peelout_end
 	ds_map_add(_map, "peelout_end", new AnimationSet(sprSuperSonicWalk,
 		AnimFrames([7, 6, 5, 4, 3, 2, 1, 0], 2),
-	false, anim_speed_fixed, 0, _peelout_end));
+	false, anim_speed_fixed, 0, anim_cb_end_stand));
 
 	// rise
 	ds_map_add(_map, "rise", new AnimationSet(sprSuperSonicRise,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// flip (reuses Sonic's flip sprite)
 	ds_map_add(_map, "flip", new AnimationSet(sprSonicFlip,
 		AnimFrames([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 6),
-	false, anim_speed_fixed, 0, _get_air_end));
+	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
 	// get_air
-	ds_map_add(_map, "get_air", new AnimationSet(sprSuperSonicGetAir, [
-		new AnimFrame(0, 24)
-	], false, anim_speed_fixed, 0, _get_air_end));
+	ds_map_add(_map, "get_air", new AnimationSet(sprSuperSonicGetAir,
+		AnimSingle(0, 24),
+	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
 	// wrap_post
 	ds_map_add(_map, "wrap_post", new AnimationSet(sprSuperSonicRotate,
@@ -704,42 +686,42 @@ function build_super_sonic_animations() {
 
 	// warp
 	ds_map_add(_map, "warp", new AnimationSet(sprSuperSonicWarp,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// hurt
 	ds_map_add(_map, "hurt", new AnimationSet(sprSuperSonicHurt,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// dead
 	ds_map_add(_map, "dead", new AnimationSet(sprSuperSonicDead,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// drown
 	ds_map_add(_map, "drown", new AnimationSet(sprSuperSonicDead,
-		AnimFrames([2]),
+		AnimSingle(2),
 	false, anim_speed_fixed));
 
 	// 3DTurn
 	ds_map_add(_map, "3DTurn", new AnimationSet(sprSuperSonic3DTurn,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// boarding
 	ds_map_add(_map, "boarding", new AnimationSet(sprSuperSonicSnowboard, [
-		new AnimFrame(0, 4, undefined, _boarding_fn)
+		new AnimFrame(0, 4, undefined, anim_cb_boarding)
 	], true, anim_speed_fixed));
 
 	// swing
 	ds_map_add(_map, "swing", new AnimationSet(sprSuperSonicSwing,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// wallrun
 	ds_map_add(_map, "wallrun", new AnimationSet(sprSuperSonicWallRun,
-		AnimFrames([0]),
+		AnimSingle(0),
 	false, anim_speed_fixed));
 
 	// float
