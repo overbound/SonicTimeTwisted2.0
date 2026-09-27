@@ -28,11 +28,19 @@ default: // normal activity
     ds_list_add(anim_table, animation_new);
     ds_list_add(angle_table, angle);
     ds_list_add(input_table, objProgram.inputManager.state);
+    ds_list_add(sprite_table, sprite_index);
+    ds_list_add(facing_table, facing);
+    ds_list_add(spinning_table, spinning);
+    ds_list_add(image_index_table, image_index);
     if ds_list_size(xtable)>table_size ds_list_delete(xtable, 0);
     if ds_list_size(ytable)>table_size ds_list_delete(ytable, 0);
     if ds_list_size(anim_table)>table_size ds_list_delete(anim_table, 0);
     if ds_list_size(angle_table)>table_size ds_list_delete(angle_table, 0);
     if ds_list_size(input_table)>table_size ds_list_delete(input_table, 0);
+    if ds_list_size(sprite_table)>table_size ds_list_delete(sprite_table, 0);
+    if ds_list_size(facing_table)>table_size ds_list_delete(facing_table, 0);
+    if ds_list_size(spinning_table)>table_size ds_list_delete(spinning_table, 0);
+    if ds_list_size(image_index_table)>table_size ds_list_delete(image_index_table, 0);
 
     // execute state
     if state and not state_reset script_execute(state);

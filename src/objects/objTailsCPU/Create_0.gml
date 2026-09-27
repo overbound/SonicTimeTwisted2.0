@@ -1,39 +1,33 @@
-/// @description Initialize as CPU Tails follower
-// Call parent objPlayer Create_0 — sets up physics, collision, camera, position tables, AnimationHandler
-// BUT: parent hardcodes player_id=0, so it calls player_change_character with wrong character
+/// @description Initialize as buffer-driven Tails follower
 event_inherited();
 
-// === Now override everything the parent got wrong ===
-
-// Identity — force Tails
-character_id = 2;
-player_id = 1;
-
-// Character re-initialization — call player_change_character as Tails
-// First call in parent used character_id[0]; this call uses character_id=2 directly
-// The first call won't have created tails_effect (since we only spawn when NOT tails),
-// so this second call won't duplicate
-player_change_character(2, true);
-
-// Start in the air so CPU Tails falls naturally, uses real physics from frame 1
-player_in_air();
-
-// Force animation
-animation_new = "spin";  // air animation
-animation_reset = true;
-
-// No shield, no invincibility
-invulnerable = 0;
-image_alpha = 1;
-
-// === Follower variables ===
 leader = noone;
-follow_delay = 30;
-teleport_distance = 480;
-fly_distance = 320;
-local_input_state = -1;
-local_input_press = -1;
-local_input_release = -1;
-prev_input = 0;
-fly_mode = false;
-fly_speed = 6;
+follow_delay = 16;           // 16-frame delay (matching Genesis Sonic 2)
+buffer_size = 64;            // 64-frame ring buffer
+teleport_distance = 320;     // rubberband threshold — viewport width + buffer
+
+// Tracking
+prev_sprite = -1;
+image_speed = 0;
+visible = true;
+
+// Variables objTailsEffect reads from player_id
+character_id = 2;
+animation = "";
+facing = 1;
+state = player_state_stand;
+angle = 0;
+xspeed = 0;
+yspeed = 0;
+spinning = false;
+
+// Hit protection
+invulnerable = 0;
+tails_hurt = 0;
+
+// Fly catch-up mode
+tails_catchup = false;
+
+// Create tails rotary effect
+tails_effect = instance_create(x, y, objTailsEffect);
+tails_effect.player_id = id;

@@ -1,111 +1,159 @@
-/// @description Replay leader's inputs with delay plus position bias
-// === Always run parent physics — never exit before event_inherited() ===
-
-// Set up input from leader (or zero if no leader)
-if (leader != noone and instance_exists(leader)) {
-	var buf_size = ds_list_size(leader.input_table);
-	
-	if (buf_size >= 2) {
-		// Read leader's recorded input from 30 frames ago
-		var read_idx = buf_size - 1 - follow_delay;
-		if (read_idx < 0) read_idx = 0;
-		
-		var target_input = ds_list_find_value(leader.input_table, read_idx);
-		var target_x = ds_list_find_value(leader.xtable, read_idx);
-		var target_y = ds_list_find_value(leader.ytable, read_idx);
-		
-		if (!is_real(target_input)) target_input = 0;
-		
-		// === Position bias ===
-		// If CPU Tails is too far from where the leader was, bias movement
-		// toward that position. This prevents Tails from standing in empty
-		// space when the leader was idle.
-		var x_gap = target_x - x;
-		var bias_input = 0;
-		var dist = abs(x_gap);
-		
-		if (dist > 32) {
-			// More than 32px away — fly to catch up
-			fly_mode = true;
-		} else if (dist > 8) {
-			// 8-32px away — add horizontal input bias toward leader position
-			bias_input = (x_gap > 0) ? cRIGHT : cLEFT;
-		}
-		// <8px — close enough, no bias needed
-		
-		// Merge recorded input with position bias
-		local_input_state = target_input | bias_input;
-		
-		// Compute press/release from consecutive states
-		local_input_press = (local_input_state & ~prev_input);
-		local_input_release = (~local_input_state & prev_input);
-		prev_input = local_input_state;
-	} else {
-		// Not enough history — no input yet, rely on position bias
-		local_input_state = 0;
-		local_input_press = 0;
-		local_input_release = 0;
-		
-		// Move toward leader directly until history is built up
-		if (abs(x - leader.x) > 16) {
-			local_input_state = (x < leader.x) ? cRIGHT : cLEFT;
-		}
-	}
-} else {
-	// No leader — neutral input
-	local_input_state = 0;
-	local_input_press = 0;
-	local_input_release = 0;
+/// @description Genesis-style buffer replay — no terrain collision, object collision only
+// Abort if no leader
+if (leader == noone or !instance_exists(leader)) {
+	visible = false;
+	if (tails_effect != noone and instance_exists(tails_effect))
+		tails_effect.visible = false;
+	exit;
 }
 
-// === Fly catch-up mode ===
-if (fly_mode and leader != noone and instance_exists(leader)) {
-	var dist_to_leader = point_distance(x, y, leader.x, leader.y);
-	
-	if (dist_to_leader < 48) {
-		// Arrived — snap to near leader
-		fly_mode = false;
-		x = leader.x - 16 * leader.facing;
-		y = leader.y;
-		xspeed = 0;
-		yspeed = 0;
-		player_in_air();
-	} else {
-		// Fly toward leader
-		var dir = point_direction(x, y, leader.x, leader.y);
-		x += lengthdir_x(fly_speed, dir);
-		y += lengthdir_y(fly_speed, dir);
-		xspeed = 0;
-		yspeed = 0;
-		animation_new = "flight";
+// Hide during non-gameplay leader states
+if (leader.state == player_state_dead
+	or leader.state == player_state_enter
+	or leader.state == player_state_exit
+	or leader.state == player_state_complete
+	or leader.state == player_state_super_flight
+	or leader.state == player_state_standby) {
+	visible = false;
+	if (tails_effect != noone and instance_exists(tails_effect)) {
+		tails_effect.visible = false;
+		tails_effect.hide = true;
 	}
-	// Update tails effect during fly mode
+	exit;
+}
+
+visible = true;
+if (tails_effect != noone and instance_exists(tails_effect))
+	tails_effect.hide = false;
+
+var buf_size = ds_list_size(leader.xtable);
+
+// Not enough history — place behind leader
+if (buf_size < follow_delay + 1) {
+	x = leader.x - 32 * leader.facing;
+	y = leader.y;
+	spinning = false;
 	if (tails_effect != noone and instance_exists(tails_effect)) {
 		tails_effect.x = x;
 		tails_effect.y = y;
 	}
-	return;
+	exit;
 }
 
-// === Teleport safety net ===
-if (leader != noone and instance_exists(leader)) {
-	var dist_to_leader = point_distance(x, y, leader.x, leader.y);
-	if (dist_to_leader > teleport_distance) {
+// === RUBBERBAND: teleport catch-up ===
+var dist_to_leader = point_distance(x, y, leader.x, leader.y);
+if (dist_to_leader > teleport_distance) {
+	// Teleport above and behind camera, then fly toward Sonic
+	x = leader.x - 200 * leader.facing;
+	y = leader.y - 240;
+	spinning = false;
+	// Enter fly catch-up mode — skip buffer reading until arrived
+	tails_catchup = true;
+	if (tails_effect != noone and instance_exists(tails_effect)) {
+		tails_effect.x = x;
+		tails_effect.y = y;
+	}
+	exit;
+}
+
+// === TELEPORT FLUSH ===
+// If leader just time-traveled or checkpointed, their position jumped.
+// Detect via a massive delta and flush the buffer by resetting position.
+var leader_dx = abs(leader.x - ds_list_find_value(leader.xtable, max(0, buf_size - 2)));
+if (leader_dx > 256) {
+	// Leader teleported — snap Tails to leader position to avoid
+	// interpolating across the entire level triggering every collision
+	x = leader.x;
+	y = leader.y;
+	spinning = false;
+	image_index = leader.image_index;
+	sprite_index = leader.sprite_index;
+	// Reset previous sprite to force a fresh apply next frame
+	prev_sprite = -1;
+	if (tails_effect != noone and instance_exists(tails_effect)) {
+		tails_effect.x = x;
+		tails_effect.y = y;
+	}
+	exit;
+}
+
+// === FLY CATCH-UP MODE ===
+if (tails_catchup) {
+	// Simple velocity toward leader
+	var dir = point_direction(x, y, leader.x, leader.y);
+	x += lengthdir_x(6, dir);
+	y += lengthdir_y(6, dir);
+	facing = (leader.x > x) ? 1 : -1;
+	sprite_index = sprTailsFlight;
+	image_index = 0;
+	spinning = false;
+	
+	// Arrived — rejoin
+	if (dist_to_leader < 48) {
+		tails_catchup = false;
+		x = leader.x - 16 * leader.facing;
+		y = leader.y;
+		spinning = leader.spinning;
+	}
+	
+	if (tails_effect != noone and instance_exists(tails_effect)) {
+		tails_effect.x = x;
+		tails_effect.y = y;
+	}
+	exit;
+}
+
+// === HIT STATE ===
+// If Tails was hit, play hurt flash and pause buffer reading
+if (tails_hurt > 0) {
+	tails_hurt -= 1;
+	if (tails_hurt <= 0) {
+		// Resume from leader's current position
 		x = leader.x - 32 * leader.facing;
 		y = leader.y;
-		xspeed = 0;
-		yspeed = 0;
+		spinning = leader.spinning;
 	}
+	// Use previous frame's sprite to hold hurt pose
+	if (tails_effect != noone and instance_exists(tails_effect)) {
+		tails_effect.x = x;
+		tails_effect.y = y;
+	}
+	exit;
 }
 
-// === RUN NORMAL PLAYER PHYSICS ===
-event_inherited();
+// === NORMAL FOLLOW: read buffer with 16-frame delay ===
+var read_idx = (buf_size - 1 - follow_delay);
+if (read_idx < 0) read_idx = 0;
 
-// Count down invulnerability (collision events set it to 120 on hit)
+var target_x = ds_list_find_value(leader.xtable, read_idx);
+var target_y = ds_list_find_value(leader.ytable, read_idx);
+var target_sprite = ds_list_find_value(leader.sprite_table, read_idx);
+var target_facing = ds_list_find_value(leader.facing_table, read_idx);
+var target_spinning = ds_list_find_value(leader.spinning_table, read_idx);
+
+if (!is_real(target_x) or !is_real(target_y)) exit;
+
+// Blindingly apply position — no terrain collision
+x = target_x;
+y = target_y;
+
+// Read animation name for objTailsEffect
+var target_anim = ds_list_find_value(leader.anim_table, read_idx);
+if (is_string(target_anim)) animation = target_anim;
+
+// Apply sprite directly — Tails has no AnimationHandler, replays leader's exact frame
+if (is_real(target_sprite)) {
+	sprite_index = target_sprite;
+}
+// Use leader's exact image_index (the mapping frame at this buffer position)
+var target_frame = ds_list_find_value(leader.image_index_table, read_idx);
+if (is_real(target_frame)) image_index = target_frame;
+
+if (is_real(target_facing)) facing = target_facing;
+if (is_real(target_spinning)) spinning = target_spinning;
+
+// Count down invulnerability
 if (invulnerable > 0) invulnerable -= 1;
-
-// Force full visibility — override objPlayer Step_2's flash formula
-image_alpha = 1;
 
 // Update tails effect
 if (tails_effect != noone and instance_exists(tails_effect)) {

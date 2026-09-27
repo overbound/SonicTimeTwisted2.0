@@ -121,6 +121,10 @@ ytable = ds_list_create();
 anim_table = ds_list_create();
 angle_table = ds_list_create();
 input_table = ds_list_create();
+sprite_table = ds_list_create();
+facing_table = ds_list_create();
+spinning_table = ds_list_create();
+image_index_table = ds_list_create();
 
 // sound
 reserved_sound = -1;
