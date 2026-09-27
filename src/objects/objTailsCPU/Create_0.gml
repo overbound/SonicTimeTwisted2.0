@@ -14,18 +14,17 @@ fly_speed = 6;
 // Force Tails character (player_id 1 = second player slot)
 player_id = 1;
 
+// Set character_id before parent init so player_change_character runs as Tails
+objGameData.character_id[1] = 2;
+
 // Call parent objPlayer Create_0 — sets up physics, animation, collision, etc.
+// This calls player_change_character which sets character_id, animation_table, tails_effect
 event_inherited();
 
-// Override character to Tails
-character_id = 2;
-animation_table = objResources.anim_tails;
+// Force into normal gameplay state (not inherited temp_state from real player)
+state = player_state_stand;
 animation_new = "idle";
 animation_reset = true;
 
-// CPU Tails is always invulnerable (no death, just flash)
-invulnerable = 999999;
-
-// Create tails effect companion
-tails_effect = instance_create(x, y, objTailsEffect);
-tails_effect.player_id = id;
+// No invulnerability — collision events handle damage
+invulnerable = 0;
