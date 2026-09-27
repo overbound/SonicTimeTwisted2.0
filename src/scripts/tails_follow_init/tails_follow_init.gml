@@ -1,6 +1,6 @@
 function tails_follow_init() {
 	// tails_follow_init()
-	// Initialize CPU-controlled Tails follower variables
+	// Initialize CPU-controlled Tails follower as a physics-based companion
 	
 	// Leader reference (the player being followed)
 	leader = noone;
@@ -10,29 +10,62 @@ function tails_follow_init() {
 	teleport_distance = 480;    // teleport to leader if further than this
 	fly_distance = 320;         // start flying toward leader if further than this
 	
-	// Movement tracking
-	move_speed = 0;
-	move_dx = 0;
-	move_dy = 0;
-	prev_x = x;
-	prev_y = y;
+	// CPU input state
+	local_input_state = -1;     // -1 means use global input
+	local_input_press = -1;
+	local_input_release = -1;
+	prev_input = 0;
 	
-	// State tracking (needed for objTailsEffect compatibility)
+	// Character
 	character_id = 2;           // Always Tails
-	state = player_state_stand;
-	facing = 1;
-	angle = 0;
-	spinning = false;
-	jumping = false;
-	invulnerable = 0;
+	player_id = 1;              // Player 2 slot
+	
+	// Physics variables (matching objPlayer)
 	xspeed = 0;
 	yspeed = 0;
+	facing = 1;
+	angle = 0;
+	relative_angle = 0;
+	mask_rotation = 0;
+	terrain_id = noone;
+	landed = false;
+	spinning = false;
+	jumping = false;
+	wall_direction = 0;
+	sliding = 0;
+	boarding = false;
 	underwater = false;
-	chain_multiplier = 0;      // For TailsEffect collision scoring
 	
-	// Collision offsets (for compatibility, CPU Tails has no collision)
+	// Physics constants
+	max_xspeed = 28;
+	max_yspeed = 28;
+	limit_xspeed = true;
+	limit_yspeed = true;
+	segment_enabled = true;
+	segment_width = 16;
+	segment_height = 16;
 	offset_x = 8;
 	offset_y = 13;
+	offset_wall = 9;
+	depth_mask = 1;
+	cliff = 0;
+	angle3D = 0;
+	
+	// Collision terrain list
+	terrain_list = ds_list_create();
+	
+	// Player physics constants (from player_reset_physics)
+	roll_threshold = 1.03125;
+	slide_threshold = 2.5;
+	ceiling_threshold = -4;
+	jump_release = 4;
+	jump_force = 6.5;
+	gravity_force = 0.21875;
+	
+	// State tracking
+	state = player_state_stand;
+	chain_multiplier = 0;
+	invulnerable = 0;
 	
 	// Animation
 	animation_table = objResources.anim_tails;
@@ -40,11 +73,14 @@ function tails_follow_init() {
 	animation_new = "idle";
 	animation_reset = true;
 	animation_handler = new AnimationHandler(id);
-	timeline_speed = 1;
 	
 	// Flying catch-up mode
 	fly_mode = false;
 	fly_speed = 6;
+	
+	// Previous position for delta
+	prev_x = x;
+	prev_y = y;
 	
 	// Tails rotary effect (the spinning tail sprites)
 	tails_effect = instance_create(x, y, objTailsEffect);

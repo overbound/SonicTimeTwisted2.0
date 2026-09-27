@@ -1,5 +1,10 @@
 function input_check_pressed(argument0) {
-	// input_check(control)
+	// input_check_pressed(control)
+	// Per-instance input override (for CPU players)
+	if (variable_instance_exists(self, "local_input_press") and local_input_press != -1)
+	{
+	    return local_input_press & argument0;
+	}
 	if (objProgram.inputManager.flag_player_input)
 	{
 	    return objProgram.inputManager.state_press & argument0;

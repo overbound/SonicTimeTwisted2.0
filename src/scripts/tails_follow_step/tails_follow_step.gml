@@ -1,6 +1,6 @@
 function tails_follow_step() {
 	// tails_follow_step()
-	// Update CPU Tails position by reading leader's position history
+	// Update CPU Tails using player physics with input replay
 	
 	// Abort if no leader exists
 	if (leader == noone or !instance_exists(leader)) {
@@ -10,7 +10,7 @@ function tails_follow_step() {
 		return;
 	}
 	
-	// Hide during non-gameplay states (death, entering, exiting, cutscene complete, super flight, standby)
+	// Hide during non-gameplay states
 	if (leader.state == player_state_dead
 		or leader.state == player_state_enter
 		or leader.state == player_state_exit
@@ -35,13 +35,10 @@ function tails_follow_step() {
 	if (buf_size < 2) {
 		x = leader.x - 32 * leader.facing;
 		y = leader.y;
-		state = player_state_stand;
 		animation_new = "idle";
-		timeline_speed = 1;
 		spinning = false;
 		xspeed = 0;
 		yspeed = 0;
-		// Update tails effect position
 		if (tails_effect != noone and instance_exists(tails_effect)) {
 			tails_effect.x = x;
 			tails_effect.y = y;
@@ -49,152 +46,228 @@ function tails_follow_step() {
 		return;
 	}
 	
-	// Calculate distance to leader's current position
-	var dist_to_leader = point_distance(x, y, leader.x, leader.y);
-	
-	// === FLYING CATCH-UP MODE ===
-	if (fly_mode) {
-		// Fly directly toward leader's current position
-		var dir = point_direction(x, y, leader.x, leader.y);
-		x += lengthdir_x(fly_speed, dir);
-		y += lengthdir_y(fly_speed, dir);
-		
-		state = player_state_fly;
-		animation_new = "flight";
-		timeline_speed = 1;
-		spinning = false;
-		
-		// Arrived close enough — resume normal follow
-		if (dist_to_leader < 48) {
-			fly_mode = false;
-			state = player_state_fall;
-			animation_new = "spin";
-		}
-		
-		// Face toward leader
-		if (leader.x > x) facing = 1;
-		else if (leader.x < x) facing = -1;
-		
-		// Compute xspeed/yspeed for tails effect angle calculation
-		xspeed = x - prev_x;
-		yspeed = y - prev_y;
-		prev_x = x;
-		prev_y = y;
-		
-		// Sync depth behind leader
-		depth = leader.depth + 1;
-		
-		// Update tails effect position
-		if (tails_effect != noone and instance_exists(tails_effect)) {
-			tails_effect.x = x;
-			tails_effect.y = y;
-		}
-		return;
-	}
-	
-	// Enter fly mode if too far behind
-	if (dist_to_leader > fly_distance) {
-		fly_mode = true;
-		state = player_state_fly;
-		animation_new = "flight";
-		timeline_speed = 1;
-		spinning = false;
-		// Update tails effect position
-		if (tails_effect != noone and instance_exists(tails_effect)) {
-			tails_effect.x = x;
-			tails_effect.y = y;
-		}
-		return;
-	}
-	
-	// Teleport if extremely far (safety net)
-	if (dist_to_leader > teleport_distance) {
-		x = leader.x - 32 * leader.facing;
-		y = leader.y;
-	}
-	
-	// === NORMAL FOLLOW MODE: Read delayed position from leader's history ===
+	// Read target from leader's history (delayed)
 	var read_idx = buf_size - 1 - follow_delay;
 	if (read_idx < 0) read_idx = 0;
 	
 	var target_x = ds_list_find_value(leader.xtable, read_idx);
 	var target_y = ds_list_find_value(leader.ytable, read_idx);
 	var target_anim = ds_list_find_value(leader.anim_table, read_idx);
-	var target_angle = ds_list_find_value(leader.angle_table, read_idx);
+	var target_input = ds_list_find_value(leader.input_table, read_idx);
 	
-	// Safety check for invalid values
+	// Safety check
 	if (!is_real(target_x) or !is_real(target_y)) {
 		prev_x = x;
 		prev_y = y;
 		return;
 	}
 	
-	// Calculate movement delta from current position to target
-	move_dx = target_x - x;
-	move_dy = target_y - y;
-	move_speed = point_distance(0, 0, move_dx, move_dy);
+	// Distance to target and to leader
+	var dist_to_target = point_distance(x, y, target_x, target_y);
+	var dist_to_leader = point_distance(x, y, leader.x, leader.y);
 	
-	// Move to the recorded position (position replay)
-	x = target_x;
-	y = target_y;
+	// === FLYING CATCH-UP MODE ===
+	if (fly_mode) {
+		var dir = point_direction(x, y, leader.x, leader.y);
+		x += lengthdir_x(fly_speed, dir);
+		y += lengthdir_y(fly_speed, dir);
+		
+		animation_new = "flight";
+		spinning = false;
+		xspeed = x - prev_x;
+		yspeed = y - prev_y;
+		
+		if (dist_to_leader < 48) {
+			fly_mode = false;
+			// Land near leader
+			x = leader.x - 16 * leader.facing;
+			y = leader.y;
+		}
+		
+		if (leader.x > x) facing = 1;
+		else if (leader.x < x) facing = -1;
+		
+		prev_x = x;
+		prev_y = y;
+		depth = leader.depth + 1;
+		
+		if (tails_effect != noone and instance_exists(tails_effect)) {
+			tails_effect.x = x;
+			tails_effect.y = y;
+		}
+		return;
+	}
 	
-	// Replay exact angle from leader (used by TailsEffect for spin axis)
-	if (is_real(target_angle)) angle = target_angle;
+	// Enter fly mode if too far
+	if (dist_to_leader > fly_distance) {
+		fly_mode = true;
+		animation_new = "flight";
+		spinning = false;
+		if (tails_effect != noone and instance_exists(tails_effect)) {
+			tails_effect.x = x;
+			tails_effect.y = y;
+		}
+		return;
+	}
 	
-	// Compute xspeed/yspeed for tails effect angle calculation
-	xspeed = move_dx;
-	yspeed = move_dy;
+	// Teleport safety net
+	if (dist_to_leader > teleport_distance) {
+		x = leader.x - 32 * leader.facing;
+		y = leader.y;
+		xspeed = 0;
+		yspeed = 0;
+	}
 	
-	// Determine facing direction from horizontal movement
-	if (abs(move_dx) > 0.5) facing = sign(move_dx);
+	// === PHYSICS-BASED MOVEMENT ===
+	
+	// Compute input from leader's recorded state
+	var action_held = (target_input & cACTION);
+	var action_just_pressed = (target_input & cACTION) and !(prev_input & cACTION);
+	prev_input = target_input;
+	
+	// Determine if on ground using collision
+	var on_ground = false;
+	if (landed) {
+		// Check if still on ground
+		var _check = collision_line(x - offset_x, y + offset_y + 1, x + offset_x, y + offset_y + 1, objSolid, false, true);
+		if (_check) {
+			on_ground = true;
+		} else {
+			landed = false;
+		}
+	}
+	
+	if (on_ground) {
+		// === GROUND MOVEMENT ===
+		
+		// Horizontal: accelerate toward target
+		var dx = target_x - x;
+		if (abs(dx) > 4) {
+			var target_dir = sign(dx);
+			xspeed += target_dir * 0.5;
+			// Apply friction when changing direction
+			if (sign(xspeed) != target_dir and abs(xspeed) > 0.5) {
+				xspeed *= 0.8;
+			}
+			// Cap speed
+			xspeed = clamp(xspeed, -10, 10);
+		} else {
+			// Decelerate near target
+			xspeed *= 0.85;
+			if (abs(xspeed) < 0.3) xspeed = 0;
+		}
+		
+		// Gravity
+		yspeed += gravity_force;
+		
+		// Jump if leader pressed ACTION
+		if (action_just_pressed and !spinning) {
+			yspeed = -jump_force;
+			landed = false;
+			spinning = true;
+			jumping = true;
+			animation_new = "spin";
+		}
+		
+		// Move horizontally with collision
+		x += xspeed;
+		
+		// Wall collision (horizontal)
+		var _wall = collision_line(x + sign(xspeed) * offset_wall, y - offset_y, x + sign(xspeed) * offset_wall, y + offset_y - 1, objSolid, false, true);
+		if (_wall) {
+			if (xspeed > 0) {
+				x = _wall.bbox_left - offset_wall - 1;
+			} else if (xspeed < 0) {
+				x = _wall.bbox_right + offset_wall + 1;
+			}
+			xspeed = 0;
+		}
+		
+		// Move vertically with collision
+		y += yspeed;
+		
+		// Floor collision
+		var _floor = collision_line(x - offset_x, y + offset_y, x + offset_x, y + offset_y, objSolid, false, true);
+		if (_floor and yspeed >= 0) {
+			y = _floor.bbox_top - offset_y;
+			yspeed = 0;
+			landed = true;
+		} else if (!_floor) {
+			landed = false;
+		}
+		
+		// Update animation
+		if (landed) {
+			if (abs(xspeed) < 0.5) {
+				animation_new = "idle";
+			} else if (abs(xspeed) >= 6) {
+				animation_new = "run";
+			} else {
+				animation_new = "walk";
+			}
+			spinning = false;
+			jumping = false;
+		}
+		
+	} else {
+		// === AIR MOVEMENT ===
+		
+		// Horizontal: slight control toward target
+		var dx = target_x - x;
+		if (abs(dx) > 8) {
+			xspeed += sign(dx) * 0.15;
+			xspeed = clamp(xspeed, -10, 10);
+		}
+		
+		// Gravity
+		yspeed += gravity_force;
+		yspeed = min(yspeed, max_yspeed);
+		
+		// Move
+		x += xspeed;
+		y += yspeed;
+		
+		// Floor collision
+		var _floor = collision_line(x - offset_x, y + offset_y, x + offset_x, y + offset_y, objSolid, false, true);
+		if (_floor and yspeed >= 0) {
+			y = _floor.bbox_top - offset_y;
+			yspeed = 0;
+			landed = true;
+			spinning = false;
+			jumping = false;
+		}
+		
+		// Ceiling collision
+		var _ceil = collision_line(x - offset_x, y - offset_y, x + offset_x, y - offset_y, objSolid, false, true);
+		if (_ceil and yspeed < 0) {
+			y = _ceil.bbox_bottom + offset_y + 1;
+			yspeed = 0;
+		}
+		
+		// Wall collision
+		var _wall = collision_line(x + sign(xspeed) * offset_wall, y - offset_y, x + sign(xspeed) * offset_wall, y + offset_y - 1, objSolid, false, true);
+		if (_wall) {
+			if (xspeed > 0) {
+				x = _wall.bbox_left - offset_wall - 1;
+			} else if (xspeed < 0) {
+				x = _wall.bbox_right + offset_wall + 1;
+			}
+			xspeed = 0;
+		}
+		
+		// Air animation
+		if (!landed) {
+			animation_new = "spin";
+		}
+	}
+	
+	// Facing direction
+	if (abs(xspeed) > 0.5) facing = sign(xspeed);
 	
 	// Sync depth behind leader
 	depth = leader.depth + 1;
 	
-	// === Animation: use exact recorded value from leader ===
-	if (is_string(target_anim) and target_anim != "") {
-		animation_new = target_anim;
-		// Remap character-exclusive animations that don't exist in Tails' table
-		switch (animation_new) {
-			// Sonic-only → spin
-			case "peelout":      animation_new = "spin";  break;
-			case "instashield":  animation_new = "spin";  break;
-			case "dropdash":     animation_new = "spin";  break;
-			case "drop_dash":    animation_new = "spin";  break;
-			case "transform":    animation_new = "spin";  break;
-			// Sonic-only → closest Tails equivalent
-			case "peelout_end":  animation_new = "idle";  break;
-			case "transform_run":animation_new = "run";   break;
-			case "drown":        animation_new = "idle";  break;
-			// Knuckles-only → closest Tails equivalent
-			case "glide":        animation_new = "spin";  break;
-			case "glide_end":    animation_new = "idle";  break;
-			case "glide_slide":  animation_new = "walk";  break;
-			case "glide_stand_1":animation_new = "idle";  break;
-			case "glide_stand_2":animation_new = "idle";  break;
-			case "climb":        animation_new = "idle";  break;
-			case "climb_end":    animation_new = "idle";  break;
-		}
-	} else {
-		// Fallback: infer from speed if anim_table not populated yet
-		if (move_speed < 0.5) animation_new = "idle";
-		else if (leader.spinning) animation_new = "spin";
-		else if (move_speed >= 8) animation_new = "sprint";
-		else if (move_speed >= 4) animation_new = "run";
-		else animation_new = "walk";
-	}
-	
-	// Map spinning flag and state from leader
-	spinning = leader.spinning;
-	state = leader.state;
-	
-	// Set animation playback speed based on movement
-	if (animation_new == "idle") timeline_speed = 1;
-	else if (animation_new == "spin") timeline_speed = 1/max(5 - move_speed, 1);
-	else if (animation_new == "sprint") timeline_speed = 1/max(10 - move_speed, 1);
-	else timeline_speed = 1/max(8 - move_speed, 1);
-	
-	// Store previous position for next frame's delta
+	// Store previous position
 	prev_x = x;
 	prev_y = y;
 	

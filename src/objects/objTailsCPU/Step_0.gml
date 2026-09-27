@@ -1,4 +1,4 @@
-/// @description Follow leader position
+/// @description Follow leader with physics
 tails_follow_step();
 
 // Count down invulnerability (for hit flashing)

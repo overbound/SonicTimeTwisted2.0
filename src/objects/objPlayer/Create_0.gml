@@ -120,6 +120,7 @@ xtable = ds_list_create();
 ytable = ds_list_create();
 anim_table = ds_list_create();
 angle_table = ds_list_create();
+input_table = ds_list_create();
 
 // sound
 reserved_sound = -1;

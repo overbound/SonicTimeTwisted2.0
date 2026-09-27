@@ -1,5 +1,10 @@
 function input_check(argument0) {
 	// input_check(control)
+	// Per-instance input override (for CPU players)
+	if (variable_instance_exists(self, "local_input_state") and local_input_state != -1)
+	{
+	    return local_input_state & argument0;
+	}
 	if (objProgram.inputManager.flag_player_input)
 	{
 	    return objProgram.inputManager.state & argument0;

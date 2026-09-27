@@ -1,5 +1,10 @@
 function input_check_released(argument0) {
 	// input_check_released(control)
+	// Per-instance input override (for CPU players)
+	if (variable_instance_exists(self, "local_input_release") and local_input_release != -1)
+	{
+	    return local_input_release & argument0;
+	}
 	if (objProgram.inputManager.flag_player_input)
 	{
 	    return objProgram.inputManager.state_release & argument0;
