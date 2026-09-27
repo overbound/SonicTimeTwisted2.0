@@ -6,7 +6,7 @@
   "name":"player_is_homing",
   "parent":{
     "name":"Player",
-    "path":"folders/Scripts/Player.yy",
+    "path":"folders/Scripts/Scene Objects/Player/General.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
