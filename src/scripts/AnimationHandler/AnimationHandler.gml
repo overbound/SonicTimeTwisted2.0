@@ -5,6 +5,7 @@ function AnimationHandler(_owner) constructor {
 	current_anim = undefined;
 	frame_index = 0;
 	frame_counter = 0;
+	timeline_pos = 0;
 	ended = false;
 	frozen = false;
 	freeze_frames = 0;
@@ -16,6 +17,7 @@ function AnimationHandler(_owner) constructor {
 		current_anim = _anim;
 		frame_index = 0;
 		frame_counter = 0;
+		timeline_pos = 0;
 		ended = false;
 		owner.animation_reset = false;
 		apply_frame();
@@ -49,6 +51,7 @@ function AnimationHandler(_owner) constructor {
 		}
 
 		frame_counter += _speed;
+		timeline_pos += _speed;
 
 		var _dur = current_anim.frames[frame_index].duration;
 		while (frame_counter >= _dur) {
@@ -94,8 +97,9 @@ function AnimationHandler(_owner) constructor {
 		}
 		owner.image_index = _frame.image_index;
 
-		// sync timeline_position for external readers
-		owner.timeline_position = frame_index;
+		// sync timeline_position for external readers (e.g. objTimePost)
+		// mirrors original timeline behavior: accumulates speed each step
+		owner.timeline_position = timeline_pos;
 
 		// run callback
 		if (_frame.callback != undefined) {
