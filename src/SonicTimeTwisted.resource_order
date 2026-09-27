@@ -113,6 +113,7 @@
     {"name":"Tidal Tubes","order":5,"path":"folders/Rooms/Zones/Tidal Tubes.yy",},
     {"name":"Viridian Valley","order":3,"path":"folders/Rooms/Zones/Viridian Valley.yy",},
     {"name":"Scripts","order":100,"path":"folders/Scripts.yy",},
+    {"name":"Animation","order":1,"path":"folders/Scripts/Animation.yy",},
     {"name":"compatibility","order":4,"path":"folders/Scripts/compatibility.yy",},
     {"name":"background","order":1,"path":"folders/Scripts/compatibility/background.yy",},
     {"name":"d3d","order":2,"path":"folders/Scripts/compatibility/d3d.yy",},
