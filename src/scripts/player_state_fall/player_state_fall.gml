@@ -165,6 +165,7 @@ function player_state_fall() {
 	            case 3: return player_is_air_dashing(); break;
 	            case 4: return player_is_ice_attacking(); break;
 	            case 5: if underwater==false return player_is_shield_flying(); break;
+	            case 6: return player_is_homing(); break;
 	            default: {
 					switch special_move_mode {
 						case 0: //Instashield only

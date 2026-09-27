@@ -24,8 +24,16 @@ function player_reaction_enemy(argument0) {
 	    {
 	        // increase force while holding jump or not jumping
 	        if input_check(cACTION) yspeed = -yspeed; else yspeed = max(-jump_release, -yspeed);
-	    }
 	}
+	}
+	
+	if state == player_state_shield_homing {
+		jump_action = false;
+		xspeed = 0;
+		yspeed = 0;
+		player_is_falling();
+	}
+	
 	// scoring
 	if chain_multiplier>15 bonus_score = 10000; else
 	if chain_multiplier>3 bonus_score = 1000; else

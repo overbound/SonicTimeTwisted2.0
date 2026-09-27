@@ -25,8 +25,12 @@ default: // normal activity
     // update position table
     ds_list_add(xtable, x);
     ds_list_add(ytable, y);
+    ds_list_add(anim_table, animation_new);
+    ds_list_add(angle_table, angle);
     if ds_list_size(xtable)>table_size ds_list_delete(xtable, 0);
     if ds_list_size(ytable)>table_size ds_list_delete(ytable, 0);
+    if ds_list_size(anim_table)>table_size ds_list_delete(anim_table, 0);
+    if ds_list_size(angle_table)>table_size ds_list_delete(angle_table, 0);
 
     // execute state
     if state and not state_reset script_execute(state);

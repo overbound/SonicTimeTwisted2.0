@@ -42,6 +42,10 @@ function player_get_shield(argument0) {
 	    if shield_type!=argument0 shield = instance_create(floor(x), floor(y), objShieldEarth);
 	        if objLevel.started && objProgram.cutscene == false
 	            play_sfx(sndRockSmash);
+	case 6:
+	    if shield_type!=argument0 shield = instance_create(floor(x), floor(y), objShieldDigital);
+	        if objLevel.started && objProgram.cutscene == false
+	            play_sfx(sndRockSmash);
 	}
 	// modify shield properties
 	if shield_type!=argument0

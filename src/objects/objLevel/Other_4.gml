@@ -64,6 +64,13 @@ if spawn_id>-1
     if spawn_id.start_script != noone
         script_execute(spawn_id.start_script);
     
+    // Spawn CPU Tails follower (only when not playing as Tails)
+    with (objTailsCPU) instance_destroy();
+    if (objGameData.character_id[0] != 2) {
+        var _cpu_tails = instance_create(player[0].x - 32, player[0].y, objTailsCPU);
+        _cpu_tails.leader = player[0];
+    }
+    
 }
 // reset temporary data
 objProgram.time_traveling = 0;

@@ -17,6 +17,10 @@ __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) + (11) );
 animation_reset = true;
 animation_handler = new AnimationHandler(id);
 
+// homing
+homing_target = false;
+homing_timer = 0;
+
 // states and flags
 state = objProgram.temp_state;
 state_reset = false;
@@ -114,6 +118,8 @@ super_lose_rings = false;
 table_size = 64;
 xtable = ds_list_create();
 ytable = ds_list_create();
+anim_table = ds_list_create();
+angle_table = ds_list_create();
 
 // sound
 reserved_sound = -1;
