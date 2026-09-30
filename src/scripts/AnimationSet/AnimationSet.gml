@@ -1,6 +1,6 @@
 /// @description  AnimationSet(sprite, frames, loop, speed_func, [loop_frame], [on_end], [step_callback])
 /// @param sprite         Default sprite resource for this animation
-/// @param frames         Array of AnimFrame structs
+/// @param frames         Array of AnimFrame structs (nested arrays auto-flattened)
 /// @param loop           Whether the animation loops
 /// @param speed_func     Function(owner) returning playback speed
 /// @param loop_frame     Frame index to loop back to (default 0)
@@ -8,7 +8,20 @@
 /// @param step_callback  Function(owner) called every step for custom logic (optional)
 function AnimationSet(_sprite, _frames, _loop, _speed_func, _loop_frame, _on_end, _step_callback) constructor {
 	sprite = _sprite;
-	frames = _frames;
+
+	// Flatten nested arrays (from multiple AnimFrames() calls in one frames array)
+	var _flat = [];
+	for (var i = 0; i < array_length(_frames); i++) {
+		if (is_array(_frames[i])) {
+			for (var j = 0; j < array_length(_frames[i]); j++) {
+				array_push(_flat, _frames[i][j]);
+			}
+		} else {
+			array_push(_flat, _frames[i]);
+		}
+	}
+	frames = _flat;
+
 	loop = _loop;
 	speed_func = _speed_func;
 	loop_frame = 0;

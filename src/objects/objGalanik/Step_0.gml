@@ -109,8 +109,8 @@ case 6:
     depth = -2000;
     
     if image_xscale > 6 {
-        // final super sonic level
-        if objProgram.special_future_current_level>=7 && objGameData.character_id[0] == 1 {
+        // final super level - any character with all seven emeralds
+        if objProgram.special_future_current_level>=7 {
             objProgram.current_level+=1;
             objProgram.spawn_time = 36000;
             objProgram.temp_spawn_time = -1;

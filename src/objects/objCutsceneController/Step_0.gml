@@ -13,7 +13,7 @@ if alarm[0] == -1 {
 }
 break;
 case 1:
-if camera_get_view_x(view_camera[0]) < 426 + (213 - (objScreen.aspect_mode ? 160 : 0)) {
+if camera_get_view_x(view_camera[0]) < 426 + (objScreen.aspect_mode ? 53 : 0) {
     camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) + 2, camera_get_view_y(view_camera[0]));
 } else if alarm[0] == -1 {
     alarm[0] = 20;

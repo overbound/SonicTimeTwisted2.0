@@ -55,8 +55,8 @@ function input_method_init_ssgyro() {
 	    }
 	}
 	input_draw_script = input_method_draw_ssgyro;
-	// Enable super button if the character is Sonic and all seven Chaod Emeralds are collected
-	super_button_enabled = (objGameData.character_id[0] == 1)
+	// Enable super button if the character can go super and all seven Chaos Emeralds are collected
+	super_button_enabled = (objGameData.character_id[0] >= 1 && objGameData.character_id[0] <= 3)
 	    && (objProgram.special_future_current_level >= 7);
 	if(!objProgram.inputManager.smartphone_controls_enabled)
 	{
