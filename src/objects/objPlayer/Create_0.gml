@@ -15,6 +15,7 @@ timeline_speed = 1;
 __view_set( e__VW.XView, 0, camera_get_view_x(view_camera[0]) + (11) );
     
 animation_reset = true;
+animation_handler = new AnimationHandler(id);
 
 // states and flags
 state = objProgram.temp_state;

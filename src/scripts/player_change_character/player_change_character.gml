@@ -37,7 +37,7 @@ function player_change_character(argument0, argument1) {
 	    break;
 	}
 	// start animation
-	if animation_table>-1 timeline_running = true;
+	if animation_table>-1 animation_reset = true;
 
 
 
