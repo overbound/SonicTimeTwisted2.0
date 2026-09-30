@@ -1,4 +1,6 @@
 function player_reload_special_moves(){
+	// always initialise so non-Sonic characters never read an undefined variable
+	special_move_mode = 0;
 	if (character_id == 1)
 	{
 		// Sonic's special moves init

@@ -132,9 +132,13 @@ function build_sonic_animations() {
 	true, anim_speed_fixed));
 
 	// peelout — walk→jog→sprint with sprite changes
+	// frame 14 is the loop point (original timeline moment 22): it sets
+	// image_index only and must NOT change sprite_index, otherwise the
+	// sprint sheet snaps back to jog on every loop iteration.
 	ds_map_add(_map, "peelout", new AnimationSet(undefined, [
 		AnimFrames([0, 1, 2, 3, 4, 5, 6, 7], 2, sprSonicWalk),
-		AnimFrames([0, 1, 2, 3, 4, 5, 6], 1, sprSonicJog),
+		AnimFrames([0, 1, 2, 3, 4, 5], 1, sprSonicJog),
+		new AnimFrame(6, 1),
 		AnimFrames([0, 1, 2, 3], 1, sprSonicSprint)
 	], true, anim_speed_fixed, 14));
 
@@ -314,6 +318,11 @@ function build_tails_animations() {
 		AnimSingle(0, 24),
 	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
+	// transform - no dedicated sprite, flicker between idle poses
+	ds_map_add(_map, "transform", new AnimationSet(sprTailsIdle,
+		AnimFrames([0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0], [6, 6, 3, 3, 3, 3, 3, 3, 3, 3, 3]),
+	false, anim_speed_fixed));
+
 	// wrap_post
 	ds_map_add(_map, "wrap_post", new AnimationSet(sprTailsRotate,
 		AnimFrames([0, 1, 2, 3, 4, 5], 2),
@@ -486,6 +495,11 @@ function build_knuckles_animations() {
 		AnimSingle(0, 24),
 	false, anim_speed_fixed, 0, anim_cb_end_walk));
 
+	// transform - no dedicated sprite, flicker between idle poses
+	ds_map_add(_map, "transform", new AnimationSet(sprKnucklesIdle,
+		AnimFrames([0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0], [6, 6, 3, 3, 3, 3, 3, 3, 3, 3, 3]),
+	false, anim_speed_fixed));
+
 	// wrap_post
 	ds_map_add(_map, "wrap_post", new AnimationSet(sprKnucklesRotate,
 		AnimFrames([0, 1, 2, 3, 4, 5], 2),
@@ -543,7 +557,7 @@ function build_knuckles_animations() {
 
 	// climb_end
 	ds_map_add(_map, "climb_end", new AnimationSet(sprKnucklesClamber,
-		AnimFrames([0, 1, 2], [7, 6, 6]),
+		AnimFrames([0, 1, 2], [7, 6, 7]),
 	false, anim_speed_fixed));
 
 	// 3DTurn
@@ -653,9 +667,12 @@ function build_super_sonic_animations() {
 	true, anim_speed_fixed));
 
 	// peelout — walk→run with sprite change
+	// frame 14 is the loop point (original timeline moment 22): image_index
+	// only, no sprite change — otherwise run snaps back to walk each loop.
 	ds_map_add(_map, "peelout", new AnimationSet(undefined, [
 		AnimFrames([0, 1, 2, 3, 4, 5, 6, 7], 2, sprSuperSonicWalk),
-		AnimFrames([0, 1, 2, 3, 4, 5, 6], 1, sprSuperSonicWalk),
+		AnimFrames([0, 1, 2, 3, 4, 5], 1, sprSuperSonicWalk),
+		new AnimFrame(6, 1),
 		AnimFrames([0, 1], 1, sprSuperSonicRun)
 	], true, anim_speed_fixed, 14));
 

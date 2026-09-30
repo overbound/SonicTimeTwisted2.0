@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_super_tint",
+  "name":"shd_super_tint",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

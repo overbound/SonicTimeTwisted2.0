@@ -32,6 +32,22 @@ if underwater and shield_type!=1 and !objProgram.cutscene
     waterCountAlpha = 0;
 }
 
+// super form visuals: spark trail and cycling tint
+if (superform > 0)
+{
+    if (abs(xspeed + yspeed) >= 7 && sparktimer < 1)
+    {
+        instance_create(x, y, objSuperSpark);
+        sparktimer = 45;
+    }
+    else if (sparktimer > 0) sparktimer -= 1;
+
+    current_pal = wrap(current_pal + 0.0625, 6);
+} else {
+    current_pal = 0;
+    sparktimer = 0;
+}
+
 // superform
 if superform
 {

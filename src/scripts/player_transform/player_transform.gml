@@ -12,6 +12,10 @@ function player_transform(argument0) {
 	    case 1: // sonic
 	        animation_table = objResources.anim_sonic_super;
 	        break;
+	    case 2: // tails
+	    case 3: // knuckles
+	        // no separate super animation set - the palette swap sells the form
+	        break;
 	    }
 	}
 	else
@@ -25,6 +29,10 @@ function player_transform(argument0) {
 	    {
 	    case 1: // sonic
 	        animation_table = objResources.anim_sonic;
+	        animation_reset = true;
+	        break;
+	    case 2: // tails
+	    case 3: // knuckles
 	        animation_reset = true;
 	        break;
 	    }

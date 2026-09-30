@@ -61,6 +61,12 @@ superspeed = 0;
 superform = -1;
 last_frame_down_pressed = 0;
 
+// super form tint
+current_pal = 0;
+sparktimer = 0;
+u_super_tint_char = shader_get_uniform(shd_super_tint, "u_char");
+u_super_tint_pulse = shader_get_uniform(shd_super_tint, "u_pulse");
+
 // camera
 camera = instance_create(x, y, objCamera);
 
