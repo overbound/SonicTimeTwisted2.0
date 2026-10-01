@@ -10,7 +10,7 @@ function player_is_exiting() {
 	rolling_jump = false;
 	jump_action = true;
 	spindashing = false;
-	if superform {
+	if specialForm {
 	    objProgram.temp_superform = true;
 	}
 	objProgram.temp_shield = shield_type;

@@ -25,16 +25,16 @@ switch other.win_icon {
 case 7:
     player_get_rings(50); break;
 case 8:
-    if not superform {superspeed = 1200; player_reset_physics(); play_jingle(bgmSpeedUp, true); } break;
+    if not specialForm {superspeed = 1200; player_reset_physics(); play_jingle(bgmSpeedUp, true); } break;
 case 9:
-    if not superform player_get_invincibility(); break;
+    if not specialForm player_get_invincibility(); break;
 case 10:
-    if not superform && objGameData.rings[0] > 0 
+    if not specialForm && objGameData.rings[0] > 0 
         player_hit(0, sndHurt)
         else play_sfx(sndHurt, 4);
         break;
 case 11:
-    if not superform && objGameData.rings[0] > 0 
+    if not specialForm && objGameData.rings[0] > 0 
         player_hit(0, sndHurt)
         else play_sfx(sndHurt, 4);
         break;

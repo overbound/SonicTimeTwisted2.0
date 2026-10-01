@@ -1,7 +1,7 @@
 function player_get_invincibility() {
 	// player_get_invincibility()
 	// hide shield
-	if !superform
+	if !specialForm
 	    with shield visible = false;
 	// refresh if already created
 	if invincibility {

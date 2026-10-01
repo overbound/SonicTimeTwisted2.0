@@ -50,7 +50,7 @@ function player_get_shield(argument0) {
 	    shield.image_xscale = facing;
 	    shield.depth = depth-1;
 	    shield.player_id = id;
-	    if (invincibility || superform) shield.visible = false;
+	    if (invincibility || specialForm) shield.visible = false;
 	}
 
 

@@ -17,7 +17,7 @@ function player_reaction_capsule(argument0) {
 	        }
 
 	// remove super form
-	if superform != -1
+	if specialForm != -1
 	    player_transform(false);
     
 	// clear underwater timer

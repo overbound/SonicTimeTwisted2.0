@@ -2,7 +2,7 @@
 // Super form tint: keep the shader bound to the player sprite only. current_pal
 // runs 0 -> 6, which is a triangle wave peaking at 3, matching the cycle the
 // palette table used to drive.
-var swap_tint = (superform > 0) && (character_id >= 1) && (character_id <= 3);
+var swap_tint = (specialForm > 0) && (character_id >= 1) && (character_id <= 3);
 if (swap_tint)
 {
     shader_set(shd_super_tint);

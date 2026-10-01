@@ -5,7 +5,7 @@ function player_reaction_boss(argument0) {
 	// ignore if already hit
 	if argument0.alarm[0] return false;
 	// if not spinning or invincible
-	if argument0.invulnerable or not (spinning or spindashing or invincibility or superform or state==player_state_glide or instashield)
+	if argument0.invulnerable or not (spinning or spindashing or invincibility or specialForm or state==player_state_glide or instashield)
 	{
 	    // abort if already hit
 	    if invulnerable or (state==player_state_hurt) return false;

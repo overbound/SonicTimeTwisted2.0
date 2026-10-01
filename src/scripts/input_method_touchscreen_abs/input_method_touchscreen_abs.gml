@@ -56,7 +56,7 @@ function input_method_touchscreen_abs() {
 	                    with(objPlayer)
 	                    {
 	                        is_invulnerable = is_invulnerable || invulnerable;
-	                        is_super = is_super || superform;
+	                        is_super = is_super || specialForm;
 	                        is_jumping = is_jumping|| jumping;
 	                    }
                     

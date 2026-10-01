@@ -58,7 +58,7 @@ underwater_count = -1;
 invulnerable = 0;
 ignore_rings = 0;
 superspeed = 0;
-superform = -1;
+specialForm = -1;
 last_frame_down_pressed = 0;
 
 // super form tint
