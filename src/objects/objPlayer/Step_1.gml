@@ -33,7 +33,7 @@ if underwater and shield_type!=1 and !objProgram.cutscene
 }
 
 // super form visuals: spark trail and cycling tint
-if (specialForm > 0)
+if (specialForm)
 {
     if (abs(xspeed + yspeed) >= 7 && sparktimer < 1)
     {
@@ -53,11 +53,11 @@ if specialForm
 {
     if objLevel.stage_timer_active
     {
-        specialForm++;
+        specialFormTimer++;
         // subtract a ring every second
-        if (specialForm >= 61)
+        if (specialFormTimer >= 61)
         {
-            specialForm = 1;
+            specialFormTimer = 1;
             objGameData.rings[0] -= 1;
             if objGameData.rings[0]<=0 player_transform(false);
         }

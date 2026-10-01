@@ -4,8 +4,9 @@ function player_transform(argument0) {
 	// transform or de-transform?
 	if argument0
 	{
-	    // set specialForm counter
+	    // set special form
 	    specialForm = 1;
+	    specialFormTimer = 0;
 	    // setup animation based on character
 	    switch character_id
 	    {
@@ -21,7 +22,8 @@ function player_transform(argument0) {
 	else
 	{
 	    // clear states
-	    specialForm = -1;
+	    specialForm = 0;
+	    specialFormTimer = 0;
 	    // reveal shield
 	    with shield visible = true;
 	    // setup animation based on character
