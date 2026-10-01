@@ -14,7 +14,10 @@ function player_state_peelout() {
 	if not input_check(cUP)
 	{
 	    // chrono time travel on a full charge
-	    if peelout_charge>=30 && specialForm >= 2
+	    // The last 2 levels don't have pasts, so no time travel in
+	    // Planetary Panic Zone (PP1, PP2) or Sunken Saucer (SS1).
+	    // This could be enhanced later.
+	    if peelout_charge>=30 && specialForm >= 2 && room!=PP1 && room!=PP2 && room!=SS1
 	    {
 	        // match nearest spawn by position in the opposite timeline
 	        objProgram.spawn_by_position = true;
