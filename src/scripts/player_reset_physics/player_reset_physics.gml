@@ -42,8 +42,8 @@ function player_reset_physics() {
 	    air_acceleration *= 2;
 	    roll_friction *= 2;
 	}
-	// specialForm modification
-	if specialForm
+	// specialForm modification (speed boost: Super/Hybrid only, Chrono keeps normal movement)
+	if specialForm == 1 || specialForm == 3
 	{
 	    // check character
 	    switch character_id
@@ -76,7 +76,7 @@ function player_reset_physics() {
 	    acceleration *= 0.5;
 	    deceleration *= 0.5;
 	    air_acceleration *= 0.5;
-	    if not specialForm {ground_friction *= 0.5; roll_friction *= 0.5;}
+	    if (specialForm != 1 && specialForm != 3) {ground_friction *= 0.5; roll_friction *= 0.5;}
 	    // gravity values
 	    jump_constant = 3.5-(0.5*(character_id==3));
 	    jump_release *= 0.5;
