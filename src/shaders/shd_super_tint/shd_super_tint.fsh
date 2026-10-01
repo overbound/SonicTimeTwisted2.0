@@ -47,13 +47,13 @@ void main()
     {
         // Super Sonic: his existing gold and yellow shades brighten.
         // Chrono: the same shades map to bronze.
-        if (hit(s, vec3(255.0, 255.0, 185.0) / 255.0)) r = form_mix(tint(s), tint(vec3(245.0, 230.0, 200.0) / 255.0));
-        if (hit(s, vec3(248.0, 241.0,  91.0) / 255.0)) r = form_mix(tint(s), tint(vec3(230.0, 205.0, 150.0) / 255.0));
-        if (hit(s, vec3(240.0, 230.0,  81.0) / 255.0)) r = form_mix(tint(s), tint(vec3(220.0, 190.0, 135.0) / 255.0));
-        if (hit(s, vec3(234.0, 209.0,  74.0) / 255.0)) r = form_mix(tint(s), tint(vec3(210.0, 175.0, 120.0) / 255.0));
-        if (hit(s, vec3(232.0, 171.0,  65.0) / 255.0)) r = form_mix(tint(s), tint(vec3(195.0, 150.0, 100.0) / 255.0));
-        if (hit(s, vec3(220.0, 125.0,   0.0) / 255.0)) r = form_mix(tint(s), tint(vec3(170.0, 120.0,  60.0) / 255.0));
-        if (hit(s, vec3(219.0, 132.0,  54.0) / 255.0)) r = form_mix(tint(s), tint(vec3(175.0, 125.0,  70.0) / 255.0));
+        if (hit(s, vec3(255.0, 255.0, 185.0) / 255.0)) r = form_mix(tint(s), tint(vec3(238.0, 215.0, 165.0) / 255.0));
+        if (hit(s, vec3(248.0, 241.0,  91.0) / 255.0)) r = form_mix(tint(s), tint(vec3(222.0, 190.0, 120.0) / 255.0));
+        if (hit(s, vec3(240.0, 230.0,  81.0) / 255.0)) r = form_mix(tint(s), tint(vec3(212.0, 175.0, 105.0) / 255.0));
+        if (hit(s, vec3(234.0, 209.0,  74.0) / 255.0)) r = form_mix(tint(s), tint(vec3(202.0, 160.0,  90.0) / 255.0));
+        if (hit(s, vec3(232.0, 171.0,  65.0) / 255.0)) r = form_mix(tint(s), tint(vec3(187.0, 136.0,  72.0) / 255.0));
+        if (hit(s, vec3(220.0, 125.0,   0.0) / 255.0)) r = form_mix(tint(s), tint(vec3(162.0, 105.0,  40.0) / 255.0));
+        if (hit(s, vec3(219.0, 132.0,  54.0) / 255.0)) r = form_mix(tint(s), tint(vec3(167.0, 110.0,  50.0) / 255.0));
     }
     else if (u_char < 2.5)
     {
