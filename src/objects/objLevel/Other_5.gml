@@ -13,6 +13,7 @@ if cleared
     objProgram.spawn_time = 36000;
     objProgram.temp_spawn_tag = -1;
     objProgram.temp_spawn_time = -1;
+    objProgram.spawn_by_position = false;
     objProgram.cutscene = false;
     
     if ds_exists(objProgram.life_future_list,ds_type_list) {

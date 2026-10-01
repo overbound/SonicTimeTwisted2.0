@@ -8,6 +8,7 @@ if (swap_tint)
     shader_set(shd_super_tint);
     shader_set_uniform_f(u_super_tint_char, character_id);
     shader_set_uniform_f(u_super_tint_pulse, 1 - abs(current_pal - 3) / 3);
+    shader_set_uniform_f(u_super_tint_form, specialForm);
 }
 if sprite_index>-1 draw_sprite_ext(sprite_index, image_index, floor(x), floor(y)+sprite_y_offset, image_xscale*facing, image_yscale, image_angle, image_blend, image_alpha);
 if (swap_tint) shader_reset();

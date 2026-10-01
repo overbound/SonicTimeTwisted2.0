@@ -4,8 +4,10 @@ function player_transform(argument0) {
 	// transform or de-transform?
 	if argument0
 	{
-	    // set special form
-	    specialForm = 1;
+	    // set special form: emeralds = super, stones = chrono, both = hybrid
+	    if objProgram.special_future_current_level>=7 && objProgram.special_past_current_level>=7 specialForm = 3; else
+	    if objProgram.special_past_current_level>=7 specialForm = 2; else
+	    if objProgram.special_future_current_level>=7 specialForm = 1; else specialForm = 0;
 	    specialFormTimer = 0;
 	    // setup animation based on character
 	    switch character_id

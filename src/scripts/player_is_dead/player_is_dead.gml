@@ -15,6 +15,7 @@ function player_is_dead() {
 	sliding = 0;
 	underwater_count = -1;
 	superspeed = 0;
+	objProgram.spawn_by_position = false;
 	// physics values
 	player_reset_physics();
 	// camera
