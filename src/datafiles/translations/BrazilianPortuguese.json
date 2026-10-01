@@ -117,6 +117,7 @@
 		"_specialstage_menu_Try_Again": "Tentar novamente",
 		"_specialstage_menu_Quit": "Sair",
 		"_specialstage_menu_Try_Again_life": "Revanche (-1 vida)",
+		"_specialstage_menu_Try_Again_coin": "Revanche (-1 coin)",
 		"_specialstage_menu_Return_to_act": "Retornar ao ato",
 
 		"_chselect_Title": "Selecionar personagem",
@@ -177,6 +178,7 @@
 		"_menu_options_Sound": "Áudio",
 		"_menu_options_Input": "Input",
 		"_menu_options_Localization": "Localização",
+		"_menu_options_Gameplay": "Gameplay Settings",
 		"_menu_options_WaD": "Avisos Importantes",
 		"_menu_options_Reset": "Reset",
 		"_menu_options_Reset_Confirm": "Reset all options to default?\nSaved games will be kept.",
@@ -313,6 +315,11 @@
 		"_menu_i18n_Reload": "Recarregar arquivo",
 		"_menu_i18n_Export": "Exportar fontes internas",
 
+		"_menu_gameplay_Title": "Gameplay Settings",
+		"_menu_gameplay_Lives": "Lives System",
+		"_menu_gameplay_Lives_Classic": "Classic",
+		"_menu_gameplay_Lives_Origins": "Origins",
+		
 		"_startText_PC": "Pressione start",
 		"_startText_MO": "Toque para iniciar",
 
@@ -324,6 +331,7 @@
 		"_charname_0": "SONIC",
 		"_charname_1": "TAILS",
 		"_charname_2": "K.T.E",
+		"_charname_COINS": "COINS",
 		"_charname_2_wide": "KNUCKLES",
 		"_charname_0_lc": "Sonic",
 		"_charname_1_lc": "Tails",

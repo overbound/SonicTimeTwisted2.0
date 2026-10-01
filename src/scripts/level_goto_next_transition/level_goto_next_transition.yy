@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"level_goto_next_transitoin",
+  "%Name":"level_goto_next_transition",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"level_goto_next_transitoin",
+  "name":"level_goto_next_transition",
   "parent":{
     "name":"Transitions",
     "path":"folders/Scripts/Game/Program/Transitions.yy",

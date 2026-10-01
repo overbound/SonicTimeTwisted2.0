@@ -18,7 +18,18 @@ with player_id
             } break;
         case 4: case 5: case 6: case 7: case 8: case 9: player_get_shield(other.image_index-4); break;
         case 10: if not superform player_get_invincibility(); break;
-        default: player_get_lives(1);
+        default: 
+		{
+			if(LIVES_MODE_IS_CLASSIC) 
+			{
+				player_get_lives(1); 
+			}
+			else if(LIVES_MODE_IS_ORIGINS)
+			{
+				player_get_coins(1); 
+			}
+		}
+		break;
     }
 }
 // done

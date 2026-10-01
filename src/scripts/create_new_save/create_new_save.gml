@@ -1,14 +1,13 @@
-function create_new_save(argument0, argument1) {
+function create_new_save(character, saveSlot) {
 	//create_new_save(character, saveslot)
 	// normally, save_data_write would have been used en masse, but for peformance's sake, we don't do it in case of a saved slot
-	var character = argument0;
-	var saveSlot = argument1;
 	if(saveSlot < 0)
 	{
 	    // if no save mode : flush temporary storage
 	    ds_map_clear(objProgram.no_save_data);
 	    save_data_write(STATS, CHARACTER, character);
 	    save_data_write(STATS, LIVES, 3);
+	    save_data_write(STATS, COINS, 0);
 	    save_data_write(LEVELS, aAA1_f, 1);
 	    save_data_write(LEVELS, aAA1_p, 0);
 	    save_data_write(LEVELS, aAA2_f, 0);
@@ -46,6 +45,7 @@ function create_new_save(argument0, argument1) {
 	    stt_ini_open(filename);
 	    ini_write_string(STATS, CHARACTER, base64_encode(string(character)));
 	    ini_write_string(STATS, LIVES, base64_encode(string(3)));
+	    ini_write_string(STATS, COINS, base64_encode(string(0)));
 	    ini_write_string(LEVELS, aAA1_f, base64_encode(string(1)));
 	    ini_write_string(LEVELS, aAA1_p, base64_encode(string(0)));
 	    ini_write_string(LEVELS, aAA2_f, base64_encode(string(0)));

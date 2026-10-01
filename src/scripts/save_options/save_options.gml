@@ -66,6 +66,10 @@ function save_options() {
 	    ini_write_real("sound_settings", "bgm_volume", objMusicNew.bgmGain);
 	    ini_write_real("sound_settings", "master_volume", objMusicNew.masterGain);
 	}
+	if(instance_exists(objGameData))
+	{
+		ini_write_real("gameplay_settings", "lives_settings", objGameData.livesMode)
+	}
 	ini_write_string("localization", "language", global.TR_lang);
 	stt_ini_close();
 	stt_save_files();

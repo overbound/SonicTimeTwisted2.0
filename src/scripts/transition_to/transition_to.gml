@@ -2,8 +2,13 @@
 /// @param kind
 /// @param  next_room
 /// @param  frames
-function transition_to(argument0, argument1, argument2) {
-	with (instance_create(0, 0, argument0)) {next_room = argument1; image_speed = 1/argument2; return id;}
+function transition_to(kind = objFade, _next_room, frames_to_go) {
+	with(instance_create(0, 0, kind)) 
+	{
+		next_room = _next_room; 
+		image_speed = 1/frames_to_go; 
+		return id;
+	}
 	return noone;
 
 
