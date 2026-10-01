@@ -16,12 +16,10 @@ function player_state_peelout() {
 	    // chrono time travel on a full charge
 	    // The last 2 levels don't have pasts, so no time travel in
 	    // Planetary Panic Zone (PP1, PP2) or Sunken Saucer (SS1).
-	    // No time travel during boss fights either: every boss fight
-	    // switches the music state to STATE_BOSS, except the final
-	    // boss (MM1) which runs on regular level music (room check).
+	    // objProgram.boss_mode blocks travel during boss fights and
+	    // stays on until death or a fresh level start.
 	    // This could be enhanced later.
-	    var _boss_fight = instance_exists(objMusicNew) && objMusicNew.state == states_music.STATE_BOSS;
-	    if peelout_charge>=30 && specialForm >= 2 && room!=PP1 && room!=PP2 && room!=SS1 && room!=MM1 && !_boss_fight
+	    if peelout_charge>=30 && specialForm >= 2 && room!=PP1 && room!=PP2 && room!=SS1 && !objProgram.boss_mode
 	    {
 	        // match nearest spawn by position in the opposite timeline
 	        objProgram.spawn_by_position = true;

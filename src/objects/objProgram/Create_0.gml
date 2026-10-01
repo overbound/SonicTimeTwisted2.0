@@ -40,6 +40,7 @@ spawn_by_position = false;
 spawn_pos_x = 0;
 spawn_pos_y = 0;
 in_past = false;
+boss_mode = false;
 temp_shield = -1;
 temp_xspeed = 0;
 temp_yspeed = 0;
