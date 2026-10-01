@@ -29,6 +29,13 @@ vec3 tint(vec3 c)
     return mix(c, vec3(1.0), u_pulse * 0.5);
 }
 
+// Chrono bronze pulse: warms toward light bronze instead of washing to white,
+// so the form stays brown through the whole brightness cycle.
+vec3 tint_bronze(vec3 c)
+{
+    return mix(c, vec3(1.0, 0.80, 0.55), u_pulse * 0.30);
+}
+
 vec3 form_mix(vec3 gold, vec3 bronze)
 {
     if (u_form < 1.5) return gold;
@@ -46,14 +53,15 @@ void main()
     if (u_char < 1.5)
     {
         // Super Sonic: his existing gold and yellow shades brighten.
-        // Chrono: the same shades map to bronze.
-        if (hit(s, vec3(255.0, 255.0, 185.0) / 255.0)) r = form_mix(tint(s), tint(vec3(238.0, 215.0, 165.0) / 255.0));
-        if (hit(s, vec3(248.0, 241.0,  91.0) / 255.0)) r = form_mix(tint(s), tint(vec3(222.0, 190.0, 120.0) / 255.0));
-        if (hit(s, vec3(240.0, 230.0,  81.0) / 255.0)) r = form_mix(tint(s), tint(vec3(212.0, 175.0, 105.0) / 255.0));
-        if (hit(s, vec3(234.0, 209.0,  74.0) / 255.0)) r = form_mix(tint(s), tint(vec3(202.0, 160.0,  90.0) / 255.0));
-        if (hit(s, vec3(232.0, 171.0,  65.0) / 255.0)) r = form_mix(tint(s), tint(vec3(187.0, 136.0,  72.0) / 255.0));
-        if (hit(s, vec3(220.0, 125.0,   0.0) / 255.0)) r = form_mix(tint(s), tint(vec3(162.0, 105.0,  40.0) / 255.0));
-        if (hit(s, vec3(219.0, 132.0,  54.0) / 255.0)) r = form_mix(tint(s), tint(vec3(167.0, 110.0,  50.0) / 255.0));
+        // Chrono: the same shades map to dark bronze (#804A00 reference).
+        if (hit(s, vec3(255.0, 255.0, 185.0) / 255.0)) r = form_mix(tint(s), tint_bronze(vec3(185.0, 112.0,  28.0) / 255.0));
+        if (hit(s, vec3(248.0, 241.0,  91.0) / 255.0)) r = form_mix(tint(s), tint_bronze(vec3(165.0,  98.0,  18.0) / 255.0));
+        if (hit(s, vec3(240.0, 230.0,  81.0) / 255.0)) r = form_mix(tint(s), tint_bronze(vec3(150.0,  88.0,  10.0) / 255.0));
+        if (hit(s, vec3(234.0, 209.0,  74.0) / 255.0)) r = form_mix(tint(s), tint_bronze(vec3(140.0,  82.0,   5.0) / 255.0));
+        if (hit(s, vec3(232.0, 171.0,  65.0) / 255.0)) r = form_mix(tint(s), tint_bronze(vec3(128.0,  74.0,   0.0) / 255.0));
+        if (hit(s, vec3(224.0, 160.0,   0.0) / 255.0)) r = form_mix(tint(s), tint_bronze(vec3(118.0,  68.0,   0.0) / 255.0));
+        if (hit(s, vec3(220.0, 125.0,   0.0) / 255.0)) r = form_mix(tint(s), tint_bronze(vec3(105.0,  60.0,   0.0) / 255.0));
+        if (hit(s, vec3(219.0, 132.0,  54.0) / 255.0)) r = form_mix(tint(s), tint_bronze(vec3(112.0,  65.0,   2.0) / 255.0));
     }
     else if (u_char < 2.5)
     {
