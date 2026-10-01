@@ -2,7 +2,7 @@
 
 ## Prerequisites
 - GameMaker Studio 2 runtime installed at `C:\ProgramData\GameMakerStudio2\Cache\runtimes\runtime-2024.14.3.260`
-- Valid GM license in user folder `C:\Users\class\AppData\Roaming\GameMakerStudio2\overbound_724712`
+- Valid GM license in user folder `C:\Users\<user>\AppData\Roaming\GameMakerStudio2\overbound_724712`
 - Android SDK/NDK set up in GM's `local_settings.json`
 
 ## Command
@@ -12,7 +12,7 @@ Run from PowerShell with the working directory set to `src/`:
 ```powershell
 $igor = "C:\ProgramData\GameMakerStudio2\Cache\runtimes\runtime-2024.14.3.260\bin\igor\windows\x64\Igor.exe"
 $rp   = "C:\ProgramData\GameMakerStudio2\Cache\runtimes\runtime-2024.14.3.260"
-$uf   = "C:\Users\class\AppData\Roaming\GameMakerStudio2\overbound_724712"
+$uf   = "C:\Users\<user>\AppData\Roaming\GameMakerStudio2\overbound_724712"
 $yyp  = "src\SonicTimeTwisted.yyp"
 $out  = "..\SonicTimeTwisted.apk"
 
@@ -21,7 +21,7 @@ $out  = "..\SonicTimeTwisted.apk"
 
 The working directory **must** be the `src` folder:
 ```
-cd C:\Users\class\git\SonicTimeTwisted2.0_new\src
+cd ... \SonicTimeTwisted2.0_new\src
 ```
 
 ## Critical: `--config=Android`
@@ -35,6 +35,6 @@ Without `--config=Android`, the build uses the `Default` configuration which has
 | compile_sdk | 33 | 34 |
 
 ## Output
-The APK is written to the repo root: `C:\Users\class\git\SonicTimeTwisted2.0_new\SonicTimeTwisted.apk`
+The APK is written to the repo root: `... \SonicTimeTwisted2.0_new\SonicTimeTwisted.apk`
 
 Build time is ~8-12 minutes on this machine.
