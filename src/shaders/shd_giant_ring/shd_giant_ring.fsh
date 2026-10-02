@@ -1,14 +1,13 @@
-// Giant ring recolour + emission glow.
+// Giant ring recolour + soft emission glow.
 //
 // The object always draws the gold ring sprite; the past-timezone bronze look
-// is produced here by remapping the baked gold palette, mirroring how
-// shd_super_tint remaps the super-form golds. The bronze ramp follows the
-// Chrono palette (#4B230F .. #CCA572).
+// is produced here by mapping the sprite's luminance through a continuous
+// bronze gradient (high colour, no palette swap). The gradient runs from a
+// deep shadow through copper and bronze to a warm highlight, keeping the
+// Chrono palette identity (#4B230F .. #CCA572 family).
 //
-// u_bronze 0 = gold (original colours), 1 = bronze (Chrono palette)
+// u_bronze 0 = gold (original colours), 1 = bronze (Chrono gradient)
 // u_glow   0 = base pass, 1 = additive emission pass (brightened for bloom)
-
-#define TOL 0.010
 
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
@@ -16,30 +15,35 @@ varying vec4 v_vColour;
 uniform float u_bronze;
 uniform float u_glow;
 
-bool hit(vec3 a, vec3 b)
+vec3 ramp(float t)
 {
-    return distance(a, b) < TOL;
+    vec3 c0 = vec3( 51.0,  21.0,  10.0) / 255.0; // deep shadow
+    vec3 c1 = vec3(150.0,  60.0,  20.0) / 255.0; // copper
+    vec3 c2 = vec3(196.0, 110.0,  45.0) / 255.0; // copper orange
+    vec3 c3 = vec3(208.0, 145.0,  75.0) / 255.0; // mid bronze
+    vec3 c4 = vec3(228.0, 195.0, 140.0) / 255.0; // light bronze gold
+    vec3 c5 = vec3(255.0, 244.0, 224.0) / 255.0; // warm highlight
+    if (t < 0.31) return mix(c0, c1, t / 0.31);
+    if (t < 0.57) return mix(c1, c2, (t - 0.31) / 0.26);
+    if (t < 0.69) return mix(c2, c3, (t - 0.57) / 0.12);
+    if (t < 0.92) return mix(c3, c4, (t - 0.69) / 0.23);
+    return mix(c4, c5, clamp((t - 0.92) / 0.08, 0.0, 1.0));
 }
 
 void main()
 {
     vec4 col = texture2D(gm_BaseTexture, v_vTexcoord);
-
-    vec3 s = col.rgb;
-    vec3 r = s;
+    vec3 r = col.rgb;
 
     if (u_bronze > 0.5)
     {
-        if (hit(s, vec3(224.0, 224.0,   0.0) / 255.0)) r = vec3(204.0, 165.0, 114.0) / 255.0;
-        if (hit(s, vec3(224.0, 160.0,   0.0) / 255.0)) r = vec3(165.0, 126.0,  84.0) / 255.0;
-        if (hit(s, vec3(224.0, 128.0,   0.0) / 255.0)) r = vec3(149.0, 109.0,  71.0) / 255.0;
-        if (hit(s, vec3(192.0,  64.0,   0.0) / 255.0)) r = vec3(114.0,  74.0,  45.0) / 255.0;
-        if (hit(s, vec3(128.0,   0.0,   0.0) / 255.0)) r = vec3( 75.0,  35.0,  15.0) / 255.0;
-        if (hit(s, vec3(224.0, 224.0, 224.0) / 255.0)) r = vec3(255.0, 242.0, 222.0) / 255.0;
+        float l = dot(col.rgb, vec3(0.2126, 0.7152, 0.0722));
+        float t = clamp((l - 0.10) / 0.78, 0.0, 1.0);
+        r = ramp(t);
     }
 
     // emission pass: brighten for the additive glow draw
-    r *= mix(1.0, 1.5, u_glow);
+    r *= mix(1.0, 1.25, u_glow);
 
     gl_FragColor = v_vColour * vec4(r, col.a);
 }
