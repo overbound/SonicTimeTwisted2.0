@@ -66,19 +66,19 @@ void main()
     else if (u_char < 2.5)
     {
         // Super Tails: orange and red fur turns gold; chrono turns bronze.
-        if (hit(s, vec3(136.0,   0.0,   0.0) / 255.0)) r = form_mix(tint(vec3(136.0, 109.0,   0.0) / 255.0), tint(vec3(109.0,  72.0,  36.0) / 255.0));
-        if (hit(s, vec3(204.0,  68.0,   0.0) / 255.0)) r = form_mix(tint(vec3(204.0, 163.0,   0.0) / 255.0), tint(vec3(153.0, 102.0,  41.0) / 255.0));
-        if (hit(s, vec3(238.0, 136.0,   0.0) / 255.0)) r = form_mix(tint(vec3(238.0, 190.0,   0.0) / 255.0), tint(vec3(184.0, 136.0,  68.0) / 255.0));
-        if (hit(s, vec3(238.0, 170.0,   0.0) / 255.0)) r = form_mix(tint(vec3(238.0, 190.0,   0.0) / 255.0), tint(vec3(196.0, 158.0,  92.0) / 255.0));
-        if (hit(s, vec3(238.0, 238.0,   0.0) / 255.0)) r = form_mix(tint(vec3(238.0, 190.0,   0.0) / 255.0), tint(vec3(215.0, 200.0, 150.0) / 255.0));
+        if (hit(s, vec3(136.0,   0.0,   0.0) / 255.0)) r = form_mix(tint(vec3(136.0, 109.0,   0.0) / 255.0), tint_bronze(vec3(109.0,  72.0,  36.0) / 255.0));
+        if (hit(s, vec3(204.0,  68.0,   0.0) / 255.0)) r = form_mix(tint(vec3(204.0, 163.0,   0.0) / 255.0), tint_bronze(vec3(153.0, 102.0,  41.0) / 255.0));
+        if (hit(s, vec3(238.0, 136.0,   0.0) / 255.0)) r = form_mix(tint(vec3(238.0, 190.0,   0.0) / 255.0), tint_bronze(vec3(184.0, 136.0,  68.0) / 255.0));
+        if (hit(s, vec3(238.0, 170.0,   0.0) / 255.0)) r = form_mix(tint(vec3(238.0, 190.0,   0.0) / 255.0), tint_bronze(vec3(196.0, 158.0,  92.0) / 255.0));
+        if (hit(s, vec3(238.0, 238.0,   0.0) / 255.0)) r = form_mix(tint(vec3(238.0, 190.0,   0.0) / 255.0), tint_bronze(vec3(215.0, 200.0, 150.0) / 255.0));
     }
     else
     {
         // Super Knuckles: red fur turns gold; chrono turns bronze.
-        if (hit(s, vec3(116.0,  16.0,  33.0) / 255.0)) r = form_mix(tint(vec3(116.0,  96.0,  16.0) / 255.0), tint(vec3(100.0,  76.0,  32.0) / 255.0));
-        if (hit(s, vec3(214.0,  25.0,  50.0) / 255.0)) r = form_mix(tint(vec3(214.0, 176.0,  25.0) / 255.0), tint(vec3(180.0, 140.0,  70.0) / 255.0));
-        if (hit(s, vec3(248.0,  92.0,  91.0) / 255.0)) r = form_mix(tint(vec3(248.0, 217.0,  91.0) / 255.0), tint(vec3(220.0, 185.0, 130.0) / 255.0));
-        if (hit(s, vec3(248.0, 172.0, 157.0) / 255.0)) r = form_mix(tint(vec3(248.0, 230.0, 157.0) / 255.0), tint(vec3(240.0, 220.0, 185.0) / 255.0));
+        if (hit(s, vec3(116.0,  16.0,  33.0) / 255.0)) r = form_mix(tint(vec3(116.0,  96.0,  16.0) / 255.0), tint_bronze(vec3(100.0,  76.0,  32.0) / 255.0));
+        if (hit(s, vec3(214.0,  25.0,  50.0) / 255.0)) r = form_mix(tint(vec3(214.0, 176.0,  25.0) / 255.0), tint_bronze(vec3(180.0, 140.0,  70.0) / 255.0));
+        if (hit(s, vec3(248.0,  92.0,  91.0) / 255.0)) r = form_mix(tint(vec3(248.0, 217.0,  91.0) / 255.0), tint_bronze(vec3(220.0, 185.0, 130.0) / 255.0));
+        if (hit(s, vec3(248.0, 172.0, 157.0) / 255.0)) r = form_mix(tint(vec3(248.0, 230.0, 157.0) / 255.0), tint_bronze(vec3(240.0, 220.0, 185.0) / 255.0));
     }
 
     gl_FragColor = v_vColour * vec4(r, col.a);
