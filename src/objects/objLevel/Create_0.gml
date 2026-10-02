@@ -1,5 +1,7 @@
 /// @description  Initialize level
 image_speed = 0;
+// fresh level entry (not a time travel arrival): allow chrono travel again
+if objProgram.time_traveling == 0 objProgram.boss_mode = false;
 // timing
 timer = 0;
 timer_enabled = false;

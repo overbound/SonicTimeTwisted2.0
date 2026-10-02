@@ -7,14 +7,14 @@ function player_change_character(argument0, argument1) {
 	// update id
 	character_id = argument0;
 	// initialize character-specific values
+	peelout_charge = 0;
 	switch character_id
 	{
 	case 1: // sonic
-	    if superform
+	    if specialForm
 	        animation_table = objResources.anim_sonic_super;
 	    else    animation_table = objResources.anim_sonic;
 	    instashield = noone;
-	    peelout_charge = 0;
 	    break;
 	case 2: // tails
 	    animation_table = objResources.anim_tails;

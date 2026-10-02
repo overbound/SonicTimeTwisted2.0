@@ -158,7 +158,7 @@ function player_state_super_flight() {
 
 	player_get_terrain_list();
 
-	if (!superform)
+	if (!specialForm)
 	{
 	    player_is_falling();
 	    animation_new = "float";

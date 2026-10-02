@@ -50,7 +50,7 @@ function player_state_fall() {
 				dropDash = false;
 				camera.alarm[0] = 16;
 				camera.ground_mode = true;
-		        if !superform play_sfx(sndSpinDash);
+		        if !specialForm play_sfx(sndSpinDash);
 				else play_sfx(sndPeeloutRelease);
 		        //stop_sound(sndDropDash);
 		        if (sign(xspeed) == facing) || (sign(xspeed) == 0){ //if player was moving forwards
@@ -129,8 +129,8 @@ function player_state_fall() {
 	if jump_action
 	{
 	    // super transformation
-	    if superform and player_transform_input() player_transform(false); else
-	    if objProgram.special_future_current_level>=7 and (not objLevel.cleared) and objGameData.rings[0]>=50 and not (superform or invincibility) and player_transform_input() return player_is_transforming(); else
+	    if specialForm and player_transform_input() player_transform(false); else
+	    if (objProgram.special_future_current_level>=7 or objProgram.special_past_current_level>=7) and (not objLevel.cleared) and objGameData.rings[0]>=50 and not (specialForm or invincibility) and player_transform_input() return player_is_transforming(); else
 	    // jump action
 	    if input_check_pressed(cACTION)
 	    {
@@ -154,7 +154,7 @@ function player_state_fall() {
 	        {
 	        case 1: // Sonic
 	            /*if invincibility break;
-	            if superform {
+	            if specialForm {
 	                player_is_shielding(); break;
 	                }*/
 	            switch shield_type

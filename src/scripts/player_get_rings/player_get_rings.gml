@@ -8,7 +8,7 @@ function player_get_rings(argument0) {
 	    objGameData.rings[0] += 1;
 	    if not (objGameData.rings[0] mod 100) {
 	        /*
-	        if not superform {
+	        if not specialForm {
 	            player_get_lives(1);
 	        } else
 	        */

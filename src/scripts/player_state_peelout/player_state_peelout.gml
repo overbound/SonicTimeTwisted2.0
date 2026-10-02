@@ -13,6 +13,41 @@ function player_state_peelout() {
 	// launch
 	if not input_check(cUP)
 	{
+	    // chrono time travel on a full charge
+	    // The last 2 levels don't have pasts, so no time travel in
+	    // Planetary Panic Zone (PP1, PP2) or Sunken Saucer (SS1).
+	    // objProgram.boss_mode blocks travel during boss fights and
+	    // stays on until death or a fresh level start.
+	    // This could be enhanced later.
+	    if peelout_charge>=30 && specialForm >= 2 && room!=PP1 && room!=PP2 && room!=SS1 && !objProgram.boss_mode
+	    {
+	        // match nearest spawn by position in the opposite timeline
+	        objProgram.spawn_by_position = true;
+	        objProgram.spawn_pos_x = x;
+	        objProgram.spawn_pos_y = y;
+	        objProgram.spawn_time = objLevel.timer;
+	        objProgram.time_traveling = facing;
+	        peelout_charge = 0;
+	        // camera
+	        camera.alarm[0] = 128;
+	        // audio
+	        var _chant = sndChantPast;
+	        if (objProgram.in_past) {
+	            _chant = sndChantFuture;
+	        }
+	        var _locChantStream = tr_stream_loc_sound(_chant);
+	        if (_locChantStream) {
+	            with (objResources) {
+	                chantAsset = _locChantStream;
+	                chantInstance = play_sfx(_locChantStream, 1);
+	            }
+	        }
+	        else {
+	            play_sfx(_chant, 1);
+	        }
+	        // time travel
+	        return player_is_exiting();
+	    }
 	    // launch if we're fully charged
 	    if peelout_charge>=30
 	    {
@@ -33,6 +68,14 @@ function player_state_peelout() {
 	        animation_new = "peelout_end";
 	        // stand
 	        return player_is_standing();
+	    }
+	    // chrono partial charge launches normally
+	    if specialForm >= 2
+	    {
+	        xspeed = facing*12;
+	        peelout_charge = 0;
+	        play_sfx(sndSpinDash, 1);
+	        return player_is_running();
 	    }
 	}
 	// charging

@@ -9,15 +9,15 @@ with player_id
     // get item type
     switch other.image_index
     {
-        case 1: if not superform player_hit(0, sndHurt); break;
+        case 1: if not specialForm player_hit(0, sndHurt); break;
         case 2: player_get_rings(10); break;
-        case 3: if not superform {
+        case 3: if not specialForm {
             superspeed = 1200; player_reset_physics(); 
            // stop_level_music();
             play_jingle(bgmSpeedUp, true); 
             } break;
         case 4: case 5: case 6: case 7: case 8: case 9: player_get_shield(other.image_index-4); break;
-        case 10: if not superform player_get_invincibility(); break;
+        case 10: if not specialForm player_get_invincibility(); break;
         default: player_get_lives(1);
     }
 }
