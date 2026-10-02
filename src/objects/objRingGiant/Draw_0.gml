@@ -12,7 +12,7 @@ var i;
 for (i = 0; i < passes; i++)
 {
     var s = 1.05 + i * 0.07;
-    var a = 0.10 * (1 - i / passes);
+    var a = 0.08 * (1 - i / passes);
     draw_sprite_ext(sprite_index, image_index, x, y, image_xscale * s, image_yscale * s, image_angle, image_blend, a * image_alpha);
 }
 shader_reset();

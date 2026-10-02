@@ -43,7 +43,7 @@ void main()
     }
 
     // emission pass: brighten for the additive glow draw
-    r *= mix(1.0, 1.3, u_glow);
+    r *= mix(1.0, 1.25, u_glow);
 
     gl_FragColor = v_vColour * vec4(r, col.a);
 }
