@@ -28,4 +28,5 @@ player_id = noone;
 
 move_towards_point(0, 0, 0);
 camera_pass = false;
+depth = 2;
 
