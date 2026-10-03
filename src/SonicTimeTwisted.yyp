@@ -2150,6 +2150,7 @@
     {"id":{"name":"set_smartphone_controls_enabled","path":"scripts/set_smartphone_controls_enabled/set_smartphone_controls_enabled.yy",},},
     {"id":{"name":"set_zone_music","path":"scripts/set_zone_music/set_zone_music.yy",},},
     {"id":{"name":"sfx_special_volume","path":"scripts/sfx_special_volume/sfx_special_volume.yy",},},
+    {"id":{"name":"shield_draw_glow","path":"scripts/shield_draw_glow/shield_draw_glow.yy",},},
     {"id":{"name":"shorter","path":"scripts/shorter/shorter.yy",},},
     {"id":{"name":"show_startup_window","path":"scripts/show_startup_window/show_startup_window.yy",},},
     {"id":{"name":"solidsSS1Future","path":"scripts/solidsSS1Future/solidsSS1Future.yy",},},
