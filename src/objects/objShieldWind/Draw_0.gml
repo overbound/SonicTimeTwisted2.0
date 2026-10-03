@@ -1,9 +1,9 @@
 /// @description  Render shield
 
 // emission halo
-shield_draw_glow(sprite_index, 10 + (index mod 7), x, y, image_xscale, image_yscale, image_angle+45, image_blend, image_alpha);
-shield_draw_glow(sprite_index, index mod 3, x, y, image_xscale, image_yscale, 0, image_blend, 1-image_alpha);
-shield_draw_glow(sprite_index, 3 + (index mod 7), x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+shield_draw_glow(sprite_index, 10 + (index mod 7), x, y, image_xscale, image_yscale, image_angle+45, image_blend, image_alpha, 0.5);
+shield_draw_glow(sprite_index, index mod 3, x, y, image_xscale, image_yscale, 0, image_blend, 1-image_alpha, 0.5);
+shield_draw_glow(sprite_index, 3 + (index mod 7), x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha, 0.5);
 
 // back wind
 draw_sprite_ext(sprite_index, 10 + (index mod 7), x, y, image_xscale, image_yscale, image_angle+45, image_blend, image_alpha);

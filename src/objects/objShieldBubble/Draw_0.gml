@@ -6,7 +6,7 @@ if flashing
     glow_sub = (objScreen.image_index div 12) mod 2;
 }
 // emission halo
-shield_draw_glow(sprite_index, glow_sub, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+shield_draw_glow(sprite_index, glow_sub, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha, 1);
 // base
 if flashing
 {

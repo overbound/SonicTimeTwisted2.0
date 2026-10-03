@@ -7,7 +7,7 @@ if (penalty_shot)
 }
 if (broken == false)
 {
-    shield_draw_glow(sprShieldEarth_Rock2, image_index, x, y, 1, 1, 0, c_white, 1);
+    shield_draw_glow(sprShieldEarth_Rock2, image_index, x, y, 1, 1, 0, c_white, 1, 1);
     draw_sprite(sprShieldEarth_Rock2, image_index, x, y);
 }
 else
@@ -18,12 +18,12 @@ else
         var py = y + (lengthdir_y(floor(broken_value/2) + broken_offset * 2.5 - broken_value_max/2, rock_direction + (i * 120))) * 0.5;
         if (image_index == 0)
         {
-            shield_draw_glow(sprShieldEarth_RockL, i, px, py, 1, 1, 0, c_white, 1);
+            shield_draw_glow(sprShieldEarth_RockL, i, px, py, 1, 1, 0, c_white, 1, 1);
             draw_sprite(sprShieldEarth_RockL, i, px, py);
         }
         else
         {
-            shield_draw_glow(sprShieldEarth_RockR, i, px, py, 1, 1, 0, c_white, 1);
+            shield_draw_glow(sprShieldEarth_RockR, i, px, py, 1, 1, 0, c_white, 1, 1);
             draw_sprite(sprShieldEarth_RockR, i, px, py);
         }
     }
