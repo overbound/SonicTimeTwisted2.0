@@ -12,11 +12,11 @@ function shield_draw_glow(argument0, argument1, argument2, argument3, argument4,
 	*/
 	gpu_set_texfilter(true);
 	gpu_set_blendmode(bm_add);
-	var passes = 6;
+	var passes = 8;
 	for (var i = 0; i < passes; i++)
 	{
-		var s = 1.05 + i * 0.06;
-		var a = 0.06 * (1 - i / passes) * argument8;
+		var s = 1.05 + i * 0.07;
+		var a = 0.10 * (1 - i / passes) * argument8;
 		draw_sprite_ext(argument0, argument1, argument2, argument3, argument4 * s, argument5 * s, argument6, argument7, a);
 	}
 	gpu_set_blendmode(bm_normal);
