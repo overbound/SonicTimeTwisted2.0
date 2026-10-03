@@ -1,8 +1,8 @@
 /// @description  Draw invincibility sparks
 var c, s;
 // fourth circle
-c = cosine[angle2]*20;
-s = sine[angle2]*20;
+c = cosine[angle2]*22;
+s = sine[angle2]*22;
 shield_draw_glow(sprMutekiSpark4, image_index, px[2]+c, py[2]-s, 1, 1, 0, c_white, 1, 0.8);
 draw_sprite(sprMutekiSpark4, image_index, px[2]+c, py[2]-s);
 shield_draw_glow(sprMutekiSpark4, image_index+5, px[2]-c, py[2]+s, 1, 1, 0, c_white, 1, 0.8);
@@ -18,8 +18,8 @@ draw_sprite(sprMutekiSpark2, image_index, px[0]+c, py[0]-s);
 shield_draw_glow(sprMutekiSpark2, image_index+7, px[0]-c, py[0]+s, 1, 1, 0, c_white, 1, 0.8);
 draw_sprite(sprMutekiSpark2, image_index+7, px[0]-c, py[0]+s);
 // first circle
-c = cosine[angle]*20;
-s = sine[angle]*20;
+c = cosine[angle]*22;
+s = sine[angle]*22;
 if (flip)
 {
     shield_draw_glow(sprMutekiSpark1, image_index, x+c, y-s, 1, 1, 0, c_white, 1, 0.8);
