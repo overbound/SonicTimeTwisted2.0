@@ -17,12 +17,12 @@ function shield_draw_glow(argument0, argument1, argument2, argument3, argument4,
 	gpu_set_texfilter(true);
 	gpu_set_blendmode(bm_add);
 	var passes = 8;
-	var taps = 16;
-	var blur_r = 5;
+	var taps = 24;
+	var blur_r = 6;
 	for (var i = 0; i < passes; i++)
 	{
-		var s = 1.05 + i * 0.07;
-		var a = 0.10 * (1 - i / passes) * argument8 * argument9 / taps;
+		var s = 1.05 + i * 0.09;
+		var a = 0.30 * (1 - i / passes) * argument8 * argument9 / taps;
 		for (var t = 0; t < taps; t++)
 		{
 			var r = blur_r * sqrt(t / taps);
