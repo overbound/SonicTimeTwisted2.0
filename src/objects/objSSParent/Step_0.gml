@@ -1,5 +1,5 @@
 /// @description  set depth
-depth = min(2000,distance_to_object(objSSCamera)/20);
+depth = min(object_index == objSSEnd ? 99 : 2000, distance_to_object(objSSCamera)/20);
 depth1= depth;
 
 /// update shadow visibility

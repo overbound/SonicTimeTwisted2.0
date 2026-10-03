@@ -4,6 +4,8 @@
 function object_get_depth(argument0) {
 
 	switch(argument0) {
+        case objEggWalkerBossSensor:
+            return -12;
         case objCloudTransition:
         case objEnterFFZ:
         case objEnterTTZF:
@@ -175,7 +177,6 @@ function object_get_depth(argument0) {
         case objAAPastBack:
         case objAA1BossController:
         case objEggWalkerBossController:
-        case objEggWalkerBossSensor:
         case objMoleEggWalker:
         case objSmokeSpawn:
         case objMetallixHead:
