@@ -4,8 +4,13 @@ function player_transform(argument0) {
 	// transform or de-transform?
 	if argument0
 	{
-	    // set superform counter
-	    superform = 1;
+	    // set special form: emeralds = super, stones = chrono, both = hybrid
+	    // no collectibles: plain Super — scripted transforms (MM1 flight,
+	    // temp_superform restore) must always grant a form, as release/2.0 did
+	    if objProgram.special_future_current_level>=7 && objProgram.special_past_current_level>=7 specialForm = 3; else
+	    if objProgram.special_past_current_level>=7 specialForm = 2; else
+	    specialForm = 1;
+	    specialFormTimer = 0;
 	    // setup animation based on character
 	    switch character_id
 	    {
@@ -21,7 +26,8 @@ function player_transform(argument0) {
 	else
 	{
 	    // clear states
-	    superform = -1;
+	    specialForm = 0;
+	    specialFormTimer = 0;
 	    // reveal shield
 	    with shield visible = true;
 	    // setup animation based on character

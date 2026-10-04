@@ -3,7 +3,7 @@ function player_reaction_knock_ufo(argument0) {
 	var bonus_score;
 	if !(abs(xspeed)>=6 && character_id==3){
 	// if not spinning or invincible
-	    if not (spinning or instashield or spindashing or invincibility or superform or state==player_state_glide)
+	    if not (spinning or instashield or spindashing or invincibility or specialForm or state==player_state_glide)
 	    {
 	        // abort if already hit
 	        if invulnerable or (state==player_state_hurt) return false;

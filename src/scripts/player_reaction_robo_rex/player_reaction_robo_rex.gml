@@ -6,7 +6,7 @@ function player_reaction_robo_rex(argument0) {
 	if argument0.alarm[0] return false;
 	// if not spinning or invincible
 	if !(abs(xspeed)>=6 && character_id==3)
-	if argument0.invulnerable or not (spinning or instashield or spindashing or invincibility or superform or state==player_state_glide)
+	if argument0.invulnerable or not (spinning or instashield or spindashing or invincibility or specialForm or state==player_state_glide)
 	{
 	    // abort if already hit
 	    if invulnerable or (state==player_state_hurt) return false;

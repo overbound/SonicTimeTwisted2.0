@@ -27,8 +27,8 @@ function player_reaction_sign_post(argument0) {
 	case 1: // 1-player
 	    // ignore if not player 1
 	    if player_id>0 return false;
-	    // cancel superform
-	    if superform player_transform(false);
+	    // cancel specialForm
+	    if specialForm player_transform(false);
 	    // clear the level
 	    objProgram.temp_shield = objLevel.player[0].shield_type; 
 	    objLevel.cleared = true;

@@ -10,7 +10,4 @@ if completedRing && (objProgram.special_future_current_level < 7 || objProgram.s
     visible = true; 
     reaction_script=player_reaction_giant_ring
 }
-if objProgram.in_past {
-    sprite_index = sprRingGiantPast;
-}
 

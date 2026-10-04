@@ -2,7 +2,7 @@ function player_reaction_spike(argument0, argument1) {
 	// player_reaction_spike(local_id, code)
 	var rotation_offset;
 	// abort if immune or already hit
-	if invulnerable or shield_type == 0 or instashield or invincibility or superform or (state==player_state_hurt) return false;
+	if invulnerable or shield_type == 0 or instashield or invincibility or specialForm or (state==player_state_hurt) return false;
 	// get angle relative to current rotation
 	rotation_offset = angle_wrap((round(argument0.image_angle/90)*90)-mask_rotation);
 	// check collision code

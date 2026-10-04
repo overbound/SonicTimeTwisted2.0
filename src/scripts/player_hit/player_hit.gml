@@ -3,7 +3,7 @@
 /// @param hitSound
 function player_hit(argument0, argument1) {
 	// abort if immune or already hit
-	if invulnerable or invincibility or superform or (state==player_state_hurt) return false;
+	if invulnerable or invincibility or specialForm or (state==player_state_hurt) return false;
 	// remove shield, if any
 	if shield
 	{

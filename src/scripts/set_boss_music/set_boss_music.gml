@@ -1,6 +1,8 @@
 /// @description set_boss_music(roomIndex)
 /// @param roomIndex
 function set_boss_music(roomIndex) {
+	// block chrono time travel for the rest of this level
+	objProgram.boss_mode = true;
 	with (objMusicNew) {
 	    switch (roomIndex) {
 	        // Regular boss theme.

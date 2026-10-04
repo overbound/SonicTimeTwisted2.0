@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_giant_ring",
+  "name":"shd_giant_ring",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

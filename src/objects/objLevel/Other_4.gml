@@ -1,8 +1,26 @@
 /// @description  Start level
 var local_id;
 spawn_id = noone;
+// chrono peelout travel: match nearest spawn point by position instead of tag
+var pos_mode = objProgram.spawn_by_position && objProgram.temp_spawn_tag<=-1;
+if pos_mode
+{
+    var best_d = 1000000000;
+    for (var i=0; i<instance_number(objStart); i+=1)
+    {
+        local_id = instance_find(objStart, i);
+        var dist = point_distance(local_id.x, local_id.y, objProgram.spawn_pos_x, objProgram.spawn_pos_y);
+        if (spawn_id<=-1 || dist<best_d)
+        {
+            best_d = dist;
+            spawn_id = local_id;
+        }
+    }
+    objProgram.spawn_by_position = false;
+    if spawn_id>-1 objProgram.spawn_tag = spawn_id.tag;
+}
 // go through spawn points
-for (var i=0; i<instance_number(objStart); i+=1)
+if (spawn_id<=-1) for (var i=0; i<instance_number(objStart); i+=1)
 {
     // get spawn position
     local_id = instance_find(objStart, i);
@@ -38,6 +56,15 @@ if spawn_id>-1
             player[0].y = spawn_id.y+2;
             
         with objPlayer player_is_entering();
+
+        // chrono travel: land on the spawn point instead of offscreen
+        if pos_mode
+        {
+            player[0].x = spawn_id.x;
+            player[0].y = spawn_id.y+1;
+            if objGameData.character_id[0] == 2
+                player[0].y = spawn_id.y+2;
+        }
     }
     else
     {
@@ -130,7 +157,7 @@ if objProgram.in_past {
 
 /* */
 ///set animations for level start
-with player[0] {
+if !pos_mode with player[0] {
     if other.spawn_id.tag == 0
         switch room {
         
@@ -318,6 +345,10 @@ with player[0] {
     
     }
 }
+
+// chrono travel: continue running from the spawn point
+if pos_mode && spawn_id>-1
+    with player[0] player_is_running();
 
 /* */
 /// save level and play music

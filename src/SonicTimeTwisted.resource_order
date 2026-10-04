@@ -2299,7 +2299,6 @@
     {"name":"sprPyramidRotate","order":17,"path":"sprites/sprPyramidRotate/sprPyramidRotate.yy",},
     {"name":"sprRacerIcon","order":1,"path":"sprites/sprRacerIcon/sprRacerIcon.yy",},
     {"name":"sprRingGiant","order":1,"path":"sprites/sprRingGiant/sprRingGiant.yy",},
-    {"name":"sprRingGiantPast","order":2,"path":"sprites/sprRingGiantPast/sprRingGiantPast.yy",},
     {"name":"sprRingSparkle","order":1,"path":"sprites/sprRingSparkle/sprRingSparkle.yy",},
     {"name":"sprRoboRexFoot","order":1,"path":"sprites/sprRoboRexFoot/sprRoboRexFoot.yy",},
     {"name":"sprRoboRexFrontFoot","order":2,"path":"sprites/sprRoboRexFrontFoot/sprRoboRexFrontFoot.yy",},

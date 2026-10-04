@@ -22,7 +22,7 @@ function player_state_look() {
 	// jumping / peelout
 	if input_check_pressed(cACTION)
 	{
-	    if character_id==1 return player_is_dashing(); else
+	    if (character_id==1 || specialForm >= 2) return player_is_dashing(); else
 	    if not player_collision_ceiling(offset_y+5) return player_is_jumping();
 	}
 
