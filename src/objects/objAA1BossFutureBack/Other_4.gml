@@ -8,6 +8,7 @@ tower2 = parallax_create(1, backAAFTowers, 0, 0, 40, 222, -3.48, 0, 0, 0, 68, 25
 tower2.visible = false;
 // red buildings
 building = parallax_create(1, backAAFBuildings1, 0, 0, 114, 223, -4.2, 0, 0, 0, 0, 225, 0, 0);
+building.palette_cycle = true;
 building.visible = false;
 // starlight
 stars = parallax_create(1, backAAFStars, 0, 0, 336, 156, -5.1, 0, 0, 0, 0, 0, 120, 0);

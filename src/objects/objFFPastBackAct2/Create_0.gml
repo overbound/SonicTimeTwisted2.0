@@ -34,7 +34,16 @@ parallax_create(1, backFFPTrees, 0, 32, 64, 32, 0, 0, 0.90, relative_y, 0, 375, 
 parallax_create(1, backFFPTrees, 0, 32, 64, 32, 0, 0, 0.89, relative_y, 0, 407, 0, 0);
 
 // stars
-for (var i=0; i<28; i+=1) parallax_create(1, backFFPStars, 0, (i mod 4)*16, 64, 16, 0, 0, 0.80+(i*0.005), relative_y, 0, i*16, 0, 0);
+for (var i=0; i<28; i+=1)
+{
+    var st = parallax_create(1, backFFPStars, 0, (i mod 4)*16, 64, 16, 0, 0, 0.80+(i*0.005), relative_y, 0, i*16, 0, 0);
+    st.palette_cycle = true;
+    st.pal_hue_min = 0.59;
+    st.pal_hue_max = 0.70;
+    st.pal_sat_min = 0.15;
+    st.pal_val_min = 0.30;
+    st.pal_speed = 0.01;
+}
 /*
 parallax_create(1, backFFPStars, 0, 0, 256, 16, 0, 0, 0.80, relative_y, 0, 0, 0, 0);
 parallax_create(1, backFFPStars, 0, 16, 256, 16, 0, 0, 0.805, relative_y, 0,  16, 0, 0);

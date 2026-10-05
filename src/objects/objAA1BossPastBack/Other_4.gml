@@ -13,6 +13,11 @@ grass2=parallax_create(1, backAAPGrass1, 0, 0, 256, 192, -4, 0, 0.64, relative_y
 grass2.visible=false;
 // water
 water=parallax_create(1, backAAPWater, 0, 0, 32, 64, -3.48, 0, 0.8, relative_y, 0, absolute_y+256, 0, 0); //338
+water.palette_cycle = true;
+water.pal_hue_min = 0.59;
+water.pal_hue_max = 0.70;
+water.pal_sat_min = 0.04;
+water.pal_val_min = 0.35;
 water.visible=false
 // hills
 hills=parallax_create(1, backAAPHills, 0, 0, 206, 118, -3, 0, 0.85, relative_y, 0, absolute_y+150, 0, 0);

@@ -48,6 +48,20 @@ rx -= view_xview[view_current];
 ly -= view_yview[view_current];
 ry -= view_yview[view_current];
 */
+// palette cycling for animated background lights
+if (palette_cycle)
+{
+    shader_set(shd_palette_cycle);
+    shader_set_uniform_f(shader_get_uniform(shd_palette_cycle, "u_phase"), (objScreen.image_index * pal_speed) mod 1);
+    shader_set_uniform_f(shader_get_uniform(shd_palette_cycle, "u_hue_min"), pal_hue_min);
+    shader_set_uniform_f(shader_get_uniform(shd_palette_cycle, "u_hue_max"), pal_hue_max);
+    shader_set_uniform_f(shader_get_uniform(shd_palette_cycle, "u_hue2_min"), pal_hue2_min);
+    shader_set_uniform_f(shader_get_uniform(shd_palette_cycle, "u_hue2_max"), pal_hue2_max);
+    shader_set_uniform_f(shader_get_uniform(shd_palette_cycle, "u_hue3_min"), pal_hue3_min);
+    shader_set_uniform_f(shader_get_uniform(shd_palette_cycle, "u_hue3_max"), pal_hue3_max);
+    shader_set_uniform_f(shader_get_uniform(shd_palette_cycle, "u_sat_min"), pal_sat_min);
+    shader_set_uniform_f(shader_get_uniform(shd_palette_cycle, "u_val_min"), pal_val_min);
+}
 for (cy=ly; cy<=ry; cy+=sy)
 {
     for (cx=lx; cx<=rx; cx+=sx)
@@ -55,6 +69,10 @@ for (cy=ly; cy<=ry; cy+=sy)
         if back>-1 draw_sprite_part_ext(back,0, left, top, width, height, floor(cx), cy, image_xscale, image_yscale, image_blend, image_alpha); else
         draw_sprite_ext(sprite_index, image_index, floor(cx), cy, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
     }
+}
+if (palette_cycle)
+{
+    shader_reset();
 }
 /*
 surface_reset_target();

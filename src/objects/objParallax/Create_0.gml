@@ -16,6 +16,17 @@ absolute_x = 0;
 absolute_y = 0;
 separation_x = 0;
 separation_y = 0;
+// palette cycling shader
+palette_cycle = false;
+pal_hue_min = 0.045;
+pal_hue_max = 0.175;
+pal_hue2_min = 0;
+pal_hue2_max = 0;
+pal_hue3_min = 0;
+pal_hue3_max = 0;
+pal_sat_min = 0.35;
+pal_val_min = 0;
+pal_speed = 0.004;
 // surface to draw to
 s = -1;
 surface_width = -1;

@@ -21,7 +21,8 @@ spotlight[1].image_alpha = 0.5;
 spotlight[1].rotation = 0.4;
 
 // red buildings
-parallax_create(1, backAAFBuildings1, 0, 0, 114, 320, 0, 0, 0.7, relative_y, 0, 188, 0, 0);
+var bld1 = parallax_create(1, backAAFBuildings1, 0, 0, 114, 320, 0, 0, 0.7, relative_y, 0, 188, 0, 0);
+bld1.palette_cycle = true;
 // starlight
 stars = parallax_create(1, backAAFStars, 0, 0, 336, 156, 0, 0, 0.85, relative_y, 2048, 0, 0, 0);
 // clouds
