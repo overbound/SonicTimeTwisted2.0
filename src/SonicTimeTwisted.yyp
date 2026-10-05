@@ -2211,6 +2211,7 @@
     {"id":{"name":"wrap","path":"scripts/wrap/wrap.yy",},},
     {"id":{"name":"DeflateShader","path":"shaders/DeflateShader/DeflateShader.yy",},},
     {"id":{"name":"NebulaShader","path":"shaders/NebulaShader/NebulaShader.yy",},},
+    {"id":{"name":"shd_palette_cycle","path":"shaders/shd_palette_cycle/shd_palette_cycle.yy",},},
     {"id":{"name":"shd_super_tint","path":"shaders/shd_super_tint/shd_super_tint.yy",},},
     {"id":{"name":"TimeTravelShader","path":"shaders/TimeTravelShader/TimeTravelShader.yy",},},
     {"id":{"name":"WaveShader","path":"shaders/WaveShader/WaveShader.yy",},},

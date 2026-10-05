@@ -10,7 +10,12 @@ parallax_create(1, backAAPGrass2, 0, 0, 128, 32, 0, 0, 0.60, relative_y, 0, abso
 // grass w/ cranes
 parallax_create(1, backAAPGrass1, 0, 0, 256, 192, 0, 0, 0.64, relative_y, 0, absolute_y+80, 0, 0); //240
 // water
-parallax_create(1, backAAPWater, 0, 0, 32, 64, 0, 0, 0.8, relative_y, 0, absolute_y+160, 0, 0); //338
+var wat = parallax_create(1, backAAPWater, 0, 0, 32, 64, 0, 0, 0.8, relative_y, 0, absolute_y+160, 0, 0); //338
+wat.palette_cycle = true;
+wat.pal_hue_min = 0.59;
+wat.pal_hue_max = 0.70;
+wat.pal_sat_min = 0.04;
+wat.pal_val_min = 0.35;
 // hills
 parallax_create(1, backAAPHills, 0, 0, 206, 118, 0, 0, 0.85, relative_y, 0, absolute_y+54, 0, 0); //240
 // clouds
